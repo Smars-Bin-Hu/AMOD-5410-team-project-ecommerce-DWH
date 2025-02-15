@@ -1,0 +1,14 @@
+Host hadoop-master
+    HostName 172.18.0.2
+    Port 22
+    User root
+
+Host hadoop-worker1
+    HostName 172.18.0.3
+    Port 22
+    User root
+
+Host hadoop-worker2
+    HostName 172.18.0.4
+    Port 22
+    User root
