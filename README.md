@@ -1,6 +1,6 @@
 # big-data-engineering-project1
 
-## Introduction
+## 📖 Introduction
 
 **Name:**
 
@@ -37,4 +37,4 @@
 │── requirements.txt         # Python dependencies
 ```
 
-## Quick Start
+## 💪 Quick Start
