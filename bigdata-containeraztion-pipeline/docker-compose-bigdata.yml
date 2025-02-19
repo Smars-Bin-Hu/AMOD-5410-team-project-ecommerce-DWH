@@ -32,8 +32,13 @@ services:
               bash -l -c "/usr/local/opt/module/hadoop/sbin/start-dfs.sh";
               tail -f /dev/null" 
     volumes:
-    #   - ./hadoop-config:/usr/local/hadoop/etc/hadoop
       - ./ssh-config/config:/root/.ssh/config
+      # hadoop cluster config
+      - ./hadoop-config/core-site.xml:${HADOOP_HOME}/etc/hadoop/core-site.xml
+      - ./hadoop-config/hadoop-env.sh:${HADOOP_HOME}/etc/hadoop/hadoop-env.sh
+      - ./hadoop-config/hdfs-site.xml:${HADOOP_HOME}/etc/hadoop/hdfs-site.xml
+      - ./hadoop-config/mapred-site.xml:${HADOOP_HOME}/etc/hadoop/mapred-site.xml
+      - ./hadoop-config/workers:${HADOOP_HOME}/etc/hadoop/workers
     
   # ========== 2) Hadoop Worker1 ==========
   hadoop-worker1:
@@ -58,8 +63,14 @@ services:
               bash -l -c "/usr/local/opt/module/hadoop/sbin/start-yarn.sh";
               tail -f /dev/null" 
     volumes:
-    #   - ./hadoop-config:/usr/local/hadoop/etc/hadoop
       - ./ssh-config/config:/root/.ssh/config
+      # hadoop cluster config
+      - ./hadoop-config/core-site.xml:${HADOOP_HOME}/etc/hadoop/core-site.xml
+      - ./hadoop-config/hadoop-env.sh:${HADOOP_HOME}/etc/hadoop/hadoop-env.sh
+      - ./hadoop-config/hdfs-site.xml:${HADOOP_HOME}/etc/hadoop/hdfs-site.xml
+      - ./hadoop-config/mapred-site.xml:${HADOOP_HOME}/etc/hadoop/mapred-site.xml
+      - ./hadoop-config/workers:${HADOOP_HOME}/etc/hadoop/workers
+
   # ========== 3) Hadoop Worker2 ==========
   hadoop-worker2:
     container_name: hadoop-worker2
@@ -81,13 +92,18 @@ services:
       bash -c "service ssh start; 
               tail -f /dev/null" 
     volumes:
-    #   - ./hadoop-config:/usr/local/hadoop/etc/hadoop
       - ./ssh-config/config:/root/.ssh/config
+      # hadoop cluster config
+      - ./hadoop-config/core-site.xml:${HADOOP_HOME}/etc/hadoop/core-site.xml
+      - ./hadoop-config/hadoop-env.sh:${HADOOP_HOME}/etc/hadoop/hadoop-env.sh
+      - ./hadoop-config/hdfs-site.xml:${HADOOP_HOME}/etc/hadoop/hdfs-site.xml
+      - ./hadoop-config/mapred-site.xml:${HADOOP_HOME}/etc/hadoop/mapred-site.xml
+      - ./hadoop-config/workers:${HADOOP_HOME}/etc/hadoop/workers
 
   # ========== 4) MySQL (metastore for Hive) ==========
   mysql:
     container_name: mysql-hive-metastore
-    image: ubuntu/mysql
+    image: mysql-hive-metastore
     hostname: mysql-hive-metastore
     networks:
       bigdata-net:
@@ -103,7 +119,7 @@ services:
   hive:
     build: ./hive-config # custom dockerfile
     container_name: hive
-    image: apache/hive
+    image: hive
     platform: linux/amd64
     hostname: hive
     networks:
@@ -117,11 +133,11 @@ services:
       - "${HIVE_SERVER2_2ND_PORT}:${HIVE_SERVER2_2ND_PORT}"  # HiveServer2 2nd
       - "${HIVE_METASTORE_PORT}:${HIVE_METASTORE_PORT}"    # Metastore Thrift
     volumes:
-      - ./hive-config/hive-site.xml:/opt/hive/conf/hive-site.xml
-      - ./hive-config/hiveservices.sh:/opt/hive/bin/hiveservices.sh
-      - ./hive-config/mysql-connector-java-8.0.30.jar:/opt/hive/lib/mysql-connector-java-8.0.30.jar # JDBC
-      - ./hive-config/hadoop-env.sh:/opt/hadoop/etc/hadoop/hadoop-env.sh
-      - ./hive-config/core-site.xml:/opt/hadoop/etc/hadoop/core-site.xml
+      - ./hive-config/hive-site.xml:${HIVE_HOME}/conf/hive-site.xml
+      - ./hive-config/hiveservices.sh:${HIVE_HOME}/bin/hiveservices.sh
+      - ./hive-config/mysql-connector-java-8.0.30.jar:${HIVE_HOME}/lib/mysql-connector-java-8.0.30.jar # JDBC
+      - ./hive-config/hadoop-env.sh:${HIVE_HADOOP_HOME}/etc/hadoop/hadoop-env.sh
+      - ./hive-config/core-site.xml:${HIVE_HADOOP_HOME}/etc/hadoop/core-site.xml
     environment:
       # connect metastore
       - JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 # different with hadoop cluster cuz hive 3.1.3 need jdk8 and amd64 for the container
@@ -129,20 +145,36 @@ services:
       - HIVE_METASTORE_DB_HOST=${METASTORE_HOST}
       - HIVE_METASTORE_DB_USER=${METASTORE_USERNAME}
       - HIVE_METASTORE_DB_PASS=${METASTORE_PASSWORD}
-    # command: >
-    #   bash -c "hiveservices.sh start; 
-    #           tail -f /dev/null" 
+    command: >
+      bash -c "/opt/hive/bin/hiveservices.sh start; 
+              tail -f /dev/null" 
 
   # ========== 6) Spark on YARN ==========
-  # spark:
-  #   container_name: spark
-  #   image: your_spark_image
-  #   hostname: spark
-  #   networks:
-  #     - bigdata-net
-  #   depends_on:
-  #     - hadoop-master
-  #   volumes:
-  #     - ./core-site.xml:/opt/hadoop/conf/core-site.xml
-  #     - ./yarn-site.xml:/opt/hadoop/conf/yarn-site.xml
-  #   # environment / entrypoint
+  spark:
+    container_name: spark
+    image: spark
+    hostname: spark
+    networks:
+      bigdata-net:
+        ipv4_address: ${SPARK_IP}
+    depends_on: # launch the hadoop cluster first
+      - hadoop-master
+      - hadoop-worker1
+      - hadoop-worker2
+      - hive
+    ports:
+      - "2226:${SSH_PORT}"    # SSH 
+      - "${SPARK_WEB_UI}:${SPARK_WEB_UI}"  # Spark UI
+      - "${SPARK_MASTER}:${SPARK_MASTER}"  # Spark Master
+    volumes:
+      - ./spark-config/spark-defaults.conf:${SPARK_HOME}/conf/spark-defaults.conf
+      - ./spark-config/spark-env.sh:${SPARK_HOME}/conf/spark-env.sh
+      - ./spark-config/log4j2.properties:${SPARK_HOME}/conf/log4j2.properties
+      - ./hadoop-config/core-site.xml:${SPARK_HOME}/conf/core-site.xml
+      - ./hadoop-config/yarn-site.xml:${SPARK_HOME}/conf/yarn-site.xml
+      - ./hadoop-config/hdfs-site.xml:${SPARK_HOME}/conf/hdfs-site.xml
+    environment:
+      - SPARK_MASTER=hadoop-master
+      - SPARK_WORKLOAD=yarn
+    command: >
+      bash -c "tail -f /dev/null"
