@@ -6,9 +6,9 @@
 
 **Background:**
 
-**Goal:** To build a data batch processing datawarehouse,including data ingestion, cleaning, storage, modelling, analytis and scheduler. Use tech stach as below:
+**Goal:** To build a data batch processing datawarehouse,including data ingestion, cleaning, storage, modelling, analytis and scheduler. Use tech stach as below.
 
-### Tech Stack
+## 🚀 Tech Stack
 
 - **Data Source(OLTP):** Oracle Database
 - **Data Extraction, Load:** Airflow + JDBC or Apache Sqoop
@@ -19,7 +19,7 @@
 - **OLAP engine:** MySQL or clickhouse
 - **Data Application Layer**: PowerBI or tableau
 
-## Project Directory
+## 📁 Project Directory
 
 ```bash
 /bigdata-datawarehouse-project
