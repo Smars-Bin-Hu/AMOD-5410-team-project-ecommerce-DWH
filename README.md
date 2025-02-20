@@ -39,7 +39,6 @@
 
 ## 💪 Quick Start
 
-
 Add hosts to your local `/etc/hosts`
 
 ```
@@ -51,4 +50,5 @@ Add hosts to your local `/etc/hosts`
 127.0.0.1   hive
 127.0.0.1   spark
 127.0.0.1   oracle-oltp
+127.0.0.1   airflow
 ```

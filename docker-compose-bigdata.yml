@@ -194,3 +194,22 @@ services:
       - ORACLE_PDB=${ORACLE_PDB}
       - ORACLE_PWD=${ORACLE_PWD}
       - ORACLE_CHARACTERSET=${ORACLE_CHARACTERSET}
+
+  # ========== 8) Airflow ==========
+  airflow:
+    container_name: airflow
+    image: airflow
+    hostname: airflow
+    networks:
+      bigdata-net:
+        ipv4_address: ${AIRFLOW_IP}
+    # environment:
+    #   - _AIRFLOW_WWW_USER_USERNAME=admin
+    #   - _AIRFLOW_WWW_USER_PASSWORD=admin
+    ports:
+      - "${AIRFLOW_WEB_UI}:${AIRFLOW_WEB_UI}"
+    # volumes:
+    #   - ./infra/airflow-config/start_airflow.sh:${AIRFLOW_HOME}/start_airflow.sh
+    command: >
+      bash -c "/opt/airflow/start_airflow.sh;
+               tail -f /dev/null"

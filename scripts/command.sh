@@ -1,3 +1,6 @@
+# docker run
+docker run -it --rm ubuntu:20.04 /bin/bash
+
 # apt update and install common use tools
 apt update && apt install -y \
     iputils-ping \
@@ -14,10 +17,16 @@ apt update && apt install -y \
     tree \
     && rm -rf /var/lib/apt/lists/*
 
+apt update && apt install -y \
+    pkg-config \
+    libmysqlclient-dev
+
 # docker exec command
 docker exec -it --user root mysql-hive-metastore bash
 docker exec -it --user root hive bash
 docker exec -it --user root spark bash
+docker exec -it --user root airflow bash
+
 
 # docker commit command
 docker commit hadoop-master hadoop-master-image
@@ -27,6 +36,7 @@ docker commit mysql-hive-metastore mysql-hive-metastore
 docker commit hive hive
 docker commit spark spark
 docker commit oracle-oltp oracle-oltp
+docker commit airflow airflow
 # docker compose command
 docker compose -f docker-compose-bigdata.yml up -d
 
@@ -47,3 +57,9 @@ docker run -d --name oracle-oltp \
 # spark
 conda activate pyspark_env
 pyspark --master yarn --deploy-mode client
+
+# airflow
+cd /opt/airflow
+source airflow-env/bin/activate
+airflow webserver -D
+airflow scheduler -D
