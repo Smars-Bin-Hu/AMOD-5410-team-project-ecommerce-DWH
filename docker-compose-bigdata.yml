@@ -139,14 +139,14 @@ services:
       - ./infra/hive-config/core-site.xml:${HIVE_HADOOP_HOME}/etc/hadoop/core-site.xml
     environment:
       # connect metastore
-      - JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 # different with hadoop cluster cuz hive 3.1.3 need jdk8 and amd64 for the container
+      - JAVA_HOME=${HIVE_JDK} # different with hadoop cluster cuz hive 3.1.3 need jdk8 and amd64 for the container
       - PATH=$JAVA_HOME/bin:$PATH
       - HIVE_METASTORE_DB_HOST=${METASTORE_HOST}
       - HIVE_METASTORE_DB_USER=${METASTORE_USERNAME}
       - HIVE_METASTORE_DB_PASS=${METASTORE_PASSWORD}
-    command: >
-      bash -c "/opt/hive/bin/hiveservices.sh start; 
-              tail -f /dev/null" 
+    # command: >
+    #   bash -c "/opt/hive/bin/hiveservices.sh start; 
+    #           tail -f /dev/null" 
 
   # ========== 6) Spark on YARN ==========
   spark:
@@ -177,3 +177,20 @@ services:
       - SPARK_WORKLOAD=yarn
     command: >
       bash -c "tail -f /dev/null"
+
+  # ========== 7) Oracle ==========
+  oracle:
+    container_name: oracle-oltp
+    image: oracle-oltp
+    hostname: oracle-oltp
+    networks:
+      bigdata-net:
+        ipv4_address: ${ORACLE_OLTP_IP}
+    ports:
+      - "${ORACLE_CONNECT}:${ORACLE_CONNECT}" # default port used for database connections
+      - "${ORACLE_MANAGE_CONSOLE}:${ORACLE_MANAGE_CONSOLE}" #  associated with the Oracle Enterprise Manager Console
+    environment:
+      - ORACLE_SID=${ORACLE_SID}
+      - ORACLE_PDB=${ORACLE_PDB}
+      - ORACLE_PWD=${ORACLE_PWD}
+      - ORACLE_CHARACTERSET=${ORACLE_CHARACTERSET}

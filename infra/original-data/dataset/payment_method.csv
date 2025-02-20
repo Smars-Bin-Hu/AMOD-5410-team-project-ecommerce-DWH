@@ -1,0 +1,6 @@
+payment_method_id,payment_method
+1,cash
+2,debit card
+3,credit card
+4,upi
+5,net banking

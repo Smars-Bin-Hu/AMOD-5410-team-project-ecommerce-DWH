@@ -1,0 +1,2501 @@
+return_id,order_id,product_id,return_date,reason,amount_refunded
+1,28970,167,2016-07-20,Received wrong product,0.00
+2,46978,433,2017-02-08,Color doesn't match,152.55
+3,41845,60,2016-11-02,Changed my mind,0.00
+4,1026,225,2018-08-08,Item not as described,0.00
+5,16602,30,2018-08-11,Received wrong product,0.00
+6,32669,367,2018-05-31,Changed my mind,500.16
+7,2555,227,2020-10-01,Product didn't meet expectations,0.00
+8,31659,250,2019-11-05,Size doesn't fit,892.74
+9,25315,473,2021-08-30,Color doesn't match,191.92
+10,42742,333,2020-11-23,Defective product,0.00
+11,21124,169,2021-12-08,Defective product,1179.68
+12,44203,22,2018-08-18,Color doesn't match,0.00
+13,27229,482,2018-09-02,Found a better deal,0.00
+14,48178,356,2018-09-17,Ordered by mistake,88.78
+15,6387,232,2021-12-18,Changed my mind,7.04
+16,10099,292,2019-08-16,Found a better deal,0.00
+17,27348,162,2017-11-30,Product damaged during shipping,0.00
+18,30144,216,2016-07-29,Product didn't meet expectations,0.00
+19,13540,266,2017-12-21,Size doesn't fit,0.00
+20,854,456,2019-04-25,Received wrong product,643.55
+21,33985,207,2017-03-03,Defective product,0.00
+22,44688,183,2018-05-12,Changed my mind,809.05
+23,8850,70,2016-03-17,Changed my mind,0.00
+24,30942,263,2022-03-29,Received wrong product,0.00
+25,14471,355,2019-01-22,Item not as described,0.00
+26,7506,165,2018-06-17,Color doesn't match,0.00
+27,17484,252,2019-10-04,Product didn't meet expectations,0.00
+28,30999,368,2016-07-15,Ordered by mistake,916.63
+29,7686,296,2018-04-05,Color doesn't match,0.00
+30,43626,457,2016-10-22,Size doesn't fit,0.00
+31,40873,164,2021-09-21,Product didn't meet expectations,0.00
+32,24415,21,2021-04-12,Size doesn't fit,0.00
+33,1781,383,2021-02-17,Changed my mind,2.54
+34,49436,166,2022-04-04,Item not as described,0.00
+35,18142,274,2019-11-18,Product damaged during shipping,0.00
+36,23262,104,2016-12-14,Ordered by mistake,40.29
+37,3710,213,2022-01-28,Found a better deal,0.00
+38,18722,4,2020-12-15,Received wrong product,0.00
+39,46675,73,2022-02-06,Found a better deal,0.00
+40,29153,206,2021-05-12,Product damaged during shipping,0.00
+41,49557,260,2021-05-19,Defective product,109.94
+42,420,439,2018-04-08,Item not as described,0.00
+43,14182,215,2022-01-12,Defective product,676.11
+44,23217,282,2021-02-05,Product didn't meet expectations,0.00
+45,49312,93,2016-05-10,Received wrong product,0.00
+46,31151,75,2022-06-01,Received wrong product,574.84
+47,40628,25,2016-01-12,Found a better deal,59.24
+48,6716,332,2022-11-21,Found a better deal,0.00
+49,29219,64,2021-01-07,Found a better deal,0.00
+50,32893,394,2020-09-07,Defective product,214.62
+51,42410,69,2019-11-20,Ordered by mistake,0.00
+52,10640,141,2019-05-05,Product didn't meet expectations,0.00
+53,43384,133,2022-12-28,Received wrong product,0.00
+54,26255,365,2016-04-15,Received wrong product,0.00
+55,41903,190,2020-10-10,Defective product,0.00
+56,21449,104,2018-07-12,Color doesn't match,80.58
+57,13872,269,2018-11-25,Item not as described,0.00
+58,4046,31,2017-11-17,Color doesn't match,0.00
+59,34403,44,2017-01-22,Found a better deal,0.00
+60,5224,255,2022-07-20,Ordered by mistake,0.00
+61,23854,279,2016-09-13,Color doesn't match,3.01
+62,17534,170,2021-03-08,Size doesn't fit,0.00
+63,38098,13,2019-02-17,Size doesn't fit,0.00
+64,43985,265,2016-02-27,Defective product,0.00
+65,15849,88,2018-09-05,Changed my mind,0.00
+66,12220,188,2019-01-04,Product didn't meet expectations,473.20
+67,39500,463,2016-03-09,Size doesn't fit,0.00
+68,47793,260,2021-03-29,Found a better deal,0.00
+69,40777,432,2021-07-13,Size doesn't fit,214.30
+70,35318,355,2016-06-15,Found a better deal,0.00
+71,45274,278,2022-08-05,Changed my mind,0.00
+72,38355,218,2019-12-22,Ordered by mistake,0.00
+73,42281,418,2022-07-24,Received wrong product,0.00
+74,11907,391,2022-07-15,Product damaged during shipping,46.22
+75,28639,429,2019-02-25,Changed my mind,0.00
+76,37227,484,2018-03-27,Defective product,0.00
+77,41620,314,2018-03-10,Item not as described,0.00
+78,35390,164,2017-12-12,Found a better deal,509.52
+79,12061,128,2020-08-29,Defective product,0.00
+80,33566,273,2017-01-23,Received wrong product,0.00
+81,42820,392,2018-05-15,Color doesn't match,726.00
+82,1373,134,2017-02-12,Defective product,489.88
+83,24787,196,2018-12-01,Found a better deal,17.63
+84,20691,450,2017-05-09,Color doesn't match,0.00
+85,1748,177,2018-09-01,Found a better deal,881.77
+86,2186,284,2019-12-30,Changed my mind,347.69
+87,18879,166,2017-07-02,Ordered by mistake,99.38
+88,20759,160,2020-09-08,Item not as described,1354.97
+89,32153,50,2020-02-27,Color doesn't match,0.00
+90,22780,114,2021-02-02,Size doesn't fit,0.00
+91,23171,367,2016-02-24,Size doesn't fit,0.00
+92,25159,461,2017-03-13,Product damaged during shipping,0.00
+93,22975,409,2018-02-11,Changed my mind,183.33
+94,39170,143,2022-08-16,Product didn't meet expectations,0.00
+95,40090,153,2018-09-27,Product didn't meet expectations,0.00
+96,5126,69,2016-04-30,Item not as described,0.00
+97,32226,22,2018-03-18,Changed my mind,0.00
+98,3297,143,2018-08-01,Found a better deal,0.00
+99,47459,353,2016-11-24,Color doesn't match,0.00
+100,38981,485,2019-01-19,Size doesn't fit,0.00
+101,22373,182,2019-07-13,Received wrong product,129.13
+102,28251,437,2020-10-12,Size doesn't fit,0.00
+103,24239,216,2021-09-21,Product didn't meet expectations,0.00
+104,3368,450,2017-09-24,Received wrong product,0.00
+105,24141,359,2018-10-17,Size doesn't fit,0.00
+106,20498,448,2017-05-13,Ordered by mistake,577.24
+107,24086,149,2016-11-30,Changed my mind,0.00
+108,47166,99,2021-12-03,Ordered by mistake,0.00
+109,44818,13,2020-08-13,Size doesn't fit,0.00
+110,29730,409,2018-10-11,Ordered by mistake,0.00
+111,31738,60,2019-05-21,Changed my mind,0.00
+112,24466,289,2021-12-18,Received wrong product,212.35
+113,43311,336,2019-04-05,Item not as described,0.00
+114,34425,378,2022-03-15,Found a better deal,0.00
+115,8438,384,2016-06-11,Defective product,0.00
+116,21853,361,2017-11-03,Size doesn't fit,0.00
+117,8582,295,2020-08-04,Defective product,0.00
+118,7557,192,2016-12-06,Found a better deal,801.14
+119,17611,286,2017-07-27,Ordered by mistake,0.00
+120,1930,332,2017-02-26,Ordered by mistake,0.00
+121,21764,434,2019-05-25,Ordered by mistake,633.17
+122,47763,441,2019-11-08,Color doesn't match,298.17
+123,24181,365,2018-08-20,Item not as described,0.00
+124,13098,340,2017-12-15,Item not as described,421.62
+125,10084,419,2019-03-06,Color doesn't match,0.00
+126,7710,376,2016-12-28,Changed my mind,0.00
+127,20995,248,2017-04-22,Defective product,0.00
+128,10225,460,2017-06-28,Product damaged during shipping,285.75
+129,30657,441,2022-05-20,Changed my mind,318.05
+130,45612,122,2022-06-14,Changed my mind,0.00
+131,28214,21,2018-01-16,Changed my mind,0.00
+132,44590,431,2021-11-17,Defective product,0.00
+133,16003,126,2016-12-20,Color doesn't match,0.00
+134,32608,278,2017-05-28,Received wrong product,0.00
+135,28867,158,2022-12-03,Ordered by mistake,0.00
+136,31965,312,2019-12-30,Changed my mind,41.56
+137,14470,411,2019-02-25,Defective product,0.00
+138,37679,150,2016-02-02,Found a better deal,0.00
+139,49107,418,2020-12-22,Color doesn't match,0.00
+140,11317,67,2017-07-14,Found a better deal,39.02
+141,10377,473,2016-04-16,Found a better deal,0.00
+142,30425,191,2016-10-13,Color doesn't match,0.00
+143,34966,270,2022-12-09,Changed my mind,204.98
+144,38597,474,2016-09-30,Found a better deal,0.00
+145,18104,376,2018-08-23,Product didn't meet expectations,0.00
+146,32265,468,2016-09-19,Changed my mind,0.00
+147,8651,235,2019-10-17,Color doesn't match,0.00
+148,41715,490,2016-05-17,Changed my mind,128.03
+149,22476,142,2022-06-02,Color doesn't match,1301.09
+150,2244,210,2021-11-12,Product didn't meet expectations,560.50
+151,48648,213,2021-09-19,Product damaged during shipping,318.70
+152,43771,500,2022-06-21,Received wrong product,242.22
+153,7713,208,2018-12-05,Found a better deal,267.25
+154,13552,353,2017-03-03,Color doesn't match,0.00
+155,22168,422,2019-02-20,Found a better deal,0.00
+156,46005,331,2021-01-25,Product didn't meet expectations,0.00
+157,41961,261,2020-04-07,Defective product,0.00
+158,13247,78,2020-12-22,Changed my mind,0.00
+159,42164,289,2021-05-18,Item not as described,315.49
+160,11247,250,2019-04-10,Found a better deal,0.00
+161,2676,230,2017-11-28,Defective product,0.00
+162,29802,491,2017-06-21,Color doesn't match,1.33
+163,19174,25,2019-08-18,Defective product,0.00
+164,16021,30,2018-05-23,Item not as described,0.00
+165,30679,324,2018-11-23,Color doesn't match,0.00
+166,24541,182,2022-05-13,Defective product,0.00
+167,26100,1,2022-08-31,Ordered by mistake,420.07
+168,9931,97,2016-11-05,Defective product,0.00
+169,23295,225,2017-07-14,Item not as described,26.10
+170,14425,261,2020-12-29,Color doesn't match,590.46
+171,36881,433,2018-04-17,Size doesn't fit,0.00
+172,26257,248,2021-08-07,Color doesn't match,0.00
+173,21509,39,2016-04-05,Product didn't meet expectations,0.00
+174,40548,286,2018-08-17,Product damaged during shipping,0.00
+175,29022,336,2021-07-06,Received wrong product,0.00
+176,23609,299,2016-03-17,Defective product,0.00
+177,9858,358,2019-01-29,Defective product,0.00
+178,23070,359,2016-11-11,Received wrong product,572.14
+179,48647,164,2022-01-26,Found a better deal,0.00
+180,25565,43,2017-03-19,Item not as described,0.00
+181,35530,322,2016-03-03,Changed my mind,0.00
+182,46522,311,2019-06-15,Found a better deal,0.00
+183,7290,291,2022-01-05,Defective product,405.01
+184,18093,93,2017-08-24,Defective product,0.00
+185,20718,439,2019-07-03,Changed my mind,0.00
+186,12993,372,2019-05-17,Product didn't meet expectations,658.79
+187,46891,474,2019-07-03,Item not as described,0.00
+188,2019,430,2019-12-17,Item not as described,0.00
+189,7209,291,2021-05-08,Product damaged during shipping,0.00
+190,129,197,2019-06-19,Received wrong product,424.77
+191,22521,172,2016-02-01,Product damaged during shipping,0.00
+192,5283,163,2016-09-15,Defective product,247.47
+193,23945,29,2017-04-18,Item not as described,0.00
+194,8252,18,2017-05-25,Product didn't meet expectations,0.00
+195,7031,209,2020-08-06,Changed my mind,0.00
+196,7494,79,2022-05-09,Size doesn't fit,0.00
+197,27924,66,2017-10-27,Color doesn't match,0.00
+198,6703,313,2020-05-14,Product damaged during shipping,653.57
+199,40174,120,2022-03-04,Item not as described,0.00
+200,4985,46,2019-05-07,Size doesn't fit,0.00
+201,10409,161,2022-03-28,Product didn't meet expectations,0.00
+202,45732,415,2018-03-22,Color doesn't match,0.00
+203,4408,482,2018-09-22,Ordered by mistake,0.00
+204,19765,191,2019-01-10,Color doesn't match,29.87
+205,16922,188,2022-05-25,Defective product,0.00
+206,35938,438,2019-03-23,Ordered by mistake,0.00
+207,28088,178,2020-08-12,Product didn't meet expectations,0.00
+208,25135,462,2016-12-15,Item not as described,101.32
+209,9591,308,2022-12-20,Product didn't meet expectations,0.00
+210,23868,179,2016-05-04,Color doesn't match,0.00
+211,27286,53,2022-03-30,Product didn't meet expectations,0.00
+212,48527,90,2019-11-08,Received wrong product,78.21
+213,49177,196,2017-12-11,Item not as described,10.58
+214,6335,52,2017-04-10,Size doesn't fit,0.00
+215,7325,445,2019-02-16,Ordered by mistake,0.00
+216,29867,115,2016-04-28,Found a better deal,439.48
+217,41118,379,2020-09-28,Ordered by mistake,0.00
+218,15692,155,2020-06-17,Size doesn't fit,1217.85
+219,35445,378,2020-03-08,Defective product,0.00
+220,8409,481,2016-12-18,Changed my mind,0.00
+221,15980,476,2022-10-17,Ordered by mistake,0.00
+222,19396,423,2022-09-07,Color doesn't match,0.00
+223,18148,306,2017-07-23,Product damaged during shipping,0.00
+224,36935,453,2020-08-10,Size doesn't fit,0.00
+225,14133,224,2021-11-20,Changed my mind,0.00
+226,20322,279,2021-11-12,Changed my mind,2.73
+227,28338,414,2021-03-04,Found a better deal,0.00
+228,28612,458,2019-03-18,Product damaged during shipping,0.00
+229,2228,187,2019-11-20,Color doesn't match,0.00
+230,32675,267,2021-10-02,Ordered by mistake,0.00
+231,36517,77,2022-08-14,Product damaged during shipping,0.00
+232,34749,374,2017-05-31,Product damaged during shipping,701.59
+233,19671,122,2018-09-27,Defective product,0.00
+234,41495,344,2020-01-27,Product didn't meet expectations,0.00
+235,37206,420,2021-03-05,Found a better deal,0.00
+236,7266,213,2020-11-20,Ordered by mistake,0.00
+237,23050,33,2018-01-05,Size doesn't fit,10.54
+238,23591,427,2019-06-29,Defective product,1098.87
+239,49032,246,2019-01-31,Product damaged during shipping,0.00
+240,39925,325,2016-10-14,Received wrong product,0.00
+241,45242,365,2017-04-12,Changed my mind,0.00
+242,2716,302,2019-06-03,Received wrong product,0.00
+243,28995,140,2020-05-04,Item not as described,0.00
+244,18470,167,2021-05-18,Defective product,386.06
+245,33509,97,2020-03-08,Product didn't meet expectations,0.00
+246,12420,66,2022-01-07,Size doesn't fit,34.48
+247,38465,441,2017-07-25,Item not as described,0.00
+248,48105,149,2016-05-11,Received wrong product,0.00
+249,26495,401,2018-04-26,Item not as described,732.43
+250,43490,391,2017-04-22,Ordered by mistake,6.74
+251,37369,423,2020-05-07,Changed my mind,0.00
+252,2648,230,2017-12-20,Ordered by mistake,0.00
+253,17954,332,2022-02-21,Defective product,0.00
+254,14481,324,2019-09-14,Size doesn't fit,917.55
+255,33625,403,2022-04-12,Found a better deal,0.00
+256,30755,432,2017-08-15,Changed my mind,0.00
+257,49923,35,2017-06-15,Changed my mind,0.00
+258,42868,52,2016-11-30,Defective product,0.00
+259,14226,216,2016-05-07,Changed my mind,0.00
+260,2638,116,2018-01-25,Received wrong product,0.00
+261,33382,168,2018-08-28,Found a better deal,54.68
+262,28936,256,2019-06-28,Defective product,152.14
+263,37786,134,2018-04-01,Received wrong product,0.00
+264,12726,188,2020-06-16,Item not as described,1183.01
+265,19555,151,2017-09-08,Size doesn't fit,0.00
+266,489,363,2019-02-21,Ordered by mistake,0.00
+267,6755,184,2022-11-27,Product didn't meet expectations,0.00
+268,7931,372,2017-08-24,Color doesn't match,0.00
+269,47876,144,2017-01-09,Found a better deal,501.07
+270,9135,7,2019-09-05,Color doesn't match,0.00
+271,4954,168,2018-12-23,Found a better deal,0.00
+272,33087,275,2020-01-04,Product damaged during shipping,258.19
+273,3932,488,2019-08-12,Color doesn't match,0.00
+274,11726,267,2021-08-07,Defective product,0.00
+275,2182,40,2019-01-30,Changed my mind,0.00
+276,1140,277,2017-04-30,Product didn't meet expectations,0.00
+277,44768,109,2020-07-06,Found a better deal,0.58
+278,7032,111,2022-08-27,Found a better deal,0.00
+279,776,298,2022-12-24,Defective product,0.00
+280,10186,428,2020-11-09,Color doesn't match,0.00
+281,28237,205,2017-11-14,Item not as described,0.00
+282,22568,451,2022-08-20,Color doesn't match,0.00
+283,13746,477,2020-07-15,Changed my mind,0.00
+284,23864,184,2017-12-31,Found a better deal,87.42
+285,7229,66,2022-04-21,Changed my mind,0.00
+286,32749,294,2016-03-05,Item not as described,0.00
+287,6534,182,2019-06-27,Defective product,63.16
+288,29721,71,2017-01-10,Item not as described,261.99
+289,48374,399,2019-01-15,Product didn't meet expectations,0.00
+290,1492,348,2017-11-28,Product damaged during shipping,0.00
+291,3634,482,2022-10-21,Ordered by mistake,0.00
+292,27902,318,2021-01-24,Found a better deal,0.00
+293,47161,231,2022-06-08,Size doesn't fit,0.00
+294,16737,1,2016-02-23,Product didn't meet expectations,0.00
+295,16056,377,2021-08-10,Size doesn't fit,0.00
+296,13152,450,2018-12-24,Product didn't meet expectations,0.00
+297,30547,428,2018-07-01,Found a better deal,0.00
+298,28611,256,2016-03-08,Product damaged during shipping,0.00
+299,8882,51,2022-06-29,Received wrong product,134.49
+300,40921,235,2020-03-13,Item not as described,0.00
+301,9017,448,2017-10-26,Product didn't meet expectations,0.00
+302,14832,386,2018-09-28,Product damaged during shipping,0.00
+303,24993,374,2016-10-26,Product didn't meet expectations,0.00
+304,655,202,2018-12-17,Size doesn't fit,0.00
+305,20256,79,2022-11-22,Ordered by mistake,0.00
+306,49547,25,2019-07-22,Changed my mind,0.00
+307,44302,160,2019-10-05,Size doesn't fit,0.00
+308,39814,348,2020-09-19,Ordered by mistake,0.00
+309,24171,443,2016-09-17,Size doesn't fit,796.21
+310,19435,30,2017-11-05,Found a better deal,362.45
+311,161,256,2017-12-06,Ordered by mistake,208.29
+312,24745,271,2019-11-29,Product damaged during shipping,0.00
+313,43585,376,2016-05-21,Product didn't meet expectations,374.64
+314,39361,499,2018-03-04,Found a better deal,0.00
+315,11641,303,2022-09-07,Received wrong product,0.00
+316,19981,222,2020-09-21,Product damaged during shipping,0.00
+317,1356,157,2022-06-15,Defective product,0.00
+318,39585,68,2022-07-15,Color doesn't match,42.38
+319,10974,398,2022-08-27,Item not as described,0.00
+320,5364,366,2018-04-12,Product didn't meet expectations,0.00
+321,9231,49,2022-02-24,Size doesn't fit,0.00
+322,21157,105,2018-11-13,Item not as described,0.00
+323,46199,172,2016-05-14,Product didn't meet expectations,0.00
+324,22080,218,2016-09-22,Defective product,0.00
+325,6147,141,2020-12-10,Product didn't meet expectations,104.48
+326,49104,212,2022-08-17,Color doesn't match,0.00
+327,30683,64,2020-09-13,Product damaged during shipping,0.00
+328,5559,95,2022-04-17,Product damaged during shipping,0.00
+329,29646,403,2017-05-22,Received wrong product,0.00
+330,2267,451,2016-07-03,Changed my mind,0.00
+331,5029,269,2022-06-04,Color doesn't match,1282.06
+332,31110,478,2016-09-30,Product damaged during shipping,0.00
+333,7197,324,2020-03-04,Size doesn't fit,0.00
+334,46339,247,2020-06-21,Color doesn't match,148.31
+335,49794,462,2018-04-01,Product didn't meet expectations,0.00
+336,11005,12,2020-02-17,Color doesn't match,521.99
+337,3510,46,2016-09-13,Item not as described,26.27
+338,36623,302,2016-12-30,Changed my mind,0.00
+339,5930,118,2017-10-15,Color doesn't match,0.00
+340,30632,208,2016-04-13,Ordered by mistake,0.00
+341,26287,292,2016-04-18,Product didn't meet expectations,0.00
+342,4194,173,2020-09-26,Product didn't meet expectations,0.00
+343,2400,76,2016-12-17,Product didn't meet expectations,0.00
+344,48462,56,2020-07-18,Product didn't meet expectations,0.00
+345,40465,412,2016-07-14,Color doesn't match,451.25
+346,29774,489,2017-01-07,Color doesn't match,1506.85
+347,18641,193,2021-01-17,Found a better deal,423.95
+348,23132,2,2019-10-10,Found a better deal,0.00
+349,8296,238,2016-08-29,Defective product,0.00
+350,31637,158,2016-01-11,Defective product,0.00
+351,9309,36,2022-10-27,Found a better deal,0.00
+352,30887,84,2018-08-01,Size doesn't fit,0.00
+353,20938,316,2017-02-04,Product didn't meet expectations,0.00
+354,17398,331,2019-02-03,Color doesn't match,0.00
+355,20531,338,2022-04-03,Color doesn't match,0.00
+356,32308,164,2021-04-12,Size doesn't fit,0.00
+357,20516,233,2017-05-12,Defective product,0.00
+358,15976,189,2016-09-05,Item not as described,0.00
+359,3303,48,2018-12-04,Ordered by mistake,545.80
+360,48053,368,2020-07-22,Found a better deal,0.00
+361,23595,82,2019-04-10,Changed my mind,0.00
+362,31841,213,2017-06-25,Item not as described,637.39
+363,18938,118,2017-04-29,Product damaged during shipping,355.31
+364,2534,482,2021-03-18,Received wrong product,0.00
+365,31174,134,2020-05-06,Product damaged during shipping,0.00
+366,49944,198,2016-05-28,Product didn't meet expectations,0.00
+367,22920,484,2022-11-03,Product didn't meet expectations,0.00
+368,36310,175,2022-07-16,Size doesn't fit,6.52
+369,11993,369,2018-09-12,Item not as described,155.97
+370,20222,320,2017-02-22,Size doesn't fit,0.00
+371,24243,247,2019-03-22,Received wrong product,0.00
+372,27207,269,2019-02-20,Color doesn't match,0.00
+373,14691,261,2016-09-18,Item not as described,0.00
+374,14910,71,2016-08-03,Changed my mind,0.00
+375,27149,47,2020-12-28,Ordered by mistake,285.24
+376,10077,88,2020-10-23,Item not as described,0.00
+377,20666,348,2016-04-14,Product damaged during shipping,0.00
+378,15625,57,2017-01-03,Changed my mind,106.81
+379,8176,43,2021-08-01,Defective product,0.00
+380,9274,250,2019-04-25,Color doesn't match,1026.65
+381,46567,166,2017-05-24,Found a better deal,0.00
+382,7918,253,2016-01-20,Item not as described,0.00
+383,20540,151,2017-02-19,Color doesn't match,0.00
+384,22186,125,2021-01-17,Ordered by mistake,295.76
+385,2491,362,2017-01-15,Size doesn't fit,94.22
+386,2700,240,2020-12-02,Color doesn't match,966.84
+387,29956,389,2017-01-31,Product damaged during shipping,0.00
+388,26778,448,2017-04-27,Product damaged during shipping,1472.55
+389,37793,187,2022-02-27,Product didn't meet expectations,0.00
+390,49745,57,2018-05-10,Received wrong product,0.00
+391,5935,405,2019-09-19,Product damaged during shipping,0.00
+392,21735,398,2022-06-19,Item not as described,0.00
+393,7211,216,2021-02-08,Received wrong product,839.12
+394,26497,76,2017-04-16,Defective product,0.00
+395,44199,311,2018-02-07,Received wrong product,220.30
+396,43761,380,2018-01-23,Ordered by mistake,0.00
+397,27065,478,2020-05-21,Product didn't meet expectations,0.00
+398,34567,22,2018-05-06,Product didn't meet expectations,0.00
+399,23253,3,2017-04-21,Item not as described,0.00
+400,7911,270,2018-07-19,Size doesn't fit,0.00
+401,9814,134,2016-10-31,Product didn't meet expectations,0.00
+402,43554,206,2017-11-08,Changed my mind,41.86
+403,31740,56,2021-12-22,Ordered by mistake,0.00
+404,3314,155,2021-12-09,Found a better deal,1074.57
+405,6148,132,2022-09-30,Defective product,0.00
+406,5118,452,2017-01-20,Size doesn't fit,0.00
+407,5927,479,2022-12-13,Product didn't meet expectations,135.10
+408,4787,70,2022-06-29,Defective product,549.37
+409,30719,296,2022-11-22,Defective product,0.00
+410,5692,88,2021-01-02,Product damaged during shipping,101.60
+411,13733,373,2016-04-28,Received wrong product,457.41
+412,30923,455,2020-07-24,Found a better deal,0.00
+413,9272,220,2022-02-22,Product damaged during shipping,0.00
+414,25066,310,2019-07-13,Changed my mind,1102.77
+415,5893,205,2022-09-05,Product damaged during shipping,0.00
+416,32900,297,2020-10-10,Product didn't meet expectations,0.00
+417,16233,480,2019-03-17,Item not as described,0.00
+418,752,493,2019-01-19,Found a better deal,0.00
+419,1251,217,2018-12-28,Changed my mind,0.00
+420,37472,204,2020-04-17,Size doesn't fit,0.00
+421,19695,250,2019-10-22,Product didn't meet expectations,0.00
+422,5124,473,2020-02-04,Item not as described,575.77
+423,38879,428,2019-04-19,Changed my mind,0.00
+424,44352,372,2019-05-23,Changed my mind,0.00
+425,31733,454,2021-11-22,Found a better deal,0.00
+426,48506,127,2020-10-24,Received wrong product,0.00
+427,40879,440,2022-01-16,Product didn't meet expectations,0.00
+428,16911,354,2016-07-14,Found a better deal,716.97
+429,13740,353,2017-08-24,Received wrong product,0.00
+430,35794,206,2017-07-24,Defective product,0.00
+431,11153,171,2021-02-04,Size doesn't fit,0.00
+432,43896,438,2020-04-03,Product damaged during shipping,0.00
+433,29587,372,2020-05-20,Size doesn't fit,0.00
+434,1655,236,2016-10-31,Item not as described,0.00
+435,10288,295,2021-10-24,Found a better deal,0.00
+436,32077,454,2020-03-13,Product didn't meet expectations,0.00
+437,19639,337,2020-08-08,Found a better deal,0.00
+438,27920,23,2021-08-10,Ordered by mistake,0.00
+439,33719,103,2019-12-13,Found a better deal,49.14
+440,42826,109,2016-05-01,Size doesn't fit,0.00
+441,29399,249,2020-05-24,Product didn't meet expectations,0.00
+442,8316,274,2022-06-08,Size doesn't fit,0.00
+443,8197,8,2019-09-30,Ordered by mistake,0.00
+444,24344,247,2017-06-14,Product didn't meet expectations,0.00
+445,38987,221,2016-01-08,Product didn't meet expectations,0.00
+446,45618,309,2018-09-11,Product damaged during shipping,1526.86
+447,22806,176,2020-11-19,Ordered by mistake,0.00
+448,20015,51,2022-02-14,Color doesn't match,1344.92
+449,33892,172,2019-12-28,Size doesn't fit,0.00
+450,19496,34,2017-11-27,Product didn't meet expectations,0.00
+451,44511,450,2021-12-12,Item not as described,181.94
+452,20446,360,2018-09-30,Color doesn't match,0.00
+453,23844,185,2021-12-14,Size doesn't fit,1517.64
+454,8681,217,2020-11-13,Defective product,0.00
+455,32789,440,2016-08-28,Found a better deal,590.24
+456,19916,424,2022-11-12,Item not as described,91.21
+457,49820,235,2017-09-21,Defective product,0.00
+458,27833,100,2021-08-03,Size doesn't fit,0.00
+459,21252,240,2020-03-16,Item not as described,0.00
+460,41479,240,2017-12-23,Color doesn't match,0.00
+461,22943,413,2022-02-13,Product didn't meet expectations,783.03
+462,36400,130,2020-03-23,Color doesn't match,0.00
+463,14737,388,2019-11-13,Size doesn't fit,0.00
+464,20018,125,2019-09-14,Found a better deal,315.47
+465,36529,236,2022-10-17,Size doesn't fit,0.00
+466,32143,85,2017-12-23,Found a better deal,0.00
+467,20505,237,2021-10-24,Changed my mind,0.00
+468,37322,370,2017-09-30,Found a better deal,0.00
+469,10636,45,2022-05-22,Item not as described,1305.08
+470,26164,197,2019-08-02,Changed my mind,0.00
+471,43254,64,2016-12-06,Defective product,343.47
+472,1844,430,2019-07-23,Product didn't meet expectations,0.00
+473,34238,11,2018-09-14,Product didn't meet expectations,268.60
+474,49089,75,2021-02-25,Received wrong product,0.00
+475,45485,341,2022-01-02,Changed my mind,0.00
+476,6911,119,2017-02-27,Received wrong product,0.00
+477,8942,492,2016-12-17,Color doesn't match,0.00
+478,36943,289,2022-06-15,Received wrong product,0.00
+479,20012,288,2019-07-25,Color doesn't match,0.00
+480,45202,109,2022-03-29,Product didn't meet expectations,0.00
+481,43218,308,2022-09-19,Found a better deal,0.00
+482,32355,72,2018-10-19,Received wrong product,0.00
+483,46529,493,2022-02-15,Changed my mind,654.78
+484,22489,264,2018-09-19,Changed my mind,0.00
+485,48738,122,2020-09-02,Found a better deal,0.00
+486,8767,236,2017-12-02,Product damaged during shipping,0.00
+487,8970,159,2021-06-13,Ordered by mistake,0.00
+488,41871,134,2022-05-21,Changed my mind,0.00
+489,1110,405,2019-08-21,Item not as described,0.00
+490,29617,245,2018-07-15,Changed my mind,319.88
+491,31616,158,2016-07-21,Product didn't meet expectations,0.00
+492,34012,475,2016-06-22,Ordered by mistake,405.91
+493,34304,459,2017-06-07,Defective product,0.00
+494,27852,409,2021-05-26,Defective product,0.00
+495,30326,141,2022-06-09,Product didn't meet expectations,0.00
+496,45260,429,2018-05-16,Found a better deal,1319.48
+497,31792,49,2020-05-22,Item not as described,0.00
+498,13453,63,2016-02-21,Ordered by mistake,0.00
+499,41683,17,2022-03-24,Size doesn't fit,0.00
+500,46541,100,2022-09-11,Product didn't meet expectations,0.00
+501,35656,169,2017-08-24,Ordered by mistake,0.00
+502,27879,440,2021-12-03,Size doesn't fit,0.00
+503,12618,500,2021-08-01,Product didn't meet expectations,0.00
+504,96,266,2019-12-06,Product didn't meet expectations,316.72
+505,35786,95,2016-02-22,Received wrong product,0.00
+506,33051,15,2022-11-08,Product damaged during shipping,552.11
+507,39568,300,2021-07-15,Changed my mind,149.50
+508,6531,226,2021-03-13,Changed my mind,0.00
+509,3018,125,2022-11-04,Received wrong product,0.00
+510,20972,217,2020-08-30,Size doesn't fit,0.00
+511,12368,196,2021-01-21,Found a better deal,0.00
+512,4707,314,2020-12-20,Product didn't meet expectations,0.00
+513,6046,12,2020-02-24,Changed my mind,0.00
+514,23269,267,2016-12-27,Defective product,0.00
+515,18381,145,2020-09-27,Product damaged during shipping,0.00
+516,3154,308,2016-12-23,Found a better deal,0.00
+517,20428,265,2016-03-28,Item not as described,0.00
+518,32183,77,2016-10-28,Defective product,0.00
+519,48324,380,2021-01-18,Product didn't meet expectations,0.00
+520,9742,239,2016-07-12,Product damaged during shipping,260.05
+521,26020,68,2020-11-20,Changed my mind,0.00
+522,22118,182,2022-06-21,Found a better deal,78.60
+523,38911,164,2021-12-09,Ordered by mistake,305.71
+524,14003,445,2016-07-12,Product didn't meet expectations,83.29
+525,1944,151,2016-03-17,Received wrong product,0.00
+526,12078,70,2017-04-09,Product damaged during shipping,0.00
+527,42031,402,2019-09-19,Ordered by mistake,0.00
+528,19393,350,2016-02-06,Size doesn't fit,184.73
+529,3409,375,2018-12-04,Item not as described,199.90
+530,32961,339,2020-03-29,Item not as described,0.00
+531,22012,160,2017-05-02,Ordered by mistake,0.00
+532,42458,133,2021-04-08,Color doesn't match,0.00
+533,33058,426,2019-04-21,Defective product,210.41
+534,47111,182,2022-11-26,Product didn't meet expectations,0.00
+535,49364,29,2022-04-11,Changed my mind,0.00
+536,9450,332,2016-05-05,Color doesn't match,0.00
+537,16958,286,2018-09-29,Size doesn't fit,0.00
+538,39164,241,2018-11-01,Defective product,0.00
+539,30579,239,2021-02-15,Received wrong product,231.15
+540,16409,146,2022-05-08,Product damaged during shipping,0.00
+541,10893,204,2021-01-04,Received wrong product,0.00
+542,47100,431,2020-05-24,Color doesn't match,0.00
+543,47109,137,2022-11-27,Product didn't meet expectations,0.00
+544,49882,23,2022-03-20,Found a better deal,0.00
+545,6663,334,2016-11-24,Product damaged during shipping,0.00
+546,230,187,2019-05-28,Found a better deal,610.01
+547,39352,282,2021-05-09,Defective product,0.00
+548,25800,445,2022-08-22,Size doesn't fit,0.00
+549,46157,320,2019-04-08,Item not as described,0.00
+550,4680,58,2016-03-16,Product damaged during shipping,0.00
+551,24435,404,2017-02-23,Ordered by mistake,0.00
+552,21468,264,2020-03-29,Ordered by mistake,0.00
+553,16903,236,2022-09-24,Item not as described,0.00
+554,28053,225,2022-07-17,Ordered by mistake,0.00
+555,7758,214,2020-10-20,Changed my mind,0.00
+556,14710,480,2018-01-09,Size doesn't fit,53.17
+557,39580,443,2016-07-17,Product didn't meet expectations,663.51
+558,7306,340,2021-04-07,Ordered by mistake,0.00
+559,2155,90,2017-05-13,Product didn't meet expectations,72.62
+560,44148,256,2018-10-21,Defective product,0.00
+561,29884,255,2016-10-21,Item not as described,0.00
+562,28409,8,2016-09-01,Item not as described,75.81
+563,19121,145,2021-04-01,Size doesn't fit,0.00
+564,1519,179,2021-04-10,Changed my mind,0.00
+565,12442,104,2017-09-21,Color doesn't match,0.00
+566,29647,267,2018-10-10,Ordered by mistake,0.00
+567,24275,306,2022-03-15,Size doesn't fit,0.00
+568,49816,484,2022-02-05,Ordered by mistake,292.98
+569,41199,395,2021-10-26,Item not as described,0.00
+570,49861,3,2017-05-03,Ordered by mistake,0.00
+571,8747,452,2018-01-16,Product damaged during shipping,0.00
+572,27562,194,2017-11-12,Changed my mind,531.56
+573,46793,355,2019-11-19,Item not as described,0.00
+574,38782,97,2022-10-30,Color doesn't match,0.00
+575,49415,273,2020-12-20,Size doesn't fit,0.00
+576,43772,255,2020-07-03,Size doesn't fit,0.00
+577,27662,88,2018-02-27,Item not as described,0.00
+578,565,2,2022-01-21,Color doesn't match,0.00
+579,46892,257,2022-08-09,Size doesn't fit,0.00
+580,47893,103,2017-09-10,Received wrong product,365.03
+581,20586,452,2020-05-02,Defective product,0.00
+582,34420,273,2016-06-05,Received wrong product,672.41
+583,26125,393,2019-06-02,Item not as described,0.00
+584,34320,97,2016-04-09,Color doesn't match,0.00
+585,47579,304,2021-03-02,Found a better deal,0.00
+586,27533,261,2020-04-18,Color doesn't match,27.55
+587,30933,357,2017-10-24,Size doesn't fit,0.00
+588,42130,450,2019-04-24,Ordered by mistake,379.04
+589,18899,289,2016-03-22,Changed my mind,0.00
+590,12012,491,2018-10-04,Color doesn't match,0.00
+591,42542,119,2017-01-14,Color doesn't match,0.00
+592,49219,72,2016-08-05,Defective product,0.00
+593,30394,376,2016-11-09,Found a better deal,1873.20
+594,28525,31,2016-07-16,Size doesn't fit,113.45
+595,46810,398,2022-10-29,Product damaged during shipping,0.00
+596,29328,415,2019-11-05,Product damaged during shipping,227.84
+597,46789,336,2020-10-28,Found a better deal,0.00
+598,48074,145,2020-11-15,Ordered by mistake,0.00
+599,29061,14,2021-01-08,Ordered by mistake,0.00
+600,11852,423,2022-02-04,Defective product,0.00
+601,43793,20,2021-07-29,Received wrong product,0.00
+602,39378,165,2019-01-16,Received wrong product,0.00
+603,4299,234,2022-01-14,Received wrong product,8.52
+604,13812,23,2019-03-14,Ordered by mistake,0.00
+605,39516,468,2019-02-27,Product didn't meet expectations,0.00
+606,7368,370,2018-08-22,Item not as described,0.00
+607,45251,481,2019-08-19,Product didn't meet expectations,0.00
+608,1006,389,2021-08-29,Changed my mind,0.00
+609,20682,68,2022-05-01,Ordered by mistake,350.60
+610,967,5,2019-12-18,Item not as described,0.00
+611,11392,373,2018-07-16,Found a better deal,0.00
+612,6618,267,2017-11-20,Defective product,0.00
+613,9119,380,2020-12-26,Product damaged during shipping,0.00
+614,46726,12,2022-12-29,Ordered by mistake,0.00
+615,35199,70,2021-05-20,Ordered by mistake,902.54
+616,12616,187,2017-07-18,Found a better deal,0.00
+617,40544,276,2019-07-10,Item not as described,155.67
+618,3057,207,2018-10-15,Defective product,0.00
+619,26251,118,2021-04-21,Defective product,0.00
+620,32152,381,2022-11-13,Received wrong product,0.00
+621,282,262,2018-10-11,Defective product,0.00
+622,18665,102,2020-11-29,Changed my mind,0.00
+623,28957,462,2020-03-09,Color doesn't match,0.00
+624,40324,444,2018-11-09,Received wrong product,136.49
+625,10454,401,2019-11-13,Product damaged during shipping,0.00
+626,7916,144,2022-07-19,Product damaged during shipping,0.00
+627,24549,392,2019-04-01,Size doesn't fit,0.00
+628,40116,278,2017-03-04,Ordered by mistake,0.00
+629,39996,381,2016-12-18,Color doesn't match,250.45
+630,49165,273,2021-04-01,Product damaged during shipping,0.00
+631,38680,164,2019-04-02,Item not as described,0.00
+632,49904,152,2020-01-10,Ordered by mistake,143.20
+633,19438,376,2017-07-31,Product damaged during shipping,0.00
+634,31153,366,2017-11-06,Product damaged during shipping,483.09
+635,36391,277,2017-02-05,Found a better deal,0.00
+636,40512,263,2021-03-09,Defective product,0.00
+637,19179,52,2019-06-08,Product didn't meet expectations,0.00
+638,4094,363,2022-09-17,Color doesn't match,701.97
+639,7418,201,2017-02-18,Found a better deal,266.70
+640,48152,290,2018-02-26,Color doesn't match,0.00
+641,26970,258,2016-06-08,Found a better deal,0.00
+642,40462,160,2020-06-25,Product damaged during shipping,1354.97
+643,28079,479,2016-11-23,Product damaged during shipping,0.00
+644,31670,126,2019-09-06,Defective product,0.00
+645,35213,80,2017-09-15,Item not as described,1416.54
+646,47279,25,2017-10-07,Color doesn't match,0.00
+647,12908,363,2016-02-07,Found a better deal,0.00
+648,1695,8,2022-01-15,Defective product,606.50
+649,23703,42,2020-07-20,Received wrong product,0.00
+650,43532,118,2022-01-02,Item not as described,0.00
+651,49672,63,2016-11-05,Found a better deal,0.00
+652,17423,151,2017-07-07,Product damaged during shipping,0.00
+653,12795,321,2019-06-30,Found a better deal,407.10
+654,8160,1,2019-01-26,Item not as described,0.00
+655,39163,28,2018-03-18,Item not as described,0.00
+656,22135,28,2022-08-24,Changed my mind,0.00
+657,14069,409,2022-12-13,Ordered by mistake,93.30
+658,23719,287,2021-01-01,Product damaged during shipping,613.30
+659,19684,471,2020-10-19,Item not as described,0.00
+660,48280,250,2020-01-24,Color doesn't match,0.00
+661,21122,244,2021-05-08,Received wrong product,0.00
+662,4480,113,2022-11-18,Found a better deal,0.00
+663,44171,190,2016-11-19,Color doesn't match,0.00
+664,6671,260,2020-02-06,Found a better deal,274.85
+665,41762,196,2021-07-14,Color doesn't match,19.14
+666,40025,254,2019-11-30,Color doesn't match,571.46
+667,33971,255,2022-10-06,Defective product,0.00
+668,20311,229,2022-07-06,Found a better deal,0.00
+669,41295,206,2016-04-28,Product didn't meet expectations,33.49
+670,46967,113,2018-04-27,Found a better deal,642.80
+671,12684,141,2017-12-22,Item not as described,0.00
+672,19031,148,2016-07-13,Found a better deal,638.22
+673,15765,120,2019-12-27,Product didn't meet expectations,0.00
+674,1931,144,2016-03-24,Found a better deal,0.00
+675,31547,132,2019-05-19,Product damaged during shipping,582.71
+676,7152,405,2019-02-15,Defective product,297.34
+677,18037,2,2021-12-19,Defective product,0.00
+678,8687,421,2016-03-13,Product didn't meet expectations,0.00
+679,32385,476,2021-07-11,Ordered by mistake,0.00
+680,20114,244,2016-03-14,Product didn't meet expectations,0.00
+681,31197,498,2021-05-17,Found a better deal,22.40
+682,29635,217,2016-06-03,Color doesn't match,573.50
+683,12591,126,2017-04-23,Product damaged during shipping,0.00
+684,15306,480,2020-03-20,Color doesn't match,0.00
+685,45258,414,2017-06-05,Item not as described,0.00
+686,20496,3,2020-09-13,Changed my mind,0.00
+687,6232,146,2022-04-03,Defective product,0.00
+688,18046,135,2019-07-30,Found a better deal,0.00
+689,48901,287,2020-10-08,Product damaged during shipping,0.00
+690,18867,80,2018-07-27,Ordered by mistake,0.00
+691,11387,318,2018-10-03,Size doesn't fit,0.00
+692,2029,385,2016-10-16,Product damaged during shipping,0.00
+693,11339,266,2022-06-13,Size doesn't fit,0.00
+694,35707,380,2016-08-13,Product didn't meet expectations,0.00
+695,1852,400,2018-09-25,Product damaged during shipping,0.00
+696,42354,442,2021-09-05,Size doesn't fit,617.33
+697,45809,147,2020-04-18,Product damaged during shipping,288.35
+698,48641,27,2017-04-22,Found a better deal,0.00
+699,44621,363,2018-07-26,Color doesn't match,0.00
+700,15136,427,2021-04-23,Item not as described,0.00
+701,16724,19,2022-05-17,Color doesn't match,553.16
+702,21344,370,2018-09-18,Product didn't meet expectations,0.00
+703,15273,151,2018-08-20,Product didn't meet expectations,0.00
+704,16259,188,2019-08-25,Size doesn't fit,2070.26
+705,25544,15,2019-06-11,Product damaged during shipping,0.00
+706,10581,32,2018-04-20,Product didn't meet expectations,0.00
+707,13849,285,2016-04-04,Defective product,0.00
+708,48581,295,2020-12-04,Color doesn't match,658.37
+709,29091,383,2022-12-22,Product didn't meet expectations,0.00
+710,190,117,2016-11-30,Changed my mind,0.00
+711,8826,283,2020-07-30,Color doesn't match,0.00
+712,24888,438,2018-03-23,Color doesn't match,0.00
+713,38010,99,2017-02-27,Ordered by mistake,0.00
+714,6102,70,2018-01-16,Size doesn't fit,0.00
+715,38919,125,2021-12-27,Defective product,0.00
+716,4162,470,2017-03-07,Defective product,0.00
+717,1767,62,2021-10-05,Received wrong product,0.00
+718,16830,333,2019-10-07,Item not as described,0.00
+719,30316,476,2021-07-24,Found a better deal,0.00
+720,20384,198,2017-09-21,Color doesn't match,0.00
+721,16080,236,2019-11-03,Found a better deal,0.00
+722,44437,136,2018-02-27,Size doesn't fit,0.00
+723,8820,334,2022-07-20,Product damaged during shipping,0.00
+724,34248,202,2022-01-09,Product didn't meet expectations,224.16
+725,29763,108,2019-09-05,Defective product,0.00
+726,40225,99,2018-01-06,Product damaged during shipping,132.64
+727,48549,447,2022-11-29,Product didn't meet expectations,0.00
+728,18287,361,2019-07-04,Ordered by mistake,0.00
+729,4829,11,2020-08-14,Ordered by mistake,0.00
+730,25857,397,2019-02-11,Defective product,609.25
+731,22792,469,2020-09-18,Received wrong product,0.00
+732,19163,75,2018-12-14,Found a better deal,246.36
+733,27865,384,2017-12-14,Size doesn't fit,722.48
+734,23906,134,2020-02-23,Ordered by mistake,0.00
+735,25590,367,2020-09-09,Ordered by mistake,194.18
+736,19314,127,2021-05-04,Changed my mind,0.00
+737,37382,272,2022-06-19,Product damaged during shipping,0.00
+738,38100,457,2020-04-21,Changed my mind,202.46
+739,10381,342,2020-08-01,Color doesn't match,0.00
+740,31333,340,2018-03-18,Color doesn't match,0.00
+741,31711,332,2016-04-01,Size doesn't fit,0.00
+742,27089,48,2018-10-06,Product damaged during shipping,0.00
+743,45396,45,2018-02-09,Defective product,522.03
+744,4085,471,2022-08-02,Found a better deal,0.00
+745,26959,158,2022-02-19,Ordered by mistake,0.00
+746,45168,122,2022-01-11,Ordered by mistake,10.19
+747,29603,261,2021-10-12,Product didn't meet expectations,0.00
+748,2419,61,2020-04-02,Product didn't meet expectations,0.00
+749,47203,281,2022-01-30,Changed my mind,0.00
+750,18253,429,2020-11-09,Product didn't meet expectations,0.00
+751,47732,465,2019-05-02,Color doesn't match,0.00
+752,5078,202,2020-03-17,Changed my mind,0.00
+753,29553,170,2017-04-11,Size doesn't fit,0.00
+754,28009,187,2018-10-24,Ordered by mistake,0.00
+755,44270,35,2016-07-01,Color doesn't match,167.23
+756,9575,255,2020-11-11,Received wrong product,0.00
+757,48076,416,2018-05-19,Size doesn't fit,75.14
+758,47391,177,2019-03-27,Changed my mind,0.00
+759,45514,389,2019-03-21,Product damaged during shipping,0.00
+760,12967,154,2019-03-08,Size doesn't fit,0.00
+761,18567,457,2019-03-17,Changed my mind,0.00
+762,37088,152,2021-03-30,Item not as described,0.00
+763,7411,354,2017-10-24,Size doesn't fit,0.00
+764,13196,316,2021-08-17,Size doesn't fit,0.00
+765,9741,183,2021-03-20,Found a better deal,0.00
+766,20664,85,2019-02-01,Found a better deal,0.00
+767,29868,34,2019-01-16,Received wrong product,0.00
+768,42891,32,2017-05-12,Product didn't meet expectations,0.00
+769,49258,251,2021-05-12,Found a better deal,0.00
+770,17561,143,2022-10-23,Ordered by mistake,0.00
+771,45355,446,2019-12-10,Received wrong product,1628.12
+772,37363,79,2016-06-21,Received wrong product,384.16
+773,17380,354,2021-08-12,Product damaged during shipping,0.00
+774,8203,151,2016-09-06,Item not as described,0.00
+775,33768,89,2022-01-10,Found a better deal,82.43
+776,3209,13,2021-03-27,Ordered by mistake,0.00
+777,47010,129,2018-01-19,Color doesn't match,0.00
+778,31596,387,2021-11-25,Color doesn't match,0.00
+779,38137,279,2020-01-27,Found a better deal,0.00
+780,20064,11,2017-02-11,Received wrong product,84.82
+781,8355,485,2022-10-07,Changed my mind,0.00
+782,45869,300,2019-08-03,Product didn't meet expectations,0.00
+783,11643,322,2018-03-03,Received wrong product,0.00
+784,22468,187,2016-08-15,Received wrong product,0.00
+785,13908,225,2018-05-17,Received wrong product,66.13
+786,18205,320,2017-12-08,Product damaged during shipping,289.62
+787,44205,131,2016-06-03,Item not as described,823.71
+788,8408,483,2016-04-19,Found a better deal,0.00
+789,32443,488,2021-11-27,Found a better deal,0.00
+790,20189,440,2016-07-24,Product damaged during shipping,0.00
+791,7903,365,2017-08-27,Received wrong product,0.00
+792,34389,120,2016-06-22,Product didn't meet expectations,152.73
+793,622,421,2020-02-18,Defective product,0.00
+794,33642,225,2018-12-05,Product didn't meet expectations,41.76
+795,44058,137,2017-07-27,Product damaged during shipping,0.00
+796,37963,128,2019-09-08,Item not as described,76.64
+797,345,337,2019-08-30,Ordered by mistake,1269.41
+798,8313,369,2017-04-13,Product damaged during shipping,0.00
+799,19379,152,2018-10-01,Received wrong product,0.00
+800,3982,31,2021-01-21,Product didn't meet expectations,0.00
+801,31641,161,2017-02-03,Ordered by mistake,0.00
+802,10423,81,2016-03-10,Found a better deal,0.00
+803,48539,85,2020-09-30,Color doesn't match,0.00
+804,9348,445,2018-04-27,Defective product,277.64
+805,49674,155,2020-05-08,Color doesn't match,0.00
+806,8944,332,2020-07-10,Ordered by mistake,459.09
+807,38040,238,2019-03-30,Found a better deal,0.00
+808,22532,113,2016-10-28,Item not as described,0.00
+809,27913,210,2017-10-11,Found a better deal,0.00
+810,35838,99,2022-01-19,Color doesn't match,0.00
+811,10544,479,2017-10-28,Defective product,0.00
+812,8792,188,2019-09-18,Color doesn't match,0.00
+813,27245,459,2021-10-06,Color doesn't match,0.00
+814,43612,344,2018-07-01,Color doesn't match,60.81
+815,42866,308,2021-08-15,Found a better deal,0.00
+816,14869,206,2016-09-16,Defective product,89.30
+817,28616,271,2019-10-12,Found a better deal,0.00
+818,40149,380,2019-12-10,Color doesn't match,210.09
+819,16885,447,2016-09-05,Size doesn't fit,0.00
+820,17315,300,2017-06-16,Item not as described,0.00
+821,8033,264,2022-06-01,Size doesn't fit,315.81
+822,497,107,2017-04-09,Color doesn't match,0.00
+823,41799,24,2022-08-19,Product didn't meet expectations,0.00
+824,26104,27,2020-11-08,Changed my mind,360.78
+825,48370,369,2018-09-28,Defective product,0.00
+826,23226,497,2016-07-11,Item not as described,1512.84
+827,13953,293,2022-08-02,Found a better deal,0.00
+828,11093,430,2017-09-30,Changed my mind,0.00
+829,37213,185,2018-09-02,Color doesn't match,0.00
+830,39779,390,2018-02-24,Defective product,0.00
+831,44652,136,2018-09-01,Color doesn't match,1140.34
+832,46182,373,2017-05-29,Changed my mind,0.00
+833,34842,466,2019-09-14,Size doesn't fit,291.61
+834,28683,143,2022-05-07,Found a better deal,0.00
+835,29106,408,2017-03-09,Changed my mind,0.00
+836,28193,473,2016-08-22,Defective product,0.00
+837,11744,450,2019-02-18,Color doesn't match,0.00
+838,28940,403,2017-04-27,Changed my mind,313.20
+839,36740,246,2016-01-11,Found a better deal,754.54
+840,5676,99,2018-12-25,Product damaged during shipping,0.00
+841,13272,259,2016-05-05,Size doesn't fit,0.00
+842,15955,430,2017-02-17,Size doesn't fit,105.69
+843,42714,80,2020-03-08,Item not as described,0.00
+844,28492,238,2016-12-03,Product damaged during shipping,0.00
+845,41850,470,2017-07-08,Changed my mind,0.00
+846,43033,469,2016-11-21,Item not as described,0.00
+847,30811,90,2017-10-23,Color doesn't match,0.00
+848,44988,414,2022-11-20,Defective product,0.00
+849,22398,262,2018-09-27,Size doesn't fit,0.00
+850,33852,207,2022-05-21,Found a better deal,76.04
+851,11029,161,2020-05-04,Changed my mind,0.00
+852,40497,19,2021-05-19,Color doesn't match,276.58
+853,37339,81,2017-02-17,Received wrong product,250.86
+854,13626,161,2017-12-26,Found a better deal,0.00
+855,17163,22,2020-08-10,Size doesn't fit,0.00
+856,40690,185,2021-02-24,Product didn't meet expectations,0.00
+857,47906,8,2018-03-13,Changed my mind,0.00
+858,48133,421,2020-08-17,Ordered by mistake,0.00
+859,3062,470,2018-10-02,Changed my mind,0.00
+860,22857,417,2020-06-02,Color doesn't match,0.00
+861,22247,480,2020-08-07,Defective product,0.00
+862,38910,53,2019-07-25,Item not as described,0.00
+863,5183,26,2018-11-06,Color doesn't match,735.73
+864,27072,475,2021-09-07,Changed my mind,0.00
+865,15319,390,2022-10-19,Item not as described,0.00
+866,20831,439,2017-06-05,Found a better deal,0.00
+867,7375,325,2020-04-02,Changed my mind,0.00
+868,44813,349,2022-08-15,Defective product,0.00
+869,5695,223,2021-09-10,Ordered by mistake,0.00
+870,30634,337,2017-05-31,Ordered by mistake,1015.52
+871,30729,163,2016-12-29,Changed my mind,0.00
+872,19171,275,2021-05-14,Item not as described,0.00
+873,18334,434,2016-01-18,Color doesn't match,0.00
+874,29430,325,2016-07-11,Received wrong product,136.12
+875,26221,420,2020-07-20,Product damaged during shipping,0.00
+876,28334,122,2022-02-03,Size doesn't fit,0.00
+877,33078,106,2021-04-30,Item not as described,132.16
+878,7242,350,2021-01-26,Product didn't meet expectations,0.00
+879,5832,489,2022-12-24,Color doesn't match,0.00
+880,19823,495,2016-03-24,Changed my mind,0.00
+881,17935,47,2020-07-01,Size doesn't fit,0.00
+882,10511,68,2022-03-03,Item not as described,0.00
+883,11983,97,2017-12-29,Color doesn't match,0.00
+884,32032,250,2020-07-03,Product didn't meet expectations,0.00
+885,4442,351,2019-08-04,Changed my mind,0.00
+886,2654,475,2016-08-24,Color doesn't match,0.00
+887,37807,414,2016-12-21,Found a better deal,0.00
+888,15952,362,2019-03-18,Found a better deal,0.00
+889,2766,253,2018-03-09,Ordered by mistake,0.00
+890,3936,225,2020-11-01,Item not as described,0.00
+891,17902,46,2016-06-17,Product damaged during shipping,0.00
+892,34290,279,2017-07-22,Product damaged during shipping,0.00
+893,6417,430,2019-07-18,Size doesn't fit,0.00
+894,28778,255,2021-08-20,Size doesn't fit,0.00
+895,22248,375,2018-12-02,Ordered by mistake,224.88
+896,26227,37,2020-12-20,Found a better deal,0.00
+897,426,459,2018-10-20,Color doesn't match,0.00
+898,36531,332,2020-05-21,Ordered by mistake,0.00
+899,25164,220,2018-04-15,Product didn't meet expectations,0.00
+900,25231,326,2016-01-16,Product damaged during shipping,0.00
+901,34373,200,2019-09-05,Defective product,0.00
+902,28253,189,2016-08-09,Received wrong product,0.00
+903,12711,118,2020-07-09,Product didn't meet expectations,85.28
+904,33370,259,2017-09-10,Ordered by mistake,0.00
+905,7038,252,2017-06-08,Changed my mind,0.00
+906,15758,244,2021-05-07,Product damaged during shipping,0.00
+907,10711,13,2021-05-05,Product damaged during shipping,0.00
+908,31928,424,2017-04-10,Received wrong product,0.00
+909,28732,38,2016-01-16,Ordered by mistake,63.77
+910,12508,416,2021-12-16,Product didn't meet expectations,429.38
+911,29442,137,2017-12-09,Changed my mind,727.14
+912,15146,124,2017-04-22,Size doesn't fit,0.00
+913,15985,199,2020-09-15,Color doesn't match,0.00
+914,35498,477,2019-10-29,Product didn't meet expectations,0.00
+915,49607,211,2021-02-07,Found a better deal,0.00
+916,31820,316,2019-10-22,Changed my mind,0.00
+917,6839,211,2017-07-11,Product didn't meet expectations,226.93
+918,9304,428,2022-11-20,Changed my mind,0.00
+919,41309,323,2017-10-06,Ordered by mistake,0.00
+920,34429,172,2021-03-26,Changed my mind,0.00
+921,17779,65,2016-02-20,Changed my mind,337.70
+922,14306,487,2020-08-01,Color doesn't match,0.00
+923,30939,29,2018-11-12,Defective product,0.00
+924,43012,418,2017-07-01,Found a better deal,0.00
+925,46165,260,2021-06-21,Product damaged during shipping,0.00
+926,5944,292,2020-09-04,Ordered by mistake,0.00
+927,14295,351,2016-09-19,Size doesn't fit,0.00
+928,11764,187,2016-03-04,Product damaged during shipping,0.00
+929,5471,397,2018-01-13,Size doesn't fit,1068.52
+930,25776,238,2021-06-27,Product damaged during shipping,582.93
+931,38861,14,2021-07-03,Defective product,2087.06
+932,8967,141,2017-07-29,Color doesn't match,0.00
+933,48447,380,2016-08-06,Changed my mind,0.00
+934,36844,96,2016-02-13,Changed my mind,77.99
+935,4310,12,2017-10-10,Color doesn't match,0.00
+936,43158,131,2018-12-02,Defective product,0.00
+937,26401,333,2022-03-07,Product damaged during shipping,0.00
+938,13517,128,2022-03-05,Ordered by mistake,0.00
+939,11439,358,2016-07-05,Item not as described,0.00
+940,48577,486,2016-07-27,Ordered by mistake,0.00
+941,47027,355,2021-02-18,Found a better deal,220.29
+942,26467,491,2017-11-17,Defective product,0.00
+943,23326,38,2016-05-16,Product didn't meet expectations,546.57
+944,5604,193,2020-03-22,Received wrong product,0.00
+945,2820,394,2017-08-06,Defective product,0.00
+946,38999,313,2017-10-20,Item not as described,0.00
+947,11212,410,2019-09-19,Defective product,0.00
+948,6545,67,2022-11-25,Changed my mind,0.00
+949,16060,178,2021-02-11,Product didn't meet expectations,846.17
+950,29845,371,2017-01-30,Item not as described,0.00
+951,18476,356,2019-09-11,Ordered by mistake,44.39
+952,1582,58,2016-01-30,Size doesn't fit,0.00
+953,3192,299,2022-02-11,Defective product,321.09
+954,6763,62,2022-06-24,Product didn't meet expectations,696.03
+955,29126,197,2021-05-08,Product didn't meet expectations,0.00
+956,19970,365,2016-02-10,Item not as described,192.84
+957,47560,424,2022-01-19,Color doesn't match,0.00
+958,31565,314,2020-01-18,Product didn't meet expectations,0.00
+959,33632,159,2017-01-19,Found a better deal,0.00
+960,19514,436,2019-03-01,Product didn't meet expectations,0.00
+961,49508,71,2018-03-03,Ordered by mistake,0.00
+962,23741,351,2019-08-15,Found a better deal,0.00
+963,20276,148,2020-10-23,Color doesn't match,0.00
+964,48674,127,2018-07-26,Ordered by mistake,0.00
+965,3023,127,2021-06-03,Color doesn't match,247.51
+966,7774,492,2018-11-12,Size doesn't fit,0.00
+967,2899,305,2017-08-22,Product damaged during shipping,0.00
+968,44873,17,2017-01-21,Item not as described,0.00
+969,36878,271,2016-03-08,Defective product,0.00
+970,48342,443,2022-11-17,Defective product,0.00
+971,18576,134,2018-07-28,Defective product,0.00
+972,31342,276,2021-12-15,Item not as described,1225.92
+973,34817,349,2022-03-12,Item not as described,0.00
+974,42074,158,2019-09-26,Color doesn't match,0.00
+975,28651,376,2020-11-14,Item not as described,0.00
+976,30375,313,2018-08-08,Color doesn't match,0.00
+977,19596,57,2019-03-19,Product damaged during shipping,0.00
+978,7314,192,2021-03-07,Found a better deal,0.00
+979,8138,303,2021-02-05,Found a better deal,0.00
+980,1589,407,2020-12-20,Received wrong product,0.00
+981,408,157,2021-05-01,Defective product,0.00
+982,33003,165,2022-01-17,Changed my mind,340.90
+983,23770,252,2018-01-01,Product didn't meet expectations,321.07
+984,43665,193,2017-12-25,Product damaged during shipping,0.00
+985,17411,134,2018-03-15,Received wrong product,0.00
+986,21861,315,2016-05-14,Size doesn't fit,228.34
+987,19243,391,2020-03-02,Item not as described,0.00
+988,3961,103,2020-08-18,Size doesn't fit,0.00
+989,12057,20,2019-03-21,Found a better deal,0.00
+990,42120,116,2019-04-24,Size doesn't fit,342.83
+991,13836,252,2018-04-11,Size doesn't fit,0.00
+992,30927,22,2018-09-12,Color doesn't match,82.86
+993,5745,291,2016-06-23,Ordered by mistake,47.65
+994,13363,475,2020-08-21,Product damaged during shipping,0.00
+995,39132,12,2017-11-05,Item not as described,704.68
+996,33426,135,2018-11-19,Product damaged during shipping,0.00
+997,17597,493,2021-03-30,Size doesn't fit,0.00
+998,21686,487,2021-08-24,Found a better deal,0.00
+999,13168,310,2018-04-30,Product didn't meet expectations,444.82
+1000,12408,284,2020-11-03,Found a better deal,103.48
+1001,14140,415,2022-10-04,Color doesn't match,0.00
+1002,15543,187,2016-01-25,Size doesn't fit,0.00
+1003,16804,70,2022-08-01,Found a better deal,0.00
+1004,4750,484,2019-05-26,Defective product,32.55
+1005,49549,122,2020-03-03,Color doesn't match,0.00
+1006,29456,340,2019-02-25,Changed my mind,0.00
+1007,36582,261,2021-12-19,Received wrong product,0.00
+1008,22868,253,2019-10-23,Product damaged during shipping,0.00
+1009,375,77,2016-01-14,Found a better deal,70.64
+1010,21048,104,2021-02-19,Color doesn't match,322.32
+1011,38892,362,2021-11-20,Ordered by mistake,0.00
+1012,17154,359,2021-07-26,Item not as described,0.00
+1013,35154,229,2017-02-03,Item not as described,0.00
+1014,29750,51,2019-01-26,Changed my mind,0.00
+1015,3424,212,2023-01-01,Product didn't meet expectations,0.00
+1016,44208,271,2016-12-16,Size doesn't fit,179.32
+1017,17236,284,2022-01-13,Product damaged during shipping,45.53
+1018,42582,315,2018-03-05,Product damaged during shipping,0.00
+1019,1366,232,2021-09-23,Product didn't meet expectations,0.00
+1020,42372,12,2018-04-07,Changed my mind,0.00
+1021,5778,313,2021-12-31,Color doesn't match,0.00
+1022,40127,73,2019-02-28,Received wrong product,0.00
+1023,47149,256,2019-12-02,Size doesn't fit,374.92
+1024,7648,387,2019-11-22,Ordered by mistake,0.00
+1025,38242,336,2019-06-16,Changed my mind,0.00
+1026,16084,326,2019-08-24,Received wrong product,0.00
+1027,1426,257,2021-02-06,Ordered by mistake,0.00
+1028,27424,128,2018-09-20,Ordered by mistake,0.00
+1029,21809,45,2022-05-10,Ordered by mistake,0.00
+1030,22235,322,2020-06-25,Received wrong product,139.85
+1031,18700,180,2021-07-31,Product damaged during shipping,0.00
+1032,19255,23,2020-11-29,Received wrong product,1177.46
+1033,28447,443,2020-12-17,Item not as described,0.00
+1034,5013,139,2016-01-25,Product didn't meet expectations,0.00
+1035,29302,234,2021-01-23,Defective product,0.00
+1036,28465,145,2020-07-01,Product damaged during shipping,0.00
+1037,21039,288,2019-11-18,Changed my mind,0.00
+1038,398,436,2022-04-25,Ordered by mistake,0.00
+1039,24696,133,2017-01-30,Item not as described,0.00
+1040,38439,155,2018-04-19,Ordered by mistake,0.00
+1041,33406,164,2021-12-13,Defective product,1358.72
+1042,7218,150,2021-11-06,Product didn't meet expectations,0.00
+1043,33804,300,2020-10-09,Received wrong product,0.00
+1044,35680,340,2018-03-07,Received wrong product,0.00
+1045,7184,464,2022-02-13,Size doesn't fit,125.96
+1046,12298,35,2021-07-27,Product didn't meet expectations,0.00
+1047,29480,424,2021-08-26,Changed my mind,0.00
+1048,13885,193,2017-03-16,Changed my mind,0.00
+1049,28850,274,2019-07-17,Item not as described,0.00
+1050,35623,147,2019-11-17,Product damaged during shipping,0.00
+1051,20922,180,2017-10-25,Received wrong product,0.00
+1052,15340,488,2020-04-24,Found a better deal,699.79
+1053,5757,183,2019-04-16,Changed my mind,0.00
+1054,3251,392,2017-08-02,Item not as described,0.00
+1055,24025,72,2018-11-22,Found a better deal,0.00
+1056,448,310,2019-03-14,Product didn't meet expectations,0.00
+1057,37433,238,2016-09-16,Item not as described,405.52
+1058,33244,259,2017-12-04,Size doesn't fit,0.00
+1059,37362,308,2022-04-12,Found a better deal,0.00
+1060,35269,500,2017-08-14,Color doesn't match,0.00
+1061,27263,332,2022-02-16,Defective product,650.37
+1062,35812,223,2020-04-11,Product didn't meet expectations,0.00
+1063,17962,281,2017-03-31,Ordered by mistake,0.00
+1064,44379,143,2018-08-02,Product didn't meet expectations,0.00
+1065,6683,146,2018-08-12,Product damaged during shipping,0.00
+1066,28920,161,2021-05-09,Received wrong product,0.00
+1067,19890,310,2016-09-08,Product didn't meet expectations,0.00
+1068,46103,429,2023-01-06,Found a better deal,263.90
+1069,11850,53,2017-05-15,Changed my mind,263.06
+1070,27256,27,2020-11-14,Defective product,0.00
+1071,28391,410,2019-01-07,Defective product,264.95
+1072,39288,135,2017-09-27,Ordered by mistake,0.00
+1073,10557,320,2021-10-09,Item not as described,0.00
+1074,44969,389,2019-11-05,Product damaged during shipping,86.37
+1075,12088,469,2020-10-07,Found a better deal,0.00
+1076,7294,28,2021-06-17,Ordered by mistake,0.00
+1077,27095,18,2020-07-26,Product didn't meet expectations,0.00
+1078,17996,286,2022-07-01,Defective product,72.62
+1079,4725,305,2021-10-07,Product damaged during shipping,0.00
+1080,24861,449,2016-01-29,Ordered by mistake,0.00
+1081,3815,452,2022-05-14,Product didn't meet expectations,0.00
+1082,35337,5,2022-11-12,Found a better deal,474.35
+1083,14993,491,2019-02-26,Item not as described,0.00
+1084,9257,473,2019-12-23,Found a better deal,0.00
+1085,904,440,2021-03-12,Item not as described,0.00
+1086,14392,38,2017-03-31,Received wrong product,0.00
+1087,39139,385,2018-02-03,Product didn't meet expectations,0.00
+1088,16465,217,2020-05-24,Color doesn't match,491.57
+1089,26984,80,2020-06-22,Product damaged during shipping,321.94
+1090,23954,226,2017-05-23,Item not as described,0.00
+1091,8042,375,2017-05-10,Ordered by mistake,0.00
+1092,15289,432,2019-06-29,Product didn't meet expectations,311.71
+1093,33814,98,2020-06-13,Changed my mind,0.00
+1094,2140,162,2021-07-18,Found a better deal,224.22
+1095,30263,86,2022-12-04,Received wrong product,88.50
+1096,34077,301,2017-10-02,Product didn't meet expectations,0.00
+1097,26651,437,2019-05-15,Item not as described,52.88
+1098,23438,468,2017-06-16,Changed my mind,0.00
+1099,41455,276,2018-09-24,Product damaged during shipping,0.00
+1100,45866,354,2022-06-28,Changed my mind,679.80
+1101,2908,317,2019-09-27,Changed my mind,0.00
+1102,10720,50,2021-12-28,Product damaged during shipping,0.00
+1103,23444,266,2022-10-17,Product damaged during shipping,0.00
+1104,1405,499,2022-02-01,Item not as described,0.00
+1105,37308,171,2022-06-16,Size doesn't fit,0.00
+1106,2991,455,2022-07-03,Size doesn't fit,0.00
+1107,30331,156,2022-07-27,Ordered by mistake,0.00
+1108,35880,19,2018-05-07,Size doesn't fit,0.00
+1109,15777,335,2017-09-05,Found a better deal,0.00
+1110,35185,96,2016-01-19,Product didn't meet expectations,0.00
+1111,20767,151,2020-12-14,Product didn't meet expectations,0.00
+1112,9059,458,2020-08-18,Defective product,0.00
+1113,861,121,2017-04-04,Item not as described,0.00
+1114,32463,349,2020-08-12,Product didn't meet expectations,0.00
+1115,6737,124,2020-01-13,Received wrong product,0.00
+1116,44476,280,2018-10-12,Product didn't meet expectations,0.00
+1117,13027,397,2017-09-12,Product damaged during shipping,281.19
+1118,31633,9,2019-08-30,Product damaged during shipping,1009.32
+1119,29233,6,2017-11-23,Changed my mind,0.00
+1120,21607,86,2020-09-20,Product damaged during shipping,0.00
+1121,18436,73,2017-07-17,Item not as described,1674.75
+1122,21191,315,2022-06-19,Found a better deal,194.85
+1123,37336,75,2019-12-31,Defective product,944.38
+1124,22598,478,2021-08-23,Changed my mind,0.00
+1125,25012,385,2022-02-16,Received wrong product,169.42
+1126,27670,319,2021-08-28,Changed my mind,0.00
+1127,47339,462,2016-11-20,Defective product,0.00
+1128,12402,102,2018-05-12,Color doesn't match,0.00
+1129,31926,185,2018-03-11,Ordered by mistake,0.00
+1130,13184,213,2020-06-30,Color doesn't match,0.00
+1131,19678,264,2022-08-31,Product damaged during shipping,671.09
+1132,6503,236,2019-02-14,Item not as described,98.57
+1133,34872,25,2017-02-27,Color doesn't match,0.00
+1134,17529,453,2019-06-10,Found a better deal,0.00
+1135,47323,421,2022-12-10,Found a better deal,177.48
+1136,7440,188,2020-11-04,Found a better deal,512.64
+1137,31716,498,2021-07-15,Size doesn't fit,17.50
+1138,13688,40,2016-08-14,Ordered by mistake,0.00
+1139,24359,23,2017-03-23,Size doesn't fit,0.00
+1140,32360,237,2021-05-13,Found a better deal,0.00
+1141,672,231,2022-08-13,Found a better deal,0.00
+1142,46930,261,2016-03-23,Product didn't meet expectations,0.00
+1143,35225,241,2017-08-05,Changed my mind,0.00
+1144,20533,222,2019-10-30,Defective product,0.00
+1145,36590,327,2018-06-16,Defective product,0.00
+1146,44610,159,2016-12-31,Product didn't meet expectations,0.00
+1147,7224,430,2017-04-10,Received wrong product,0.00
+1148,12174,92,2020-03-28,Item not as described,0.00
+1149,4008,251,2019-05-29,Received wrong product,40.01
+1150,47849,428,2019-04-08,Received wrong product,0.00
+1151,45241,163,2016-03-20,Product didn't meet expectations,0.00
+1152,16326,40,2021-07-15,Color doesn't match,300.64
+1153,40964,413,2016-09-01,Product damaged during shipping,646.00
+1154,45037,313,2017-08-16,Item not as described,0.00
+1155,48766,88,2022-03-12,Received wrong product,0.00
+1156,25845,383,2022-11-03,Ordered by mistake,0.00
+1157,39722,152,2017-07-12,Product didn't meet expectations,644.42
+1158,31647,475,2016-12-27,Defective product,0.00
+1159,31595,378,2018-06-05,Product damaged during shipping,0.00
+1160,6704,369,2021-08-12,Size doesn't fit,0.00
+1161,31301,239,2018-01-09,Found a better deal,121.35
+1162,17052,265,2022-11-20,Ordered by mistake,0.00
+1163,43021,44,2017-03-27,Ordered by mistake,0.00
+1164,14315,183,2020-12-15,Color doesn't match,0.00
+1165,35713,454,2020-09-28,Received wrong product,0.00
+1166,43639,19,2016-02-03,Found a better deal,0.00
+1167,47862,172,2020-03-07,Color doesn't match,0.00
+1168,48589,362,2021-08-30,Item not as described,161.52
+1169,43226,30,2021-07-15,Changed my mind,761.15
+1170,23397,294,2021-09-03,Received wrong product,283.12
+1171,7227,201,2016-02-21,Changed my mind,0.00
+1172,16809,281,2020-06-17,Ordered by mistake,120.77
+1173,45643,29,2017-02-28,Product damaged during shipping,0.00
+1174,14262,137,2017-06-21,Received wrong product,519.38
+1175,27914,120,2018-10-25,Defective product,0.00
+1176,41515,353,2021-05-25,Found a better deal,0.00
+1177,722,166,2019-12-26,Color doesn't match,0.00
+1178,15924,78,2017-06-05,Received wrong product,0.00
+1179,46257,32,2020-08-28,Item not as described,224.47
+1180,33124,460,2022-08-18,Product didn't meet expectations,0.00
+1181,27139,211,2018-11-29,Defective product,0.00
+1182,10292,114,2019-12-22,Found a better deal,0.00
+1183,41340,432,2016-08-25,Product damaged during shipping,0.00
+1184,30774,208,2018-01-15,Ordered by mistake,42.95
+1185,37813,231,2020-03-25,Changed my mind,0.00
+1186,45725,194,2016-10-02,Color doesn't match,0.00
+1187,45575,397,2016-01-30,Changed my mind,0.00
+1188,42163,336,2016-07-19,Changed my mind,0.00
+1189,15375,265,2020-04-24,Size doesn't fit,402.73
+1190,34125,101,2019-12-01,Received wrong product,0.00
+1191,32237,433,2020-07-19,Defective product,0.00
+1192,24974,34,2022-01-31,Color doesn't match,0.00
+1193,44499,432,2017-02-12,Received wrong product,298.72
+1194,36593,316,2017-09-07,Received wrong product,0.00
+1195,40772,462,2018-11-11,Ordered by mistake,0.00
+1196,30681,408,2020-09-24,Defective product,0.00
+1197,26785,435,2019-09-26,Changed my mind,0.00
+1198,34266,377,2021-01-29,Item not as described,0.00
+1199,50,216,2020-01-05,Product damaged during shipping,671.30
+1200,49245,210,2017-11-11,Changed my mind,640.58
+1201,31804,109,2017-07-02,Color doesn't match,1.54
+1202,41895,437,2021-03-29,Size doesn't fit,0.00
+1203,6565,468,2018-06-13,Defective product,0.00
+1204,28307,381,2018-07-20,Found a better deal,0.00
+1205,33428,109,2016-04-11,Ordered by mistake,0.00
+1206,6654,41,2017-05-21,Received wrong product,0.00
+1207,37615,398,2021-05-18,Changed my mind,93.49
+1208,7553,280,2016-09-26,Color doesn't match,0.00
+1209,29833,162,2018-09-15,Received wrong product,0.00
+1210,22767,35,2018-09-28,Size doesn't fit,0.00
+1211,47589,157,2017-12-15,Product damaged during shipping,160.78
+1212,26123,330,2016-05-16,Item not as described,220.73
+1213,34256,373,2017-07-27,Ordered by mistake,0.00
+1214,1680,426,2016-08-10,Found a better deal,0.00
+1215,7578,226,2022-06-12,Ordered by mistake,0.00
+1216,44077,377,2021-12-01,Item not as described,0.00
+1217,42935,423,2016-02-23,Changed my mind,0.00
+1218,18967,218,2020-02-08,Changed my mind,979.51
+1219,32657,410,2019-11-05,Found a better deal,216.78
+1220,14655,23,2021-03-16,Product didn't meet expectations,0.00
+1221,49811,269,2018-08-10,Received wrong product,0.00
+1222,18007,197,2020-04-23,Size doesn't fit,693.79
+1223,26946,131,2020-12-03,Product damaged during shipping,193.81
+1224,15439,444,2019-12-16,Item not as described,0.00
+1225,10097,231,2021-07-24,Found a better deal,0.00
+1226,14800,185,2021-10-30,Item not as described,0.00
+1227,43180,242,2018-05-25,Defective product,0.00
+1228,49983,297,2018-02-27,Color doesn't match,0.00
+1229,33437,232,2017-01-03,Item not as described,22.61
+1230,11396,68,2021-01-11,Product didn't meet expectations,169.52
+1231,47946,10,2016-01-17,Found a better deal,0.00
+1232,47587,139,2022-04-09,Color doesn't match,0.00
+1233,17863,179,2016-02-16,Size doesn't fit,25.09
+1234,26168,41,2021-03-08,Size doesn't fit,0.00
+1235,6557,366,2019-11-18,Size doesn't fit,0.00
+1236,46406,181,2020-11-26,Product damaged during shipping,0.00
+1237,33303,192,2016-06-05,Defective product,0.00
+1238,4012,67,2021-01-27,Size doesn't fit,0.00
+1239,6507,158,2019-03-03,Size doesn't fit,0.00
+1240,18022,303,2022-11-07,Changed my mind,564.16
+1241,37710,224,2019-09-16,Color doesn't match,0.00
+1242,26468,411,2022-09-02,Found a better deal,327.10
+1243,37986,160,2022-06-26,Defective product,985.43
+1244,837,222,2019-05-19,Product didn't meet expectations,505.78
+1245,18583,28,2018-07-06,Received wrong product,0.00
+1246,5544,118,2017-10-13,Defective product,0.00
+1247,25087,215,2018-08-05,Item not as described,0.00
+1248,40356,29,2016-02-14,Ordered by mistake,257.16
+1249,18868,204,2020-11-21,Size doesn't fit,0.00
+1250,30248,194,2019-10-17,Ordered by mistake,0.00
+1251,20993,491,2019-05-15,Product damaged during shipping,3.28
+1252,31181,256,2017-05-25,Product didn't meet expectations,0.00
+1253,38522,148,2017-04-26,Received wrong product,611.63
+1254,8231,26,2021-04-02,Color doesn't match,0.00
+1255,28653,65,2019-07-21,Changed my mind,0.00
+1256,4192,83,2017-06-01,Defective product,158.42
+1257,48846,374,2021-06-27,Color doesn't match,344.53
+1258,33736,217,2020-09-24,Defective product,0.00
+1259,44179,448,2021-03-25,Color doesn't match,0.00
+1260,40215,494,2019-02-20,Product didn't meet expectations,0.00
+1261,22536,258,2016-05-21,Product didn't meet expectations,75.73
+1262,20970,276,2019-03-28,Size doesn't fit,0.00
+1263,26614,108,2017-12-11,Received wrong product,160.74
+1264,8887,215,2019-09-21,Changed my mind,0.00
+1265,6085,301,2018-12-17,Ordered by mistake,0.00
+1266,6833,131,2021-10-20,Defective product,0.00
+1267,19085,171,2019-04-06,Defective product,0.00
+1268,37254,190,2019-09-05,Item not as described,0.00
+1269,7492,483,2018-08-12,Item not as described,0.00
+1270,39062,78,2019-03-02,Defective product,0.00
+1271,30408,418,2019-06-14,Found a better deal,0.00
+1272,38214,198,2022-01-09,Size doesn't fit,710.14
+1273,46195,352,2018-02-16,Color doesn't match,53.67
+1274,15395,41,2022-06-16,Received wrong product,0.00
+1275,4487,404,2022-03-14,Defective product,0.00
+1276,22466,359,2019-06-04,Received wrong product,0.00
+1277,48322,43,2018-04-18,Product damaged during shipping,0.00
+1278,35261,225,2020-02-21,Ordered by mistake,0.00
+1279,22447,146,2018-08-09,Product didn't meet expectations,0.00
+1280,26949,203,2017-12-01,Product damaged during shipping,0.00
+1281,15264,66,2021-07-16,Size doesn't fit,132.75
+1282,21851,270,2022-07-26,Received wrong product,0.00
+1283,25293,406,2020-04-16,Product didn't meet expectations,0.00
+1284,24064,375,2021-01-06,Color doesn't match,0.00
+1285,31546,368,2020-04-15,Product damaged during shipping,0.00
+1286,28481,351,2016-12-03,Found a better deal,76.91
+1287,14271,128,2018-09-09,Ordered by mistake,114.96
+1288,33631,123,2016-11-11,Defective product,1363.30
+1289,4100,61,2018-10-11,Found a better deal,0.00
+1290,18005,99,2017-08-03,Size doesn't fit,0.00
+1291,5067,110,2022-11-01,Product damaged during shipping,0.00
+1292,21443,492,2016-10-02,Ordered by mistake,0.00
+1293,6879,190,2018-01-23,Item not as described,0.00
+1294,15537,455,2021-02-07,Found a better deal,0.00
+1295,36987,197,2020-11-03,Found a better deal,1359.26
+1296,22887,388,2020-07-29,Item not as described,0.00
+1297,34273,126,2018-10-18,Found a better deal,0.00
+1298,36977,311,2022-10-21,Product damaged during shipping,0.00
+1299,2621,432,2019-09-12,Found a better deal,467.57
+1300,41036,151,2020-09-27,Size doesn't fit,0.00
+1301,34386,294,2020-09-02,Received wrong product,0.00
+1302,31058,104,2018-03-13,Ordered by mistake,0.00
+1303,13798,447,2019-11-24,Changed my mind,0.00
+1304,16,371,2021-03-20,Received wrong product,0.00
+1305,18231,149,2020-02-15,Product damaged during shipping,713.89
+1306,6986,166,2022-09-09,Color doesn't match,0.00
+1307,7943,289,2019-10-22,Received wrong product,0.00
+1308,22197,221,2017-09-30,Ordered by mistake,0.00
+1309,44837,272,2021-04-23,Changed my mind,0.00
+1310,46777,63,2019-10-22,Ordered by mistake,0.00
+1311,18027,309,2016-08-19,Changed my mind,0.00
+1312,30554,202,2021-04-17,Defective product,0.00
+1313,20052,183,2022-08-03,Item not as described,0.00
+1314,33267,189,2018-01-11,Product didn't meet expectations,1092.99
+1315,29743,468,2021-08-23,Defective product,0.00
+1316,14894,153,2016-02-27,Product didn't meet expectations,0.00
+1317,35909,82,2017-07-27,Product damaged during shipping,0.00
+1318,38336,436,2016-01-29,Color doesn't match,0.00
+1319,34037,468,2016-09-10,Received wrong product,0.00
+1320,19115,15,2021-12-27,Color doesn't match,0.00
+1321,12282,177,2021-07-05,Changed my mind,269.72
+1322,26971,260,2019-08-15,Color doesn't match,0.00
+1323,12056,5,2021-07-03,Ordered by mistake,206.99
+1324,13352,51,2018-05-02,Color doesn't match,0.00
+1325,33839,275,2017-09-22,Product damaged during shipping,0.00
+1326,12246,142,2019-11-16,Product damaged during shipping,0.00
+1439,20261,50,2017-01-25,Changed my mind,0.00
+1327,45313,223,2019-02-12,Color doesn't match,124.72
+1328,46461,311,2017-01-08,Product didn't meet expectations,55.08
+1329,17337,170,2017-12-19,Found a better deal,0.00
+1330,31138,191,2019-02-13,Changed my mind,18.18
+1331,9479,414,2021-08-29,Product didn't meet expectations,85.55
+1332,47179,249,2021-01-21,Changed my mind,0.00
+1333,33843,463,2016-05-21,Size doesn't fit,0.00
+1334,11411,382,2021-04-08,Changed my mind,0.00
+1335,32516,41,2022-10-10,Changed my mind,0.00
+1336,31780,159,2021-10-24,Item not as described,0.00
+1337,43754,109,2020-10-30,Ordered by mistake,0.00
+1338,7352,423,2018-07-17,Color doesn't match,0.00
+1339,548,317,2017-04-29,Color doesn't match,122.09
+1340,24288,55,2016-04-05,Defective product,0.00
+1341,34102,308,2019-08-08,Size doesn't fit,0.00
+1342,15298,89,2019-02-17,Found a better deal,114.13
+1343,30267,118,2018-03-28,Ordered by mistake,0.00
+1344,656,309,2022-02-10,Defective product,450.02
+1345,38620,473,2021-05-05,Item not as described,0.00
+1346,43132,195,2022-08-14,Size doesn't fit,0.00
+1347,39511,166,2016-04-10,Ordered by mistake,0.00
+1348,14024,199,2019-02-25,Received wrong product,0.00
+1349,38197,202,2018-07-31,Product didn't meet expectations,0.00
+1350,24933,254,2021-09-24,Changed my mind,0.00
+1351,10674,468,2019-10-13,Found a better deal,0.00
+1352,29124,304,2017-04-10,Changed my mind,0.00
+1353,33915,495,2019-01-28,Size doesn't fit,0.00
+1354,44475,283,2020-07-19,Item not as described,0.00
+1355,34233,274,2022-12-10,Ordered by mistake,627.06
+1356,29556,53,2021-12-02,Product didn't meet expectations,0.00
+1357,21520,468,2016-12-01,Size doesn't fit,0.00
+1358,49382,335,2019-09-06,Defective product,0.00
+1359,4769,369,2018-10-03,Found a better deal,0.00
+1360,18715,86,2020-06-11,Defective product,0.00
+1361,38857,276,2019-02-03,Received wrong product,0.00
+1362,36300,95,2021-11-30,Changed my mind,0.00
+1363,10966,209,2016-10-12,Changed my mind,0.00
+1364,2446,424,2020-06-25,Item not as described,76.01
+1365,12345,53,2019-03-27,Ordered by mistake,0.00
+1366,25226,280,2018-06-24,Changed my mind,134.13
+1367,47129,62,2022-09-27,Found a better deal,0.00
+1368,44697,453,2016-07-05,Found a better deal,0.00
+1369,23796,5,2019-11-29,Ordered by mistake,0.00
+1370,12321,131,2021-07-13,Found a better deal,553.75
+1371,46515,80,2019-11-03,Received wrong product,515.10
+1372,42510,117,2019-04-16,Changed my mind,0.00
+1373,48661,72,2018-03-06,Found a better deal,0.00
+1374,954,423,2016-02-24,Color doesn't match,0.00
+1375,21920,370,2017-06-13,Received wrong product,0.00
+1376,29711,31,2021-06-22,Received wrong product,476.47
+1377,33323,372,2016-11-09,Found a better deal,214.11
+1378,10602,241,2020-05-21,Changed my mind,0.00
+1379,10311,149,2021-11-08,Defective product,801.56
+1380,27282,441,2016-04-21,Found a better deal,0.00
+1381,12084,7,2020-05-25,Item not as described,1010.61
+1382,46954,334,2021-08-16,Item not as described,0.00
+1383,42773,100,2021-05-24,Changed my mind,0.00
+1384,41552,183,2019-07-07,Product didn't meet expectations,1181.46
+1385,7560,321,2016-01-14,Product damaged during shipping,498.69
+1386,45688,183,2016-09-17,Found a better deal,770.52
+1387,6734,478,2017-04-17,Size doesn't fit,0.00
+1388,18737,401,2022-12-26,Found a better deal,0.00
+1389,25532,141,2019-04-10,Size doesn't fit,0.00
+1390,23984,16,2022-07-02,Changed my mind,184.66
+1391,37922,57,2020-01-23,Received wrong product,0.00
+1392,44308,186,2021-09-02,Color doesn't match,1012.50
+1393,1539,483,2020-03-08,Defective product,0.00
+1394,29620,324,2021-03-13,Product didn't meet expectations,0.00
+1395,20886,159,2022-11-08,Defective product,217.37
+1396,42242,12,2016-02-03,Size doesn't fit,0.00
+1397,5009,1,2022-05-23,Item not as described,0.00
+1398,31232,322,2016-05-30,Changed my mind,0.00
+1399,23616,228,2020-11-19,Color doesn't match,0.00
+1400,16198,360,2022-08-02,Product didn't meet expectations,0.00
+1401,9137,69,2016-08-20,Received wrong product,0.00
+1402,2261,475,2022-06-04,Size doesn't fit,766.73
+1403,35102,94,2021-05-08,Changed my mind,0.00
+1404,2179,309,2022-01-18,Received wrong product,0.00
+1405,16768,105,2022-10-27,Item not as described,0.00
+1406,25432,388,2017-10-10,Size doesn't fit,0.00
+1407,41345,294,2019-02-06,Color doesn't match,206.44
+1408,17925,178,2019-02-28,Item not as described,0.00
+1409,14054,32,2018-06-09,Product didn't meet expectations,0.00
+1410,19358,38,2017-10-07,Color doesn't match,0.00
+1411,46987,317,2022-04-12,Received wrong product,0.00
+1412,16878,421,2021-09-12,Product didn't meet expectations,93.41
+1413,29317,479,2016-10-26,Size doesn't fit,0.00
+1414,11940,408,2018-01-01,Received wrong product,187.22
+1415,35967,49,2017-09-18,Size doesn't fit,0.00
+1416,36248,168,2017-02-19,Ordered by mistake,0.00
+1417,20934,302,2017-07-02,Item not as described,0.00
+1418,167,399,2022-02-01,Ordered by mistake,0.00
+1419,838,460,2021-09-02,Product didn't meet expectations,1714.50
+1420,139,203,2021-02-22,Defective product,0.00
+1421,46668,140,2017-12-14,Size doesn't fit,80.75
+1422,12025,449,2022-11-13,Changed my mind,46.16
+1423,6712,347,2016-01-29,Item not as described,0.00
+1424,12019,236,2018-05-16,Product didn't meet expectations,473.13
+1425,15,355,2016-03-24,Product damaged during shipping,0.00
+1426,21126,253,2016-06-25,Size doesn't fit,634.74
+1427,10962,416,2018-09-28,Ordered by mistake,0.00
+1428,36818,403,2019-10-13,Color doesn't match,0.00
+1429,21121,119,2021-08-18,Color doesn't match,0.00
+1430,28136,102,2020-12-07,Color doesn't match,848.07
+1431,2557,403,2019-02-09,Product damaged during shipping,313.20
+1432,24748,268,2019-06-27,Received wrong product,57.21
+1433,23751,121,2021-05-08,Found a better deal,0.00
+1434,22395,288,2016-12-15,Received wrong product,620.76
+1435,37121,429,2016-10-25,Product didn't meet expectations,0.00
+1436,3098,448,2020-07-31,Changed my mind,0.00
+1437,31330,159,2019-01-04,Ordered by mistake,760.79
+1438,12010,331,2018-07-30,Product didn't meet expectations,0.00
+1440,29420,185,2017-02-03,Color doesn't match,0.00
+1441,41526,101,2020-07-10,Ordered by mistake,339.64
+1442,1862,291,2022-11-18,Product damaged during shipping,0.00
+1443,28246,45,2022-10-12,Defective product,0.00
+1444,43114,304,2022-06-29,Found a better deal,661.33
+1445,10919,93,2022-03-25,Defective product,0.00
+1446,26588,39,2018-03-21,Item not as described,0.00
+1447,22058,146,2020-11-28,Item not as described,699.82
+1448,23857,415,2021-05-02,Ordered by mistake,337.54
+1449,3072,215,2018-03-20,Product didn't meet expectations,0.00
+1450,10737,474,2020-05-12,Size doesn't fit,29.20
+1451,19384,438,2016-11-12,Found a better deal,0.00
+1452,30589,219,2016-12-03,Changed my mind,72.11
+1453,30854,396,2017-09-19,Ordered by mistake,0.00
+1454,2690,200,2017-05-14,Item not as described,147.52
+1455,12164,206,2022-06-26,Item not as described,52.09
+1456,5518,468,2021-11-01,Received wrong product,0.00
+1457,14177,359,2016-09-27,Received wrong product,0.00
+1458,44444,371,2023-01-01,Ordered by mistake,0.00
+1459,2483,153,2019-12-11,Product damaged during shipping,226.85
+1460,32791,124,2020-07-01,Color doesn't match,0.00
+1461,4121,215,2019-10-19,Color doesn't match,0.00
+1462,16766,362,2017-03-19,Product didn't meet expectations,0.00
+1463,36856,349,2020-11-18,Defective product,0.00
+1464,23757,171,2018-10-16,Defective product,0.00
+1465,11529,296,2019-04-15,Changed my mind,0.00
+1466,2771,338,2019-01-04,Found a better deal,60.21
+1467,33983,267,2016-07-03,Ordered by mistake,1464.91
+1468,12481,175,2018-03-12,Size doesn't fit,0.00
+1469,41147,199,2017-11-09,Product didn't meet expectations,778.25
+1470,14668,276,2020-06-05,Defective product,0.00
+1471,26006,385,2022-05-09,Changed my mind,0.00
+1472,16217,291,2019-07-16,Size doesn't fit,0.00
+1473,17885,15,2016-11-05,Defective product,0.00
+1474,41249,476,2017-07-11,Color doesn't match,519.35
+1475,31449,271,2018-03-21,Changed my mind,0.00
+1476,9174,65,2020-06-25,Item not as described,106.64
+1477,17559,175,2016-10-18,Item not as described,0.00
+1478,14576,275,2017-04-30,Changed my mind,0.00
+1479,17069,320,2020-12-01,Product damaged during shipping,289.62
+1480,18674,81,2016-06-30,Color doesn't match,403.16
+1481,5332,80,2018-06-02,Product didn't meet expectations,405.64
+1482,37144,458,2020-05-13,Color doesn't match,143.20
+1483,9076,163,2019-02-22,Product damaged during shipping,0.00
+1484,17294,478,2021-02-24,Found a better deal,0.00
+1485,2978,413,2017-03-27,Defective product,0.00
+1486,1804,73,2022-02-07,Changed my mind,137.03
+1487,13295,322,2018-12-10,Item not as described,104.89
+1488,25593,185,2022-05-08,Product damaged during shipping,0.00
+1489,39465,478,2016-04-24,Product damaged during shipping,0.00
+1490,8310,9,2019-01-15,Size doesn't fit,0.00
+1491,4434,74,2018-12-20,Changed my mind,0.00
+1492,18850,270,2018-07-20,Item not as described,0.00
+1493,36244,127,2016-11-26,Item not as described,0.00
+1494,7724,219,2018-07-09,Received wrong product,0.00
+1495,10684,153,2019-11-15,Color doesn't match,0.00
+1496,41066,420,2017-10-10,Found a better deal,0.00
+1497,31007,474,2018-11-26,Color doesn't match,0.00
+1498,15135,11,2018-05-13,Ordered by mistake,11.78
+1499,15750,424,2017-03-22,Changed my mind,0.00
+1500,17375,54,2017-04-23,Defective product,714.34
+1501,31053,497,2022-07-24,Found a better deal,0.00
+1502,10235,76,2019-10-01,Defective product,0.00
+1503,35975,499,2022-12-03,Size doesn't fit,0.00
+1504,15360,281,2022-02-27,Ordered by mistake,0.00
+1505,9633,398,2018-04-08,Size doesn't fit,0.00
+1506,20361,355,2020-08-11,Defective product,0.00
+1507,17377,308,2017-04-09,Changed my mind,0.00
+1508,19037,339,2016-01-30,Item not as described,0.00
+1509,32076,484,2021-09-21,Defective product,0.00
+1510,3735,246,2017-07-22,Size doesn't fit,0.00
+1511,26587,279,2021-10-28,Product damaged during shipping,0.00
+1512,27579,310,2018-05-04,Size doesn't fit,0.00
+1513,29461,238,2021-02-04,Ordered by mistake,0.00
+1514,44285,352,2018-02-16,Item not as described,483.02
+1515,27486,2,2018-02-05,Found a better deal,41.96
+1516,9029,313,2018-08-15,Received wrong product,0.00
+1517,6670,291,2017-09-21,Color doesn't match,0.00
+1518,2177,95,2019-02-15,Product didn't meet expectations,336.83
+1519,37020,86,2021-01-21,Color doesn't match,0.00
+1520,48744,322,2020-02-28,Found a better deal,0.00
+1521,36960,11,2017-07-05,Product didn't meet expectations,0.00
+1522,13121,7,2018-07-25,Product didn't meet expectations,0.00
+1523,7801,287,2016-07-11,Size doesn't fit,0.00
+1524,18588,330,2021-02-03,Found a better deal,0.00
+1525,12810,79,2017-04-17,Received wrong product,0.00
+1526,24418,38,2017-03-27,Changed my mind,0.00
+1527,505,37,2017-03-17,Product didn't meet expectations,0.00
+1528,32307,372,2018-08-01,Item not as described,0.00
+1529,45919,431,2016-02-29,Found a better deal,0.00
+1530,12677,262,2017-05-14,Product didn't meet expectations,0.00
+1531,42101,114,2022-10-14,Size doesn't fit,0.00
+1532,47041,491,2018-11-26,Product didn't meet expectations,0.00
+1533,21949,207,2016-05-08,Size doesn't fit,0.00
+1534,45339,53,2018-04-21,Found a better deal,0.00
+1535,442,80,2019-05-04,Found a better deal,0.00
+1536,7259,493,2018-03-01,Defective product,0.00
+1537,8848,67,2022-10-08,Product didn't meet expectations,0.00
+1538,23389,100,2020-01-21,Color doesn't match,0.00
+1539,20072,253,2021-02-23,Changed my mind,0.00
+1540,10870,417,2017-04-29,Changed my mind,0.00
+1541,8543,22,2022-03-30,Product didn't meet expectations,0.00
+1542,7446,232,2020-05-18,Size doesn't fit,0.00
+1543,43195,117,2017-09-19,Color doesn't match,0.00
+1544,49579,35,2021-10-19,Received wrong product,0.00
+1545,14787,61,2017-12-26,Ordered by mistake,0.00
+1546,46347,212,2017-04-16,Defective product,0.00
+1547,37349,107,2018-08-11,Ordered by mistake,0.00
+1548,14131,309,2022-11-12,Found a better deal,0.00
+1549,38708,464,2021-10-15,Product damaged during shipping,0.00
+1550,1266,385,2020-04-18,Found a better deal,0.00
+2215,46446,99,2016-08-25,Changed my mind,0.00
+1551,35750,478,2017-02-10,Found a better deal,676.81
+1552,14145,37,2021-11-16,Item not as described,0.00
+1553,40131,39,2018-06-03,Found a better deal,0.00
+1554,23321,370,2018-04-23,Product didn't meet expectations,0.00
+1555,26351,349,2019-04-09,Found a better deal,0.00
+1556,19351,104,2020-08-14,Product damaged during shipping,0.00
+1557,4155,420,2022-03-28,Size doesn't fit,0.00
+1558,49335,87,2016-06-25,Found a better deal,493.16
+1559,29175,119,2017-03-01,Changed my mind,0.00
+1560,24026,358,2019-02-07,Changed my mind,247.66
+1561,21352,485,2018-10-17,Item not as described,0.00
+1562,32704,244,2020-10-04,Product damaged during shipping,0.00
+1563,2390,68,2021-06-19,Color doesn't match,0.00
+1564,40172,475,2019-08-12,Color doesn't match,0.00
+1565,41920,294,2016-05-21,Changed my mind,990.91
+1566,38537,480,2020-04-30,Found a better deal,0.00
+1567,28350,181,2022-06-28,Size doesn't fit,68.21
+1568,41105,387,2021-06-21,Size doesn't fit,0.00
+1569,36874,113,2019-09-29,Product didn't meet expectations,0.00
+1570,47309,241,2016-04-04,Changed my mind,0.00
+1571,33136,164,2017-08-02,Defective product,0.00
+1572,910,256,2016-07-18,Color doesn't match,0.00
+1573,19249,113,2020-08-24,Found a better deal,0.00
+1574,15921,335,2018-04-20,Item not as described,0.00
+1575,20232,280,2018-10-03,Received wrong product,0.00
+1576,2027,94,2018-11-28,Product damaged during shipping,0.00
+1577,39946,183,2020-01-05,Product didn't meet expectations,89.89
+1578,28664,425,2020-01-19,Product damaged during shipping,0.00
+1579,24192,39,2021-05-08,Received wrong product,0.00
+1580,40689,278,2017-11-25,Ordered by mistake,0.00
+1581,36546,41,2021-04-15,Color doesn't match,0.00
+1582,6217,435,2022-08-04,Changed my mind,0.00
+1583,39755,289,2019-11-24,Ordered by mistake,0.00
+1584,33770,126,2022-07-04,Received wrong product,0.00
+1585,14180,426,2016-03-19,Size doesn't fit,0.00
+1586,26562,144,2017-11-15,Changed my mind,0.00
+1587,11516,278,2018-08-14,Product didn't meet expectations,0.00
+1588,1197,180,2022-06-13,Product damaged during shipping,0.00
+1589,12125,331,2018-12-27,Defective product,0.00
+1590,29704,196,2020-07-13,Defective product,0.00
+1591,14588,294,2021-06-04,Ordered by mistake,188.75
+1592,12383,440,2020-06-11,Found a better deal,0.00
+1593,29923,435,2018-10-26,Color doesn't match,0.00
+1594,15593,164,2017-04-22,Product damaged during shipping,0.00
+1595,23687,173,2017-02-02,Product didn't meet expectations,0.00
+1596,38503,219,2020-12-20,Product didn't meet expectations,0.00
+1597,18462,414,2022-09-06,Size doesn't fit,0.00
+1598,38302,166,2017-02-16,Received wrong product,120.46
+1599,43845,133,2019-07-24,Color doesn't match,0.00
+1600,29489,44,2020-07-11,Size doesn't fit,0.00
+1601,44812,129,2022-02-05,Item not as described,0.00
+1602,9199,344,2021-09-07,Product damaged during shipping,0.00
+1603,271,414,2016-07-23,Ordered by mistake,0.00
+1604,47281,14,2020-03-19,Product didn't meet expectations,0.00
+1605,48833,52,2020-12-24,Product damaged during shipping,0.00
+1606,49974,112,2020-07-26,Defective product,0.00
+1607,43354,170,2016-03-13,Defective product,0.00
+1608,41179,467,2022-01-15,Item not as described,653.44
+1609,11909,479,2022-03-15,Changed my mind,0.00
+1610,40102,140,2017-05-12,Changed my mind,0.00
+1611,8888,113,2019-11-12,Found a better deal,0.00
+1612,1837,332,2023-01-02,Product damaged during shipping,464.55
+1613,17413,290,2019-10-09,Ordered by mistake,0.00
+1614,5325,50,2022-05-31,Color doesn't match,31.55
+1615,28777,342,2017-05-25,Size doesn't fit,0.00
+1616,21108,272,2019-06-10,Defective product,0.00
+1617,8437,194,2020-10-22,Product didn't meet expectations,0.00
+1618,25301,397,2022-06-25,Size doesn't fit,1771.50
+1619,32021,335,2019-04-10,Color doesn't match,0.00
+1620,45036,191,2019-12-30,Ordered by mistake,0.00
+1621,2352,120,2018-02-07,Found a better deal,33.46
+1622,2384,77,2020-06-17,Found a better deal,136.23
+1623,49298,476,2019-11-05,Received wrong product,673.23
+1624,27446,27,2021-02-06,Changed my mind,721.56
+1625,13187,371,2021-02-14,Color doesn't match,119.89
+1626,37534,284,2016-02-03,Changed my mind,0.00
+1627,47686,252,2018-03-15,Changed my mind,0.00
+1628,33680,205,2016-02-02,Color doesn't match,0.00
+1629,14163,299,2018-09-14,Color doesn't match,331.56
+1630,23214,61,2022-07-10,Found a better deal,1390.53
+1631,27103,474,2016-05-11,Defective product,0.00
+1632,45058,147,2017-06-25,Color doesn't match,175.52
+1633,26150,293,2022-05-10,Ordered by mistake,0.00
+1634,9537,121,2019-12-28,Changed my mind,0.00
+1635,8150,407,2018-02-28,Size doesn't fit,0.00
+1636,19288,386,2021-01-11,Changed my mind,0.00
+1637,6261,469,2016-07-16,Size doesn't fit,287.09
+1638,37524,358,2019-09-03,Product damaged during shipping,0.00
+1639,7551,73,2019-07-13,Defective product,167.48
+1640,41809,156,2022-07-25,Ordered by mistake,0.00
+1641,42070,397,2019-03-10,Size doesn't fit,0.00
+1642,20439,347,2020-10-10,Found a better deal,0.00
+1643,1883,76,2021-05-28,Product didn't meet expectations,0.00
+1644,32859,357,2016-10-29,Color doesn't match,0.00
+1645,22116,112,2019-09-25,Ordered by mistake,0.00
+1646,47352,340,2016-02-01,Defective product,0.00
+1647,41378,423,2016-03-18,Color doesn't match,0.00
+1648,43427,23,2018-03-12,Received wrong product,0.00
+1649,9683,121,2017-01-10,Color doesn't match,229.32
+1650,33176,333,2022-01-17,Color doesn't match,0.00
+1651,22433,477,2022-01-27,Received wrong product,0.00
+1652,35295,440,2018-08-15,Ordered by mistake,0.00
+1653,34834,146,2017-10-01,Defective product,0.00
+1654,9622,277,2019-12-22,Defective product,0.00
+1655,28787,311,2022-05-02,Size doesn't fit,0.00
+1656,21897,324,2021-07-26,Size doesn't fit,0.00
+1657,44084,368,2021-01-07,Product didn't meet expectations,0.00
+1658,37794,137,2020-11-17,Ordered by mistake,0.00
+1659,12281,415,2016-01-25,Product didn't meet expectations,0.00
+1660,8464,79,2019-04-28,Color doesn't match,0.00
+1661,48957,119,2020-12-09,Color doesn't match,1105.27
+1662,13615,364,2016-11-27,Changed my mind,0.00
+1663,40436,355,2018-02-06,Product didn't meet expectations,330.43
+1664,17096,24,2017-10-08,Changed my mind,0.00
+1665,30980,77,2021-09-10,Received wrong product,0.00
+1666,46758,286,2020-07-07,Product damaged during shipping,96.83
+1667,18954,291,2018-03-26,Changed my mind,0.00
+1668,49743,250,2021-07-23,Changed my mind,0.00
+1669,42678,215,2017-04-21,Item not as described,0.00
+1670,32324,447,2017-03-24,Changed my mind,0.00
+1671,44945,153,2022-08-28,Product damaged during shipping,0.00
+1672,307,407,2018-03-18,Size doesn't fit,0.00
+1673,5586,439,2017-04-25,Color doesn't match,110.31
+1674,37802,441,2021-06-16,Size doesn't fit,0.00
+1675,46501,277,2020-02-14,Color doesn't match,227.84
+1676,13437,124,2022-10-22,Changed my mind,0.00
+1677,32368,177,2020-11-16,Color doesn't match,0.00
+1678,46631,64,2018-06-20,Item not as described,161.00
+1679,24269,155,2020-02-28,Color doesn't match,0.00
+1680,17562,107,2018-02-01,Received wrong product,0.00
+1681,37921,451,2020-04-23,Found a better deal,23.16
+1682,22882,445,2020-04-09,Changed my mind,0.00
+1683,4524,39,2016-02-22,Defective product,553.94
+1684,49000,314,2021-11-10,Found a better deal,291.46
+1685,39459,472,2017-11-10,Ordered by mistake,11.88
+1686,7900,355,2017-06-14,Changed my mind,0.00
+1687,36760,356,2021-10-19,Color doesn't match,0.00
+1688,22228,370,2016-12-24,Size doesn't fit,0.00
+1689,12068,365,2018-10-29,Changed my mind,0.00
+1690,24571,400,2017-12-12,Product didn't meet expectations,72.56
+1691,37600,317,2021-01-25,Received wrong product,0.00
+1692,11091,189,2019-11-04,Found a better deal,888.06
+1693,13731,49,2021-06-29,Ordered by mistake,301.11
+1694,8621,50,2020-07-15,Item not as described,0.00
+1695,9401,310,2017-11-07,Received wrong product,250.21
+1696,38701,139,2018-06-07,Found a better deal,0.00
+1697,27006,251,2018-02-14,Found a better deal,44.45
+1698,5485,201,2016-05-04,Ordered by mistake,0.00
+1699,24731,56,2022-04-18,Defective product,0.00
+1700,30777,277,2017-08-05,Found a better deal,0.00
+1701,11709,112,2016-09-09,Found a better deal,0.00
+1702,28227,196,2019-08-11,Ordered by mistake,0.00
+1703,38900,160,2020-10-01,Received wrong product,0.00
+1704,30268,125,2016-08-08,Received wrong product,0.00
+1705,33955,439,2018-12-23,Product didn't meet expectations,0.00
+1706,25343,329,2017-02-17,Received wrong product,292.41
+1707,47663,393,2016-02-20,Product didn't meet expectations,163.07
+1708,14778,226,2017-12-13,Product damaged during shipping,18.51
+1709,10949,318,2016-11-09,Product didn't meet expectations,130.78
+1710,31089,352,2020-05-21,Color doesn't match,0.00
+1711,28860,21,2019-06-05,Ordered by mistake,0.00
+1712,27415,414,2020-10-19,Item not as described,0.00
+1713,42817,410,2016-03-21,Product didn't meet expectations,0.00
+1714,37432,174,2017-07-27,Product damaged during shipping,0.00
+1715,22911,325,2016-07-25,Product didn't meet expectations,0.00
+1716,41855,267,2021-06-17,Size doesn't fit,0.00
+1717,35314,337,2018-04-06,Product damaged during shipping,0.00
+1718,1038,444,2020-05-08,Size doesn't fit,0.00
+1719,26174,442,2020-02-05,Received wrong product,377.26
+1720,5650,235,2018-02-16,Size doesn't fit,814.40
+1721,31118,100,2018-07-08,Changed my mind,1391.60
+1722,40886,55,2020-08-21,Product damaged during shipping,0.00
+1723,20100,366,2021-06-03,Size doesn't fit,435.52
+1724,15855,251,2022-06-20,Color doesn't match,71.13
+1725,5570,102,2019-04-06,Changed my mind,0.00
+1726,9247,179,2019-10-27,Received wrong product,0.00
+1727,30847,457,2016-11-02,Product damaged during shipping,0.00
+1728,20612,253,2020-09-25,Found a better deal,0.00
+1729,18759,129,2018-08-10,Item not as described,0.00
+1730,42873,290,2017-05-06,Changed my mind,0.00
+1731,25025,1,2019-06-24,Size doesn't fit,174.57
+1732,17301,413,2021-07-01,Ordered by mistake,479.61
+1733,20785,404,2020-12-30,Defective product,277.85
+1734,7161,166,2018-03-07,Defective product,0.00
+1735,3691,152,2017-09-06,Size doesn't fit,0.00
+1736,11305,336,2019-07-28,Product didn't meet expectations,0.00
+1737,48451,307,2017-08-03,Product didn't meet expectations,0.00
+1738,13597,327,2021-01-14,Color doesn't match,230.62
+1739,49095,105,2017-05-17,Defective product,28.90
+1740,28980,285,2016-07-06,Product didn't meet expectations,0.00
+1741,49085,291,2020-09-12,Item not as described,0.00
+1742,7493,461,2018-07-27,Ordered by mistake,0.00
+1743,42169,449,2018-12-17,Size doesn't fit,0.00
+1744,10968,136,2017-05-22,Product damaged during shipping,0.00
+1745,415,185,2016-03-01,Found a better deal,0.00
+1746,7767,96,2019-09-12,Defective product,105.51
+1747,19917,149,2016-09-05,Product didn't meet expectations,0.00
+1748,16127,353,2022-03-06,Size doesn't fit,0.00
+1749,18025,457,2022-12-18,Ordered by mistake,43.87
+1750,35601,238,2016-01-21,Color doesn't match,0.00
+1751,43537,199,2020-08-27,Size doesn't fit,210.78
+1752,20636,278,2019-05-10,Size doesn't fit,0.00
+1753,33345,206,2018-06-28,Ordered by mistake,52.09
+1754,6582,162,2017-08-25,Found a better deal,0.00
+1755,6767,272,2016-03-20,Defective product,0.00
+1756,19944,83,2017-11-26,Defective product,0.00
+1757,40047,344,2022-09-15,Product damaged during shipping,416.96
+1758,34308,158,2016-05-21,Color doesn't match,87.58
+1759,49673,48,2017-03-01,Item not as described,0.00
+1760,19287,120,2022-01-22,Defective product,0.00
+1761,17827,482,2021-07-01,Found a better deal,997.04
+1762,2803,446,2021-05-02,Color doesn't match,1017.58
+1763,26,9,2019-01-15,Product damaged during shipping,0.00
+1764,40897,24,2019-02-22,Color doesn't match,0.00
+1765,24028,292,2020-03-07,Product damaged during shipping,0.00
+1766,11481,469,2020-06-25,Found a better deal,775.15
+1767,26953,449,2016-01-17,Item not as described,85.04
+1768,1272,151,2018-10-19,Size doesn't fit,0.00
+1769,15066,113,2022-02-18,Received wrong product,214.27
+1770,29111,350,2019-06-27,Changed my mind,54.74
+1771,4759,226,2018-10-03,Found a better deal,0.00
+1772,5507,387,2020-12-09,Product didn't meet expectations,659.50
+1773,39650,135,2021-11-04,Product didn't meet expectations,0.00
+1774,33324,35,2019-11-24,Ordered by mistake,0.00
+1775,7426,138,2019-03-01,Received wrong product,0.00
+1776,15227,326,2017-05-06,Product damaged during shipping,0.00
+1777,25374,156,2022-02-10,Found a better deal,224.62
+1778,19820,410,2020-04-07,Item not as described,0.00
+1779,22338,70,2019-03-04,Changed my mind,0.00
+1780,20331,354,2021-09-04,Size doesn't fit,74.35
+1781,18991,409,2020-06-15,Product didn't meet expectations,0.00
+1782,18358,166,2017-05-28,Received wrong product,192.73
+1783,20789,363,2016-09-26,Changed my mind,0.00
+1784,30773,146,2019-05-21,Item not as described,0.00
+1785,18121,275,2017-07-21,Defective product,0.00
+1786,48681,274,2021-12-18,Defective product,447.90
+1787,11854,366,2020-07-11,Ordered by mistake,175.67
+1788,17859,350,2019-01-03,Found a better deal,136.84
+1789,18350,295,2021-07-05,Product damaged during shipping,395.02
+1790,39102,416,2019-04-21,Item not as described,100.19
+1791,27488,230,2022-03-21,Size doesn't fit,0.00
+1792,36132,240,2017-12-04,Received wrong product,580.10
+1793,38292,370,2022-09-03,Color doesn't match,0.00
+1794,24751,247,2022-05-01,Found a better deal,0.00
+1795,43409,400,2021-03-29,Product damaged during shipping,0.00
+1796,1975,446,2019-11-19,Color doesn't match,0.00
+1797,21575,256,2018-07-13,Product didn't meet expectations,30.79
+1798,34811,105,2017-01-24,Defective product,0.00
+1799,4474,184,2018-07-21,Ordered by mistake,0.00
+1800,43708,368,2016-02-14,Size doesn't fit,257.80
+1801,36877,464,2019-12-07,Product didn't meet expectations,97.97
+1802,36289,432,2017-09-03,Defective product,496.79
+1803,35639,20,2019-04-21,Changed my mind,849.66
+1804,28426,106,2021-03-30,Changed my mind,0.00
+1805,18453,203,2022-12-20,Received wrong product,0.00
+1806,35593,205,2022-04-07,Defective product,0.00
+1807,46202,471,2018-04-03,Changed my mind,0.00
+1808,19454,210,2019-03-10,Product damaged during shipping,0.00
+1809,38448,47,2016-09-22,Color doesn't match,0.00
+1810,36173,450,2019-09-20,Ordered by mistake,0.00
+1811,9682,193,2020-07-16,Found a better deal,0.00
+1812,10787,213,2022-08-24,Ordered by mistake,0.00
+1813,5057,454,2021-09-03,Color doesn't match,305.92
+1814,36469,131,2018-06-20,Color doesn't match,186.89
+1815,46233,298,2021-04-14,Changed my mind,0.00
+1816,48818,97,2016-10-20,Size doesn't fit,0.00
+1817,318,10,2021-06-13,Product damaged during shipping,0.00
+1818,44268,291,2016-08-12,Product damaged during shipping,0.00
+1819,17790,233,2018-10-24,Received wrong product,0.00
+1820,34093,442,2022-05-08,Received wrong product,0.00
+1821,16200,306,2022-01-05,Changed my mind,368.46
+1822,32487,238,2022-08-09,Received wrong product,0.00
+1823,45513,453,2017-08-07,Item not as described,0.00
+1824,27732,7,2017-09-04,Found a better deal,0.00
+1825,710,220,2019-09-13,Size doesn't fit,344.28
+1826,47855,5,2019-02-15,Color doesn't match,47.44
+1827,46325,279,2021-08-07,Item not as described,0.00
+1828,44567,99,2022-09-25,Product damaged during shipping,0.00
+1829,15783,451,2016-02-11,Size doesn't fit,389.05
+1830,16751,448,2022-05-21,Color doesn't match,494.78
+1831,20355,86,2019-02-24,Item not as described,0.00
+1832,40425,467,2019-01-31,Changed my mind,0.00
+1833,39776,478,2020-01-08,Found a better deal,580.13
+1834,8167,179,2022-07-25,Found a better deal,0.00
+1835,16555,298,2019-12-02,Product didn't meet expectations,32.04
+1836,27735,392,2018-12-18,Size doesn't fit,0.00
+1837,16972,127,2021-03-30,Found a better deal,0.00
+1838,49282,69,2019-01-19,Ordered by mistake,0.00
+1839,23549,52,2022-11-28,Defective product,0.00
+1840,21293,154,2022-12-14,Defective product,618.54
+1841,41162,226,2017-04-28,Received wrong product,333.18
+1842,30510,9,2018-09-20,Changed my mind,0.00
+1843,428,117,2018-01-31,Size doesn't fit,0.00
+1844,30858,239,2016-02-15,Ordered by mistake,219.59
+1845,14354,437,2022-07-23,Ordered by mistake,0.00
+1846,14716,327,2021-05-27,Defective product,0.00
+1847,36907,24,2016-09-15,Defective product,635.51
+1848,41184,102,2022-04-17,Item not as described,0.00
+1849,33590,107,2020-11-10,Defective product,0.00
+1850,5475,140,2021-04-22,Size doesn't fit,0.00
+1851,19005,54,2019-12-17,Received wrong product,0.00
+1852,47321,137,2022-03-06,Size doesn't fit,0.00
+1853,19569,390,2019-03-09,Product didn't meet expectations,0.00
+1854,19354,498,2019-11-26,Defective product,0.00
+1855,15087,426,2017-11-14,Changed my mind,0.00
+1856,3333,474,2020-01-08,Received wrong product,35.55
+1857,7302,495,2018-08-15,Size doesn't fit,0.00
+1858,23480,359,2016-02-19,Size doesn't fit,193.69
+1859,14764,52,2018-10-17,Received wrong product,0.00
+1860,44821,210,2022-04-09,Changed my mind,0.00
+1861,4603,102,2019-02-10,Size doesn't fit,121.15
+1862,34480,332,2017-09-21,Color doesn't match,0.00
+1863,45493,79,2016-02-03,Defective product,0.00
+1864,36155,493,2018-05-28,Received wrong product,0.00
+1865,2001,475,2017-07-13,Product damaged during shipping,56.38
+1866,48129,140,2019-12-30,Color doesn't match,0.00
+1867,30796,43,2019-11-01,Changed my mind,0.00
+1868,25508,474,2021-11-21,Product didn't meet expectations,0.00
+1869,20358,328,2018-01-09,Product didn't meet expectations,124.77
+1870,41702,167,2019-01-30,Changed my mind,0.00
+1871,23697,159,2019-08-08,Product didn't meet expectations,0.00
+1872,47364,384,2021-05-04,Changed my mind,0.00
+1873,5868,161,2022-10-05,Size doesn't fit,0.00
+1874,44289,263,2019-01-08,Item not as described,792.46
+1875,9930,320,2018-08-08,Changed my mind,0.00
+1876,348,495,2017-12-07,Ordered by mistake,115.59
+1877,27507,198,2017-10-29,Product damaged during shipping,0.00
+1878,38803,280,2020-11-23,Changed my mind,0.00
+1879,38367,476,2021-02-16,Product didn't meet expectations,1538.82
+1880,4022,391,2016-02-16,Found a better deal,22.15
+1881,23820,125,2018-07-14,Size doesn't fit,354.91
+1882,6666,467,2016-11-03,Found a better deal,0.00
+1883,17563,500,2022-11-06,Defective product,0.00
+1884,47682,317,2019-02-04,Item not as described,203.48
+1885,2079,225,2017-02-16,Defective product,93.97
+1886,7143,422,2018-12-20,Color doesn't match,0.00
+1887,3425,244,2018-03-07,Item not as described,0.00
+1888,37464,438,2017-03-28,Product didn't meet expectations,0.00
+1889,5539,284,2020-04-14,Changed my mind,0.00
+1890,39128,455,2022-09-05,Ordered by mistake,0.00
+1891,33956,375,2017-06-09,Changed my mind,0.00
+1892,38268,96,2016-08-19,Color doesn't match,0.00
+1893,7355,447,2022-12-28,Size doesn't fit,0.00
+1894,14852,344,2017-10-02,Received wrong product,0.00
+1895,5784,24,2018-05-20,Product didn't meet expectations,221.29
+1896,18723,285,2021-09-13,Received wrong product,0.00
+1897,22758,434,2019-12-14,Ordered by mistake,56.53
+1898,9561,300,2018-08-02,Defective product,0.00
+1899,8000,132,2019-11-07,Changed my mind,145.68
+1900,14365,164,2018-11-20,Product didn't meet expectations,0.00
+1901,13192,354,2016-11-10,Found a better deal,159.33
+1902,37867,59,2017-09-01,Product damaged during shipping,726.11
+1903,2278,158,2020-02-14,Ordered by mistake,222.92
+1904,47879,89,2018-10-06,Product damaged during shipping,0.00
+1905,19068,460,2020-09-25,Found a better deal,0.00
+1906,30489,353,2019-06-14,Changed my mind,0.00
+1907,5887,130,2016-03-26,Ordered by mistake,0.00
+1908,27402,466,2018-03-09,Color doesn't match,0.00
+1909,32332,244,2021-11-22,Product didn't meet expectations,0.00
+1910,1774,349,2019-06-08,Product didn't meet expectations,0.00
+1911,6229,324,2017-08-21,Defective product,0.00
+1912,46478,338,2017-11-05,Ordered by mistake,0.00
+1913,48249,8,2019-09-19,Changed my mind,0.00
+1914,45254,460,2016-09-26,Product didn't meet expectations,0.00
+1915,49228,248,2022-12-27,Product didn't meet expectations,0.00
+1916,38953,353,2016-10-06,Defective product,0.00
+1917,23554,322,2019-02-07,Color doesn't match,96.15
+1918,43116,222,2019-10-21,Defective product,0.00
+1919,40936,139,2021-05-16,Changed my mind,0.00
+1920,7976,136,2016-06-21,Color doesn't match,781.95
+1921,47448,499,2018-04-30,Size doesn't fit,0.00
+1922,35916,440,2016-09-07,Received wrong product,0.00
+1923,20979,7,2021-01-12,Product damaged during shipping,518.78
+1924,41436,389,2016-07-17,Ordered by mistake,690.98
+1925,22125,340,2016-11-07,Defective product,134.68
+1926,7206,376,2020-10-31,Product damaged during shipping,1498.56
+1927,5852,202,2021-07-20,Changed my mind,0.00
+1928,24240,416,2019-01-05,Ordered by mistake,85.88
+1929,27462,324,2019-01-12,Product didn't meet expectations,778.52
+1930,46030,263,2019-10-03,Color doesn't match,0.00
+1931,21008,268,2022-12-23,Product didn't meet expectations,0.00
+1932,49595,376,2020-01-10,Defective product,234.15
+1933,42487,123,2019-05-17,Defective product,86.76
+1934,43725,94,2019-08-21,Color doesn't match,0.00
+1935,30352,240,2020-05-26,Ordered by mistake,1778.98
+1936,536,75,2019-05-06,Size doesn't fit,0.00
+1937,14062,2,2019-03-11,Product didn't meet expectations,0.00
+1938,29351,304,2017-04-14,Color doesn't match,0.00
+1939,33368,274,2021-03-22,Item not as described,0.00
+1940,19185,240,2018-09-24,Defective product,0.00
+1941,19345,394,2021-10-13,Changed my mind,0.00
+1942,25389,430,2021-02-03,Size doesn't fit,0.00
+1943,44774,142,2018-06-25,Found a better deal,329.61
+1944,42204,477,2020-08-14,Product damaged during shipping,0.00
+1945,38520,199,2018-04-25,Received wrong product,226.99
+1946,33600,384,2018-11-12,Ordered by mistake,0.00
+1947,3756,27,2017-02-21,Color doesn't match,0.00
+1948,29559,330,2022-06-28,Defective product,486.50
+1949,22788,94,2022-12-23,Size doesn't fit,0.00
+1950,30760,255,2016-07-05,Color doesn't match,0.00
+1951,30433,307,2019-08-16,Item not as described,0.00
+1952,10209,366,2018-03-13,Product damaged during shipping,0.00
+1953,45654,448,2018-11-14,Ordered by mistake,0.00
+1954,31155,63,2022-05-07,Changed my mind,0.00
+1955,34628,380,2022-01-27,Defective product,0.00
+1956,24307,90,2020-12-16,Found a better deal,0.00
+1957,19102,62,2019-06-29,Defective product,556.82
+1958,19949,169,2019-12-11,Received wrong product,718.07
+1959,48883,209,2021-08-18,Size doesn't fit,0.00
+1960,43284,390,2022-09-09,Size doesn't fit,0.00
+1961,28819,24,2017-05-07,Ordered by mistake,0.00
+1962,31088,275,2018-07-30,Defective product,0.00
+1963,35994,294,2022-08-21,Product didn't meet expectations,0.00
+1964,43293,204,2021-04-11,Ordered by mistake,0.00
+1965,7300,299,2020-03-26,Ordered by mistake,0.00
+1966,5699,178,2020-03-10,Defective product,0.00
+1967,12325,193,2021-11-19,Ordered by mistake,0.00
+1968,18021,282,2018-06-21,Product damaged during shipping,263.44
+1969,18803,255,2019-10-18,Item not as described,0.00
+1970,20955,449,2019-11-07,Size doesn't fit,115.41
+1971,1367,68,2017-08-25,Ordered by mistake,0.00
+1972,27112,408,2021-11-23,Defective product,0.00
+1973,9422,24,2022-06-22,Ordered by mistake,748.99
+1974,27178,5,2016-06-22,Product damaged during shipping,86.25
+1975,49393,38,2016-11-24,Defective product,0.00
+1976,28617,84,2017-09-16,Product damaged during shipping,88.67
+1977,34862,79,2016-07-30,Size doesn't fit,0.00
+1978,7431,422,2019-01-27,Received wrong product,0.00
+1979,35353,43,2016-07-23,Product damaged during shipping,0.00
+1980,9429,87,2023-01-02,Ordered by mistake,0.00
+1981,30249,1,2016-04-15,Ordered by mistake,0.00
+1982,45442,441,2020-10-22,Ordered by mistake,0.00
+1983,205,230,2018-05-14,Size doesn't fit,128.89
+1984,44249,296,2021-07-27,Product didn't meet expectations,0.00
+1985,13842,470,2020-01-20,Product didn't meet expectations,0.00
+1986,32142,358,2018-07-17,Product damaged during shipping,0.00
+1987,17620,416,2020-09-27,Item not as described,0.00
+1988,45175,376,2016-11-23,Ordered by mistake,0.00
+1989,11523,406,2017-05-08,Received wrong product,0.00
+1990,13028,82,2022-05-07,Color doesn't match,0.00
+1991,46962,266,2022-06-21,Item not as described,475.08
+1992,1674,290,2022-03-24,Changed my mind,0.00
+1993,4598,142,2016-12-20,Color doesn't match,0.00
+1994,37334,56,2022-10-27,Product damaged during shipping,0.00
+1995,15108,113,2020-04-09,Defective product,0.00
+1996,38071,43,2017-04-08,Found a better deal,0.00
+1997,35179,133,2017-12-13,Changed my mind,456.78
+1998,28718,87,2019-12-18,Changed my mind,0.00
+1999,19330,39,2020-07-04,Item not as described,0.00
+2000,20413,224,2019-09-03,Ordered by mistake,0.00
+2001,10316,379,2020-02-28,Size doesn't fit,0.00
+2002,7589,361,2021-05-25,Size doesn't fit,0.00
+2003,25311,48,2020-12-19,Color doesn't match,0.00
+2004,35239,493,2017-01-29,Product didn't meet expectations,0.00
+2005,23280,126,2020-01-04,Ordered by mistake,257.81
+2006,17402,446,2022-03-31,Defective product,0.00
+2007,9652,436,2021-12-04,Ordered by mistake,0.00
+2008,37133,129,2017-06-26,Changed my mind,1691.03
+2009,21742,325,2018-02-06,Changed my mind,136.12
+2010,24849,42,2017-02-06,Found a better deal,0.00
+2011,35703,313,2020-10-20,Size doesn't fit,0.00
+2012,10438,369,2017-05-06,Item not as described,0.00
+2013,14068,25,2017-02-21,Received wrong product,0.00
+2014,40575,131,2020-07-26,Product didn't meet expectations,0.00
+2015,47080,107,2021-10-20,Product damaged during shipping,0.00
+2016,15212,243,2017-08-20,Found a better deal,0.00
+2017,676,344,2018-06-23,Product damaged during shipping,469.08
+2018,48113,275,2022-01-17,Size doesn't fit,0.00
+2019,12572,350,2018-11-21,Color doesn't match,0.00
+2020,39653,465,2018-05-27,Changed my mind,62.62
+2021,45055,446,2017-09-09,Color doesn't match,0.00
+2022,47355,80,2020-01-16,Item not as described,0.00
+2023,100,84,2018-11-23,Product damaged during shipping,0.00
+2024,46946,140,2018-03-29,Size doesn't fit,0.00
+2025,48785,471,2020-03-04,Item not as described,0.00
+2026,43102,463,2017-09-27,Item not as described,0.00
+2027,5042,36,2021-02-23,Changed my mind,0.00
+2028,37131,185,2020-07-12,Item not as described,0.00
+2029,36395,413,2021-10-26,Product damaged during shipping,0.00
+2030,42910,358,2020-03-12,Product damaged during shipping,0.00
+2031,35235,146,2020-10-02,Defective product,0.00
+2032,22713,286,2018-01-05,Product didn't meet expectations,316.90
+2033,47246,7,2021-07-21,Found a better deal,0.00
+2034,47791,379,2021-05-15,Color doesn't match,0.00
+2035,39384,355,2018-01-27,Ordered by mistake,0.00
+2036,25938,350,2022-01-14,Changed my mind,145.39
+2037,10741,335,2020-08-24,Size doesn't fit,115.85
+2038,23314,85,2020-07-21,Color doesn't match,0.00
+2039,21380,8,2021-03-30,Color doesn't match,0.00
+2040,14286,7,2022-03-27,Ordered by mistake,0.00
+2041,15546,398,2022-06-15,Defective product,0.00
+2042,28565,385,2018-07-07,Ordered by mistake,0.00
+2043,26111,167,2018-12-17,Size doesn't fit,1176.56
+2044,13083,160,2019-04-19,Changed my mind,0.00
+2045,21257,424,2022-01-07,Ordered by mistake,912.11
+2046,48651,5,2017-12-29,Color doesn't match,0.00
+2047,17872,50,2017-02-15,Product didn't meet expectations,6.01
+2048,45844,214,2020-09-29,Color doesn't match,0.00
+2049,22262,473,2021-10-26,Product damaged during shipping,0.00
+2050,26270,312,2021-03-02,Received wrong product,0.00
+2051,17395,483,2020-01-29,Found a better deal,0.00
+2052,3198,289,2019-07-05,Changed my mind,0.00
+2053,21975,324,2019-06-06,Found a better deal,0.00
+2054,41544,51,2016-04-02,Product didn't meet expectations,0.00
+2055,43675,320,2022-10-02,Ordered by mistake,0.00
+2056,8889,26,2022-10-01,Changed my mind,0.00
+2057,29532,333,2020-09-17,Product damaged during shipping,0.00
+2058,32275,325,2020-01-27,Color doesn't match,0.00
+2059,15727,217,2022-07-30,Product didn't meet expectations,0.00
+2060,48590,435,2020-04-21,Item not as described,237.13
+2061,23840,92,2020-08-08,Product didn't meet expectations,0.00
+2062,263,473,2020-06-16,Product damaged during shipping,671.73
+2063,46681,88,2018-10-12,Color doesn't match,0.00
+2064,32992,292,2019-05-08,Changed my mind,0.00
+2065,6955,92,2020-06-05,Product damaged during shipping,0.00
+2066,25403,250,2022-10-01,Found a better deal,0.00
+2067,8095,381,2017-04-21,Color doesn't match,0.00
+2068,28016,339,2016-08-14,Product damaged during shipping,0.00
+2069,40869,488,2019-12-27,Changed my mind,0.00
+2070,2797,20,2021-07-21,Received wrong product,0.00
+2071,37643,294,2016-01-23,Changed my mind,0.00
+2072,16068,416,2019-03-02,Product damaged during shipping,0.00
+2073,21215,252,2018-05-03,Item not as described,0.00
+2074,39442,280,2021-02-07,Product didn't meet expectations,0.00
+2075,42003,410,2018-12-24,Product damaged during shipping,0.00
+2076,31662,341,2017-02-02,Defective product,0.00
+2077,16669,31,2017-07-22,Changed my mind,0.00
+2078,1382,468,2018-02-12,Color doesn't match,48.98
+2079,35856,40,2016-12-24,Product didn't meet expectations,0.00
+2080,29728,423,2022-10-30,Defective product,0.00
+2081,34298,436,2017-06-12,Product damaged during shipping,0.00
+2082,48225,362,2020-07-24,Changed my mind,0.00
+2083,32691,78,2018-05-18,Size doesn't fit,649.04
+2084,46613,207,2019-09-11,Defective product,60.83
+2085,7336,468,2022-12-13,Received wrong product,1257.06
+2086,33260,67,2018-11-15,Color doesn't match,0.00
+2087,10713,121,2018-10-26,Color doesn't match,0.00
+2088,45827,441,2016-03-05,Product damaged during shipping,0.00
+2089,5886,454,2019-05-30,Changed my mind,244.74
+2090,17010,197,2018-12-18,Ordered by mistake,0.00
+2091,40776,131,2020-07-21,Size doesn't fit,0.00
+2092,21747,385,2017-12-26,Color doesn't match,0.00
+2093,13418,119,2021-07-28,Color doesn't match,0.00
+2094,39782,353,2020-03-25,Product damaged during shipping,0.00
+2095,8880,244,2018-11-06,Item not as described,649.54
+2096,14814,459,2019-11-08,Found a better deal,447.17
+2097,44527,8,2022-06-13,Received wrong product,0.00
+2098,33300,160,2018-04-12,Product didn't meet expectations,0.00
+2099,2110,373,2019-11-30,Changed my mind,0.00
+2100,22873,101,2019-07-01,Item not as described,323.47
+2101,11170,369,2017-06-28,Color doesn't match,893.31
+2102,18298,169,2022-04-10,Ordered by mistake,0.00
+2103,46826,447,2017-06-03,Changed my mind,1855.16
+2104,39742,120,2022-04-01,Received wrong product,0.00
+2105,5839,177,2018-12-12,Item not as described,82.99
+2106,43512,284,2017-07-26,Received wrong product,0.00
+2107,13852,76,2016-03-09,Ordered by mistake,0.00
+2108,20687,55,2022-03-09,Ordered by mistake,0.00
+2109,36990,296,2016-10-14,Found a better deal,0.00
+2110,37576,38,2017-01-29,Product didn't meet expectations,0.00
+2111,19948,483,2020-09-15,Product didn't meet expectations,0.00
+2112,26296,227,2020-02-04,Item not as described,151.62
+2113,45307,424,2018-12-21,Product didn't meet expectations,0.00
+2114,6530,74,2021-08-30,Received wrong product,38.20
+2115,13119,258,2018-04-05,Defective product,0.00
+2116,17311,44,2020-03-05,Item not as described,0.00
+2117,20238,301,2019-03-16,Received wrong product,0.00
+2118,3020,425,2016-12-03,Color doesn't match,0.00
+2119,35744,45,2019-02-27,Found a better deal,0.00
+2120,32857,54,2016-04-27,Size doesn't fit,892.92
+2121,9830,151,2022-05-10,Received wrong product,0.00
+2122,48286,192,2016-06-23,Received wrong product,854.54
+2123,17271,127,2021-04-02,Product damaged during shipping,0.00
+2124,4198,167,2018-05-03,Color doesn't match,0.00
+2125,13776,203,2021-07-07,Defective product,0.00
+2126,24854,99,2020-08-20,Size doesn't fit,0.00
+2127,47096,155,2016-02-28,Product damaged during shipping,0.00
+2128,17988,30,2018-05-09,Size doesn't fit,0.00
+2129,37590,1,2019-05-01,Item not as described,0.00
+2130,49739,186,2017-08-09,Received wrong product,0.00
+2131,4916,320,2017-03-11,Product damaged during shipping,0.00
+2132,27035,64,2022-08-08,Product damaged during shipping,0.00
+2133,3575,162,2017-05-12,Item not as described,0.00
+2134,997,414,2016-05-05,Defective product,0.00
+2135,49374,222,2017-10-24,Received wrong product,0.00
+2136,17538,141,2019-04-11,Found a better deal,0.00
+2137,21030,406,2021-11-25,Color doesn't match,0.00
+2138,10561,27,2018-04-12,Color doesn't match,0.00
+2139,1458,14,2019-09-16,Ordered by mistake,0.00
+2140,27587,138,2016-10-02,Changed my mind,0.00
+2141,38697,116,2022-12-13,Size doesn't fit,164.56
+2142,14566,385,2020-07-19,Received wrong product,0.00
+2143,41727,302,2020-09-28,Found a better deal,0.00
+2144,45517,104,2017-07-08,Item not as described,0.00
+2145,4335,465,2020-09-05,Item not as described,0.00
+2146,17877,30,2022-06-30,Received wrong product,1902.87
+2147,4254,461,2016-11-10,Item not as described,49.54
+2148,18520,433,2022-10-01,Product damaged during shipping,0.00
+2149,48051,247,2017-02-25,Product damaged during shipping,0.00
+2150,32436,251,2022-01-24,Product didn't meet expectations,0.00
+2151,25006,54,2020-05-30,Product damaged during shipping,282.76
+2152,25467,401,2018-08-13,Item not as described,0.00
+2153,42926,251,2018-05-30,Product damaged during shipping,13.34
+2154,44371,15,2017-03-17,Changed my mind,0.00
+2155,22474,20,2021-11-12,Changed my mind,339.87
+2156,7519,277,2021-08-24,Defective product,0.00
+2157,49730,418,2017-06-06,Changed my mind,0.00
+2158,35769,421,2022-05-30,Product damaged during shipping,0.00
+2159,28759,486,2021-12-17,Color doesn't match,185.00
+2160,42472,131,2021-04-13,Changed my mind,0.00
+2161,32274,61,2019-03-03,Product damaged during shipping,0.00
+2162,48856,483,2017-01-09,Size doesn't fit,59.43
+2163,17029,261,2018-09-07,Changed my mind,0.00
+2164,47856,102,2017-09-19,Product damaged during shipping,0.00
+2165,44020,134,2020-07-28,Received wrong product,0.00
+2166,31131,259,2019-03-07,Product didn't meet expectations,0.00
+2167,20263,27,2019-02-23,Size doesn't fit,0.00
+2168,43302,44,2021-09-01,Color doesn't match,97.86
+2169,3882,102,2020-07-20,Size doesn't fit,0.00
+2170,35167,307,2016-03-22,Changed my mind,0.00
+2171,41910,478,2021-02-03,Found a better deal,0.00
+2172,46604,418,2019-03-19,Changed my mind,0.00
+2173,26526,475,2022-07-17,Received wrong product,225.51
+2174,24580,128,2016-02-24,Changed my mind,0.00
+2175,2817,140,2017-08-14,Item not as described,0.00
+2176,35650,150,2017-03-26,Ordered by mistake,0.00
+2177,24593,104,2017-02-13,Color doesn't match,103.60
+2178,10328,436,2018-07-29,Product damaged during shipping,0.00
+2179,29856,84,2019-10-17,Size doesn't fit,0.00
+2180,36996,286,2020-07-07,Changed my mind,217.87
+2181,18990,142,2021-05-12,Product damaged during shipping,0.00
+2182,771,108,2017-10-11,Size doesn't fit,0.00
+2183,29492,7,2021-06-22,Product damaged during shipping,296.45
+2184,33671,227,2018-10-23,Size doesn't fit,0.00
+2185,11900,192,2016-04-22,Received wrong product,0.00
+2186,5866,415,2022-09-29,Color doesn't match,0.00
+2187,10987,333,2022-12-03,Item not as described,0.00
+2188,9892,425,2022-04-27,Size doesn't fit,88.53
+2189,16098,394,2020-06-01,Product damaged during shipping,0.00
+2190,38736,168,2020-05-19,Changed my mind,0.00
+2191,5307,420,2016-04-04,Item not as described,0.00
+2192,40213,188,2019-01-16,Size doesn't fit,0.00
+2193,25639,373,2018-11-09,Product damaged during shipping,169.89
+2194,6491,83,2016-05-15,Item not as described,88.01
+2195,37902,322,2016-02-26,Size doesn't fit,0.00
+2196,46754,65,2019-04-10,Found a better deal,0.00
+2197,13235,452,2016-08-21,Defective product,0.00
+2198,25409,74,2020-12-11,Found a better deal,38.20
+2199,17341,192,2016-07-05,Found a better deal,0.00
+2200,16598,264,2018-07-02,Changed my mind,131.59
+2201,6481,269,2020-02-26,Item not as described,0.00
+2202,44832,220,2017-02-12,Product didn't meet expectations,1071.10
+2203,37866,39,2021-07-26,Size doesn't fit,0.00
+2204,14683,199,2016-10-30,Defective product,0.00
+2205,34781,382,2020-02-16,Color doesn't match,0.00
+2206,15666,182,2018-11-29,Color doesn't match,0.00
+2207,6977,391,2017-01-08,Color doesn't match,13.48
+2208,49855,269,2021-03-10,Product damaged during shipping,0.00
+2209,26595,145,2019-01-20,Product didn't meet expectations,0.00
+2210,31004,478,2021-07-27,Found a better deal,0.00
+2211,23831,42,2016-11-14,Ordered by mistake,0.00
+2212,39726,265,2018-06-12,Ordered by mistake,0.00
+2213,42781,39,2020-03-03,Found a better deal,0.00
+2214,19915,124,2019-08-24,Ordered by mistake,0.00
+2216,8026,483,2016-11-20,Ordered by mistake,0.00
+2217,18528,1,2018-06-30,Ordered by mistake,785.58
+2218,27524,183,2017-08-05,Found a better deal,0.00
+2219,13593,492,2019-10-31,Product didn't meet expectations,0.00
+2220,42180,471,2022-05-06,Ordered by mistake,0.00
+2221,6897,39,2021-05-07,Changed my mind,0.00
+2222,40867,337,2016-02-08,Product didn't meet expectations,1362.49
+2223,14385,157,2017-03-24,Item not as described,0.00
+2224,23017,73,2019-07-23,Ordered by mistake,0.00
+2225,48666,235,2017-05-27,Size doesn't fit,0.00
+2226,28192,483,2017-01-29,Product damaged during shipping,0.00
+2227,39961,340,2021-09-20,Color doesn't match,0.00
+2228,20847,135,2017-11-12,Found a better deal,193.88
+2229,32837,454,2022-05-13,Changed my mind,0.00
+2230,29911,89,2019-03-09,Changed my mind,0.00
+2231,6727,439,2021-09-03,Size doesn't fit,422.87
+2232,40145,114,2018-11-24,Item not as described,0.00
+2233,13218,26,2016-03-02,Item not as described,0.00
+2234,16721,184,2018-10-22,Product didn't meet expectations,0.00
+2235,23385,218,2018-11-12,Received wrong product,0.00
+2236,44613,150,2017-06-22,Color doesn't match,189.39
+2237,47085,447,2017-11-19,Defective product,0.00
+2238,49158,347,2019-03-09,Changed my mind,0.00
+2239,37878,105,2022-04-08,Color doesn't match,0.00
+2240,19336,453,2017-09-10,Changed my mind,742.98
+2241,41120,234,2018-06-30,Changed my mind,0.00
+2242,4733,322,2019-03-22,Found a better deal,0.00
+2243,403,336,2020-10-07,Defective product,0.00
+2244,9232,3,2016-07-18,Defective product,0.00
+2245,15184,377,2019-05-04,Received wrong product,0.00
+2246,44802,373,2016-01-16,Received wrong product,0.00
+2247,45921,183,2021-10-07,Ordered by mistake,0.00
+2248,48502,129,2020-03-31,Product damaged during shipping,0.00
+2249,14704,467,2020-07-16,Item not as described,0.00
+2250,48354,283,2017-12-30,Size doesn't fit,0.00
+2251,7416,147,2020-11-05,Received wrong product,200.59
+2252,1123,365,2017-08-14,Defective product,0.00
+2253,38711,406,2021-01-09,Color doesn't match,0.00
+2254,41647,61,2017-11-24,Changed my mind,0.00
+2255,32052,235,2018-08-03,Product damaged during shipping,0.00
+2256,42749,203,2018-09-30,Received wrong product,0.00
+2257,22277,444,2017-09-13,Defective product,1023.68
+2258,20702,373,2021-07-19,Item not as described,718.78
+2259,26041,415,2020-03-14,Size doesn't fit,0.00
+2260,17993,294,2016-05-15,Product didn't meet expectations,424.68
+2261,4199,170,2022-02-22,Size doesn't fit,0.00
+2262,36775,133,2021-08-28,Product damaged during shipping,0.00
+2263,40627,281,2019-04-12,Size doesn't fit,0.00
+2264,36704,428,2020-07-14,Color doesn't match,0.00
+2265,24175,217,2022-12-13,Ordered by mistake,97.29
+2266,5173,447,2020-06-02,Item not as described,0.00
+2267,38281,357,2021-10-27,Defective product,0.00
+2268,3490,450,2021-04-19,Changed my mind,0.00
+2269,38727,334,2022-12-06,Defective product,440.14
+2270,11211,230,2017-12-13,Received wrong product,273.41
+2271,13287,206,2019-07-24,Product damaged during shipping,0.00
+2272,48798,337,2022-02-27,Color doesn't match,0.00
+2273,31111,80,2022-01-17,Ordered by mistake,90.14
+2274,21535,66,2018-05-14,Defective product,237.91
+2275,18918,454,2019-04-25,Changed my mind,305.92
+2276,4895,3,2017-09-11,Product didn't meet expectations,0.00
+2277,8369,285,2017-12-10,Product damaged during shipping,162.23
+2278,27098,47,2019-08-08,Item not as described,0.00
+2279,10452,464,2020-07-25,Ordered by mistake,0.00
+2280,38673,478,2022-03-03,Item not as described,0.00
+2281,26292,408,2022-08-17,Product didn't meet expectations,0.00
+2282,24145,240,2017-08-25,Size doesn't fit,0.00
+2283,9334,41,2022-09-06,Found a better deal,0.00
+2284,3881,402,2019-08-14,Found a better deal,0.00
+2285,38835,167,2019-01-09,Item not as described,1323.63
+2286,45031,273,2017-03-31,Changed my mind,0.00
+2287,25402,497,2019-02-24,Size doesn't fit,0.00
+2288,8919,394,2019-02-11,Ordered by mistake,564.13
+2289,46813,243,2021-01-21,Item not as described,0.00
+2290,48158,454,2018-11-04,Changed my mind,256.97
+2291,20888,209,2019-05-01,Changed my mind,0.00
+2292,8764,145,2016-08-20,Size doesn't fit,0.00
+2293,43653,331,2022-04-17,Item not as described,0.00
+2294,27265,401,2020-06-05,Item not as described,0.00
+2295,23146,106,2021-11-17,Item not as described,0.00
+2296,20592,385,2018-08-12,Found a better deal,0.00
+2297,22345,170,2018-03-18,Size doesn't fit,0.00
+2298,22830,283,2016-10-12,Product didn't meet expectations,0.00
+2299,3208,444,2018-08-23,Defective product,0.00
+2300,1730,77,2022-01-16,Color doesn't match,0.00
+2301,11629,368,2020-03-06,Product didn't meet expectations,0.00
+2302,24266,342,2021-08-30,Product didn't meet expectations,53.73
+2303,38992,137,2018-12-27,Found a better deal,0.00
+2304,33447,270,2021-11-21,Found a better deal,0.00
+2305,47912,450,2019-04-07,Ordered by mistake,0.00
+2306,37278,388,2016-10-23,Ordered by mistake,0.00
+2307,9180,296,2016-06-04,Changed my mind,0.00
+2308,37859,145,2021-07-27,Defective product,0.00
+2309,14649,177,2022-04-01,Found a better deal,0.00
+2310,23220,178,2016-08-15,Found a better deal,0.00
+2311,34613,253,2022-01-12,Changed my mind,94.46
+2312,35306,154,2016-08-20,Product damaged during shipping,0.00
+2313,23057,171,2020-04-04,Color doesn't match,0.00
+2314,12409,11,2020-01-30,Found a better deal,0.00
+2315,17100,420,2022-08-19,Product damaged during shipping,0.00
+2316,24832,47,2016-02-26,Size doesn't fit,0.00
+2317,45156,419,2018-12-21,Item not as described,0.00
+2318,49143,116,2020-09-18,Defective product,0.00
+2319,49392,429,2016-07-26,Product damaged during shipping,0.00
+2320,11756,195,2017-08-30,Received wrong product,779.99
+2321,1238,223,2017-02-07,Item not as described,327.40
+2322,21212,317,2016-12-13,Ordered by mistake,465.09
+2323,46492,432,2021-12-10,Color doesn't match,38.96
+2324,32792,84,2018-11-23,Item not as described,0.00
+2325,33588,301,2017-12-15,Received wrong product,861.82
+2326,32448,4,2022-10-05,Size doesn't fit,0.00
+2327,13534,472,2020-11-15,Defective product,0.00
+2328,7153,156,2017-09-12,Product damaged during shipping,308.85
+2329,25904,23,2017-09-16,Received wrong product,515.14
+2330,5492,113,2021-02-10,Defective product,328.09
+2331,23192,344,2022-12-30,Received wrong product,0.00
+2332,37403,106,2022-01-06,Color doesn't match,231.29
+2333,15070,29,2022-08-14,Defective product,0.00
+2334,2890,394,2017-01-31,Changed my mind,0.00
+2335,42016,224,2021-02-21,Found a better deal,330.98
+2336,39494,405,2018-03-26,Ordered by mistake,0.00
+2337,24113,39,2016-06-14,Product damaged during shipping,0.00
+2338,13353,204,2017-01-15,Received wrong product,0.00
+2339,34525,194,2019-05-26,Received wrong product,262.65
+2340,23157,291,2019-01-03,Received wrong product,354.38
+2341,27389,102,2018-06-14,Product didn't meet expectations,0.00
+2342,29105,326,2020-09-29,Product damaged during shipping,0.00
+2343,12102,67,2017-09-01,Defective product,606.54
+2344,37818,440,2021-05-11,Color doesn't match,0.00
+2345,26157,292,2018-03-02,Color doesn't match,0.00
+2346,28160,361,2019-02-18,Ordered by mistake,0.00
+2347,45576,411,2020-10-26,Product damaged during shipping,0.00
+2348,7113,286,2017-02-26,Product didn't meet expectations,0.00
+2349,22098,106,2022-10-23,Product didn't meet expectations,0.00
+2350,35899,369,2016-12-07,Changed my mind,425.39
+2351,20862,449,2022-07-28,Color doesn't match,0.00
+2352,4317,387,2018-07-03,Changed my mind,0.00
+2353,12602,453,2022-12-20,Defective product,0.00
+2354,17589,416,2017-06-22,Ordered by mistake,121.66
+2355,3810,34,2019-01-07,Color doesn't match,1.42
+2356,13693,114,2018-07-09,Defective product,0.00
+2357,33808,63,2019-11-13,Ordered by mistake,0.00
+2358,18208,474,2022-04-23,Changed my mind,0.00
+2359,3156,256,2021-03-09,Product didn't meet expectations,0.00
+2360,2696,212,2017-03-25,Changed my mind,0.00
+2361,38584,497,2016-08-21,Changed my mind,0.00
+2362,24764,228,2017-07-31,Ordered by mistake,0.00
+2363,2357,286,2016-03-19,Product damaged during shipping,0.00
+2364,538,410,2021-05-05,Color doesn't match,0.00
+2365,6932,237,2021-07-07,Ordered by mistake,0.00
+2366,27953,244,2022-09-09,Ordered by mistake,0.00
+2367,48143,66,2018-03-01,Defective product,0.00
+2368,4405,216,2021-06-24,Product damaged during shipping,427.95
+2369,21723,390,2018-07-30,Size doesn't fit,0.00
+2370,45851,456,2022-08-30,Defective product,900.97
+2371,44522,441,2021-01-20,Changed my mind,0.00
+2372,37455,347,2019-10-10,Ordered by mistake,0.00
+2373,36756,444,2018-09-24,Size doesn't fit,0.00
+2374,32612,176,2020-04-28,Received wrong product,0.00
+2375,30319,3,2020-01-14,Item not as described,0.00
+2376,6309,80,2019-07-08,Product didn't meet expectations,927.19
+2377,32945,16,2017-07-26,Received wrong product,0.00
+2378,39124,206,2022-09-07,Item not as described,0.00
+2379,15417,113,2021-07-23,Defective product,0.00
+2380,5808,337,2022-08-13,Ordered by mistake,0.00
+2381,27834,287,2022-09-18,Color doesn't match,0.00
+2382,2540,463,2017-01-23,Color doesn't match,0.00
+2383,16449,397,2016-08-16,Found a better deal,0.00
+2384,20631,366,2017-09-27,Product didn't meet expectations,0.00
+2385,13179,100,2017-12-21,Product didn't meet expectations,0.00
+2386,1259,272,2019-01-04,Found a better deal,142.07
+2387,40180,191,2020-04-28,Color doesn't match,0.00
+2388,863,58,2017-04-30,Ordered by mistake,278.72
+2389,29738,172,2017-06-18,Product didn't meet expectations,1202.97
+2390,39645,64,2019-05-26,Defective product,0.00
+2391,22872,83,2018-07-04,Product didn't meet expectations,0.00
+2392,47076,3,2019-08-27,Item not as described,71.47
+2393,28269,303,2021-12-03,Found a better deal,0.00
+2394,11135,298,2016-10-26,Defective product,0.00
+2395,1102,167,2018-08-18,Item not as described,0.00
+2396,15024,40,2017-04-18,Defective product,0.00
+2397,37008,493,2022-11-22,Found a better deal,0.00
+2398,29533,118,2016-12-17,Product didn't meet expectations,0.00
+2399,22627,114,2018-11-21,Color doesn't match,0.00
+2400,40795,495,2016-09-13,Changed my mind,445.83
+2401,2691,85,2020-08-27,Found a better deal,749.17
+2402,14621,374,2021-05-21,Found a better deal,250.57
+2403,30761,38,2019-10-07,Product didn't meet expectations,0.00
+2404,26507,192,2017-06-08,Item not as described,0.00
+2405,29454,207,2020-08-29,Size doesn't fit,365.00
+2406,14088,438,2018-12-26,Color doesn't match,0.00
+2407,27568,205,2018-12-05,Received wrong product,77.54
+2408,47649,209,2021-11-08,Changed my mind,394.34
+2409,43417,38,2021-05-27,Size doesn't fit,0.00
+2410,4742,369,2019-11-16,Item not as described,0.00
+2411,18842,146,2022-11-20,Defective product,0.00
+2412,44136,435,2016-05-17,Size doesn't fit,711.40
+2413,15790,2,2022-06-02,Item not as described,50.35
+2414,36716,243,2021-05-24,Product didn't meet expectations,0.00
+2415,41027,442,2021-08-10,Defective product,0.00
+2416,42618,426,2018-07-02,Color doesn't match,0.00
+2417,8814,293,2017-05-15,Found a better deal,510.26
+2418,22334,333,2016-12-17,Defective product,19.63
+2419,11778,397,2020-07-09,Size doesn't fit,281.19
+2420,11472,45,2019-04-07,Received wrong product,0.00
+2421,19744,214,2021-02-05,Ordered by mistake,0.00
+2422,35853,281,2021-02-04,Changed my mind,0.00
+2423,48902,387,2022-04-06,Received wrong product,0.00
+2424,40071,97,2020-12-22,Color doesn't match,0.00
+2425,2551,151,2018-11-21,Product damaged during shipping,0.00
+2426,30339,417,2020-01-12,Ordered by mistake,0.00
+2427,46146,328,2016-06-23,Defective product,320.83
+2428,33343,396,2022-12-20,Ordered by mistake,0.00
+2429,23891,52,2022-07-12,Ordered by mistake,62.52
+2430,46160,444,2018-10-02,Product damaged during shipping,0.00
+2431,34017,181,2019-11-09,Defective product,0.00
+2432,17685,94,2021-03-18,Color doesn't match,0.00
+2433,25981,285,2021-10-16,Ordered by mistake,0.00
+2434,33891,120,2022-03-28,Changed my mind,0.00
+2435,30838,134,2017-10-07,Found a better deal,0.00
+2436,46117,358,2021-01-31,Found a better deal,0.00
+2437,31522,452,2021-04-14,Ordered by mistake,0.00
+2438,26719,407,2019-08-01,Changed my mind,0.00
+2439,46464,429,2022-10-24,Ordered by mistake,0.00
+2440,3762,330,2018-09-15,Product didn't meet expectations,0.00
+2441,16801,312,2019-07-03,Found a better deal,0.00
+2442,18848,27,2021-06-27,Item not as described,1894.10
+2443,30781,120,2016-05-15,Defective product,0.00
+2444,29698,26,2018-07-26,Product didn't meet expectations,0.00
+2445,10982,424,2019-10-16,Received wrong product,0.00
+2446,22192,54,2017-02-14,Found a better deal,937.57
+2447,23340,410,2022-10-30,Received wrong product,0.00
+2448,10813,418,2019-02-08,Ordered by mistake,137.82
+2449,6889,230,2021-03-04,Size doesn't fit,0.00
+2450,1899,112,2018-07-01,Defective product,0.00
+2451,1436,433,2020-08-17,Changed my mind,0.00
+2452,25840,5,2016-10-08,Product damaged during shipping,0.00
+2453,27767,379,2020-02-18,Ordered by mistake,0.00
+2454,17258,190,2019-07-28,Item not as described,0.00
+2455,2282,66,2017-01-11,Received wrong product,189.64
+2456,17948,81,2020-11-28,Product didn't meet expectations,537.55
+2457,45570,326,2020-01-23,Changed my mind,0.00
+2458,2741,393,2021-05-15,Found a better deal,0.00
+2459,5715,84,2017-11-05,Ordered by mistake,210.59
+2460,19301,6,2020-07-18,Received wrong product,0.00
+2461,29041,40,2021-09-12,Item not as described,105.22
+2462,7384,272,2018-06-06,Defective product,0.00
+2463,14961,170,2022-09-18,Size doesn't fit,234.95
+2464,40654,183,2022-08-11,Size doesn't fit,0.00
+2465,49074,160,2022-09-16,Ordered by mistake,1742.10
+2466,3212,24,2021-02-07,Size doesn't fit,0.00
+2467,39540,138,2020-07-24,Product damaged during shipping,0.00
+2468,23032,430,2021-07-21,Defective product,0.00
+2469,29976,430,2019-05-09,Item not as described,0.00
+2470,32266,173,2021-04-02,Found a better deal,0.00
+2471,2095,478,2020-06-24,Item not as described,989.19
+2472,11312,386,2017-02-01,Defective product,0.00
+2473,22753,298,2020-05-27,Received wrong product,196.27
+2474,5994,457,2017-03-13,Found a better deal,0.00
+2475,1611,348,2022-02-27,Received wrong product,0.00
+2476,35211,318,2020-04-06,Ordered by mistake,0.00
+2477,33120,152,2018-07-27,Received wrong product,0.00
+2478,48308,46,2019-04-10,Defective product,0.00
+2479,40239,51,2019-03-26,Ordered by mistake,0.00
+2480,7663,454,2022-05-21,Product didn't meet expectations,550.66
+2481,25352,12,2019-12-14,Ordered by mistake,0.00
+2482,31584,52,2021-12-21,Received wrong product,0.00
+2483,41721,277,2019-03-04,Product damaged during shipping,0.00
+2484,3534,311,2018-01-12,Changed my mind,132.18
+2485,28918,416,2020-08-11,Changed my mind,0.00
+2486,37981,392,2020-09-14,Found a better deal,40.33
+2487,30978,301,2017-03-25,Product didn't meet expectations,0.00
+2488,26678,493,2022-09-04,Defective product,0.00
+2489,33397,344,2020-01-23,Ordered by mistake,0.00
+2490,18549,77,2022-03-03,Product damaged during shipping,0.00
+2491,43880,449,2021-12-08,Changed my mind,29.16
+2492,8187,193,2018-12-17,Defective product,368.65
+2493,28051,493,2020-12-02,Item not as described,218.26
+2494,11084,324,2020-08-23,Product didn't meet expectations,0.00
+2495,23164,267,2017-07-10,Defective product,0.00
+2496,32159,346,2018-07-03,Received wrong product,0.00
+2497,32371,277,2020-10-17,Found a better deal,0.00
+2498,7200,180,2018-08-29,Received wrong product,720.45
+2499,11872,110,2020-06-05,Found a better deal,0.00
+2500,11986,469,2022-06-27,Color doesn't match,516.77

@@ -1,0 +1,101 @@
+subcategory_id,subcategory_name,category_id
+1,Smartphones,1
+2,Laptops,1
+3,Headphones,1
+4,Cameras,1
+5,Wearables,1
+6,T-Shirts,2
+7,Dresses,2
+8,Jeans,2
+9,Sweaters,2
+10,Activewear,2
+11,Furniture,3
+12,Cookware,3
+13,Bedding,3
+14,Appliances,3
+15,Decor,3
+16,Fiction,4
+17,Non-Fiction,4
+18,Mystery,4
+19,Science Fiction,4
+20,Biography,4
+21,Outdoor Clothing,5
+22,Exercise Equipment,5
+23,Camping Gear,5
+24,Sports Shoes,5
+25,Bicycles,5
+26,Board Games,6
+27,Action Figures,6
+28,Puzzles,6
+29,Dolls,6
+30,Educational Toys,6
+31,Skincare,7
+32,Haircare,7
+33,Makeup,7
+34,Fragrances,7
+35,Personal Hygiene,7
+36,Vitamins,8
+37,Medical Supplies,8
+38,Cleaning Products,8
+39,Pet Care,8
+40,Health Monitors,8
+41,Car Parts,9
+42,Car Accessories,9
+43,Oil & Lubricants,9
+44,Tools,9
+45,Electronics,9
+46,Power Tools,10
+47,Hand Tools,10
+48,Home Security,10
+49,Lighting,10
+50,Paint,10
+51,Office Furniture,11
+52,Stationery,11
+53,Printers,11
+54,Computers,11
+55,Desk Accessories,11
+56,Fresh Produce,12
+57,Beverages,12
+58,Snacks,12
+59,Canned Goods,12
+60,Bakery,12
+61,Dog Food,13
+62,Cat Food,13
+63,Pet Toys,13
+64,Grooming,13
+65,Pet Beds,13
+66,Guitars,14
+67,Keyboards,14
+68,Drums,14
+69,Wind Instruments,14
+70,DJ Equipment,14
+71,Action & Adventure,15
+72,Drama,15
+73,Comedy,15
+74,Science Fiction,15
+75,Documentaries,15
+76,Action,16
+77,Adventure,16
+78,Role-Playing,16
+79,Sports,16
+80,Simulation,16
+81,Rings,17
+82,Necklaces,17
+83,Bracelets,17
+84,Earrings,17
+85,Watches,17
+86,Laptops,18
+87,Desktops,18
+88,Monitors,18
+89,Accessories,18
+90,Networking,18
+91,Running Shoes,19
+92,Casual Shoes,19
+93,Boots,19
+94,Sandals,19
+95,Athletic Shoes,19
+96,Analog Watches,20
+97,Digital Watches,20
+98,Smartwatches,20
+99,Luxury Watches,20
+100,Sports Watches,20

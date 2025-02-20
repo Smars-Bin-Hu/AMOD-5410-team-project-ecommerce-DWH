@@ -1,0 +1,17 @@
+campaign_id,campaign_name,offer_week
+1,NewYearSale,1
+2,ValentinesDaySale,6
+3,EasterSale,16
+4,IndependenceDaySale,27
+5,HalloweenSale,44
+6,ThanksgivingSale,48
+7,ChristmasSale,52
+8,LaborDaySale,36
+9,MemorialDaySale,21
+10,BlackFridaySale,48
+11,CyberMondaySale,49
+12,Mother'sDaySale,19
+13,Father'sDaySale,24
+14,BackToSchoolSale,34
+15,SummerSolsticeSale,25
+16,GroundhogDaySale,5

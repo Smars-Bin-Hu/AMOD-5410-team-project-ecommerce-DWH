@@ -38,3 +38,17 @@
 ```
 
 ## 💪 Quick Start
+
+
+Add hosts to your local `/etc/hosts`
+
+```
+# for docker network
+127.0.0.1   hadoop-master 
+127.0.0.1   hadoop-worker1
+127.0.0.1   hadoop-worker2
+127.0.0.1   mysql-hive-metastore
+127.0.0.1   hive
+127.0.0.1   spark
+127.0.0.1   oracle-oltp
+```

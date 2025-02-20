@@ -8,4 +8,4 @@ Data Warehouse Modelling
 
 Data Warehouse Development Standard
 
-Original Data Dictionary (OLTP)
+Original Data Dictionary (from DBA or OLTP)

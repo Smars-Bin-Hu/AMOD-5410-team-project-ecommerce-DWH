@@ -1,0 +1,501 @@
+product_id,name,price,description,subcategory_id
+1,Smartphones - Product 1,545.54,This is a description for Smartphones - Product 1,1
+2,Smartphones - Product 2,59.94,This is a description for Smartphones - Product 2,1
+3,Smartphones - Product 3,216.59,This is a description for Smartphones - Product 3,1
+4,Smartphones - Product 4,414.26,This is a description for Smartphones - Product 4,1
+5,Smartphones - Product 5,431.23,This is a description for Smartphones - Product 5,1
+6,Laptops - Product 1,736.51,This is a description for Laptops - Product 1,2
+7,Laptops - Product 2,673.74,This is a description for Laptops - Product 2,2
+8,Laptops - Product 3,689.21,This is a description for Laptops - Product 3,2
+9,Laptops - Product 4,917.56,This is a description for Laptops - Product 4,2
+10,Laptops - Product 5,505.61,This is a description for Laptops - Product 5,2
+11,Headphones - Product 1,235.61,This is a description for Headphones - Product 1,3
+12,Headphones - Product 2,869.98,This is a description for Headphones - Product 2,3
+13,Headphones - Product 3,528.03,This is a description for Headphones - Product 3,3
+14,Headphones - Product 4,993.84,This is a description for Headphones - Product 4,3
+15,Headphones - Product 5,766.82,This is a description for Headphones - Product 5,3
+16,Cameras - Product 1,615.52,This is a description for Cameras - Product 1,4
+17,Cameras - Product 2,942.05,This is a description for Cameras - Product 2,4
+18,Cameras - Product 3,795.17,This is a description for Cameras - Product 3,4
+19,Cameras - Product 4,628.59,This is a description for Cameras - Product 4,4
+20,Cameras - Product 5,944.07,This is a description for Cameras - Product 5,4
+21,Wearables - Product 1,692.04,This is a description for Wearables - Product 1,5
+22,Wearables - Product 2,98.64,This is a description for Wearables - Product 2,5
+23,Wearables - Product 3,735.91,This is a description for Wearables - Product 3,5
+24,Wearables - Product 4,567.42,This is a description for Wearables - Product 4,5
+25,Wearables - Product 5,282.11,This is a description for Wearables - Product 5,5
+26,T-Shirts - Product 1,408.74,This is a description for T-Shirts - Product 1,6
+27,T-Shirts - Product 2,901.95,This is a description for T-Shirts - Product 2,6
+28,T-Shirts - Product 3,42.09,This is a description for T-Shirts - Product 3,6
+29,T-Shirts - Product 4,642.90,This is a description for T-Shirts - Product 4,6
+30,T-Shirts - Product 5,906.13,This is a description for T-Shirts - Product 5,6
+31,Dresses - Product 1,567.23,This is a description for Dresses - Product 1,7
+32,Dresses - Product 2,510.17,This is a description for Dresses - Product 2,7
+33,Dresses - Product 3,150.56,This is a description for Dresses - Product 3,7
+34,Dresses - Product 4,20.22,This is a description for Dresses - Product 4,7
+35,Dresses - Product 5,278.72,This is a description for Dresses - Product 5,7
+36,Jeans - Product 1,629.92,This is a description for Jeans - Product 1,8
+37,Jeans - Product 2,393.59,This is a description for Jeans - Product 2,8
+38,Jeans - Product 3,910.95,This is a description for Jeans - Product 3,8
+39,Jeans - Product 4,279.77,This is a description for Jeans - Product 4,8
+40,Jeans - Product 5,250.53,This is a description for Jeans - Product 5,8
+41,Sweaters - Product 1,694.44,This is a description for Sweaters - Product 1,9
+42,Sweaters - Product 2,913.46,This is a description for Sweaters - Product 2,9
+43,Sweaters - Product 3,43.21,This is a description for Sweaters - Product 3,9
+44,Sweaters - Product 4,889.65,This is a description for Sweaters - Product 4,9
+45,Sweaters - Product 5,652.54,This is a description for Sweaters - Product 5,9
+46,Activewear - Product 1,262.69,This is a description for Activewear - Product 1,10
+47,Activewear - Product 2,570.47,This is a description for Activewear - Product 2,10
+48,Activewear - Product 3,826.97,This is a description for Activewear - Product 3,10
+49,Activewear - Product 4,912.46,This is a description for Activewear - Product 4,10
+50,Activewear - Product 5,18.78,This is a description for Activewear - Product 5,10
+51,Furniture - Product 1,747.18,This is a description for Furniture - Product 1,11
+52,Furniture - Product 2,208.40,This is a description for Furniture - Product 2,11
+53,Furniture - Product 3,487.15,This is a description for Furniture - Product 3,11
+54,Furniture - Product 4,744.10,This is a description for Furniture - Product 4,11
+55,Furniture - Product 5,205.07,This is a description for Furniture - Product 5,11
+56,Cookware - Product 1,851.30,This is a description for Cookware - Product 1,12
+57,Cookware - Product 2,133.51,This is a description for Cookware - Product 2,12
+58,Cookware - Product 3,290.33,This is a description for Cookware - Product 3,12
+59,Cookware - Product 4,631.40,This is a description for Cookware - Product 4,12
+60,Cookware - Product 5,669.49,This is a description for Cookware - Product 5,12
+61,Bedding - Product 1,902.94,This is a description for Bedding - Product 1,13
+62,Bedding - Product 2,928.04,This is a description for Bedding - Product 2,13
+63,Bedding - Product 3,624.14,This is a description for Bedding - Product 3,13
+64,Bedding - Product 4,214.67,This is a description for Bedding - Product 4,13
+65,Bedding - Product 5,444.34,This is a description for Bedding - Product 5,13
+66,Appliances - Product 1,172.40,This is a description for Appliances - Product 1,14
+67,Appliances - Product 2,354.70,This is a description for Appliances - Product 2,14
+68,Appliances - Product 3,385.27,This is a description for Appliances - Product 3,14
+69,Appliances - Product 4,238.89,This is a description for Appliances - Product 4,14
+70,Appliances - Product 5,981.02,This is a description for Appliances - Product 5,14
+71,Decor - Product 1,873.30,This is a description for Decor - Product 1,15
+72,Decor - Product 2,403.96,This is a description for Decor - Product 2,15
+73,Decor - Product 3,761.25,This is a description for Decor - Product 3,15
+74,Decor - Product 4,53.06,This is a description for Decor - Product 4,15
+75,Decor - Product 5,456.22,This is a description for Decor - Product 5,15
+76,Fiction - Product 1,800.12,This is a description for Fiction - Product 1,16
+77,Fiction - Product 2,168.19,This is a description for Fiction - Product 2,16
+78,Fiction - Product 3,400.64,This is a description for Fiction - Product 3,16
+79,Fiction - Product 4,853.69,This is a description for Fiction - Product 4,16
+80,Fiction - Product 5,643.88,This is a description for Fiction - Product 5,16
+81,Non-Fiction - Product 1,447.96,This is a description for Non-Fiction - Product 1,17
+82,Non-Fiction - Product 2,699.34,This is a description for Non-Fiction - Product 2,17
+83,Non-Fiction - Product 3,80.01,This is a description for Non-Fiction - Product 3,17
+84,Non-Fiction - Product 4,123.15,This is a description for Non-Fiction - Product 4,17
+85,Non-Fiction - Product 5,624.31,This is a description for Non-Fiction - Product 5,17
+86,Mystery - Product 1,61.46,This is a description for Mystery - Product 1,18
+87,Mystery - Product 2,547.95,This is a description for Mystery - Product 2,18
+88,Mystery - Product 3,260.52,This is a description for Mystery - Product 3,18
+89,Mystery - Product 4,634.08,This is a description for Mystery - Product 4,18
+90,Mystery - Product 5,186.21,This is a description for Mystery - Product 5,18
+91,Science Fiction - Product 1,787.66,This is a description for Science Fiction - Product 1,19
+92,Science Fiction - Product 2,0.37,This is a description for Science Fiction - Product 2,19
+93,Science Fiction - Product 3,845.60,This is a description for Science Fiction - Product 3,19
+94,Science Fiction - Product 4,836.60,This is a description for Science Fiction - Product 4,19
+95,Science Fiction - Product 5,443.20,This is a description for Science Fiction - Product 5,19
+96,Biography - Product 1,114.69,This is a description for Biography - Product 1,20
+97,Biography - Product 2,354.21,This is a description for Biography - Product 2,20
+98,Biography - Product 3,458.13,This is a description for Biography - Product 3,20
+99,Biography - Product 4,602.92,This is a description for Biography - Product 4,20
+100,Biography - Product 5,773.11,This is a description for Biography - Product 5,20
+101,Outdoor Clothing - Product 1,539.11,This is a description for Outdoor Clothing - Product 1,21
+102,Outdoor Clothing - Product 2,673.07,This is a description for Outdoor Clothing - Product 2,21
+103,Outdoor Clothing - Product 3,701.99,This is a description for Outdoor Clothing - Product 3,21
+104,Outdoor Clothing - Product 4,575.58,This is a description for Outdoor Clothing - Product 4,21
+105,Outdoor Clothing - Product 5,192.64,This is a description for Outdoor Clothing - Product 5,21
+106,Exercise Equipment - Product 1,367.12,This is a description for Exercise Equipment - Product 1,22
+107,Exercise Equipment - Product 2,426.99,This is a description for Exercise Equipment - Product 2,22
+108,Exercise Equipment - Product 3,236.38,This is a description for Exercise Equipment - Product 3,22
+109,Exercise Equipment - Product 4,1.60,This is a description for Exercise Equipment - Product 4,22
+110,Exercise Equipment - Product 5,858.05,This is a description for Exercise Equipment - Product 5,22
+111,Camping Gear - Product 1,560.98,This is a description for Camping Gear - Product 1,23
+112,Camping Gear - Product 2,536.21,This is a description for Camping Gear - Product 2,23
+113,Camping Gear - Product 3,669.58,This is a description for Camping Gear - Product 3,23
+114,Camping Gear - Product 4,427.86,This is a description for Camping Gear - Product 4,23
+115,Camping Gear - Product 5,915.59,This is a description for Camping Gear - Product 5,23
+116,Sports Shoes - Product 1,228.55,This is a description for Sports Shoes - Product 1,24
+117,Sports Shoes - Product 2,873.59,This is a description for Sports Shoes - Product 2,24
+118,Sports Shoes - Product 3,473.75,This is a description for Sports Shoes - Product 3,24
+119,Sports Shoes - Product 4,767.55,This is a description for Sports Shoes - Product 4,24
+120,Sports Shoes - Product 5,145.46,This is a description for Sports Shoes - Product 5,24
+121,Bicycles - Product 1,764.39,This is a description for Bicycles - Product 1,25
+122,Bicycles - Product 2,22.65,This is a description for Bicycles - Product 2,25
+123,Bicycles - Product 3,619.68,This is a description for Bicycles - Product 3,25
+124,Bicycles - Product 4,378.18,This is a description for Bicycles - Product 4,25
+125,Bicycles - Product 5,394.34,This is a description for Bicycles - Product 5,25
+126,Board Games - Product 1,859.36,This is a description for Board Games - Product 1,26
+127,Board Games - Product 2,750.04,This is a description for Board Games - Product 2,26
+128,Board Games - Product 3,116.12,This is a description for Board Games - Product 3,26
+129,Board Games - Product 4,676.41,This is a description for Board Games - Product 4,26
+130,Board Games - Product 5,665.06,This is a description for Board Games - Product 5,26
+131,Action Figures - Product 1,692.19,This is a description for Action Figures - Product 1,27
+132,Action Figures - Product 2,560.30,This is a description for Action Figures - Product 2,27
+133,Action Figures - Product 3,380.65,This is a description for Action Figures - Product 3,27
+134,Action Figures - Product 4,244.94,This is a description for Action Figures - Product 4,27
+135,Action Figures - Product 5,745.71,This is a description for Action Figures - Product 5,27
+136,Puzzles - Product 1,543.02,This is a description for Puzzles - Product 1,28
+137,Puzzles - Product 2,649.23,This is a description for Puzzles - Product 2,28
+138,Puzzles - Product 3,825.95,This is a description for Puzzles - Product 3,28
+139,Puzzles - Product 4,774.42,This is a description for Puzzles - Product 4,28
+140,Puzzles - Product 5,576.77,This is a description for Puzzles - Product 5,28
+141,Dolls - Product 1,316.60,This is a description for Dolls - Product 1,29
+142,Dolls - Product 2,867.39,This is a description for Dolls - Product 2,29
+143,Dolls - Product 3,124.23,This is a description for Dolls - Product 3,29
+144,Dolls - Product 4,795.35,This is a description for Dolls - Product 4,29
+145,Dolls - Product 5,947.51,This is a description for Dolls - Product 5,29
+146,Educational Toys - Product 1,795.25,This is a description for Educational Toys - Product 1,30
+147,Educational Toys - Product 2,313.42,This is a description for Educational Toys - Product 2,30
+148,Educational Toys - Product 3,664.81,This is a description for Educational Toys - Product 3,30
+149,Educational Toys - Product 4,626.22,This is a description for Educational Toys - Product 4,30
+150,Educational Toys - Product 5,473.47,This is a description for Educational Toys - Product 5,30
+151,Skincare - Product 1,172.38,This is a description for Skincare - Product 1,31
+152,Skincare - Product 2,358.01,This is a description for Skincare - Product 2,31
+153,Skincare - Product 3,198.99,This is a description for Skincare - Product 3,31
+154,Skincare - Product 4,813.87,This is a description for Skincare - Product 4,31
+155,Skincare - Product 5,795.98,This is a description for Skincare - Product 5,31
+156,Haircare - Product 1,280.77,This is a description for Haircare - Product 1,32
+157,Haircare - Product 2,382.82,This is a description for Haircare - Product 2,32
+158,Haircare - Product 3,265.38,This is a description for Haircare - Product 3,32
+159,Haircare - Product 4,905.70,This is a description for Haircare - Product 4,32
+160,Haircare - Product 5,879.85,This is a description for Haircare - Product 5,32
+161,Makeup - Product 1,609.87,This is a description for Makeup - Product 1,33
+162,Makeup - Product 2,215.60,This is a description for Makeup - Product 2,33
+163,Makeup - Product 3,114.57,This is a description for Makeup - Product 3,33
+164,Makeup - Product 4,849.20,This is a description for Makeup - Product 4,33
+165,Makeup - Product 5,852.25,This is a description for Makeup - Product 5,33
+166,Fragrances - Product 1,100.38,This is a description for Fragrances - Product 1,34
+167,Fragrances - Product 2,919.19,This is a description for Fragrances - Product 2,34
+168,Fragrances - Product 3,82.85,This is a description for Fragrances - Product 3,34
+169,Fragrances - Product 4,641.13,This is a description for Fragrances - Product 4,34
+170,Fragrances - Product 5,939.79,This is a description for Fragrances - Product 5,34
+171,Personal Hygiene - Product 1,797.35,This is a description for Personal Hygiene - Product 1,35
+172,Personal Hygiene - Product 2,556.93,This is a description for Personal Hygiene - Product 2,35
+173,Personal Hygiene - Product 3,162.33,This is a description for Personal Hygiene - Product 3,35
+174,Personal Hygiene - Product 4,490.40,This is a description for Personal Hygiene - Product 4,35
+175,Personal Hygiene - Product 5,19.77,This is a description for Personal Hygiene - Product 5,35
+176,Vitamins - Product 1,473.94,This is a description for Vitamins - Product 1,36
+177,Vitamins - Product 2,518.69,This is a description for Vitamins - Product 2,36
+178,Vitamins - Product 3,447.71,This is a description for Vitamins - Product 3,36
+179,Vitamins - Product 4,167.27,This is a description for Vitamins - Product 4,36
+180,Vitamins - Product 5,529.74,This is a description for Vitamins - Product 5,36
+181,Medical Supplies - Product 1,227.38,This is a description for Medical Supplies - Product 1,37
+182,Medical Supplies - Product 2,70.18,This is a description for Medical Supplies - Product 2,37
+183,Medical Supplies - Product 3,642.10,This is a description for Medical Supplies - Product 3,37
+184,Medical Supplies - Product 4,397.36,This is a description for Medical Supplies - Product 4,37
+185,Medical Supplies - Product 5,790.44,This is a description for Medical Supplies - Product 5,37
+186,Cleaning Products - Product 1,964.29,This is a description for Cleaning Products - Product 1,38
+187,Cleaning Products - Product 2,610.01,This is a description for Cleaning Products - Product 2,38
+188,Cleaning Products - Product 3,985.84,This is a description for Cleaning Products - Product 3,38
+189,Cleaning Products - Product 4,853.90,This is a description for Cleaning Products - Product 4,38
+190,Cleaning Products - Product 5,529.24,This is a description for Cleaning Products - Product 5,38
+191,Pet Care - Product 1,64.93,This is a description for Pet Care - Product 1,39
+192,Pet Care - Product 2,890.15,This is a description for Pet Care - Product 2,39
+193,Pet Care - Product 3,921.63,This is a description for Pet Care - Product 3,39
+194,Pet Care - Product 4,312.68,This is a description for Pet Care - Product 4,39
+195,Pet Care - Product 5,577.77,This is a description for Pet Care - Product 5,39
+196,Health Monitors - Product 1,50.37,This is a description for Health Monitors - Product 1,40
+197,Health Monitors - Product 2,707.95,This is a description for Health Monitors - Product 2,40
+198,Health Monitors - Product 3,986.30,This is a description for Health Monitors - Product 3,40
+199,Health Monitors - Product 4,540.45,This is a description for Health Monitors - Product 4,40
+200,Health Monitors - Product 5,223.51,This is a description for Health Monitors - Product 5,40
+201,Car Parts - Product 1,512.88,This is a description for Car Parts - Product 1,41
+202,Car Parts - Product 2,934.01,This is a description for Car Parts - Product 2,41
+203,Car Parts - Product 3,198.43,This is a description for Car Parts - Product 3,41
+204,Car Parts - Product 4,974.71,This is a description for Car Parts - Product 4,41
+205,Car Parts - Product 5,242.31,This is a description for Car Parts - Product 5,41
+206,Car Accessories - Product 1,46.51,This is a description for Car Accessories - Product 1,42
+207,Car Accessories - Product 2,253.47,This is a description for Car Accessories - Product 2,42
+208,Car Accessories - Product 3,238.62,This is a description for Car Accessories - Product 3,42
+209,Car Accessories - Product 4,730.26,This is a description for Car Accessories - Product 4,42
+210,Car Accessories - Product 5,889.69,This is a description for Car Accessories - Product 5,42
+211,Oil & Lubricants - Product 1,756.42,This is a description for Oil & Lubricants - Product 1,43
+212,Oil & Lubricants - Product 2,414.84,This is a description for Oil & Lubricants - Product 2,43
+213,Oil & Lubricants - Product 3,265.58,This is a description for Oil & Lubricants - Product 3,43
+214,Oil & Lubricants - Product 4,487.44,This is a description for Oil & Lubricants - Product 4,43
+215,Oil & Lubricants - Product 5,417.35,This is a description for Oil & Lubricants - Product 5,43
+216,Tools - Product 1,839.12,This is a description for Tools - Product 1,44
+217,Tools - Product 2,512.05,This is a description for Tools - Product 2,44
+218,Tools - Product 3,699.65,This is a description for Tools - Product 3,44
+219,Tools - Product 4,327.77,This is a description for Tools - Product 4,44
+220,Tools - Product 5,765.07,This is a description for Tools - Product 5,44
+221,Electronics - Product 1,634.32,This is a description for Electronics - Product 1,45
+222,Electronics - Product 2,887.34,This is a description for Electronics - Product 2,45
+223,Electronics - Product 3,519.68,This is a description for Electronics - Product 3,45
+224,Electronics - Product 4,612.93,This is a description for Electronics - Product 4,45
+225,Electronics - Product 5,174.02,This is a description for Electronics - Product 5,45
+226,Power Tools - Product 1,264.43,This is a description for Power Tools - Product 1,46
+227,Power Tools - Product 2,379.04,This is a description for Power Tools - Product 2,46
+228,Power Tools - Product 3,362.36,This is a description for Power Tools - Product 3,46
+229,Power Tools - Product 4,417.55,This is a description for Power Tools - Product 4,46
+230,Power Tools - Product 5,390.59,This is a description for Power Tools - Product 5,46
+231,Hand Tools - Product 1,128.14,This is a description for Hand Tools - Product 1,47
+232,Hand Tools - Product 2,10.05,This is a description for Hand Tools - Product 2,47
+233,Hand Tools - Product 3,145.16,This is a description for Hand Tools - Product 3,47
+234,Hand Tools - Product 4,5.92,This is a description for Hand Tools - Product 4,47
+235,Hand Tools - Product 5,925.45,This is a description for Hand Tools - Product 5,47
+236,Home Security - Product 1,492.84,This is a description for Home Security - Product 1,48
+237,Home Security - Product 2,956.56,This is a description for Home Security - Product 2,48
+238,Home Security - Product 3,281.61,This is a description for Home Security - Product 3,48
+239,Home Security - Product 4,577.88,This is a description for Home Security - Product 4,48
+240,Home Security - Product 5,773.47,This is a description for Home Security - Product 5,48
+241,Lighting - Product 1,833.27,This is a description for Lighting - Product 1,49
+242,Lighting - Product 2,552.17,This is a description for Lighting - Product 2,49
+243,Lighting - Product 3,252.86,This is a description for Lighting - Product 3,49
+244,Lighting - Product 4,843.56,This is a description for Lighting - Product 4,49
+245,Lighting - Product 5,761.62,This is a description for Lighting - Product 5,49
+246,Paint - Product 1,381.08,This is a description for Paint - Product 1,50
+247,Paint - Product 2,247.18,This is a description for Paint - Product 2,50
+248,Paint - Product 3,789.79,This is a description for Paint - Product 3,50
+249,Paint - Product 4,743.57,This is a description for Paint - Product 4,50
+250,Paint - Product 5,557.96,This is a description for Paint - Product 5,50
+251,Office Furniture - Product 1,74.09,This is a description for Office Furniture - Product 1,51
+252,Office Furniture - Product 2,713.49,This is a description for Office Furniture - Product 2,51
+253,Office Furniture - Product 3,377.82,This is a description for Office Furniture - Product 3,51
+254,Office Furniture - Product 4,892.90,This is a description for Office Furniture - Product 4,51
+255,Office Furniture - Product 5,719.39,This is a description for Office Furniture - Product 5,51
+256,Stationery - Product 1,181.12,This is a description for Stationery - Product 1,52
+257,Stationery - Product 2,153.90,This is a description for Stationery - Product 2,52
+258,Stationery - Product 3,631.12,This is a description for Stationery - Product 3,52
+259,Stationery - Product 4,967.19,This is a description for Stationery - Product 4,52
+260,Stationery - Product 5,916.18,This is a description for Stationery - Product 5,52
+261,Printers - Product 1,393.64,This is a description for Printers - Product 1,53
+262,Printers - Product 2,31.77,This is a description for Printers - Product 2,53
+263,Printers - Product 3,825.48,This is a description for Printers - Product 3,53
+264,Printers - Product 4,657.93,This is a description for Printers - Product 4,53
+265,Printers - Product 5,719.16,This is a description for Printers - Product 5,53
+266,Computers - Product 1,377.05,This is a description for Computers - Product 1,54
+267,Computers - Product 2,861.71,This is a description for Computers - Product 2,54
+268,Computers - Product 3,336.51,This is a description for Computers - Product 3,54
+269,Computers - Product 4,801.29,This is a description for Computers - Product 4,54
+270,Computers - Product 5,162.68,This is a description for Computers - Product 5,54
+271,Desk Accessories - Product 1,332.07,This is a description for Desk Accessories - Product 1,55
+272,Desk Accessories - Product 2,101.48,This is a description for Desk Accessories - Product 2,55
+273,Desk Accessories - Product 3,960.58,This is a description for Desk Accessories - Product 3,55
+274,Desk Accessories - Product 4,497.67,This is a description for Desk Accessories - Product 4,55
+275,Desk Accessories - Product 5,614.74,This is a description for Desk Accessories - Product 5,55
+276,Fresh Produce - Product 1,972.95,This is a description for Fresh Produce - Product 1,56
+277,Fresh Produce - Product 2,949.33,This is a description for Fresh Produce - Product 2,56
+278,Fresh Produce - Product 3,197.44,This is a description for Fresh Produce - Product 3,56
+279,Fresh Produce - Product 4,6.83,This is a description for Fresh Produce - Product 4,56
+280,Fresh Produce - Product 5,145.79,This is a description for Fresh Produce - Product 5,56
+281,Beverages - Product 1,154.83,This is a description for Beverages - Product 1,57
+282,Beverages - Product 2,506.61,This is a description for Beverages - Product 2,57
+283,Beverages - Product 3,24.75,This is a description for Beverages - Product 3,57
+284,Beverages - Product 4,206.96,This is a description for Beverages - Product 4,57
+285,Beverages - Product 5,289.70,This is a description for Beverages - Product 5,57
+286,Snacks - Product 1,220.07,This is a description for Snacks - Product 1,58
+287,Snacks - Product 2,425.90,This is a description for Snacks - Product 2,58
+288,Snacks - Product 3,985.34,This is a description for Snacks - Product 3,58
+289,Snacks - Product 4,303.36,This is a description for Snacks - Product 4,58
+290,Snacks - Product 5,901.42,This is a description for Snacks - Product 5,58
+291,Canned Goods - Product 1,297.80,This is a description for Canned Goods - Product 1,59
+292,Canned Goods - Product 2,404.60,This is a description for Canned Goods - Product 2,59
+293,Canned Goods - Product 3,708.70,This is a description for Canned Goods - Product 3,59
+294,Canned Goods - Product 4,589.83,This is a description for Canned Goods - Product 4,59
+295,Canned Goods - Product 5,376.21,This is a description for Canned Goods - Product 5,59
+296,Bakery - Product 1,298.54,This is a description for Bakery - Product 1,60
+297,Bakery - Product 2,721.38,This is a description for Bakery - Product 2,60
+298,Bakery - Product 3,200.28,This is a description for Bakery - Product 3,60
+299,Bakery - Product 4,349.01,This is a description for Bakery - Product 4,60
+300,Bakery - Product 5,498.33,This is a description for Bakery - Product 5,60
+301,Dog Food - Product 1,506.95,This is a description for Dog Food - Product 1,61
+302,Dog Food - Product 2,882.53,This is a description for Dog Food - Product 2,61
+303,Dog Food - Product 3,783.55,This is a description for Dog Food - Product 3,61
+304,Dog Food - Product 4,870.17,This is a description for Dog Food - Product 4,61
+305,Dog Food - Product 5,313.58,This is a description for Dog Food - Product 5,61
+306,Cat Food - Product 1,404.90,This is a description for Cat Food - Product 1,62
+307,Cat Food - Product 2,523.94,This is a description for Cat Food - Product 2,62
+308,Cat Food - Product 3,315.98,This is a description for Cat Food - Product 3,62
+309,Cat Food - Product 4,803.61,This is a description for Cat Food - Product 4,62
+310,Cat Food - Product 5,926.70,This is a description for Cat Food - Product 5,62
+311,Pet Toys - Product 1,275.38,This is a description for Pet Toys - Product 1,63
+312,Pet Toys - Product 2,831.21,This is a description for Pet Toys - Product 2,63
+313,Pet Toys - Product 3,435.71,This is a description for Pet Toys - Product 3,63
+314,Pet Toys - Product 4,728.66,This is a description for Pet Toys - Product 4,63
+315,Pet Toys - Product 5,304.45,This is a description for Pet Toys - Product 5,63
+316,Grooming - Product 1,728.13,This is a description for Grooming - Product 1,64
+317,Grooming - Product 2,290.68,This is a description for Grooming - Product 2,64
+318,Grooming - Product 3,484.36,This is a description for Grooming - Product 3,64
+319,Grooming - Product 4,635.63,This is a description for Grooming - Product 4,64
+320,Grooming - Product 5,877.63,This is a description for Grooming - Product 5,64
+321,Pet Beds - Product 1,508.87,This is a description for Pet Beds - Product 1,65
+322,Pet Beds - Product 2,174.81,This is a description for Pet Beds - Product 2,65
+323,Pet Beds - Product 3,761.73,This is a description for Pet Beds - Product 3,65
+324,Pet Beds - Product 4,695.11,This is a description for Pet Beds - Product 4,65
+325,Pet Beds - Product 5,247.49,This is a description for Pet Beds - Product 5,65
+326,Guitars - Product 1,79.60,This is a description for Guitars - Product 1,66
+327,Guitars - Product 2,366.07,This is a description for Guitars - Product 2,66
+328,Guitars - Product 3,222.80,This is a description for Guitars - Product 3,66
+329,Guitars - Product 4,219.86,This is a description for Guitars - Product 4,66
+330,Guitars - Product 5,225.23,This is a description for Guitars - Product 5,66
+331,Keyboards - Product 1,335.02,This is a description for Keyboards - Product 1,67
+332,Keyboards - Product 2,546.53,This is a description for Keyboards - Product 2,67
+333,Keyboards - Product 3,46.73,This is a description for Keyboards - Product 3,67
+334,Keyboards - Product 4,244.52,This is a description for Keyboards - Product 4,67
+335,Keyboards - Product 5,965.42,This is a description for Keyboards - Product 5,67
+336,Drums - Product 1,381.72,This is a description for Drums - Product 1,68
+337,Drums - Product 2,846.27,This is a description for Drums - Product 2,68
+338,Drums - Product 3,334.48,This is a description for Drums - Product 3,68
+339,Drums - Product 4,898.89,This is a description for Drums - Product 4,68
+340,Drums - Product 5,292.79,This is a description for Drums - Product 5,68
+341,Wind Instruments - Product 1,930.73,This is a description for Wind Instruments - Product 1,69
+342,Wind Instruments - Product 2,537.33,This is a description for Wind Instruments - Product 2,69
+343,Wind Instruments - Product 3,234.88,This is a description for Wind Instruments - Product 3,69
+344,Wind Instruments - Product 4,868.66,This is a description for Wind Instruments - Product 4,69
+345,Wind Instruments - Product 5,602.61,This is a description for Wind Instruments - Product 5,69
+346,DJ Equipment - Product 1,530.79,This is a description for DJ Equipment - Product 1,70
+347,DJ Equipment - Product 2,563.31,This is a description for DJ Equipment - Product 2,70
+348,DJ Equipment - Product 3,656.62,This is a description for DJ Equipment - Product 3,70
+349,DJ Equipment - Product 4,155.84,This is a description for DJ Equipment - Product 4,70
+350,DJ Equipment - Product 5,171.05,This is a description for DJ Equipment - Product 5,70
+351,Action & Adventure - Product 1,404.80,This is a description for Action & Adventure - Product 1,71
+352,Action & Adventure - Product 2,894.49,This is a description for Action & Adventure - Product 2,71
+353,Action & Adventure - Product 3,827.87,This is a description for Action & Adventure - Product 3,71
+354,Action & Adventure - Product 4,531.09,This is a description for Action & Adventure - Product 4,71
+355,Action & Adventure - Product 5,458.93,This is a description for Action & Adventure - Product 5,71
+356,Drama - Product 1,110.98,This is a description for Drama - Product 1,72
+357,Drama - Product 2,174.87,This is a description for Drama - Product 2,72
+358,Drama - Product 3,687.94,This is a description for Drama - Product 3,72
+359,Drama - Product 4,297.99,This is a description for Drama - Product 4,72
+360,Drama - Product 5,321.62,This is a description for Drama - Product 5,72
+361,Comedy - Product 1,925.58,This is a description for Comedy - Product 1,73
+362,Comedy - Product 2,672.99,This is a description for Comedy - Product 2,73
+363,Comedy - Product 3,709.06,This is a description for Comedy - Product 3,73
+364,Comedy - Product 4,258.54,This is a description for Comedy - Product 4,73
+365,Comedy - Product 5,306.10,This is a description for Comedy - Product 5,73
+366,Science Fiction - Product 1,365.98,This is a description for Science Fiction - Product 1,19
+367,Science Fiction - Product 2,588.42,This is a description for Science Fiction - Product 2,19
+368,Science Fiction - Product 3,477.41,This is a description for Science Fiction - Product 3,19
+369,Science Fiction - Product 4,472.65,This is a description for Science Fiction - Product 4,19
+370,Science Fiction - Product 5,714.09,This is a description for Science Fiction - Product 5,19
+371,Documentaries - Product 1,666.05,This is a description for Documentaries - Product 1,75
+372,Documentaries - Product 2,823.49,This is a description for Documentaries - Product 2,75
+373,Documentaries - Product 3,653.44,This is a description for Documentaries - Product 3,75
+374,Documentaries - Product 4,626.42,This is a description for Documentaries - Product 4,75
+375,Documentaries - Product 5,249.87,This is a description for Documentaries - Product 5,75
+376,Action - Product 1,780.50,This is a description for Action - Product 1,76
+377,Action - Product 2,475.84,This is a description for Action - Product 2,76
+378,Action - Product 3,667.27,This is a description for Action - Product 3,76
+379,Action - Product 4,975.66,This is a description for Action - Product 4,76
+380,Action - Product 5,350.15,This is a description for Action - Product 5,76
+381,Adventure - Product 1,313.06,This is a description for Adventure - Product 1,77
+382,Adventure - Product 2,957.41,This is a description for Adventure - Product 2,77
+383,Adventure - Product 3,31.80,This is a description for Adventure - Product 3,77
+384,Adventure - Product 4,722.48,This is a description for Adventure - Product 4,77
+385,Adventure - Product 5,302.54,This is a description for Adventure - Product 5,77
+386,Role-Playing - Product 1,417.03,This is a description for Role-Playing - Product 1,78
+387,Role-Playing - Product 2,610.65,This is a description for Role-Playing - Product 2,78
+388,Role-Playing - Product 3,527.35,This is a description for Role-Playing - Product 3,78
+389,Role-Playing - Product 4,863.73,This is a description for Role-Playing - Product 4,78
+390,Role-Playing - Product 5,251.19,This is a description for Role-Playing - Product 5,78
+391,Sports - Product 1,32.10,This is a description for Sports - Product 1,79
+392,Sports - Product 2,806.67,This is a description for Sports - Product 2,79
+393,Sports - Product 3,78.78,This is a description for Sports - Product 3,79
+394,Sports - Product 4,613.19,This is a description for Sports - Product 4,79
+395,Sports - Product 5,185.80,This is a description for Sports - Product 5,79
+396,Simulation - Product 1,105.48,This is a description for Simulation - Product 1,80
+397,Simulation - Product 2,937.30,This is a description for Simulation - Product 2,80
+398,Simulation - Product 3,359.59,This is a description for Simulation - Product 3,80
+399,Simulation - Product 4,340.93,This is a description for Simulation - Product 4,80
+400,Simulation - Product 5,806.27,This is a description for Simulation - Product 5,80
+401,Rings - Product 1,678.18,This is a description for Rings - Product 1,81
+402,Rings - Product 2,417.74,This is a description for Rings - Product 2,81
+403,Rings - Product 3,870.01,This is a description for Rings - Product 3,81
+404,Rings - Product 4,661.55,This is a description for Rings - Product 4,81
+405,Rings - Product 5,312.99,This is a description for Rings - Product 5,81
+406,Necklaces - Product 1,777.00,This is a description for Necklaces - Product 1,82
+407,Necklaces - Product 2,865.01,This is a description for Necklaces - Product 2,82
+408,Necklaces - Product 3,985.36,This is a description for Necklaces - Product 3,82
+409,Necklaces - Product 4,163.69,This is a description for Necklaces - Product 4,82
+410,Necklaces - Product 5,481.73,This is a description for Necklaces - Product 5,82
+411,Bracelets - Product 1,991.21,This is a description for Bracelets - Product 1,83
+412,Bracelets - Product 2,475.00,This is a description for Bracelets - Product 2,83
+413,Bracelets - Product 3,978.79,This is a description for Bracelets - Product 3,83
+414,Bracelets - Product 4,259.23,This is a description for Bracelets - Product 4,83
+415,Bracelets - Product 5,421.93,This is a description for Bracelets - Product 5,83
+416,Earrings - Product 1,178.91,This is a description for Earrings - Product 1,84
+417,Earrings - Product 2,365.71,This is a description for Earrings - Product 2,84
+418,Earrings - Product 3,918.81,This is a description for Earrings - Product 3,84
+419,Earrings - Product 4,309.91,This is a description for Earrings - Product 4,84
+420,Earrings - Product 5,145.85,This is a description for Earrings - Product 5,84
+421,Watches - Product 1,467.05,This is a description for Watches - Product 1,85
+422,Watches - Product 2,857.97,This is a description for Watches - Product 2,85
+423,Watches - Product 3,82.85,This is a description for Watches - Product 3,85
+424,Watches - Product 4,506.73,This is a description for Watches - Product 4,85
+425,Watches - Product 5,421.59,This is a description for Watches - Product 5,85
+426,Laptops - Product 1,184.57,This is a description for Laptops - Product 1,2
+427,Laptops - Product 2,998.97,This is a description for Laptops - Product 2,2
+428,Laptops - Product 3,867.33,This is a description for Laptops - Product 3,2
+429,Laptops - Product 4,659.74,This is a description for Laptops - Product 4,2
+430,Laptops - Product 5,440.38,This is a description for Laptops - Product 5,2
+431,Desktops - Product 1,278.01,This is a description for Desktops - Product 1,87
+432,Desktops - Product 2,324.70,This is a description for Desktops - Product 2,87
+433,Desktops - Product 3,132.65,This is a description for Desktops - Product 3,87
+434,Desktops - Product 4,565.33,This is a description for Desktops - Product 4,87
+435,Desktops - Product 5,988.05,This is a description for Desktops - Product 5,87
+436,Monitors - Product 1,454.12,This is a description for Monitors - Product 1,88
+437,Monitors - Product 2,114.95,This is a description for Monitors - Product 2,88
+438,Monitors - Product 3,430.89,This is a description for Monitors - Product 3,88
+439,Monitors - Product 4,612.85,This is a description for Monitors - Product 4,88
+440,Monitors - Product 5,427.71,This is a description for Monitors - Product 5,88
+441,Accessories - Product 1,993.90,This is a description for Accessories - Product 1,89
+442,Accessories - Product 2,428.70,This is a description for Accessories - Product 2,89
+443,Accessories - Product 3,884.68,This is a description for Accessories - Product 3,89
+444,Accessories - Product 4,758.28,This is a description for Accessories - Product 4,89
+445,Accessories - Product 5,138.82,This is a description for Accessories - Product 5,89
+446,Networking - Product 1,814.06,This is a description for Networking - Product 1,90
+447,Networking - Product 2,976.40,This is a description for Networking - Product 2,90
+448,Networking - Product 3,589.02,This is a description for Networking - Product 3,90
+449,Networking - Product 4,60.74,This is a description for Networking - Product 4,90
+450,Networking - Product 5,758.08,This is a description for Networking - Product 5,90
+451,Running Shoes - Product 1,231.58,This is a description for Running Shoes - Product 1,91
+452,Running Shoes - Product 2,801.57,This is a description for Running Shoes - Product 2,91
+453,Running Shoes - Product 3,742.98,This is a description for Running Shoes - Product 3,91
+454,Running Shoes - Product 4,305.92,This is a description for Running Shoes - Product 4,91
+455,Running Shoes - Product 5,625.36,This is a description for Running Shoes - Product 5,91
+456,Casual Shoes - Product 1,536.29,This is a description for Casual Shoes - Product 1,92
+457,Casual Shoes - Product 2,337.43,This is a description for Casual Shoes - Product 2,92
+458,Casual Shoes - Product 3,260.36,This is a description for Casual Shoes - Product 3,92
+459,Casual Shoes - Product 4,596.22,This is a description for Casual Shoes - Product 4,92
+460,Casual Shoes - Product 5,793.75,This is a description for Casual Shoes - Product 5,92
+461,Boots - Product 1,145.72,This is a description for Boots - Product 1,93
+462,Boots - Product 2,105.54,This is a description for Boots - Product 2,93
+463,Boots - Product 3,640.31,This is a description for Boots - Product 3,93
+464,Boots - Product 4,155.51,This is a description for Boots - Product 4,93
+465,Boots - Product 5,417.46,This is a description for Boots - Product 5,93
+466,Sandals - Product 1,405.02,This is a description for Sandals - Product 1,94
+467,Sandals - Product 2,466.74,This is a description for Sandals - Product 2,94
+468,Sandals - Product 3,816.27,This is a description for Sandals - Product 3,94
+469,Sandals - Product 4,717.73,This is a description for Sandals - Product 4,94
+470,Sandals - Product 5,232.27,This is a description for Sandals - Product 5,94
+471,Athletic Shoes - Product 1,847.19,This is a description for Athletic Shoes - Product 1,95
+472,Athletic Shoes - Product 2,14.85,This is a description for Athletic Shoes - Product 2,95
+473,Athletic Shoes - Product 3,799.68,This is a description for Athletic Shoes - Product 3,95
+474,Athletic Shoes - Product 4,126.97,This is a description for Athletic Shoes - Product 4,95
+475,Athletic Shoes - Product 5,563.77,This is a description for Athletic Shoes - Product 5,95
+476,Analog Watches - Product 1,961.76,This is a description for Analog Watches - Product 1,96
+477,Analog Watches - Product 2,20.39,This is a description for Analog Watches - Product 2,96
+478,Analog Watches - Product 3,743.75,This is a description for Analog Watches - Product 3,96
+479,Analog Watches - Product 4,562.91,This is a description for Analog Watches - Product 4,96
+480,Analog Watches - Product 5,408.97,This is a description for Analog Watches - Product 5,96
+481,Digital Watches - Product 1,178.20,This is a description for Digital Watches - Product 1,97
+482,Digital Watches - Product 2,692.39,This is a description for Digital Watches - Product 2,97
+483,Digital Watches - Product 3,457.12,This is a description for Digital Watches - Product 3,97
+484,Digital Watches - Product 4,542.56,This is a description for Digital Watches - Product 4,97
+485,Digital Watches - Product 5,584.05,This is a description for Digital Watches - Product 5,97
+486,Smartwatches - Product 1,102.78,This is a description for Smartwatches - Product 1,98
+487,Smartwatches - Product 2,287.16,This is a description for Smartwatches - Product 2,98
+488,Smartwatches - Product 3,728.95,This is a description for Smartwatches - Product 3,98
+489,Smartwatches - Product 4,837.14,This is a description for Smartwatches - Product 4,98
+490,Smartwatches - Product 5,984.88,This is a description for Smartwatches - Product 5,98
+491,Luxury Watches - Product 1,7.80,This is a description for Luxury Watches - Product 1,99
+492,Luxury Watches - Product 2,914.89,This is a description for Luxury Watches - Product 2,99
+493,Luxury Watches - Product 3,779.50,This is a description for Luxury Watches - Product 3,99
+494,Luxury Watches - Product 4,576.83,This is a description for Luxury Watches - Product 4,99
+495,Luxury Watches - Product 5,825.62,This is a description for Luxury Watches - Product 5,99
+496,Sports Watches - Product 1,616.93,This is a description for Sports Watches - Product 1,100
+497,Sports Watches - Product 2,756.42,This is a description for Sports Watches - Product 2,100
+498,Sports Watches - Product 3,17.50,This is a description for Sports Watches - Product 3,100
+499,Sports Watches - Product 4,141.89,This is a description for Sports Watches - Product 4,100
+500,Sports Watches - Product 5,897.10,This is a description for Sports Watches - Product 5,100
