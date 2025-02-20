@@ -1,4 +1,4 @@
-# big-data-engineering-project1
+# AMOD-5410-team-project-ecommerce-DWH
 
 ## 📖 Introduction
 
