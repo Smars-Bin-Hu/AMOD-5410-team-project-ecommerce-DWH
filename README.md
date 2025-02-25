@@ -6,7 +6,7 @@
 
 **Background:**
 
-**Goal:** To build a data batch processing datawarehouse,including data ingestion, cleaning, storage, modelling, analytis and scheduler. Use tech stach as below.
+**Goal:** To build a data batch processing datawarehouse, including data ingestion, cleaning, storage, modelling, analytis and scheduler. Use tech stach as below.
 
 ## 🚀 Tech Stack
 
@@ -53,7 +53,7 @@ Add hosts to your local `/etc/hosts`
 127.0.0.1   airflow
 ```
 
-## Project Documents
+## 📌 Project Documents
 
 > [!NOTE]
 > Click this link to the document navigation map in the /docs: [Document Navigation](./docs/README.md)
