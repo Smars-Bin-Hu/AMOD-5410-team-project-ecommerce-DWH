@@ -10,20 +10,20 @@
 
 ## 🚀 Tech Stack
 
-- **Data Source(OLTP):** Oracle Database
-- **Data Extraction, Load:** Airflow + JDBC or Apache Sqoop
-- **Data Storage and Resources Management:** Apache Hadoop(HDFS, Yarn)
+- **Data Source(OLTP):** Oracle
+- **Data Extraction, Load:** Maxwell
+- **Data Storage and Resources Management:** HDFS, Yarn
 - **Data Warehousing:** Apache Hive, MySQL(Metastore), Dimension Modelling
-- **Data Transform:** Apache Spark(PySpark), SparkSQL
+- **Data Transform:** PySpark, SparkSQL
 - **Scheduler:** Airflow
-- **OLAP engine:** MySQL or clickhouse
-- **Data Application Layer**: PowerBI or tableau
+- **OLAP engine:** clickhouse
+- **Data Application Layer**: PowerBI
 
 ## 📁 Project Directory
 
 ```bash
 /bigdata-datawarehouse-project
-│── /docs                    # docs (technologies architecture diagram, desgin, README)
+│── /docs                    # docs (all business and technologies documents about this project)
 │── /data_pipeline           # data pipeline code (ETL/ELT Logic, output)
 │── /warehouse_modeling      # DWH modelling（Hive/SparkSQL etc.）
 │── /batch_processing        # Data Batch processing (Hadoop, Hive, Spark)
@@ -52,3 +52,8 @@ Add hosts to your local `/etc/hosts`
 127.0.0.1   oracle-oltp
 127.0.0.1   airflow
 ```
+
+## Project Documents
+
+> [!NOTE]
+> Click this link to the document navigation map in the /docs: [Document Navigation](./docs/README.md)

@@ -1,11 +1,15 @@
-# Navigation Map
+# Document Navigation Map
 
-## Links
+#### Tech Selection
 
 [Project Tech Architecture](doc/tech-architecture.md)
 
-Data Warehouse Modelling
+#### Data Warehouse Modelling
 
-Data Warehouse Development Standard
+[DWH Modelling Methodology](doc/dwh-modelling-methodology.md)
+[Business Data Research](doc/business_data_research.md)
+[Data Warehouse Development Standard]()
 
-Original Data Dictionary (from DBA or OLTP)
+#### Development
+
+#### Testing
