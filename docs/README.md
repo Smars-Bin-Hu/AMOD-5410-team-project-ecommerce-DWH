@@ -1,5 +1,8 @@
 # 📌 Document Navigation Map
 
+> [!NOTE]
+> Back to the project main page: [Project Main Page](../README.md)
+
 #### 🚀 Tech Selection
 
 [Project Tech Architecture](doc/tech-architecture.md)
