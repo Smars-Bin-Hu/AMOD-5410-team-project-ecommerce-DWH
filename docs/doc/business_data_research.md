@@ -1,16 +1,19 @@
 # Data 
 
-## Data Source
+> [!NOTE]
+> Back to the navigation map: [Document Navigation Map](../README.md)
+
+### Data Source
 
 Data source is available: [https://www.kaggle.com/datasets/mkechinov/ecommerce-behavior-data-from-multi-category-store/data](https://www.kaggle.com/datasets/mkechinov/ecommerce-behavior-data-from-multi-category-store/data)
 
-## Entity-Relationship (ER)
+### Entity-Relationship (ER)
 
 <p align="center">
     <img src="../image/business_data_research/ER.png" alt="image" width="60%">
 </p>
 
-## OLTP Tables
+### OLTP Tables
 
 | **Table**              | **Description**                                                                                                                       | **Fact  Table/ Dimension Table** | **Increment Load/ Full Load** | **DWH Sync frequency** | **Partitioned By** |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------- | ----------------------------------- | ---------------------------- | ------------------------ |
