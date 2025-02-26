@@ -57,7 +57,7 @@ Add hosts to your local `/etc/hosts`
 
 #### 🚀 Tech Selection
 
-[Project Tech Architecture](./docs/doc/tech-architecture.md)
+[Project Tech Architecture](./docs/doc/tech_architecture.md)
 
 #### 🏠 Data Warehouse Modelling
 
