@@ -55,5 +55,22 @@ Add hosts to your local `/etc/hosts`
 
 ## 📌 Project Documents
 
-> [!NOTE]
-> Click this link to the document navigation map in the /docs: [Document Navigation](./docs/README.md)
+#### 🚀 Tech Selection
+
+[Project Tech Architecture](./docs/doc/tech-architecture.md)
+
+#### 🏠 Data Warehouse Modelling
+
+[DWH Modelling Methodology](./docs/doc/dwh-modelling-methodology.md)
+
+- [Business Data Research](./docs/doc/business_data_research.md)
+- Data Warehouse Development Specification
+  - [Data Warehouse Layering Specification](./docs/doc/data-warehouse-development-specification/data-warehouse-layering-specification.md)
+  - [Data Warehouse Column Naming Conventions](./docs/doc/data-warehouse-development-specification/partitioning-column-naming-conventions.md)
+  - [Table Naming Conventions](./docs/doc/data-warehouse-development-specification/table-naming-convertions.md)
+  - [Data Table Lifecycle Management Specification](./docs/doc/data-warehouse-development-specification/data-table-lifecycle-management-specification.md)
+  - [Development Specification](./docs/doc/data-warehouse-development-specification/development-specification.md)
+
+#### 🔨 Development
+
+#### 📏 Testing
