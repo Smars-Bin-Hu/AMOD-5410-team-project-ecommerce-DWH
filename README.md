@@ -61,7 +61,7 @@ Add hosts to your local `/etc/hosts`
 
 #### 🏠 Data Warehouse Modelling
 
-[DWH Modelling Methodology](./docs/doc/dwh-modelling-sop.md)
+[DWH Modelling Standard Operation Procedure (SOP)](./docs/doc/dwh-modelling-sop.md)
 
 - [Business Data Research](./docs/doc/business_data_research.md)
 - Data Warehouse Development Specification
