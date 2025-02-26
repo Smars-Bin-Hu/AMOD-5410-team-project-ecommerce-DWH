@@ -12,6 +12,10 @@
 - ✅ Design Review
 - ✅ Code Development
 
+<p align="center">
+    <img src="../image/dwh-modelling-sop/DWH SOP.jpg" alt="image" width="80%">
+</p>
+
 ## **Roadmap**
 
 ### **1. Business Database Research**
@@ -23,10 +27,10 @@
 
 - Identification of key stakeholders: **Product Owner → Development Leader → Module Owners**
 - Collection of relevant documentation:
-    - **System product design**
-    - **Business process design**
-    - **Data flow relationships between systems**
-    - ...
+  - **System product design**
+  - **Business process design**
+  - **Data flow relationships between systems**
+  - ...
 - **Complete ER model / Tables Structure** in the source system
 - **Table description**
 - **Data dictionary**
@@ -38,14 +42,14 @@
 **Deliverables:**
 
 - **List of tables** to be ingested into the data warehouse
-    - In principle, all **business-relevant and actively used tables** should be included.
+  - In principle, all **business-relevant and actively used tables** should be included.
 - **Design of ingestion rules:**
-    - **Fact Table** is typically ingested **incrementally** (binlog-based ingestion).
-    - **Dimension Table** is typically ingested **in full**.
+  - **Fact Table** is typically ingested **incrementally** (binlog-based ingestion).
+  - **Dimension Table** is typically ingested **in full**.
 - **Data exploration and validation:**
-    - Ensure **enumeration values** are complete.
-    - Check for **null values** in key fields.
-    - ...
+  - Ensure **enumeration values** are complete.
+  - Check for **null values** in key fields.
+  - ...
 
 ### **3. Business Domain Segmentation**
 
@@ -54,18 +58,21 @@
 ### **4. Dimensional Modeling Design**
 
 > Build the data model following the dimensional modeling methodology.
-> 
+
+<p align="center">
+    <img src="../image/dwh-modelling-sop/DWH-modelling.jpg" alt="image" width="80%">
+</p>
 
 **Steps:**
 
 - **Identify the core business processes** that the data warehouse needs to support.
 - **Construct the Bus Matrix (DIM, DWM):**
-    - **Identify Shared Dimensions**
-    - **Identify the Facts**
-    - **Build the Bus Matrix** – A tabular representation of the relationships between **business processes (fact tables)** and **shared dimensions**.
+  - **Identify Shared Dimensions**
+  - **Identify the Facts**
+  - **Build the Bus Matrix** – A tabular representation of the relationships between **business processes (fact tables)** and **shared dimensions**.
 - **Design aggregated tables (DWS, DWT):**
-    - **Determine Granularity** – Predict the required level of detail for all analytical needs and define the appropriate grain.
-    - **Define key business metrics**, including both **raw** and **derived metrics**.
+  - **Determine Granularity** – Predict the required level of detail for all analytical needs and define the appropriate grain.
+  - **Define key business metrics**, including both **raw** and **derived metrics**.
 
 ### **5. Design Review**
 
@@ -76,10 +83,10 @@
 - **Are domain segmentation and data layering reasonable?**
 - **Is the table structure compliant with data warehouse standards?**
 - **Is the data model properly designed?**
-    - Are there **missing dimensions**?
-    - Can additional **metrics or identifiers** be extracted?
+  - Are there **missing dimensions**?
+  - Can additional **metrics or identifiers** be extracted?
 - **Are the table update rules properly defined?**
-  
+
 ### **6. Code Development**
 
 > Proceed with **ETL development** based on the finalized dimensional model and ingestion design.
