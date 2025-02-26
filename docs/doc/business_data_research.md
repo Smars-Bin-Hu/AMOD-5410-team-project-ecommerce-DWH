@@ -1,7 +1,7 @@
 # OLTP Business Data Research
 
 > [!NOTE]
-> Back to the navigation map: [Document Navigation Map](../README.md)
+> Back to the navigation map: [Document Navigation Map](../../README.md)
 
 ### Data Source
 
