@@ -1,7 +1,7 @@
 # Tech Architecture
 
 > [!NOTE]
-> Back to the navigation map: [Document Navigation Map](../README.md)
+> Back to the navigation map: [Document Navigation Map](../../README.md)
 
 ## Diagram 
 
