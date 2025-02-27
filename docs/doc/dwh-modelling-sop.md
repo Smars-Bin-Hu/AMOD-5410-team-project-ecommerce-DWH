@@ -7,7 +7,7 @@
 
 - ✅ Business Database Research
 - ✅ Data Ingestion
-- ✅ Business Domain Segmentation
+- ✅ Business Subject Area Segmentation
 - ✅ Dimensional Modeling Design (Bus Matrix + Defining Metrics)
 - ✅ Design Review
 - ✅ Code Development
@@ -51,9 +51,9 @@
   - Check for **null values** in key fields.
   - ...
 
-### **3. Business Domain Segmentation**
+### **3. Subject Area Segmentation**
 
-> Segment business domains based on business processes, ensuring logical organization for analytical use cases.
+> Segment Subject Area based on business processes, ensuring logical organization for analytical use cases.
 
 ### **4. Dimensional Modeling Design**
 
@@ -80,7 +80,7 @@
 
 **Review Checklist:**
 
-- **Are domain segmentation and data layering reasonable?**
+- **Are subject area segmentation and data layering reasonable?**
 - **Is the table structure compliant with data warehouse standards?**
 - **Is the data model properly designed?**
   - Are there **missing dimensions**?
