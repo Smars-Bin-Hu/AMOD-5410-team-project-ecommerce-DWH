@@ -1,0 +1,50 @@
+{
+  "type": "record",
+  "name": "customer_product_ratings",
+  "namespace": "com.ods.avro",
+  "fields": [
+    {
+      "name": "customerproductrating_id",
+      "type": "int",
+      "doc": "Unique id for each row in table customer_product_ratings"
+    },
+    {
+      "name": "customer_id",
+      "type": "int",
+      "doc": "The customer gave the review and ratings"
+    },
+    {
+      "name": "product_id",
+      "type": "int",
+      "doc": "The product that was given the review and ratings"
+    },
+    {
+      "name": "ratings",
+      "type": {
+        "type": "bytes",
+        "logicalType": "decimal",
+        "precision": 2,
+        "scale": 1
+      },
+      "doc": "The ratings specific number"
+    },
+    {
+      "name": "review",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null,
+      "doc": "The review text"
+    },
+    {
+      "name": "sentiment",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null,
+      "doc": "The final sentiment ('good' or 'bad')"
+    }
+  ]
+}

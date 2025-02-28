@@ -1,0 +1,17 @@
+{
+  "type": "record",
+  "name": "payment_method",
+  "namespace": "com.ods.avro",
+  "fields": [
+    {
+      "name": "payment_method_id",
+      "type": "int",
+      "doc": "Unique id for payment method"
+    },
+    {
+      "name": "payment_method",
+      "type": "string",
+      "doc": "Payment method name"
+    }
+  ]
+}

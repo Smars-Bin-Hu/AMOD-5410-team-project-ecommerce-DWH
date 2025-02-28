@@ -1,0 +1,47 @@
+{
+  "type": "record",
+  "name": "orders",
+  "namespace": "com.ods.avro",
+  "fields": [
+    {
+      "name": "order_id_surrogate",
+      "type": "int",
+      "doc": "Unique id for each row in table orders"
+    },
+    {
+      "name": "order_id",
+      "type": "int",
+      "doc": "Id for orders, could be duplicated"
+    },
+    {
+      "name": "customer_id",
+      "type": "int",
+      "doc": "The customer associated with the order"
+    },
+    {
+      "name": "order_date",
+      "type": {
+        "type": "int",
+        "logicalType": "date"
+      },
+      "doc": "The date generated on the order"
+    },
+    {
+      "name": "campaign_id",
+      "type": ["null", "int"],
+      "default": null,
+      "doc": "The campaign associated with the order"
+    },
+    {
+      "name": "amount",
+      "type": "int",
+      "doc": "The amount in this order associated with the order"
+    },
+    {
+      "name": "payment_method_id",
+      "type": ["null", "int"],
+      "default": null,
+      "doc": "The Payment Method for this order"
+    }
+  ]
+}

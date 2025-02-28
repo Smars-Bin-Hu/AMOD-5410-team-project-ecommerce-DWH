@@ -1,0 +1,52 @@
+{
+  "type": "record",
+  "name": "orderitem",
+  "namespace": "com.ods.avro",
+  "fields": [
+    {
+      "name": "orderitem_id",
+      "type": "int",
+      "doc": "Unique id for each row in table orderitem"
+    },
+    {
+      "name": "order_id",
+      "type": "int",
+      "doc": "To find the order in table orders"
+    },
+    {
+      "name": "product_id",
+      "type": "int",
+      "doc": "To find the product in the table products"
+    },
+    {
+      "name": "quantity",
+      "type": "int",
+      "doc": "The quantity of each product under this order"
+    },
+    {
+      "name": "supplier_id",
+      "type": "int",
+      "doc": "To find the supplier in the table supplier"
+    },
+    {
+      "name": "subtotal",
+      "type": {
+        "type": "bytes",
+        "logicalType": "decimal",
+        "precision": 10,
+        "scale": 2
+      },
+      "doc": "The subtotal amount for this order (quantity times price)"
+    },
+    {
+      "name": "discount",
+      "type": {
+        "type": "bytes",
+        "logicalType": "decimal",
+        "precision": 5,
+        "scale": 2
+      },
+      "doc": "The discount for this order"
+    }
+  ]
+}

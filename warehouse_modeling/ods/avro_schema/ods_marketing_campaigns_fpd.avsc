@@ -1,0 +1,22 @@
+{
+  "type": "record",
+  "name": "marketing_campaigns",
+  "namespace": "com.ods.avro",
+  "fields": [
+    {
+      "name": "campaign_id",
+      "type": "int",
+      "doc": "Unique id for each row in table marketing_campaigns"
+    },
+    {
+      "name": "campaign_name",
+      "type": "string",
+      "doc": "The campaign name"
+    },
+    {
+      "name": "offer_week",
+      "type": "int",
+      "doc": "Represents the ordinal of a year"
+    }
+  ]
+}

@@ -26,7 +26,7 @@ docker exec -it --user root mysql-hive-metastore bash
 docker exec -it --user root hive bash
 docker exec -it --user root spark bash
 docker exec -it --user root airflow bash
-
+docker exec -it --user root oracle-oltp bash
 
 # docker commit command
 docker commit hadoop-master hadoop-master-image

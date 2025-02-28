@@ -11,7 +11,7 @@
 ## 🚀 Tech Stack
 
 - **Data Source(OLTP):** Oracle
-- **Data Extraction, Load:** Maxwell
+- **Data Extraction, Load:** Airflow + JDBC
 - **Data Storage and Resources Management:** HDFS, Yarn
 - **Data Warehousing:** Apache Hive, MySQL(Metastore), Dimension Modelling
 - **Data Transform:** PySpark, SparkSQL
@@ -66,8 +66,8 @@ Add hosts to your local `/etc/hosts`
 - [Business Data Research](./docs/doc/business_data_research.md)
 - Data Warehouse Development Specification
   - [Data Warehouse Layering Specification](./docs/doc/data-warehouse-development-specification/data-warehouse-layering-specification.md)
-  - [Data Warehouse Column Naming Conventions](./docs/doc/data-warehouse-development-specification/partitioning-column-naming-conventions.md)
   - [Table Naming Conventions](./docs/doc/data-warehouse-development-specification/table-naming-convertions.md)
+  - [Data Warehouse Column Naming Conventions](./docs/doc/data-warehouse-development-specification/partitioning-column-naming-conventions.md)
   - [Data Table Lifecycle Management Specification](./docs/doc/data-warehouse-development-specification/data-table-lifecycle-management-specification.md)
   - [Development Specification](./docs/doc/data-warehouse-development-specification/development-specification.md)
 
