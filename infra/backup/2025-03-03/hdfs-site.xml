@@ -17,41 +17,28 @@
 <!-- Put site-specific property overrides in this file. -->
 
 <configuration>
-    <!-- <property>
-        <name>fs.defaultFS</name>
-        <value>hdfs://hadoop-master:8020</value> 
-    </property>   -->
     <property>
-        <name>hadoop.data.dir</name>
-        <value>/usr/local/opt/module/hadoop/data</value>
+        <name>dfs.replication</name>
+        <value>2</value>
     </property>
     <property>
-        <name>hadoop.proxyuser.vb.hosts</name>
-        <value>*</value>
+         <name>dfs.namenode.name.dir</name>
+         <value>file:///usr/local/opt/module/hadoop/data/name</value>
+    </property>  
+    <property>
+        <name>dfs.datanode.data.dir</name>
+        <value>file:///usr/local/opt/module/hadoop/data/data</value>         
     </property>
     <property>
-        <name>hadoop.proxyuser.vb.groups</name>
-        <value>*</value>
+         <name>dfs.namenode.checkpoint.dir</name>
+         <value>file:///usr/local/opt/module/hadoop/data/namesecondary</value>
     </property>
-    <!-- config hadoop http user as vb，grant higher accessibility to user -->
     <property>
-        <name>hadoop.http.staticuser.user</name>
-        <value>vb</value>
-    </property>
-
-    <!-- config HA NameService -->
+         <name>dfs.client.datanode-restart.timeout</name>
+         <value>30</value>
+    </property> 
     <property>
-        <name>fs.defaultFS</name>
-        <value>hdfs://ns-ha</value>
-    </property>
-    
-    <property>
-        <name>ha.zookeeper.quorum</name>
-        <value>hadoop-master:2181,hadoop-worker1:2181,hadoop-worker2:2181</value>
-    </property>
-
-    <property>
-        <name>hadoop.http.authentication.simple.anonymous.allowed</name>
-        <value>true</value>
+         <name>dfs.namenode.secondary.http-address</name>
+         <value>hadoop-worker2:9868</value>
     </property>
 </configuration>

@@ -23,7 +23,7 @@
         
     <property>
         <name>hive.metastore.warehouse.dir</name>
-        <value>hdfs://ns-ha/user/hive/warehouse</value>
+        <value>/user/hive/warehouse</value>
     </property>
     
     <property>
@@ -51,10 +51,11 @@
         <value>10000</value>
     </property>
     
-    <!-- <property>
+    <property>
         <name>fs.defaultFS</name>
-        <value>hdfs://ns-ha</value>
-    </property> -->
+        <value>hdfs://172.18.0.2:8020</value>
+    </property>
+
     <property>
         <name>hive.metastore.event.db.notification.api.auth</name>
         <value>false</value>

@@ -44,16 +44,6 @@ docker compose -f docker-compose-bigdata.yml up -d
 /opt/hive/bin/hive --service metastore
 /opt/hive/bin/hive --service hiveserver2
 
-# oracle
-docker run -d --name oracle-oltp \
-    --network bigdata-net \
-    -p 1521:1521 -p 5500:5500 \
-    -e ORACLE_SID=ORCLCDB \
-    -e ORACLE_PDB=ORCLPDB1 \
-    -e ORACLE_PWD=MyStrongPassw0rd \
-    -e ORACLE_CHARACTERSET=AL32UTF8 \
-    oracle/database:19.3.0-ee
-
 # spark
 conda activate pyspark_env
 pyspark --master yarn --deploy-mode client
@@ -63,3 +53,6 @@ cd /opt/airflow
 source airflow-env/bin/activate
 airflow webserver -D
 airflow scheduler -D
+
+# run docker
+docker compose -f docker-compose-bigdata.yml up -d

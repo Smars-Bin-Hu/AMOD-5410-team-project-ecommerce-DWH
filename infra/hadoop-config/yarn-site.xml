@@ -13,12 +13,11 @@
   limitations under the License. See accompanying LICENSE file.
 -->
 <configuration>
-
-<!-- Site specific YARN configuration properties -->
-    <property>
+    <!-- Site specific YARN configuration properties -->
+    <!-- <property>
         <name>yarn.resourcemanager.hostname</name>
         <value>hadoop-worker1</value>
-    </property>
+    </property> -->
     <property>
         <name>yarn.nodemanager.aux-services</name>
         <value>mapreduce_shuffle</value>
@@ -26,5 +25,51 @@
     <property>
         <name>yarn.nodemanager.env-whitelist</name>
         <value>JAVA_HOME,HADOOP_COMMON_HOME,HADOOP_HDFS_HOME,HADOOP_CONF_DIR,CLASSPATH_PREPEND_DISTCACHE,HADOOP_YARN_HOME,HADOOP_MAPRED_HOME</value>
+    </property>
+
+    <!-- 配置 HA ResourceManager -->
+    <property>
+        <name>yarn.resourcemanager.ha.enabled</name>
+        <value>true</value>
+    </property>
+
+    <!-- 定义 ResourceManager 服务名 -->
+    <property>
+        <name>yarn.resourcemanager.cluster-id</name>
+        <value>yarn-cluster</value>
+    </property>
+
+    <!-- 定义两个 RM -->
+    <property>
+        <name>yarn.resourcemanager.ha.rm-ids</name>
+        <value>rm1,rm2</value>
+    </property>
+
+    <!-- RM1（hadoop-master） 配置 -->
+    <property>
+        <name>yarn.resourcemanager.hostname.rm1</name>
+        <value>hadoop-master</value>
+    </property>
+
+    <property>
+        <name>yarn.resourcemanager.webapp.address.rm1</name>
+        <value>hadoop-master:8088</value>
+    </property>
+
+    <!-- RM2（hadoop-worker1） 配置 -->
+    <property>
+        <name>yarn.resourcemanager.hostname.rm2</name>
+        <value>hadoop-worker1</value>
+    </property>
+
+    <property>
+        <name>yarn.resourcemanager.webapp.address.rm2</name>
+        <value>hadoop-worker1:8089</value>
+    </property>
+
+    <!-- 自动故障转移 -->
+    <property>
+        <name>yarn.resourcemanager.zk-address</name>
+        <value>hadoop-master:2181,hadoop-worker1:2181,hadoop-worker2:2181</value>
     </property>
 </configuration>

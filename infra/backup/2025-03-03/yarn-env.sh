@@ -131,9 +131,7 @@ export HADOOP_NICENESS=""
 #
 # See ResourceManager for some examples
 #
-export YARN_PROXYSERVER_OPTS="-Dyarn.web-proxy.address=hadoop-master:8088"
-
-
+#export YARN_PROXYSERVER_OPTS=
 
 ###
 # Shared Cache Manager specific parameters

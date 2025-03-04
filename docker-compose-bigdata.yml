@@ -9,6 +9,9 @@ networks:
 
 services:
   # ========== 1) Hadoop Master ==========
+  # -------------------------------------------------
+  # Hadoop Master: start ZK、JournalNode、NameNode、ZKFC、ResourceManager、DN/NM
+  # -------------------------------------------------
   hadoop-master:
     container_name: hadoop-master               
     image: hadoop-master-image                         
@@ -21,6 +24,8 @@ services:
     ports:
       - "2222:${SSH_PORT}"    # SSH 
       - "${HDFS_WEB_UI}:${HDFS_WEB_UI}"
+      # - "${YARN_WEB_UI}:${YARN_WEB_UI}"
+      - "${YARN_RM1_WEB_UI}:${YARN_RM1_WEB_UI}"
       - "${HDFS}:${HDFS}" # HDFS for hive
     extra_hosts:
       - "hadoop-worker2:${HADOOP_WORKER2_IP}"
@@ -28,19 +33,29 @@ services:
     stdin_open: true     # keep the container runing
     tty: true     # keep the container runing
     command: >
-      bash -c "service ssh start;
-              bash -l -c "/usr/local/opt/module/hadoop/sbin/start-dfs.sh";
-              tail -f /dev/null" 
+        bash -c "
+          service ssh start;
+          tail -f /dev/null
+        "
     volumes:
       - ./infra/ssh-config/config:/root/.ssh/config
       # hadoop cluster config
       - ./infra/hadoop-config/core-site.xml:${HADOOP_HOME}/etc/hadoop/core-site.xml
       - ./infra/hadoop-config/hadoop-env.sh:${HADOOP_HOME}/etc/hadoop/hadoop-env.sh
       - ./infra/hadoop-config/hdfs-site.xml:${HADOOP_HOME}/etc/hadoop/hdfs-site.xml
+      - ./infra/hadoop-config/yarn-site.xml:${HADOOP_HOME}/etc/hadoop/yarn-site.xml
       - ./infra/hadoop-config/mapred-site.xml:${HADOOP_HOME}/etc/hadoop/mapred-site.xml
+      - ./infra/hadoop-config/yarn-env.sh:${HADOOP_HOME}/etc/hadoop/yarn-env.sh
       - ./infra/hadoop-config/workers:${HADOOP_HOME}/etc/hadoop/workers
-    
+      - ./infra/zookeeper-config/zoo.cfg:${ZOOKEEPER_HOME}/conf/zoo.cfg
+      - ./infra/zookeeper-config/dataDir.1/myid:${ZOOKEEPER_HOME}/data/myid
+      # hdfs metadata
+      - ./infra/hdfs-data/master:${HADOOP_HOME}/data
+
   # ========== 2) Hadoop Worker1 ==========
+  # -------------------------------------------------
+  # Hadoop Worker1: start ZK、JournalNode、ResourceManager、DN/NM
+  # -------------------------------------------------
   hadoop-worker1:
     container_name: hadoop-worker1
     image: hadoop-worker1-image
@@ -52,7 +67,7 @@ services:
       - HADOOP_MASTER_HOST=hadoop-master
     ports:
       - "2223:${SSH_PORT}"    # SSH
-      - "${YARN_WEB_UI}:${YARN_WEB_UI}"  # YARN ResourceManager web UI 
+      - "${YARN_RM2_WEB_UI}:${YARN_RM2_WEB_UI}"    # YARN_RM2_WEB_UI
     extra_hosts:
       - "hadoop-worker2:${HADOOP_WORKER2_IP}"
       - "hadoop-master:${HADOOP_MASTER_IP}"
@@ -60,7 +75,6 @@ services:
     tty: true     # keep the container runing
     command: >
       bash -c "service ssh start;
-              bash -l -c "/usr/local/opt/module/hadoop/sbin/start-yarn.sh";
               tail -f /dev/null" 
     volumes:
       - ./infra/ssh-config/config:/root/.ssh/config
@@ -69,9 +83,18 @@ services:
       - ./infra/hadoop-config/hadoop-env.sh:${HADOOP_HOME}/etc/hadoop/hadoop-env.sh
       - ./infra/hadoop-config/hdfs-site.xml:${HADOOP_HOME}/etc/hadoop/hdfs-site.xml
       - ./infra/hadoop-config/mapred-site.xml:${HADOOP_HOME}/etc/hadoop/mapred-site.xml
+      - ./infra/hadoop-config/yarn-site.xml:${HADOOP_HOME}/etc/hadoop/yarn-site.xml
       - ./infra/hadoop-config/workers:${HADOOP_HOME}/etc/hadoop/workers
+      - ./infra/hadoop-config/yarn-env.sh:${HADOOP_HOME}/etc/hadoop/yarn-env.sh
+      - ./infra/zookeeper-config/zoo.cfg:${ZOOKEEPER_HOME}/conf/zoo.cfg
+      - ./infra/zookeeper-config/dataDir.2/myid:${ZOOKEEPER_HOME}/data/myid
+      # hdfs metadata
+      - ./infra/hdfs-data/worker1:${HADOOP_HOME}/data
 
   # ========== 3) Hadoop Worker2 ==========
+  # -------------------------------------------------
+  # Hadoop Master: start ZK、JournalNode、NameNode、ZKFC、DN/NM
+  # -------------------------------------------------
   hadoop-worker2:
     container_name: hadoop-worker2
     image: hadoop-worker2-image
@@ -89,7 +112,7 @@ services:
     stdin_open: true     # keep the container runing
     tty: true     # keep the container runing
     command: >
-      bash -c "service ssh start; 
+      bash -c "service ssh start;
               tail -f /dev/null" 
     volumes:
       - ./infra/ssh-config/config:/root/.ssh/config
@@ -99,6 +122,12 @@ services:
       - ./infra/hadoop-config/hdfs-site.xml:${HADOOP_HOME}/etc/hadoop/hdfs-site.xml
       - ./infra/hadoop-config/mapred-site.xml:${HADOOP_HOME}/etc/hadoop/mapred-site.xml
       - ./infra/hadoop-config/workers:${HADOOP_HOME}/etc/hadoop/workers
+      - ./infra/hadoop-config/yarn-site.xml:${HADOOP_HOME}/etc/hadoop/yarn-site.xml
+      - ./infra/hadoop-config/yarn-env.sh:${HADOOP_HOME}/etc/hadoop/yarn-env.sh
+      - ./infra/zookeeper-config/zoo.cfg:${ZOOKEEPER_HOME}/conf/zoo.cfg
+      - ./infra/zookeeper-config/dataDir.3/myid:${ZOOKEEPER_HOME}/data/myid
+      # hdfs metadata
+      - ./infra/hdfs-data/worker2:${HADOOP_HOME}/data
 
   # ========== 4) MySQL (metastore for Hive) ==========
   mysql:
@@ -137,6 +166,7 @@ services:
       - ./infra/hive-config/mysql-connector-java-8.0.30.jar:${HIVE_HOME}/lib/mysql-connector-java-8.0.30.jar # JDBC
       - ./infra/hive-config/hadoop-env.sh:${HIVE_HADOOP_HOME}/etc/hadoop/hadoop-env.sh
       - ./infra/hive-config/core-site.xml:${HIVE_HADOOP_HOME}/etc/hadoop/core-site.xml
+      - ./infra/hive-config/hdfs-site.xml:${HIVE_HADOOP_HOME}/etc/hadoop/hdfs-site.xml
     environment:
       # connect metastore
       - JAVA_HOME=${HIVE_JDK} # different with hadoop cluster cuz hive 3.1.3 need jdk8 and amd64 for the container

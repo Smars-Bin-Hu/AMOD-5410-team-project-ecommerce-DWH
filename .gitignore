@@ -1,5 +1,6 @@
 # ignore MySQL database files (data files, logs, cache, sensitive information, etc)
 /infra/mysql-data/
+/infra/hdfs-data/
 
 # allow upload the Hive metastore
 !/infra/mysql-data/metastore/
