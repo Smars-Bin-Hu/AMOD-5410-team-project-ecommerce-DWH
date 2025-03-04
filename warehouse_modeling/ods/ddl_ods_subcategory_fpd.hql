@@ -3,7 +3,7 @@ CREATE EXTERNAL TABLE IF NOT EXISTS ods_subcategory_fpd (
     subcategory_name STRING COMMENT 'Subcategory name',
     category_id INT COMMENT 'Link to table category'
 )
-COMMENT 'ODS Table for Subcategory (Daily Incremental Sync, Permenant Storage)'
+COMMENT 'ODS Table for Subcategory (Daily Full Sync, Permenant Storage) based on existing category'
 PARTITIONED BY (DATA_DATE STRING COMMENT 'Data load date')
 ROW FORMAT SERDE 
     'org.apache.hadoop.hive.serde2.avro.AvroSerDe'

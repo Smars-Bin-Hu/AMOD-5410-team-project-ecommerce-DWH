@@ -2,7 +2,7 @@ CREATE EXTERNAL TABLE IF NOT EXISTS ods_payment_method_fpd (
     payment_method_id INT COMMENT 'Unique id for payment method',
     payment_method STRING COMMENT 'Payment method name'
 )
-COMMENT 'ODS Table for Payment Method (Daily Incremental Sync, Permenant Storage)'
+COMMENT 'ODS Table for Payment Method (Daily Full Sync, Permenant Storage)'
 PARTITIONED BY (DATA_DATE STRING COMMENT 'Data load date')
 ROW FORMAT SERDE 
     'org.apache.hadoop.hive.serde2.avro.AvroSerDe'

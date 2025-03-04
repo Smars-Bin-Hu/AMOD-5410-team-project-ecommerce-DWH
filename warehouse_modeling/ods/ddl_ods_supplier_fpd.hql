@@ -3,7 +3,7 @@ CREATE EXTERNAL TABLE IF NOT EXISTS ods_supplier_fpd (
     supplier_name STRING COMMENT 'Name for supplier',
     email STRING COMMENT 'Email for supplier'
 )
-COMMENT 'ODS Table for Supplier  (Daily Incremental Sync, Permenant Storage)'
+COMMENT 'ODS Table for Supplier (Daily Full Sync, Permenant Storage)'
 PARTITIONED BY (DATA_DATE STRING COMMENT 'Data load date')
 ROW FORMAT SERDE 
     'org.apache.hadoop.hive.serde2.avro.AvroSerDe'
