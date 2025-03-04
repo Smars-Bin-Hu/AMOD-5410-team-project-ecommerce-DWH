@@ -1,23 +1,37 @@
-# hadoop master
+# Start
+# 1. All
 zkServer.sh start
 hdfs --daemon start journalnode 
 
-# Master and worker2 (NameNode)
+# 2. Master and worker2 (NameNode)
 hdfs --daemon start namenode 
 hdfs --daemon start zkfc
 
-# Master and worker1 (resourceManager)
+# 3. Master and worker1 (resourceManager)
 yarn --daemon start resourcemanager
 
-# All
-rm -rf /usr/local/opt/module/hadoop/data/data/current/in_use.lock
+# 4. All
+rm -rf /usr/local/opt/module/hadoop/data/data/current/in_use.lock  # in case the lock is existing because of invalid exiting last time
 hdfs --daemon start datanode
 yarn --daemon start nodemanager
 
 
+# Stop
+# 1. All
+yarn --daemon stop nodemanager
+hdfs --daemon stop datanode
 
+# 2. Master and worker1 (resourceManager)
+yarn --daemon stop resourcemanager
 
+# 3. Master and worker2 (NameNode)
+hdfs --daemon stop zkfc # all stop this first 
+# after stop zkfc, stop NN
+hdfs --daemon stop namenode 
 
+# 4. All
+hdfs --daemon stop journalnode
+zkServer.sh stop
 
 # Check
 jps
