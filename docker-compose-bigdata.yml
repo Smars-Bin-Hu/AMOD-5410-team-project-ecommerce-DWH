@@ -25,6 +25,7 @@ services:
       - "2222:${SSH_PORT}"    # SSH 
       - "${HDFS_WEB_UI}:${HDFS_WEB_UI}"
       - "${YARN_RM1_WEB_UI}:${YARN_RM1_WEB_UI}"
+      - "8042:${YARN_LOG_WEB_UI}" 
       - "${HDFS}:${HDFS}" # HDFS for hive
     extra_hosts:
       - "hadoop-worker2:${HADOOP_WORKER2_IP}"
@@ -50,7 +51,9 @@ services:
       - ./infra/zookeeper-config/dataDir.1/myid:${ZOOKEEPER_HOME}/data/myid
       # hdfs metadata
       - ./infra/hdfs-data/master:${HADOOP_HOME}/data
-
+      # local mount - for big volume storage
+      - /Users/smars/bigdata-cluster-volume/hadoop-master/data:/data
+      
   # ========== 2) Hadoop Worker1 ==========
   # -------------------------------------------------
   # Hadoop Worker1: start ZK、JournalNode、ResourceManager、DN/NM
@@ -67,6 +70,7 @@ services:
     ports:
       - "2223:${SSH_PORT}"    # SSH
       - "${YARN_RM2_WEB_UI}:${YARN_RM2_WEB_UI}"    # YARN_RM2_WEB_UI
+      - "8043:${YARN_LOG_WEB_UI}"
     extra_hosts:
       - "hadoop-worker2:${HADOOP_WORKER2_IP}"
       - "hadoop-master:${HADOOP_MASTER_IP}"
@@ -89,6 +93,8 @@ services:
       - ./infra/zookeeper-config/dataDir.2/myid:${ZOOKEEPER_HOME}/data/myid
       # hdfs metadata
       - ./infra/hdfs-data/worker1:${HADOOP_HOME}/data
+      # local mount - for big volume storage
+      - /Users/smars/bigdata-cluster-volume/hadoop-worker1/data:/data
 
   # ========== 3) Hadoop Worker2 ==========
   # -------------------------------------------------
@@ -105,6 +111,8 @@ services:
       - HADOOP_MASTER_HOST=hadoop-master
     ports:
       - "2224:${SSH_PORT}"    # SSH
+      - "9871:${HDFS_WEB_UI}"
+      - "8044:${YARN_LOG_WEB_UI}"
     extra_hosts:
       - "hadoop-master:${HADOOP_MASTER_IP}"
       - "hadoop-worker1:${HADOOP_WORKER1_IP}"
@@ -127,6 +135,8 @@ services:
       - ./infra/zookeeper-config/dataDir.3/myid:${ZOOKEEPER_HOME}/data/myid
       # hdfs metadata
       - ./infra/hdfs-data/worker2:${HADOOP_HOME}/data
+      # local mount - for big volume storage
+      - /Users/smars/bigdata-cluster-volume/hadoop-worker2/data:/data
 
   # ========== 4) MySQL (metastore for Hive) ==========
   mysql:
@@ -207,7 +217,10 @@ services:
       - SPARK_MASTER=hadoop-master
       - SPARK_WORKLOAD=yarn
     command: >
-      bash -c "tail -f /dev/null"
+      bash -c "
+              service ssh start;
+              tail -f /dev/null
+              "
 
   # ========== 7) Oracle ==========
   oracle:

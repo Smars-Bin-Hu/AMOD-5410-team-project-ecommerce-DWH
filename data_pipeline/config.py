@@ -5,27 +5,34 @@ Config Files, including Database, HDFS constant variable info
 
 """
 
-# Oracle Database Configuration
-ORACLE_JDBC_DRIVER_PATH = "/opt/sqoop/lib/ojdbc8.jar"
-ORACLE_HOST = "172.18.0.10"
-ORACLE_PORT = "1521"
-ORACLE_SID = "ORCL"
-ORACLE_USERNAME = "your_user"
-ORACLE_PASSWORD = "your_password"
-ORACLE_TABLE = "your_table"
+class Config:
+    """
+        Configuration Info Class
+        includes the configuration to database, HDFS,etc...
+    """
 
-# HDFS Target Path
-HDFS_PATH = "/user/hdfs/oracle_data"
+    # Hadoop Cluster & HDFS
+    HADOOP_HOST="hadoop-master"
+    HADOOP_USER="root" # authenticate without password using ssh-keygen and send the pub key to hadoop cluster
+    HDFS_PATH = "/user/hdfs/oracle_data"
 
-# Sqoop Command and Configuration
-SQOOP_CMD_TEMPLATE = (
-    "sqoop import --connect jdbc:oracle:thin:@{host}:{port}:{sid} "
-    "--username {user} --password {password} "
-    "--table {table} --target-dir {hdfs_path} "
-    "--delete-target-dir --num-mappers 1 "
-    "--driver oracle.jdbc.OracleDriver "
-    "--as-parquetfile"
-)
+    # Oracle Database Configuration
+    ORACLE_JDBC_DRIVER_PATH = "/opt/sqoop/lib/ojdbc8.jar"
+    ORACLE_HOST = "oracle-oltp"
+    ORACLE_PORT = "1521"
+    ORACLE_SERVICE_NAME = "ORCLPDB1"
+    ORACLE_USERNAME = "Smars"
+    ORACLE_PASSWORD = "Whos3301919!"
+    ORACLE_DRIVER = "oracle.jdbc.OracleDriver"
 
-# Logging
-LOG_FILE = "logs/etl_process.log"
+    # Spark
+    SPARK_APP_NAME = "OracleToHDFS"
+    SPARK_JDBC_DRIVER_PATH = "/opt/spark/jars/ojdbc8.jar"
+
+    # Logging files path
+    LOG_FILE = "logs/etl_process.log"
+
+    class OracleTable:
+        ORACLE_TABLE = {
+
+        }

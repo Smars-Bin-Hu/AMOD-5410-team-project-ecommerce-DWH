@@ -72,4 +72,14 @@
         <name>yarn.resourcemanager.zk-address</name>
         <value>hadoop-master:2181,hadoop-worker1:2181,hadoop-worker2:2181</value>
     </property>
+
+    <property>
+        <name>yarn.nodemanager.local-dirs</name>
+        <value>/data/nm-local-dir</value>
+    </property>
+    <property>
+        <name>yarn.nodemanager.log-dirs</name>
+        <value>/data/logs</value>
+    </property>
+
 </configuration>

@@ -15,6 +15,7 @@ apt update && apt install -y \
     dnsutils \
     htop \
     tree \
+    openssh-server \
     && rm -rf /var/lib/apt/lists/*
 
 apt update && apt install -y \
