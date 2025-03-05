@@ -73,6 +73,7 @@
         <value>hadoop-master:2181,hadoop-worker1:2181,hadoop-worker2:2181</value>
     </property>
 
+    <!-- 为了本地宿主机挂载，防止因为磁盘90%以上占用，导致nodemanager无法被RM注册到yarn中 -->
     <property>
         <name>yarn.nodemanager.local-dirs</name>
         <value>/data/nm-local-dir</value>
@@ -80,6 +81,45 @@
     <property>
         <name>yarn.nodemanager.log-dirs</name>
         <value>/data/logs</value>
+    </property>
+
+    <!-- 启用日志聚合 -->
+	<property>
+	  <name>yarn.log-aggregation-enable</name>
+	  <value>true</value>
+	</property>
+
+    <!-- 聚合日志保留位置 -->
+    <property>
+        <name>yarn.nodemanager.remote-app-log-dir</name>
+        <value>/tmp/logs</value>
+    </property>
+
+    <property>
+        <name>yarn.nodemanager.remote-app-log-dir-suffix</name>
+        <value>/logs-tfile</value> <!-- 匹配HDFS： /tmp/logs/root/logs-tfile -->
+    </property>
+
+	<!-- 聚合后的日志保留时间（单位：秒） -->
+	<property>
+	  <name>yarn.log-aggregation.retain-seconds</name>
+	  <value>604800</value> <!-- 7天 -->
+	</property>
+
+	<!-- 聚合延迟（任务完成后立即触发） -->
+	<property>
+	  <name>yarn.log-aggregation.retain-check-interval-seconds</name>
+	  <value>5</value> 
+	</property>		
+
+    <property>
+        <name>yarn.log.server.url</name>
+        <value>http://hadoop-master:19888/jobhistory/logs</value>
+    </property>
+
+    <property>
+        <name>yarn.nodemanager.delete.debug-delay-sec</name>
+        <value>86400</value>
     </property>
 
 </configuration>

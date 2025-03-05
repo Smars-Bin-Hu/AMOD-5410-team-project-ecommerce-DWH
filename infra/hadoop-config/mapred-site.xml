@@ -21,4 +21,18 @@
         <name>mapreduce.framework.name</name>
         <value>yarn</value>
     </property>
+
+    <!-- jobhistory server -->
+    <property>
+        <name>mapreduce.jobhistory.done-dir</name>
+        <value>/tmp/logs</value>
+    </property>
+    <property>
+        <name>mapreduce.jobhistory.address</name>
+        <value>hadoop-master:10020</value>
+    </property>
+    <property>
+        <name>mapreduce.jobhistory.webapp.address</name>
+        <value>hadoop-master:19888</value>
+    </property>
 </configuration>

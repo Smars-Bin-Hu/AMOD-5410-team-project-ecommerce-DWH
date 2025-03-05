@@ -3,7 +3,6 @@ from pyspark.sql import SparkSession
 # Create SparkSession
 spark = SparkSession.builder \
     .appName("OracleConnectionTest") \
-    .config("spark.driver.extraClassPath", "/opt/sqoop/lib/ojdbc8.jar") \
     .getOrCreate()
 
 # Oracle DB Configuration

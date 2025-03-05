@@ -27,6 +27,7 @@ services:
       - "${YARN_RM1_WEB_UI}:${YARN_RM1_WEB_UI}"
       - "8042:${YARN_LOG_WEB_UI}" 
       - "${HDFS}:${HDFS}" # HDFS for hive
+      - "${YARN_JOB_HISTORY_SERVER}:${YARN_JOB_HISTORY_SERVER}"
     extra_hosts:
       - "hadoop-worker2:${HADOOP_WORKER2_IP}"
       - "hadoop-worker1:${HADOOP_WORKER1_IP}"
