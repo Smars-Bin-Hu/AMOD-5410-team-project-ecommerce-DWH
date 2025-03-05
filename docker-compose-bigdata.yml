@@ -24,7 +24,6 @@ services:
     ports:
       - "2222:${SSH_PORT}"    # SSH 
       - "${HDFS_WEB_UI}:${HDFS_WEB_UI}"
-      # - "${YARN_WEB_UI}:${YARN_WEB_UI}"
       - "${YARN_RM1_WEB_UI}:${YARN_RM1_WEB_UI}"
       - "${HDFS}:${HDFS}" # HDFS for hive
     extra_hosts:
@@ -167,6 +166,8 @@ services:
       - ./infra/hive-config/hadoop-env.sh:${HIVE_HADOOP_HOME}/etc/hadoop/hadoop-env.sh
       - ./infra/hive-config/core-site.xml:${HIVE_HADOOP_HOME}/etc/hadoop/core-site.xml
       - ./infra/hive-config/hdfs-site.xml:${HIVE_HADOOP_HOME}/etc/hadoop/hdfs-site.xml
+      - ./infra/hive-config/core-site.xml:${HIVE_HOME}/conf/core-site.xml
+      - ./infra/hive-config/hdfs-site.xml:${HIVE_HOME}/conf/hdfs-site.xml
     environment:
       # connect metastore
       - JAVA_HOME=${HIVE_JDK} # different with hadoop cluster cuz hive 3.1.3 need jdk8 and amd64 for the container

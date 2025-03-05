@@ -13,6 +13,6 @@ STORED AS
     OUTPUTFORMAT 'org.apache.hadoop.hive.ql.io.avro.AvroContainerOutputFormat'
 LOCATION '/user/hive/warehouse/ods/ods_campaign_product_subcategory_fpd'
 TBLPROPERTIES (
-    'avro.schema.url'='hdfs:///user/hive/warehouse/ods/schema/ods_campaign_product_subcategory_fpd.avsc',
+    'avro.schema.url'='hdfs://ns-ha/user/hive/warehouse/ods/schema/ods_campaign_product_subcategory_fpd.avsc',
     'serialization.null.format'=''
 );

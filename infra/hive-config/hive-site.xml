@@ -10,7 +10,7 @@
         <name>javax.jdo.option.ConnectionDriverName</name>
         <value>com.mysql.cj.jdbc.Driver</value>
     </property>
-    
+
     <property>
         <name>javax.jdo.option.ConnectionUserName</name>
         <value>root</value>
@@ -20,22 +20,22 @@
         <name>javax.jdo.option.ConnectionPassword</name>
         <value>Whos3301919!</value>
     </property>
-        
+
     <property>
         <name>hive.metastore.warehouse.dir</name>
         <value>hdfs://ns-ha/user/hive/warehouse</value>
     </property>
-    
+
     <property>
         <name>hive.metastore.schema.verification</name>
         <value>false</value>
     </property>
-    
+
     <property>
         <name>datanucleus.schema.autoCreateAll</name>
         <value>true</value>
     </property>
-    
+
     <property>
         <name>hive.metastore.uris</name>
         <value>thrift://172.18.0.6:9083</value>
@@ -45,12 +45,12 @@
         <name>hive.server2.thrift.bind.host</name>
         <value>0.0.0.0</value>
     </property>
-    
+
     <property>
         <name>hive.server2.thrift.port</name>
         <value>10000</value>
     </property>
-    
+
     <!-- <property>
         <name>fs.defaultFS</name>
         <value>hdfs://ns-ha</value>
@@ -65,8 +65,16 @@
         <value>root</value>
     </property>
 
+
     <property>
         <name>hive.server2.enable.doAs</name>
-        <value>false</value> 
+        <value>false</value>
     </property>
+
+    <!-- ADMIN for root -->
+    <property>
+        <name>hive.users.in.admin.role</name>
+        <value>root</value>
+    </property>
+
 </configuration>
