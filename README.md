@@ -55,7 +55,7 @@ Add hosts to your local `/etc/hosts`
 
 ## 📌 Project Documents
 
-#### 🚀 Tech Selection
+#### 🚀 Business logic && Tech Selection
 
 [Project Tech Architecture](./docs/doc/tech-architecture.md)
 
@@ -71,6 +71,17 @@ Add hosts to your local `/etc/hosts`
   - [Data Table Lifecycle Management Specification](./docs/doc/data-warehouse-development-specification/data-table-lifecycle-management-specification.md)
   - [Development Specification](./docs/doc/data-warehouse-development-specification/development-specification.md)
 
+####    Troubleshooting
+
+  - [04_MAR_2025](./docs/doc/error-handling/04_MAR_2025.md)
+  - [05_MAR_2025](./docs/doc/error-handling/05_MAR_2025.md)
+  - [06_MAR_2025](./docs/doc/error-handling/06_MAR_2025.md)
+
+  - [Future Bugs to Fix](./docs/doc/error-handling/future-fix.md)
+
 #### 🔨 Development
 
 #### 📏 Testing
+
+
+

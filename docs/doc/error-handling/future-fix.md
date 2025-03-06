@@ -1,107 +1,75 @@
 # Bugs Need To Be Fixed in Future
 
-### 1. Yarn Web UI logs Showing
+## 1. Future Bug Fix Record: Yarn Log Aggregation Inconsistency
 
-#### Description
+### Description
 
-Sometimes, I cannot get the logs even though its the same jobs I run via Spark on Yarn.
+<p align="center">
+    <img src="../../image/error-handling/future-fix/no-logs.png" alt="image" width="100%">
+</p>
 
-e.g.
+In the current Hadoop + Yarn setup, Spark jobs sometimes fail to display logs in the Yarn Web UI, even though the job succeeds. Specifically:
 
-it shows on the Job History Server: `http://hadoop-master:19888/jobhistory/logs/hadoop-master:42117/container_1741213971623_0002_01_000001/container_1741213971623_0002_01_000001/root`
+1. **Some completed applications** show "No logs available for container…" in the Yarn Web UI’s log link, but:
+   - `yarn logs -applicationId ...` can successfully retrieve the logs, or  
+   - `hdfs dfs -cat /tmp/logs/root/logs-tfile/application_XXXX/...` can retrieve them as well.
 
-that:
-`No logs available for container container_1741213971623_0002_01_000001`
+2. **Other completed applications** show no logs in the Web UI **and** the logs do not exist at all in HDFS (`/tmp/logs/...`), nor in the local NM logs directory.
 
-However, sometimes it works.
+Overall, **it’s inconsistent**: some applications fully expose logs in the Web UI, some partially, and others not at all.
 
-Wheter it happens or not, I still can get the logs by run `yarn logs -applicationID <Application_ID_XXXX>`
-it just cannot be showed on the Yarn Web UI.
+---
 
-#### Current Clue
+## Possible Causes
 
-1. yarn-site.xml
+1. **Yarn Log Aggregation Timing/Failure**  
+   - Yarn’s log aggregation occurs only after the application finishes. If NodeManager local directories are cleaned too early or an error occurs, logs may not be uploaded to HDFS in time.
 
-```xml
-    <!-- 为了本地宿主机挂载，防止因为磁盘90%以上占用，导致nodemanager无法被RM注册到yarn中 -->
-    <property>
-        <name>yarn.nodemanager.local-dirs</name>
-        <value>/data/nm-local-dir</value>
-    </property>
-    <property>
-        <name>yarn.nodemanager.log-dirs</name>
-        <value>/data/logs</value>
-    </property>
+2. **Disk Space / NodeManager Health**  
+   - If a NodeManager sees disk usage above the configured threshold (default 90%), it might skip local log writing or fail to aggregate logs, causing them to never appear in HDFS.
 
-    <!-- 启用日志聚合 -->
-	<property>
-	  <name>yarn.log-aggregation-enable</name>
-	  <value>true</value>
-	</property>
+3. **Misconfiguration in NodeManager or Yarn**  
+   - Different nodes could have inconsistent `yarn.log-aggregation-enable`, `yarn.nodemanager.remote-app-log-dir`, or permission settings, leading to partial log uploads.
 
-    <!-- 聚合日志保留位置 -->
-    <property>
-        <name>yarn.nodemanager.remote-app-log-dir</name>
-        <value>/tmp/logs</value>
-    </property>
+4. **Spark vs. MapReduce Log Links**  
+   - Some Yarn Web UI links are more aligned with MapReduce tasks. Spark applications may not always produce logs that the JobHistory Server can parse correctly.
 
-	<!-- 聚合后的日志保留时间（单位：秒） -->
-	<property>
-	  <name>yarn.log-aggregation.retain-seconds</name>
-	  <value>604800</value> <!-- 7天 -->
-	</property>
+5. **Short-Lived Jobs**  
+   - Rapidly finishing jobs might not fully flush or store logs before NodeManager cleans them up, especially if relevant intervals or thresholds are configured sub-optimally.
 
-	<!-- 聚合延迟（任务完成后立即触发） -->
-	<property>
-	  <name>yarn.log-aggregation.retain-check-interval-seconds</name>
-	  <value>5</value> 
-	</property>	
+---
 
-    <property>
-        <name>yarn.log.server.url</name>
-        <value>http://hadoop-master:19888/jobhistory/logs</value>
-    </property>
+### Current Situation & Impact
 
-    <property>
-        <name>yarn.nodemanager.delete.debug-delay-sec</name>
-        <value>86400</value>
-    </property>
-```
+- **Impact**: It’s inconsistent to diagnose issues from Yarn’s Web UI. One must rely on `yarn logs -applicationId` or direct HDFS cat commands for guaranteed log retrieval.  
+- **Current Priority**: Low. Spark jobs do succeed, and logs can often be retrieved via CLI if needed. The Web UI inconsistency doesn’t block day-to-day operations but is annoying.
 
-2. mapred-site.xml
+---
 
-```xml
-    <!-- jobhistory server -->
-    <property>
-        <name>mapreduce.jobhistory.done-dir</name>
-        <value>/tmp/logs</value>
-    </property>
-    <property>
-        <name>mapreduce.jobhistory.address</name>
-        <value>hadoop-master:10020</value>
-    </property>
-    <property>
-        <name>mapreduce.jobhistory.webapp.address</name>
-        <value>hadoop-master:19888</value>
-    </property>
-```
+### Temporary Workarounds
 
-3. Hadoop Cluster Local Logs Path is on  `/data/logs`
+1. **Use CLI**  
+   - Run `yarn logs -applicationId <ID>` to access the logs.  
+   - If logs were successfully aggregated, they will appear here even if the Web UI says "No logs available."
 
-Reminder: When I can see the logs on the Yarn Web UI, the logs file must be under here. Otherwise, it didn't exist under the directory. But sometimes, even though it has the directory under this path, it still cannot see the
+2. **Check HDFS Directly**  
+   - Inspect `/tmp/logs/<user>/logs-tfile/application_XXXX_YYYY` to see if the logs are present.
 
-4. HDFS Logs Path is `/tmp/logs/root/logs-tfile/`
+3. **Allow More Time for Aggregation**  
+   - Sometimes just waiting a few extra seconds/minutes after job completion helps the logs appear.
 
-`hdfs dfs -cat /tmp/logs/root/logs-tfile/application_1741213971623_0002/hadoop-worker1_43545`
+4. **Rely on Spark History Server**  
+   - For Spark internal logs and event data, enabling Spark EventLog and viewing them in Spark History Server can complement Yarn’s log references.
 
-This basically sync with `/data/logs/application_1741213971623_0002`,
+---
 
-they both come out, or neither come out.
+### Future Plans
 
-Even though it come out, it still probably shows incomplete content in the logs.
+When we revisit the Yarn log aggregation system:
 
-#### I think the root cause is still because the log aggregation problem. It cannot complete every time,
+- **Ensure All NodeManagers** share the same log aggregation configurations, have consistent disk usage thresholds, and have no permission conflicts.  
+- **Increase / Validate Disk Space** on each NodeManager to prevent logs from being skipped.  
+- **Investigate Short-Lived Jobs** to confirm if logs are properly aggregated.  
+- **Explore Yarn / Spark Versions** to see if upgrading addresses any known log aggregation bugs.
 
-#### current solution
-
-only use `yarn logs -applicationId` to check out the logs
+For now, the system remains usable. This bug is labeled as a "future fix" and will be examined in detail at a later stage.
