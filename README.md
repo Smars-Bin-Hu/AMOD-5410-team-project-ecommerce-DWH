@@ -55,11 +55,11 @@ Add hosts to your local `/etc/hosts`
 
 ## 📌 Project Documents
 
-#### 🚀 Business logic && Tech Selection
+#### Business logic && Tech Selection
 
 [Project Tech Architecture](./docs/doc/tech-architecture.md)
 
-#### 🏠 Data Warehouse Modelling
+#### Data Warehouse Modelling
 
 [DWH Modelling Standard Operation Procedure (SOP)](./docs/doc/dwh-modelling-sop.md)
 
@@ -71,17 +71,16 @@ Add hosts to your local `/etc/hosts`
   - [Data Table Lifecycle Management Specification](./docs/doc/data-warehouse-development-specification/data-table-lifecycle-management-specification.md)
   - [Development Specification](./docs/doc/data-warehouse-development-specification/development-specification.md)
 
-####    Troubleshooting
+#### Troubleshooting
 
+  - [Future Bugs to Fix](./docs/doc/error-handling/future-fix.md)
   - [04_MAR_2025](./docs/doc/error-handling/04_MAR_2025.md)
   - [05_MAR_2025](./docs/doc/error-handling/05_MAR_2025.md)
   - [06_MAR_2025](./docs/doc/error-handling/06_MAR_2025.md)
 
-  - [Future Bugs to Fix](./docs/doc/error-handling/future-fix.md)
+#### Development
 
-#### 🔨 Development
-
-#### 📏 Testing
+#### Testing
 
 
 
