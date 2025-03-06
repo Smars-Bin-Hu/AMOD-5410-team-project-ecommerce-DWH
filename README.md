@@ -56,12 +56,12 @@ Add hosts to your local `/etc/hosts`
 
 ## 📌 Project Documents
 
-#### 🚀 Business logic && Tech Selection
+#### Business logic && Tech Selection
 
 - Business Logic
 - [Project Tech Architecture](./docs/doc/tech-architecture.md)
 
-#### 🏠 Data Warehouse Modelling
+#### Data Warehouse Modelling
 
 [DWH Modelling Standard Operation Procedure (SOP)](./docs/doc/dwh-modelling-sop.md)
 
@@ -73,15 +73,15 @@ Add hosts to your local `/etc/hosts`
   - [Data Table Lifecycle Management Specification](./docs/doc/data-warehouse-development-specification/data-table-lifecycle-management-specification.md)
   - [Development Specification](./docs/doc/data-warehouse-development-specification/development-specification.md)
 
-####    Troubleshooting
+#### Troubleshooting
 
+  - [Future Bugs to Fix](./docs/doc/error-handling/future-fix.md)
   - [04_MAR_2025](./docs/doc/error-handling/04_MAR_2025.md)
   - [05_MAR_2025](./docs/doc/error-handling/05_MAR_2025.md)
   - [06_MAR_2025](./docs/doc/error-handling/06_MAR_2025.md)
 
-  - [Future Bugs to Fix](./docs/doc/error-handling/future-fix.md)
 
-####    Infrastructure & Building
+#### Infrastructure & Building
 
   - 核心架构docker容器分布图
   - Hadoop 3节点 的搭建和配置
@@ -92,7 +92,7 @@ Add hosts to your local `/etc/hosts`
   - airflow 节点的搭建和配置
   - `docker-compose` 文件的配置
 
-#### 🔨 Development
+#### Development
 
   - Data Warehousing
     - ods
@@ -104,8 +104,7 @@ Add hosts to your local `/etc/hosts`
   - Scheduler (Airflow)
   - some files under /scripts
 
-#### 📏 Testing
-
+#### Testing
   - spark_connect_oracle.py  
 
 
