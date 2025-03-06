@@ -9,11 +9,9 @@ from config import Config # Config.py
 
 # Utils.py
 from utils import LoggingUtils
-from utils import DatabaseUtils
-from utils import HDFSUtils
 
 class OracleToHDFS:
-    """Oracle 数据拉取并存储至 HDFS 的 ETL 任务类"""
+    """ETL Job Class: Oracle Data Extract and Load to HDFS"""
 
     def __init__(self):
         """
@@ -28,7 +26,6 @@ class OracleToHDFS:
         # launch the SparkSession
         self.spark = SparkSession.builder \
             .appName(Config.SPARK_APP_NAME) \
-            .config("spark.driver.extraClassPath", Config.SPARK_JDBC_DRIVER_PATH) \
             .getOrCreate()
 
     def extract(self, table_name):
@@ -50,32 +47,26 @@ class OracleToHDFS:
 
         return df
 
-    def transform(self, df):
-        """（可选）数据转换逻辑"""
-        self.logger.info("数据转换：当前无特殊转换逻辑")
-        return df  # 目前不做转换，直接返回原始数据
-
     def load(self, df):
-        """写入数据到 HDFS"""
-        self.logger.info(f"数据写入 HDFS: {Config.HDFS_PATH}")
-        df.write.mode("overwrite").parquet(Config.HDFS_PATH)
+        """Load data to HDFS"""
+        self.logger.info(f"Loading tables to HDFS: {Config.HDFS_PATH}")
+        df.write\
+            .mode("overwrite")\
+            .parquet(Config.HDFS_PATH)
 
     def run(self, table_name):
-        """执行完整的 ETL 流程"""
-        self.logger.info(f"开始处理表: {table_name}")
+        """execute the entire ETL job"""
+        self.logger.info(f"Processing Table Name: {table_name}")
 
-        # 1. 抽取数据
+        # 1. Extract the data
         df = self.extract(table_name)
 
-        # 2. 进行转换（这里暂时不做转换）
-        df_transformed = self.transform(df)
-
-        # 3. 加载到 HDFS
+        # 2. Load the data
         self.load(df_transformed)
 
-        self.logger.info("ETL 任务完成！")
+        self.logger.info("ETL job task complete！")
 
     def stop(self):
-        """停止 SparkSession"""
-        self.logger.info("正在关闭 SparkSession...")
+        """stop SparkSession"""
+        self.logger.info("Stopping SparkSession...")
         self.spark.stop()

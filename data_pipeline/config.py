@@ -17,22 +17,17 @@ class Config:
     HDFS_PATH = "/user/hdfs/oracle_data"
 
     # Oracle Database Configuration
-    ORACLE_JDBC_DRIVER_PATH = "/opt/sqoop/lib/ojdbc8.jar"
+    ORACLE_JDBC_DRIVER_PATH = "/opt/spark/jars/ojdbc8.jar"
     ORACLE_HOST = "oracle-oltp"
     ORACLE_PORT = "1521"
     ORACLE_SERVICE_NAME = "ORCLPDB1"
     ORACLE_USERNAME = "Smars"
     ORACLE_PASSWORD = "Whos3301919!"
     ORACLE_DRIVER = "oracle.jdbc.OracleDriver"
+    ORACLE_JDBC_URL = f"jdbc:oracle:thin:@//{ORACLE_HOST}:{ORACLE_PORT}/{ORACLE_SERVICE_NAME}"
 
     # Spark
     SPARK_APP_NAME = "OracleToHDFS"
-    SPARK_JDBC_DRIVER_PATH = "/opt/spark/jars/ojdbc8.jar"
 
     # Logging files path
     LOG_FILE = "logs/etl_process.log"
-
-    class OracleTable:
-        ORACLE_TABLE = {
-
-        }

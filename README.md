@@ -29,11 +29,12 @@
 │── /batch_processing        # Data Batch processing (Hadoop, Hive, Spark)
 │── /scheduler               # Task Scheduler(Airflow/DolphinScheduler)
 │── /infra                   # infrastructure deployment(Docker, Kubernetes)
-│── /notebooks               # Jupyter Notebook
 │── /tests                   # Testing code
 │── /scripts                 # deployment and operations script and command
 │── README.md                # Introduction about project
 │── docker-compose.yml       # Docker Compose to launch the project
+│── .env                     # Docker Compose to read the constant variable about environment
+│── .gitignore               # Git ignore some directory to commit to the remote repo
 │── requirements.txt         # Python dependencies
 ```
 
@@ -57,7 +58,8 @@ Add hosts to your local `/etc/hosts`
 
 #### 🚀 Business logic && Tech Selection
 
-[Project Tech Architecture](./docs/doc/tech-architecture.md)
+- Business Logic
+- [Project Tech Architecture](./docs/doc/tech-architecture.md)
 
 #### 🏠 Data Warehouse Modelling
 
@@ -79,9 +81,32 @@ Add hosts to your local `/etc/hosts`
 
   - [Future Bugs to Fix](./docs/doc/error-handling/future-fix.md)
 
+####    Infrastructure & Building
+
+  - 核心架构docker容器分布图
+  - Hadoop 3节点 的搭建和配置
+  - Hive 节点的搭建和配置
+  - Spark 节点的搭建和配置
+  - mysql 节点的搭建和配置
+  - oracle 节点的搭建和配置
+  - airflow 节点的搭建和配置
+  - `docker-compose` 文件的配置
+
 #### 🔨 Development
 
+  - Data Warehousing
+    - ods
+    - dwd
+  - datapipe ETL
+    - Spark on Yarn to connect Oracle (Hello World)
+    - Spark to extract data and load to HDFS
+    - OOP
+  - Scheduler (Airflow)
+  - some files under /scripts
+
 #### 📏 Testing
+
+  - spark_connect_oracle.py  
 
 
 
