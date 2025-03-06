@@ -16,11 +16,11 @@ apt update && apt install -y \
     htop \
     tree \
     openssh-server \
-    && rm -rf /var/lib/apt/lists/*
-
-apt update && apt install -y \
     pkg-config \
     libmysqlclient-dev
+    && rm -rf /var/lib/apt/lists/*
+
+docker ps
 
 # docker exec command
 docker exec -it --user root mysql-hive-metastore bash

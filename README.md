@@ -104,6 +104,10 @@ Add hosts to your local `/etc/hosts`
   - Scheduler (Airflow)
   - some files under /scripts
 
+#### Optimization
+
+  - [Too many INFO logs: Reducing Spark Console Log Levels](./docs/doc/optimization/reducing-spark-console-log-levels.md)
+
 #### Testing
   - spark_connect_oracle.py  
 

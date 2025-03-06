@@ -1,5 +1,5 @@
 conda activate pyspark_env
-pyspark --master yarn --deploy-mode client
+# pyspark --master yarn --deploy-mode client
 
 spark-submit --master yarn \
     --deploy-mode cluster \
