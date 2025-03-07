@@ -71,6 +71,11 @@ Add hosts to your local `/etc/hosts`
   - [Table Naming Conventions](./docs/doc/data-warehouse-development-specification/table-naming-convertions.md)
   - [Data Warehouse Column Naming Conventions](./docs/doc/data-warehouse-development-specification/partitioning-column-naming-conventions.md)
   - [Data Table Lifecycle Management Specification](./docs/doc/data-warehouse-development-specification/data-table-lifecycle-management-specification.md)
+
+- Python Development Specification
+  - Package Modulize
+ 
+- SQL Development Specification
   - [Development Specification](./docs/doc/data-warehouse-development-specification/development-specification.md)
 
 #### Troubleshooting

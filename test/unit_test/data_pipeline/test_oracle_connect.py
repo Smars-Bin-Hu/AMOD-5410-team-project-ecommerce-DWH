@@ -1,8 +1,8 @@
 import logging
-# import config as cfg
+# import configs as cfg
 import jaydebeapi  # all NodeManager need install this API
 
-"""config"""
+"""configs"""
 ORACLE_JDBC_DRIVER_PATH = "/opt/spark/jars/ojdbc8.jar"
 ORACLE_HOST = "oracle-oltp"
 ORACLE_PORT = "1521"

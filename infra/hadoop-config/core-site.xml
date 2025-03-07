@@ -26,7 +26,7 @@
         <value>/usr/local/opt/module/hadoop/data</value>
     </property>
 
-    <!-- config hadoop http user as root，grant higher accessibility to user -->
+    <!-- configs hadoop http user as root，grant higher accessibility to user -->
     <property>
         <name>hadoop.http.staticuser.user</name>
         <value>root</value>
@@ -40,7 +40,7 @@
         <value>*</value>
     </property>
 
-    <!-- config HA NameService -->
+    <!-- configs HA NameService -->
     <property>
         <name>fs.defaultFS</name>
         <value>hdfs://ns-ha</value>

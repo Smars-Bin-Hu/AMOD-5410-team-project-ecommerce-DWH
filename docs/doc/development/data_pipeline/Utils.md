@@ -12,18 +12,25 @@
 > Edited By: Smars Hu
 > Date: 05 Mar 2025
 
-#### 代码依赖库：
+### 代码依赖库：
 
 1. 用到jaydebeapi模块。
 2. 代码要用到logging用于生成日志
 3. 用到config（自定义类），读取常量信息
 
-#### 代码逻辑：
+### 代码逻辑：
+
+[Utils.py](../../../../data_pipeline/utils.py)
 
 - 启动日志
 - 用jaybeapi连接Oracle数据库，从config类中读取常量信息（数据库连接信息，比如driver，URL，username，password，JDBC driver path等）
 - 连接Oracle数据库，尝试运行SQL
 - 如果没异常就返回True，异常就返回False
+
+```python
+
+```
+### `test_oracle_connection()` Development
 
 #### 注意事项
 
@@ -33,9 +40,9 @@
 (pyspark_env) root@hadoop-worker2:~# pip install JayDeBeApi
 ```
 
-#### 单元测试代码链接：
+#### 单元测试：
 
-[Utils.py](../../../../test/unit_test/data_pipeline/test_oracle_connect.py)
+
 
 在Spark容器上，运行上面的python单元测试代码，连接oracle，返回成功：
 
@@ -55,9 +62,10 @@ Debug: Oracle Database Connected!
 > Edited By: Smars Hu
 > Date: 05 Mar 2025
 
-#### 代码依赖库：
+###
 
-#### 代码逻辑：
+### 代码依赖库：
+
 
 #### 注意事项
 
@@ -70,26 +78,71 @@ Debug: Oracle Database Connected!
 > Edited By: Smars Hu
 > Date: 06 Mar 2025
 
-#### 代码依赖库：
+### 代码依赖库：
 
 1. logging - Provides core logging functionalities.
    
-#### 代码逻辑：
+### 代码逻辑：
 
-- Register Custom Log Level
-    
-    The function `logging.addLevelName(log_level, level_name)` adds a user-defined log level to the Python logging system.
+[Utils.py](../../../../data_pipeline/utils.py)
 
-- Bind Custom Logging Method to `Logger` class
-  
-    A new logging method (e.g., `logger.smars_dev("message")`) is dynamically attached to the `logging.Logger` class using `setattr()`. This allows calling the custom log level like a built-in logging method.
+```python
+class LoggingUtils:
+    """Utility class for customized logging operations."""
 
-- Setup Logger Configuration
-  - The logging format includes timestamps, log level names, and messages.
-  - The logger uses `logging.StreamHandler()` to output logs to the console.
-  - The function returns a `Logger` instance configured with the specified log level.
+    @staticmethod
+    def setup_custom_logger(log_name:str, log_level:int, level_name:str):
+        """
+        Setup a customized logger with a new log level.
 
-Usage Example
+        Args:
+            log_name(str) : Custom log name. Use the file name `__name__` by default
+            log_level (int): Custom log level (e.g., 25).
+            level_name (str): Name for the custom log level.
+
+        Returns:
+            logging.Logger: Configured logger instance.
+        """
+
+        # Register the new log level
+        logging.addLevelName(log_level, level_name)
+
+        # customize logging method: for logger.smars_dev("log content")
+        # bind the smars_dev() to Logger Class
+        def smars_dev(self, message, *args, **kwargs):
+            """
+            Custom log function bound to logging.Logger.
+            Logs messages at the specified custom log level.
+
+            Args:
+                self (logging.Logger): Logger instance.
+                message (str): Log message.
+                *args: Additional arguments.
+                **kwargs: Additional keyword arguments.
+            """
+            if self.isEnabledFor(log_level):
+                self._log(log_level, message, args, **kwargs)
+
+        # Attach the custom logging method to the Logger class dynamically
+        setattr(logging.Logger, level_name.lower(), smars_dev)
+
+        # Config the certain logger level for its format, handlers etc.
+        logging.basicConfig(
+            level=log_level,
+            format="%(asctime)s - %(name)s - %(levelname)s: - %(message)s",
+            datefmt="%Y-%m-%d %H:%M:%S",
+            handlers=[logging.StreamHandler()]  # Console output handler
+        )
+
+        # Return the logger instance for the current module with custom name
+        return logging.getLogger(log_name)
+```
+
+### `setup_custom_logger()` Development
+
+#### Usage Example
+
+#### ``
 ```python
 from logging_utils import LoggingUtils
 
@@ -100,7 +153,6 @@ logger = LoggingUtils.setup_custom_logger(SMARS_DEV_LEVEL, "SMARS_DEV")
 # Use the custom log level
 logger.smars_dev("This is a custom log message.")
 logger.info("This is an INFO level log.")  # Standard logging still works
-
 ```
 
 #### 注意事项
@@ -119,6 +171,8 @@ logger.info("This is an INFO level log.")  # Standard logging still works
 
 
 #### 单元测试代码链接：
+
+[Utils.py](../../testing/setup_custom_logger.md)
 
 #### 故障处理：
 
