@@ -16,11 +16,15 @@ class OracleToHDFS:
     def __init__(self):
         """
             Constructor:
-                initialize SparkSession and Logging System
+                initialize SparkSession and Global Logging System
          """
 
         # launch the Logging System
-        self.logger = LoggingUtils.setup_logger()
+        self.logger = LoggingUtils.setup_custom_logger(
+            "ORACLE_TO_HDFS",
+            Config.LoggingConfig.SMARS_DEV_LOG_LEVEL,
+            Config.LoggingConfig.SMARS_DEV_LOG_LEVEL_NAME
+        )
         self.logger.info("Initializing SparkSession...")
 
         # launch the SparkSession

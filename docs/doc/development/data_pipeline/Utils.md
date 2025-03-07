@@ -9,6 +9,9 @@
 
 ## OracleDatabaseUtils 组件开发
 
+> Edited By: Smars Hu
+> Date: 05 Mar 2025
+
 #### 代码依赖库：
 
 1. 用到jaydebeapi模块。
@@ -28,18 +31,6 @@
 
 ```bash
 (pyspark_env) root@hadoop-worker2:~# pip install JayDeBeApi
-    Collecting JayDeBeApi
-    Downloading JayDeBeApi-1.2.3-py3-none-any.whl.metadata (10 kB)
-    Collecting JPype1 (from JayDeBeApi)
-    Downloading jpype1-1.5.2-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (4.9 kB)
-    Collecting packaging (from JPype1->JayDeBeApi)
-    Downloading packaging-24.2-py3-none-any.whl.metadata (3.2 kB)
-    Downloading JayDeBeApi-1.2.3-py3-none-any.whl (26 kB)
-    Downloading jpype1-1.5.2-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (467 kB)
-    Downloading packaging-24.2-py3-none-any.whl (65 kB)
-    Installing collected packages: packaging, JPype1, JayDeBeApi
-    Successfully installed JPype1-1.5.2 JayDeBeApi-1.2.3 packaging-24.2
-    WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable.It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
 ```
 
 #### 单元测试代码链接：
@@ -61,4 +52,74 @@ Debug: Oracle Database Connected!
 
 ## HDFSUtils  组件开发
 
-。。。
+> Edited By: Smars Hu
+> Date: 05 Mar 2025
+
+#### 代码依赖库：
+
+#### 代码逻辑：
+
+#### 注意事项
+
+#### 单元测试代码链接：
+
+#### 故障处理：
+
+## LoggingUtils 组件开发
+
+> Edited By: Smars Hu
+> Date: 06 Mar 2025
+
+#### 代码依赖库：
+
+1. logging - Provides core logging functionalities.
+   
+#### 代码逻辑：
+
+- Register Custom Log Level
+    
+    The function `logging.addLevelName(log_level, level_name)` adds a user-defined log level to the Python logging system.
+
+- Bind Custom Logging Method to `Logger` class
+  
+    A new logging method (e.g., `logger.smars_dev("message")`) is dynamically attached to the `logging.Logger` class using `setattr()`. This allows calling the custom log level like a built-in logging method.
+
+- Setup Logger Configuration
+  - The logging format includes timestamps, log level names, and messages.
+  - The logger uses `logging.StreamHandler()` to output logs to the console.
+  - The function returns a `Logger` instance configured with the specified log level.
+
+Usage Example
+```python
+from logging_utils import LoggingUtils
+
+# Define custom log level
+SMARS_DEV_LEVEL = 25
+logger = LoggingUtils.setup_custom_logger(SMARS_DEV_LEVEL, "SMARS_DEV")
+
+# Use the custom log level
+logger.smars_dev("This is a custom log message.")
+logger.info("This is an INFO level log.")  # Standard logging still works
+
+```
+
+#### 注意事项
+
+1. Custom Log Levels Must Be Unique
+
+    Ensure that `level_name` is not a built-in log level (`DEBUG`, `INFO`, `WARNING`, etc.).
+
+2. Logging Configuration Affects All Loggers
+   
+    The `basicConfig()` method applies globally. If multiple logging configurations exist in a project, ensure they don’t conflict.
+
+3. Custom Log Levels Are Accessible Like Built-in Levels
+   
+    Once registered, the new log level can be used as `logger.<level_name.lower()>("Message")`
+
+
+#### 单元测试代码链接：
+
+#### 故障处理：
+
+None

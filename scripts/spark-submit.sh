@@ -1,6 +1,7 @@
 conda activate pyspark_env
 # pyspark --master yarn --deploy-mode client
 
+# cluster mode
 spark-submit --master yarn \
     --deploy-mode cluster \
     --driver-memory 512m \
@@ -15,3 +16,9 @@ spark-submit --master yarn \
     --conf spark.eventLog.enabled=true \
     --conf spark.eventLog.dir=hdfs:///spark-logs \
     /opt/miniconda3/envs/pyspark_env/jobs_sync/Users/smars/Developer/big-data-engineering-project1/data_pipeline/unit_test/spark_connect_oracle.py
+
+# client mode
+spark-submit \
+    --master yarn \
+    --deploy-mode client \
+    feistiest_pokemon.py <dataset_input_path> <result_output_path>
