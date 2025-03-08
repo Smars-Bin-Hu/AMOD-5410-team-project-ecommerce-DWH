@@ -44,5 +44,6 @@ class DatabaseConnectionConfig:
         """Getter: Return the connection properties"""
         return {
             "username": self._username,
-            "password": self._password
+            "password": self._password,
+            "driver": "oracle.jdbc.OracleDriver" # for Spark connect Oracle
         }

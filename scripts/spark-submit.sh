@@ -18,7 +18,18 @@ spark-submit --master yarn \
     /opt/miniconda3/envs/pyspark_env/jobs_sync/Users/smars/Developer/big-data-engineering-project1/data_pipeline/unit_test/spark_connect_oracle.py
 
 # client mode
-spark-submit \
-    --master yarn \
+spark-submit --master yarn \
     --deploy-mode client \
-    feistiest_pokemon.py <dataset_input_path> <result_output_path>
+    --driver-memory 512m \
+    --executor-memory 1g \
+    --executor-cores 1 \
+    --num-executors 1 \
+    --jars /opt/spark/jars/ojdbc8.jar \
+    --conf "spark.yarn.executor.memoryOverhead=512" \
+    --conf "spark.yarn.driver.memoryOverhead=256" \
+    --conf "spark.driver.extraClassPath=/opt/spark/jars/ojdbc8.jar" \
+    --conf spark.hadoop.yarn.log-aggregation.wait.ms=60000 \
+    --conf spark.eventLog.enabled=true \
+    --conf spark.eventLog.dir=hdfs:///spark-logs \
+    --packages org.apache.spark:spark-avro_2.12:3.3.0\
+    /opt/miniconda3/envs/pyspark_env/jobs_sync/Users/smars/Developer/big-data-engineering-project1/test/unit_test/data_pipeline/spark_load_to_hive.py

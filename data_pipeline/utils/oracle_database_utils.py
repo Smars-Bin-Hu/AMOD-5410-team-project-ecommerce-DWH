@@ -7,9 +7,10 @@
 import jaydebeapi
 from data_pipeline.configs import (
     HadoopEnvConfig,
-    LoggingConfig
+    LoggingConfig,
+    DatabaseConnectionConfig
 )
-from logging_utils import LoggingUtils
+from .logging_utils import LoggingUtils
 
 # create a logger for current util
 smars_dev_log_level = int(LoggingConfig.get_smars_dev_log_level())
@@ -60,3 +61,7 @@ class OracleDatabaseUtils:
         except Exception as e:
             logger.smars_dev(f"failed to connect Oracle Database: {e}")
             return False
+
+if __name__ == '__main__':
+    oracle_db_config = DatabaseConnectionConfig("oracle","1")
+    OracleDatabaseUtils.test_oracle_connection(oracle_db_config)

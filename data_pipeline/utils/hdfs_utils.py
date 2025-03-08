@@ -6,7 +6,7 @@
 """
 import subprocess
 from data_pipeline.configs import LoggingConfig
-from logging_utils import LoggingUtils
+from .logging_utils import LoggingUtils
 
 # create a logger for current util
 smars_dev_log_level = int(LoggingConfig.get_smars_dev_log_level())

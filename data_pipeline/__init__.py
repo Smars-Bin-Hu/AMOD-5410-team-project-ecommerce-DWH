@@ -9,9 +9,12 @@ __author__ = "Smars Hu"
 __date__ = "05 Mar 2025"
 
 """Loading Spark Session"""
-spark = SparkSession.builder \
-    .appName("etl_oracle_to_hdfs_pyspark_on_yarn") \
+spark = (
+    SparkSession.builder
+    .appName("etl_oracle_to_hdfs_pyspark_on_yarn")
+    .config("spark.jars.packages", "org.apache.spark:spark-avro_2.12:3.3.0")
     .getOrCreate()
+)
 
 """Load environment variables from .env and .env.secret file"""
 # get the file path

@@ -49,8 +49,10 @@ def main():
     # full load tables
     if len(tables) != 0:
         for table in tables:
-            df = ETLOracleToHDFS.extract(table)
-            if ETLOracleToHDFS.load(df, hive_ods_hdfs_path):
+            df = ETLOracleToHDFS.extract(table, oracle_db_config)
+
+
+            if ETLOracleToHDFS.load(table, df):
                 logger.smars_dev(f"{table} loaded to HDFS")
             etl = ETLOracleToHDFS(table, oracle_db_config)
     else:
