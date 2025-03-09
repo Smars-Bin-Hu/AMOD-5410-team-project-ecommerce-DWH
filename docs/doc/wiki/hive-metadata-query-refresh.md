@@ -29,7 +29,9 @@ WHERE TBL_ID = (SELECT TBL_ID FROM TBLS WHERE TBL_NAME = 'ods_customer_product_r
 
 ## On the `Hive` refresh the metadata
 
-on Hive to show create ddl 
+> after load data to HDFS, hive cannot know. so we should refresh the metadata and tell hive to scan the tables again. 
+
+on `Hive` to show create ddl 
 ```hiveql
 SHOW CREATE TABLE ods.ods_customer_product_ratings_ipd;
 ```

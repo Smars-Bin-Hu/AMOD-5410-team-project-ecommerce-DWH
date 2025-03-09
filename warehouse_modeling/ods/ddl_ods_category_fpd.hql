@@ -3,8 +3,7 @@ CREATE EXTERNAL TABLE IF NOT EXISTS ods_category_fpd (
     category_name STRING COMMENT 'Name of category, like Clothing, Books, Grocery...'
 )
 COMMENT 'ODS Table for Category (Daily Full Sync, Permenant Storage)'
-PARTITIONED BY (DATA_DATE STRING COMMENT 'Data load date')
-ROW FORMAT SERDE 
+ROW FORMAT SERDE
     'org.apache.hadoop.hive.serde2.avro.AvroSerDe'
 STORED AS 
     INPUTFORMAT 'org.apache.hadoop.hive.ql.io.avro.AvroContainerInputFormat'

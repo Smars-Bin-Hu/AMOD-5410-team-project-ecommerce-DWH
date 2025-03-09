@@ -4,7 +4,7 @@
     Layer2 : import external modules in the project from project_directory.ext_mod/__init__.py
     Layer3 : import internal modules in the project from project_directory.int_mod/mod_file.py: avoid circular importing
 """
-from data_pipeline import get_env
+from .get_env import get_env
 
 class HadoopEnvConfig:
     @staticmethod

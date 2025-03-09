@@ -1,7 +1,7 @@
 import json
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, date_format, current_date
-from pyspark.sql.types import IntegerType, StringType
+from pyspark.sql.types import IntegerType, StringType, DecimalType
 
 spark = SparkSession.builder \
     .appName("OracleExtractionByPySpark") \
@@ -20,8 +20,8 @@ properties =  {
     "password": ORACLE_PASSWORD,
     "driver": "oracle.jdbc.OracleDriver"
 }
-oracle_table_name = "CATEGORY"
-oracle_table_sql_query = f"SELECT * FROM CATEGORY"
+oracle_table_name = "CUSTOMER_PRODUCT_RATINGS"
+oracle_table_sql_query = f"SELECT * FROM CUSTOMER_PRODUCT_RATINGS"
 
 def extract(oracle_table_name, oracle_jdbc_url, oracle_table_sql_query, properties):
     try:
@@ -36,7 +36,7 @@ def extract(oracle_table_name, oracle_jdbc_url, oracle_table_sql_query, properti
 
         # Check if the DataFrame is empty (no rows)
         if df.head(1):
-            df.show()
+            # df.show()
             print(f"Successfully extract data from table: {oracle_table_name}")
             return df
         else:
@@ -49,38 +49,77 @@ def extract(oracle_table_name, oracle_jdbc_url, oracle_table_sql_query, properti
 
 df = extract(oracle_table_name, oracle_jdbc_url, oracle_table_sql_query, properties)
 
-hive_hdfs_table_path = "/user/hive/warehouse/ods/ods_category_fpd"
+hive_hdfs_table_path = "/user/hive/warehouse/ods/ods_customer_product_ratings_ipd"
 save_mode = "overwrite"
 hive_format = "avro"
 avro_schema_json = """
 {
   "type": "record",
-  "name": "category",
+  "name": "customer_product_ratings",
   "namespace": "com.ods.avro",
   "fields": [
     {
-      "name": "category_id",
+      "name": "customerproductrating_id",
       "type": "int",
-      "doc": "Unique identifier for table category"
+      "doc": "Unique id for each row in table customer_product_ratings"
     },
     {
-      "name": "category_name",
-      "type": "string",
-      "doc": "Name of category, like Clothing, Books, Grocery..."
+      "name": "customer_id",
+      "type": "int",
+      "doc": "The customer gave the review and ratings"
+    },
+    {
+      "name": "product_id",
+      "type": "int",
+      "doc": "The product that was given the review and ratings"
+    },
+    {
+      "name": "ratings",
+      "type": {
+        "type": "bytes",
+        "logicalType": "decimal",
+        "precision": 2,
+        "scale": 1
+      },
+      "doc": "The ratings specific number"
+    },
+    {
+      "name": "review",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null,
+      "doc": "The review text"
+    },
+    {
+      "name": "sentiment",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null,
+      "doc": "The final sentiment ('good' or 'bad')"
     }
   ]
 }
 """
 # load
 try:
-    df = df.withColumn("DATA_DATE", date_format(current_date(), "yyyy-MM-dd"))
-    # 2) 如果你的 DataFrame 中列是 `CATEGORY_ID` 等，需要先转换为匹配的类型 & 字段名
-    df = df.withColumnRenamed("CATEGORY_ID", "category_id") \
-        .withColumnRenamed("CATEGORY_NAME", "category_name")
-    df = df.withColumn("category_id", col("category_id").cast(IntegerType()))
-    df = df.withColumn("category_name", col("category_name").cast(StringType()))
+    df = df.withColumnRenamed("customerproductrating_id".upper(), "customerproductrating_id") \
+        .withColumnRenamed("customer_id".upper(), "customer_id")\
+        .withColumnRenamed("product_id".upper(), "product_id")\
+        .withColumnRenamed("ratings".upper(), "ratings")\
+        .withColumnRenamed("review".upper(), "review")\
+        .withColumnRenamed("sentiment".upper(), "sentiment")\
 
-    # 3) 添加分区列
+    df = df.withColumn("customerproductrating_id", col("customerproductrating_id").cast(IntegerType()))
+    df = df.withColumn("customer_id", col("customer_id").cast(IntegerType()))
+    df = df.withColumn("product_id", col("product_id").cast(IntegerType()))
+    df = df.withColumn("ratings", col("ratings").cast(DecimalType(2, 1)))
+    df = df.withColumn("review", col("review").cast(StringType()))
+    df = df.withColumn("sentiment", col("sentiment").cast(StringType()))
+
     df = df.withColumn("data_date", date_format(current_date(), "yyyy-MM-dd"))
 
     (

@@ -4,8 +4,7 @@ CREATE EXTERNAL TABLE IF NOT EXISTS ods_marketing_campaigns_fpd (
     offer_week INT COMMENT 'Represents the ordinal of a year'
 )
 COMMENT 'ODS Table for Marketing Campaigns (Daily Full Sync, Permenant Storage)'
-PARTITIONED BY (DATA_DATE STRING COMMENT 'Data load date')
-ROW FORMAT SERDE 
+ROW FORMAT SERDE
     'org.apache.hadoop.hive.serde2.avro.AvroSerDe'
 STORED AS 
     INPUTFORMAT 'org.apache.hadoop.hive.ql.io.avro.AvroContainerInputFormat'

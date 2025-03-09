@@ -6,8 +6,7 @@ CREATE EXTERNAL TABLE IF NOT EXISTS ods_product_fpd (
     subcategory_id INT COMMENT 'Foreign key to subcategory'
 )
 COMMENT 'ODS Table for Product (Daily Full Sync, Permenant Storage)'
-PARTITIONED BY (DATA_DATE STRING COMMENT 'Data load date')
-ROW FORMAT SERDE 
+ROW FORMAT SERDE
     'org.apache.hadoop.hive.serde2.avro.AvroSerDe'
 STORED AS 
     INPUTFORMAT 'org.apache.hadoop.hive.ql.io.avro.AvroContainerInputFormat'

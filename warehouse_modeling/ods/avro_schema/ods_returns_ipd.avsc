@@ -3,11 +3,47 @@
   "name": "returns",
   "namespace": "com.ods.avro",
   "fields": [
-    {"name": "return_id", "type": "int", "doc": "Unique id for each row in table returns"},
-    {"name": "order_id", "type": "int", "doc": "The order associated with the returned order"},
-    {"name": "product_id", "type": "int", "doc": "The product associated with the returned order"},
-    {"name": "return_date", "type": {"type": "string", "logicalType": "date"}, "doc": "The returned date for this order"},
-    {"name": "reason", "type": ["null", "string"], "default": null, "doc": "The reason why customer returned this order"},
-    {"name": "amount_refunded", "type": {"type": "bytes", "logicalType": "decimal", "precision": 10, "scale": 2}, "doc": "The amount refunded to the customer"}
+    {
+      "name": "return_id",
+      "type": "int",
+      "doc": "Unique id for each row in table returns"
+    },
+    {
+      "name": "order_id",
+      "type": "int",
+      "doc": "The order associated with the returned order"
+    },
+    {
+      "name": "product_id",
+      "type": "int",
+      "doc": "The product associated with the returned order"
+    },
+    {
+      "name": "return_date",
+      "type": {
+        "type": "string",
+        "logicalType": "date"
+      },
+      "doc": "The returned date for this order"
+    },
+    {
+      "name": "reason",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null,
+      "doc": "The reason why customer returned this order"
+    },
+    {
+      "name": "amount_refunded",
+      "type": {
+        "type": "bytes",
+        "logicalType": "decimal",
+        "precision": 10,
+        "scale": 2
+      },
+      "doc": "The amount refunded to the customer"
+    }
   ]
 }

@@ -12,7 +12,7 @@ TABLES=(
     "ods_customer_product_ratings_ipd"
     "ods_marketing_campaigns_fpd"
     "ods_orders_ipd"
-    "ods_ordersitem_ipd"
+    "ods_orderitem_ipd"
     "ods_payment_method_fpd"
     "ods_product_fpd"
     "ods_returns_ipd"

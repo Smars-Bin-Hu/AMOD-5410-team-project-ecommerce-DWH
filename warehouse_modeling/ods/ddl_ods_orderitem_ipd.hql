@@ -1,4 +1,4 @@
-CREATE EXTERNAL TABLE IF NOT EXISTS ods_ordersitem_ipd (
+CREATE EXTERNAL TABLE IF NOT EXISTS ods_orderitem_ipd (
     orderitem_id INT COMMENT 'Unique id for each row in table orderitem',
     order_id INT COMMENT 'To find the order in table orders',
     product_id INT COMMENT 'To find the product in the table products',
@@ -9,7 +9,7 @@ CREATE EXTERNAL TABLE IF NOT EXISTS ods_ordersitem_ipd (
 )
 COMMENT 'ODS Table for Order Items (Daily Incremental Sync, Permenant Storage)'
 PARTITIONED BY (DATA_DATE STRING COMMENT 'Data load date')
-ROW FORMAT SERDE 
+ROW FORMAT SERDE
     'org.apache.hadoop.hive.serde2.avro.AvroSerDe'
 STORED AS 
     INPUTFORMAT 'org.apache.hadoop.hive.ql.io.avro.AvroContainerInputFormat'

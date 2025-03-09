@@ -5,7 +5,6 @@ CREATE EXTERNAL TABLE IF NOT EXISTS ods_campaign_product_subcategory_fpd (
     discount DECIMAL(3,2) COMMENT 'Discount number (from 0 to 1)'
 )
 COMMENT 'ODS Table for Campaign Product Subcategory (Daily Full Sync, Permenant Storage)'
-PARTITIONED BY (DATA_DATE STRING COMMENT 'Data load date')
 ROW FORMAT SERDE 
     'org.apache.hadoop.hive.serde2.avro.AvroSerDe'
 STORED AS 
