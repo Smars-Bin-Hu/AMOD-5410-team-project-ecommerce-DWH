@@ -7,7 +7,7 @@ etl_tables_config = [
         "save_mode": "overwrite",
         "oracle_table_sql_query" : f"select * from CAMPAIGN_PRODUCT_SUBCATEGORY",
         "partition_field" : "None",
-        "avro_schema_json" : {
+        "avro_schema_json" : """{
             "type": "record",
             "name": "campaign_product_subcategory",
             "namespace": "com.ods.avro",
@@ -38,7 +38,7 @@ etl_tables_config = [
                     "doc": "Discount number (from 0 to 1)"
                 }
             ]
-        }
+        }"""
     },
     {
         "oracle_table_name": "CATEGORY",
@@ -47,7 +47,7 @@ etl_tables_config = [
         "save_mode": "overwrite",
         "oracle_table_sql_query" : f"SELECT * FROM CATEGORY",
         "partition_field" : "None",
-        "avro_schema_json" : {
+        "avro_schema_json" : """{
             "type": "record",
             "name": "category",
             "namespace": "com.ods.avro",
@@ -63,7 +63,7 @@ etl_tables_config = [
                     "doc": "Name of category, like Clothing, Books, Grocery..."
                 }
             ]
-        }
+        }"""
     },
     {
         "oracle_table_name": "CUSTOMER",
@@ -72,7 +72,7 @@ etl_tables_config = [
         "save_mode": "overwrite",
         "oracle_table_sql_query" : f"select * from CUSTOMER",
         "partition_field" : "None",
-        "avro_schema_json" : {
+        "avro_schema_json" : """{
             "type": "record",
             "name": "customer",
             "namespace": "com.ods.avro",
@@ -103,7 +103,7 @@ etl_tables_config = [
                     "doc": "The country that the customer is from"
                 }
             ]
-        }
+        }"""
     },
     {
         "oracle_table_name": "CUSTOMER_PRODUCT_RATINGS",
@@ -113,7 +113,7 @@ etl_tables_config = [
         "save_mode": "overwrite",
         "oracle_table_sql_query" : f"select * from CUSTOMER_PRODUCT_RATINGS",
         "partition_field" : "data_date",
-        "avro_schema_json" : {
+        "avro_schema_json" : """{
             "type": "record",
             "name": "customer_product_ratings",
             "namespace": "com.ods.avro",
@@ -162,7 +162,7 @@ etl_tables_config = [
                     "doc": "The final sentiment ('good' or 'bad')"
                 }
             ]
-        }
+        }"""
     },
     {
         "oracle_table_name": "MARKETING_CAMPAIGNS",
@@ -171,7 +171,7 @@ etl_tables_config = [
         "save_mode": "overwrite",
         "oracle_table_sql_query" : f"select * from MARKETING_CAMPAIGNS",
         "partition_field" : "None",
-        "avro_schema_json" : {
+        "avro_schema_json" : """{
             "type": "record",
             "name": "marketing_campaigns",
             "namespace": "com.ods.avro",
@@ -192,7 +192,7 @@ etl_tables_config = [
                     "doc": "Represents the ordinal of a year"
                 }
             ]
-        }
+        }"""
     },
     {
         "oracle_table_name": "ORDERS",
@@ -202,7 +202,7 @@ etl_tables_config = [
         "save_mode": "overwrite",
         "oracle_table_sql_query" : f"select * from ORDERS",
         "partition_field" : "data_date",
-        "avro_schema_json" : {
+        "avro_schema_json" : """{
             "type": "record",
             "name": "orders",
             "namespace": "com.ods.avro",
@@ -248,7 +248,7 @@ etl_tables_config = [
                     "doc": "The Payment Method for this order"
                 }
             ]
-        }
+        }"""
     },
     {
         "oracle_table_name": "ORDERITEM",
@@ -258,7 +258,7 @@ etl_tables_config = [
         "save_mode": "overwrite",
         "oracle_table_sql_query" : f"select * from ORDERITEM",
         "partition_field" : "data_date",
-        "avro_schema_json" : {
+        "avro_schema_json" : """{
             "type": "record",
             "name": "orderitem",
             "namespace": "com.ods.avro",
@@ -309,7 +309,7 @@ etl_tables_config = [
                     "doc": "The discount for this order"
                 }
             ]
-        }
+        }"""
     },
     {
         "oracle_table_name": "PAYMENT_METHOD",
@@ -318,7 +318,7 @@ etl_tables_config = [
         "save_mode": "overwrite",
         "oracle_table_sql_query" : f"select * from PAYMENT_METHOD",
         "partition_field" : "None",
-        "avro_schema_json" : {
+        "avro_schema_json" : """{
             "type": "record",
             "name": "payment_method",
             "namespace": "com.ods.avro",
@@ -334,7 +334,7 @@ etl_tables_config = [
                     "doc": "Payment method name"
                 }
             ]
-        }
+        }"""
     },
     {
         "oracle_table_name": "PRODUCT",
@@ -343,7 +343,7 @@ etl_tables_config = [
         "save_mode": "overwrite",
         "oracle_table_sql_query" : f"select * from PRODUCT",
         "partition_field" : "None",
-        "avro_schema_json" : {
+        "avro_schema_json" : """{
             "type": "record",
             "name": "product",
             "namespace": "com.ods.avro",
@@ -379,7 +379,7 @@ etl_tables_config = [
                     "doc": "Foreign key to subcategory"
                 }
             ]
-        }
+        }"""
     },
     {
         "oracle_table_name": "RETURNS",
@@ -389,7 +389,7 @@ etl_tables_config = [
         "save_mode": "overwrite",
         "oracle_table_sql_query" : f"select * from RETURNS",
         "partition_field" : "data_date",
-        "avro_schema_json" : {
+        "avro_schema_json" : """{
             "type": "record",
             "name": "returns",
             "namespace": "com.ods.avro",
@@ -431,7 +431,7 @@ etl_tables_config = [
                     "doc": "Link to table category"
                 }
             ]
-        }
+        }"""
     },
     {
         "oracle_table_name": "SUPPLIER",
@@ -440,7 +440,7 @@ etl_tables_config = [
         "save_mode": "overwrite",
         "oracle_table_sql_query" : f"select * from SUPPLIER",
         "partition_field" : "None",
-        "avro_schema_json" : {
+        "avro_schema_json" : """{
             "type": "record",
             "name": "supplier",
             "namespace": "com.ods.avro",
@@ -461,6 +461,6 @@ etl_tables_config = [
                     "doc": "Email for supplier"
                 }
             ]
-        }
+        }"""
     }
 ]

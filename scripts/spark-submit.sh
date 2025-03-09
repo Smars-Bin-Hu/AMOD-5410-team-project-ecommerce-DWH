@@ -49,5 +49,8 @@ spark-submit --master yarn \
     --conf spark.eventLog.enabled=true \
     --conf spark.eventLog.dir=hdfs:///spark-logs \
     --packages org.apache.spark:spark-avro_2.12:3.3.0\
-    --py-files data_pipeline.zip \
+    --py-files /opt/miniconda3/envs/pyspark_env/jobs_sync/Users/smars/Developer/big-data-engineering-project1/data_pipeline.zip \
     /opt/miniconda3/envs/pyspark_env/jobs_sync/Users/smars/Developer/big-data-engineering-project1/main.py
+
+
+    
