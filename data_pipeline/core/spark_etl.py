@@ -45,10 +45,10 @@ def spark_etl(spark) -> bool:
         return False
 
     # 2. check Hive ODS Layer HDFS target path
-    hive_ods_hdfs_path = HadoopEnvConfig.get_hive_ods_hdfs_path()
-    if not HDFSUtils.check_hdfs_path(hive_ods_hdfs_path):
-        logger.smars_dev(f"HDFS path {hive_ods_hdfs_path} Not found")
-        return False
+    # hive_ods_hdfs_path = HadoopEnvConfig.get_hive_ods_hdfs_path()
+    # if not HDFSUtils.check_hdfs_path(hive_ods_hdfs_path):
+    #     logger.smars_dev(f"HDFS path {hive_ods_hdfs_path} Not found")
+    #     return False
 
     # 3. do the etl jobs
     for table in etl_tables_config:

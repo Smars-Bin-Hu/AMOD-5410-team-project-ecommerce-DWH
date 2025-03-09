@@ -37,7 +37,7 @@ class HDFSUtils:
             cmd = f"hdfs dfs -ls {hdfs_path}"
 
             # Execute the command using subprocess
-            result: subprocess.CompletedProcess = subprocess.run(
+            subprocess.run(
                 cmd,
                 shell=True,
                 check=True,

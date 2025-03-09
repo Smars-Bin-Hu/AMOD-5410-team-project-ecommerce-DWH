@@ -32,7 +32,7 @@ spark-submit --master yarn \
     --conf spark.eventLog.enabled=true \
     --conf spark.eventLog.dir=hdfs:///spark-logs \
     --packages org.apache.spark:spark-avro_2.12:3.3.0\
-    /opt/miniconda3/envs/pyspark_env/jobs_sync/Users/smars/Developer/big-data-engineering-project1/data_pipeline/main.py
+    /opt/miniconda3/envs/pyspark_env/jobs_sync/Users/smars/Developer/big-data-engineering-project1/test/unit_test/data_pipeline/spark_load_to_hive.py
 
 # final spark submit python proejct package, otherwise the spark cannot regconize the package while importing
 spark-submit --master yarn \

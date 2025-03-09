@@ -43,7 +43,7 @@ class OracleDatabaseUtils:
             conn = jaydebeapi.connect(
                 "oracle.jdbc.OracleDriver",
                 oracle_jdbc_url,
-                [oracle_properties["username"],
+                [oracle_properties["user"],
                  oracle_properties["password"]],
                 HadoopEnvConfig.get_jdbc_driver_path()
             )

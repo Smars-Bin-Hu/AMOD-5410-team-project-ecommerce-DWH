@@ -43,7 +43,7 @@ class DatabaseConnectionConfig:
     def get_properties(self):
         """Getter: Return the connection properties"""
         return {
-            "username": self._username,
+            "user": self._username,
             "password": self._password,
             "driver": "oracle.jdbc.OracleDriver" # for Spark connect Oracle
         }
