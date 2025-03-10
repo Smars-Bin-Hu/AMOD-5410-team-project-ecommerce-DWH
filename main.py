@@ -1,8 +1,10 @@
 from pyspark.sql import SparkSession
-import data_pipeline
+from data_pipeline.utils import logger
 from data_pipeline.core import spark_etl
 
 if __name__ == '__main__':
+    logger.smars_dev("MAIN METHOD IS EXECUTED. SPARK ETL JOB IS STARTING")
+
     # launch spark
     spark = (
         SparkSession.builder

@@ -1,8 +1,9 @@
-CREATE EXTERNAL TABLE IF NOT EXISTS ods_returns_ipd (
+DROP TABLE ods.ods_returns_ipd;
+CREATE EXTERNAL TABLE IF NOT EXISTS ods.ods_returns_ipd (
     return_id INT COMMENT 'Unique id for each row in table returns',
     order_id INT COMMENT 'The order associated with the returned order',
     product_id INT COMMENT 'The product associated with the returned order',
-    return_date DATE COMMENT 'The returned date for this order',
+    return_date STRING COMMENT 'The returned date for this order',
     reason STRING COMMENT 'The reason why customer returned this order',
     amount_refunded DECIMAL(10,2) COMMENT 'The amount refunded to the customer'
 )

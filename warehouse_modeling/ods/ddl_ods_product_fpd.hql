@@ -1,4 +1,5 @@
-CREATE EXTERNAL TABLE IF NOT EXISTS ods_product_fpd (
+DROP TABLE ods.ods_product_fpd;
+CREATE EXTERNAL TABLE IF NOT EXISTS ods.ods_product_fpd (
     product_id INT COMMENT 'Unique id for each row in table product',
     name STRING COMMENT 'Name for product',
     price DECIMAL(10,2) COMMENT 'Price for product, decimal with 2 places',

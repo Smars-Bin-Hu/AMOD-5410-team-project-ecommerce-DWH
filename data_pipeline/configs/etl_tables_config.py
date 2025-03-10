@@ -7,6 +7,12 @@ etl_tables_config = [
         "save_mode": "overwrite",
         "oracle_table_sql_query" : f"select * from CAMPAIGN_PRODUCT_SUBCATEGORY",
         "partition_field" : "None",
+        "field_casting_map": {
+            "campaign_product_subcategory_id": "int",
+            "campaign_id": "int",
+            "subcategory_id": "int",
+            "discount": "decimal(3,2)"
+        },
         "avro_schema_json" : """{
             "type": "record",
             "name": "campaign_product_subcategory",
@@ -47,6 +53,10 @@ etl_tables_config = [
         "save_mode": "overwrite",
         "oracle_table_sql_query" : f"SELECT * FROM CATEGORY",
         "partition_field" : "None",
+        "field_casting_map": {
+            "category_id": "int",
+            "category_name": "string",
+        },
         "avro_schema_json" : """{
             "type": "record",
             "name": "category",
@@ -72,6 +82,13 @@ etl_tables_config = [
         "save_mode": "overwrite",
         "oracle_table_sql_query" : f"select * from CUSTOMER",
         "partition_field" : "None",
+        "field_casting_map": {
+            "customer_id": "int",
+            "first_name": "string",
+            "last_name": "string",
+            "email": "string",
+            "country": "string"
+        },
         "avro_schema_json" : """{
             "type": "record",
             "name": "customer",
@@ -113,6 +130,14 @@ etl_tables_config = [
         "save_mode": "overwrite",
         "oracle_table_sql_query" : f"select * from CUSTOMER_PRODUCT_RATINGS",
         "partition_field" : "data_date",
+        "field_casting_map": {
+            "customerproductrating_id": "int",
+            "customer_id": "int",
+            "product_id": "int",
+            "ratings": "decimal(2,1)",
+            "review": "string",
+            "sentiment": "string"
+        },
         "avro_schema_json" : """{
             "type": "record",
             "name": "customer_product_ratings",
@@ -171,6 +196,11 @@ etl_tables_config = [
         "save_mode": "overwrite",
         "oracle_table_sql_query" : f"select * from MARKETING_CAMPAIGNS",
         "partition_field" : "None",
+        "field_casting_map": {
+            "campaign_id": "int",
+            "campaign_name": "string",
+            "offer_week": "int",
+        },
         "avro_schema_json" : """{
             "type": "record",
             "name": "marketing_campaigns",
@@ -202,6 +232,15 @@ etl_tables_config = [
         "save_mode": "overwrite",
         "oracle_table_sql_query" : f"select * from ORDERS",
         "partition_field" : "data_date",
+        "field_casting_map": {
+            "order_id_surrogate": "int",
+            "order_id": "int",
+            "customer_id": "int",
+            "order_date": "string",
+            "campaign_id": "int",
+            "amount": "int",
+            "payment_method_id": "int",
+        },
         "avro_schema_json" : """{
             "type": "record",
             "name": "orders",
@@ -224,10 +263,7 @@ etl_tables_config = [
                 },
                 {
                     "name": "order_date",
-                    "type": {
-                        "type": "int",
-                        "logicalType": "date"
-                    },
+                    "type": "string",
                     "doc": "The date generated on the order"
                 },
                 {
@@ -258,6 +294,15 @@ etl_tables_config = [
         "save_mode": "overwrite",
         "oracle_table_sql_query" : f"select * from ORDERITEM",
         "partition_field" : "data_date",
+        "field_casting_map": {
+            "orderitem_id": "int",
+            "order_id": "int",
+            "product_id": "int",
+            "quantity": "int",
+            "supplier_id": "int",
+            "subtotal": "decimal(10,2)",
+            "discount": "decimal(5,2)",
+        },
         "avro_schema_json" : """{
             "type": "record",
             "name": "orderitem",
@@ -318,6 +363,10 @@ etl_tables_config = [
         "save_mode": "overwrite",
         "oracle_table_sql_query" : f"select * from PAYMENT_METHOD",
         "partition_field" : "None",
+        "field_casting_map": {
+            "payment_method_id": "int",
+            "payment_method": "string",
+        },
         "avro_schema_json" : """{
             "type": "record",
             "name": "payment_method",
@@ -343,7 +392,15 @@ etl_tables_config = [
         "save_mode": "overwrite",
         "oracle_table_sql_query" : f"select * from PRODUCT",
         "partition_field" : "None",
-        "avro_schema_json" : """{
+        "field_casting_map": {
+            "product_id": "int",
+            "name": "string",
+            "price": "decimal(10,2)",
+            "description": "string",
+            "subcategory_id": "int",
+        },
+        "avro_schema_json" : """
+        {
             "type": "record",
             "name": "product",
             "namespace": "com.ods.avro",
@@ -389,6 +446,14 @@ etl_tables_config = [
         "save_mode": "overwrite",
         "oracle_table_sql_query" : f"select * from RETURNS",
         "partition_field" : "data_date",
+        "field_casting_map": {
+            "return_id": "int",
+            "order_id": "int",
+            "product_id": "int",
+            "return_date": "string",
+            "reason": "string",
+            "amount_refunded": "decimal(10,2)",
+        },
         "avro_schema_json" : """{
             "type": "record",
             "name": "returns",
@@ -397,11 +462,11 @@ etl_tables_config = [
                 {"name": "return_id", "type": "int", "doc": "Unique id for each row in table returns"},
                 {"name": "order_id", "type": "int", "doc": "The order associated with the returned order"},
                 {"name": "product_id", "type": "int", "doc": "The product associated with the returned order"},
-                {"name": "return_date", "type": {"type": "string", "logicalType": "date"}, "doc": "The returned date for this order"},
+                {"name": "return_date", "type": "string", "doc": "The returned date for this order"},
                 {"name": "reason", "type": ["null", "string"], "default": null, "doc": "The reason why customer returned this order"},
                 {"name": "amount_refunded", "type": {"type": "bytes", "logicalType": "decimal", "precision": 10, "scale": 2}, "doc": "The amount refunded to the customer"}
             ]
-        }
+        }"""
     },
     {
         "oracle_table_name": "SUBCATEGORY",
@@ -410,7 +475,12 @@ etl_tables_config = [
         "save_mode": "overwrite",
         "oracle_table_sql_query" : f"select * from SUBCATEGORY",
         "partition_field" : "None",
-        "avro_schema_json" : {
+        "field_casting_map": {
+            "subcategory_id": "int",
+            "subcategory_name": "string",
+            "category_id": "int",
+        },
+        "avro_schema_json" : """{
             "type": "record",
             "name": "subcategory",
             "namespace": "com.ods.avro",
@@ -440,6 +510,11 @@ etl_tables_config = [
         "save_mode": "overwrite",
         "oracle_table_sql_query" : f"select * from SUPPLIER",
         "partition_field" : "None",
+        "field_casting_map": {
+            "supplier_id": "int",
+            "supplier_name": "string",
+            "email": "string",
+        },
         "avro_schema_json" : """{
             "type": "record",
             "name": "supplier",

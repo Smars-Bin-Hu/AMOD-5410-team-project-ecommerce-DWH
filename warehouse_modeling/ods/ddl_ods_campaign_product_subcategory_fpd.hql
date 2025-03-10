@@ -1,4 +1,5 @@
-CREATE EXTERNAL TABLE IF NOT EXISTS ods_campaign_product_subcategory_fpd (
+DROP TABLE ods.ods_campaign_product_subcategory_fpd;
+CREATE EXTERNAL TABLE IF NOT EXISTS ods.ods_campaign_product_subcategory_fpd (
     campaign_product_subcategory_id INT COMMENT 'Unique id for each row in table campaign_product_subcategory',
     campaign_id INT COMMENT 'Campaign id (16 in total)',
     subcategory_id INT COMMENT 'Subcategory id (100 in total)',

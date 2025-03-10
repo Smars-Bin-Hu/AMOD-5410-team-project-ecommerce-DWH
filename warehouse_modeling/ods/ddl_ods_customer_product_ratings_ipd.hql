@@ -1,4 +1,5 @@
-CREATE EXTERNAL TABLE IF NOT EXISTS ods_customer_product_ratings_ipd (
+DROP TABLE ods.ods_customer_product_ratings_ipd;
+CREATE EXTERNAL TABLE IF NOT EXISTS ods.ods_customer_product_ratings_ipd (
     customerproductrating_id INT COMMENT 'Unique id for each row in table customer_product_ratings',
     customer_id INT COMMENT 'The customer gave the review and ratings',
     product_id INT COMMENT 'The product that was given the review and ratings',

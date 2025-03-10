@@ -20,10 +20,7 @@
     },
     {
       "name": "order_date",
-      "type": {
-        "type": "int",
-        "logicalType": "date"
-      },
+      "type": "string",
       "doc": "The date generated on the order"
     },
     {

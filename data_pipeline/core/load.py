@@ -5,18 +5,9 @@ load.py
 This Module: ..
 """
 from pyspark.sql.functions import  current_date, date_format, col
-from .parse_avro_field_type import parse_avro_type
-from data_pipeline.configs import LoggingConfig
-from data_pipeline.utils import LoggingUtils
+from .parse_field_type import parse_field_type
+from data_pipeline.utils import logger
 
-# create a logger for current etl
-smars_dev_log_level = int(LoggingConfig.get_smars_dev_log_level())
-smars_dev_log_level_name = LoggingConfig.get_smars_dev_log_level_name()
-logger = LoggingUtils.setup_custom_logger(
-    "LOAD_LOGGER",
-    smars_dev_log_level,
-    smars_dev_log_level_name
-)
 def load(table:dict, df) -> bool:
     """Load data to HDFS"""
     # read table configuration information
@@ -24,22 +15,19 @@ def load(table:dict, df) -> bool:
     save_mode = table["save_mode"]
     hive_format = table["hive_format"]
     partition_field = table["partition_field"] # None or data_date
+    field_casting_map = table["field_casting_map"]
     avro_schema_json = table["avro_schema_json"]
-    avro_schema_table_fields : list = avro_schema_json["fields"]
 
     # load the dataframe to hive
     try:
         # field rename and casting data type
-        for field_def in avro_schema_table_fields:
-            field_name = field_def["name"]  # e.g. "customerproductrating_id"
-            spark_type = parse_avro_type(field_def["type"])
-
+        for key, value in field_casting_map.items():
             # 假设上游列是大写 => uppercase
             # rename e.g. "CUSTOMERPRODUCTRATING_ID" -> "customerproductrating_id"
-            df = df.withColumnRenamed(field_name.upper(), field_name)
+            df = df.withColumnRenamed(key.upper(), key)
 
             # 再 cast
-            df = df.withColumn(field_name, col(field_name).cast(spark_type))
+            df = df.withColumn(key, col(key).cast(parse_field_type(value)))
 
         # add partition field if the table has partition
         if partition_field == "data_date":
@@ -51,6 +39,8 @@ def load(table:dict, df) -> bool:
                 df.write
                 .format(hive_format)
                 .mode(save_mode)
+                .option("avroSchema", avro_schema_json)
+                .option("compression", "uncompressed") # do not use Snappy
                 .save(hive_hdfs_table_path)
             )
         else:
@@ -59,6 +49,8 @@ def load(table:dict, df) -> bool:
                 df.write
                 .format(hive_format)
                 .mode(save_mode)
+                .option("avroSchema", avro_schema_json)
+                .option("compression", "uncompressed") # do not use Snappy
                 .partitionBy(partition_field)
                 .save(hive_hdfs_table_path)
             )

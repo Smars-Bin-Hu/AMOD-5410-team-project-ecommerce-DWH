@@ -5,17 +5,7 @@
     Layer3 : import internal_modules ----- avoid circular importing
 """
 import subprocess
-from data_pipeline.configs import LoggingConfig
-from .logging_utils import LoggingUtils
-
-# create a logger for current util
-smars_dev_log_level = int(LoggingConfig.get_smars_dev_log_level())
-smars_dev_log_level_name = LoggingConfig.get_smars_dev_log_level_name()
-logger = LoggingUtils.setup_custom_logger(
-    "HDFS_UTILS_LOGGER",
-    smars_dev_log_level,
-    smars_dev_log_level_name
-)
+from .logging_utils import logger
 
 class HDFSUtils:
     """Utility class for HDFS operations."""

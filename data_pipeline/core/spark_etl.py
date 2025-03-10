@@ -1,29 +1,16 @@
-import json
-from pathlib import Path
 from data_pipeline.configs import (
-    LoggingConfig,
     DatabaseConnectionConfig,
-    HadoopEnvConfig,
     etl_tables_config
 )
 from data_pipeline.utils import (
-    LoggingUtils,
     OracleDatabaseUtils,
-    HDFSUtils,
+    logger
 )
 from data_pipeline.core import (
     extract,
     load,
 )
 
-# create a logger for current util
-smars_dev_log_level = int(LoggingConfig.get_smars_dev_log_level())
-smars_dev_log_level_name = LoggingConfig.get_smars_dev_log_level_name()
-logger = LoggingUtils.setup_custom_logger(
-    "ETL_MAIN_LOGGER",
-    smars_dev_log_level,
-    smars_dev_log_level_name
-)
 
 # record the result of extract and load tables
 # NOTE: only load the successful and
@@ -60,7 +47,7 @@ def spark_etl(spark) -> bool:
 
             if df.schema is None:  # Case 3: Extraction failed
                 failed_extract_tables.append(table["oracle_table_name"])
-                logger.smars_dev(f"Failed to extract data from table: {table['oracle_table_name']}")
+                logger.smars_dev(f"Failed to extract data from table: {table['oracle_table_name']} because df.schema is None")
                 continue  # Skip load step
 
             successful_extract_tables.append(table["oracle_table_name"])
@@ -87,7 +74,7 @@ def spark_etl(spark) -> bool:
     logger.smars_dev("=== ETL jobs finished ===")
     logger.smars_dev(f"Successfully Extracted: {successful_extract_tables}")
     logger.smars_dev(f"Failed to Extract: {failed_extract_tables}")
-    logger.smars_dev(f"Failed to Extract: {empty_tables}")
+    logger.smars_dev(f"Empty tables: {empty_tables}")
     logger.smars_dev(f"Successfully Loaded: {successful_load_tables}")
     logger.smars_dev(f"Failed to Load: {failed_load_tables}")
     return True

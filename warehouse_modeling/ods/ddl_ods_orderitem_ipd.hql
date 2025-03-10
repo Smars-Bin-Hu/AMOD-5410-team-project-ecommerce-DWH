@@ -1,6 +1,7 @@
-CREATE EXTERNAL TABLE IF NOT EXISTS ods_orderitem_ipd (
+DROP TABLE ods.ods_orderitem_ipd;
+CREATE EXTERNAL TABLE IF NOT EXISTS ods.ods_orderitem_ipd (
     orderitem_id INT COMMENT 'Unique id for each row in table orderitem',
-    order_id INT COMMENT 'To find the order in table orders',
+    order_id INT COMMENT 'To find the order in table orders', -- AVRO
     product_id INT COMMENT 'To find the product in the table products',
     quantity INT COMMENT 'The quantity of each product under this order',
     supplier_id INT COMMENT 'To find the supplier in the table supplier',
@@ -14,8 +15,8 @@ ROW FORMAT SERDE
 STORED AS 
     INPUTFORMAT 'org.apache.hadoop.hive.ql.io.avro.AvroContainerInputFormat'
     OUTPUTFORMAT 'org.apache.hadoop.hive.ql.io.avro.AvroContainerOutputFormat'
-LOCATION '/user/hive/warehouse/ods/ods_ordersitem_ipd'
+LOCATION '/user/hive/warehouse/ods/ods_orderitem_ipd'
 TBLPROPERTIES (
-    'avro.schema.url'='hdfs:///user/hive/warehouse/ods/schema/ods_ordersitem_ipd.avsc',
+    'avro.schema.url'='hdfs:///user/hive/warehouse/ods/schema/ods_orderitem_ipd.avsc',
     'serialization.null.format'=''
 );

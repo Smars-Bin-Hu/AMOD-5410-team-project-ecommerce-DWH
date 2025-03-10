@@ -1,5 +1,8 @@
 import logging
 
+from data_pipeline.configs import LoggingConfig
+
+
 class LoggingUtils:
     """Initialize for customized logging operations."""
 
@@ -49,3 +52,10 @@ class LoggingUtils:
 
         # Return the logger instance for the current module with custom name
         return logging.getLogger(log_name)
+
+# create a logger for the spark etl job only
+logger = LoggingUtils.setup_custom_logger(
+    "SPARK_ETL_LOGGER",
+    int(LoggingConfig.get_smars_dev_log_level()),
+    LoggingConfig.get_smars_dev_log_level_name()
+)

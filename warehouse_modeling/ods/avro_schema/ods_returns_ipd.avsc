@@ -20,10 +20,7 @@
     },
     {
       "name": "return_date",
-      "type": {
-        "type": "string",
-        "logicalType": "date"
-      },
+      "type": "string",
       "doc": "The returned date for this order"
     },
     {

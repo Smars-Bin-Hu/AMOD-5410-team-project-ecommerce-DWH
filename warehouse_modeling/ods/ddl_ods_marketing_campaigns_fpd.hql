@@ -1,4 +1,5 @@
-CREATE EXTERNAL TABLE IF NOT EXISTS ods_marketing_campaigns_fpd (
+DROP TABLE ods.ods_marketing_campaigns_fpd;
+CREATE EXTERNAL TABLE IF NOT EXISTS ods.ods_marketing_campaigns_fpd (
     campaign_id INT COMMENT 'Unique id for each row in table marketing_campaigns',
     campaign_name STRING COMMENT 'The campaign name',
     offer_week INT COMMENT 'Represents the ordinal of a year'

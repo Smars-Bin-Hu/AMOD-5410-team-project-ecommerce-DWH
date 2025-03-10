@@ -4,17 +4,7 @@ extract.py
 This Module: define OracleToHDFS class, to extract the data from Oracle and load to the HDFS
 """
 from pyspark.sql import DataFrame
-from data_pipeline.configs import LoggingConfig
-from data_pipeline.utils import LoggingUtils
-
-# create a logger for current etl
-smars_dev_log_level = int(LoggingConfig.get_smars_dev_log_level())
-smars_dev_log_level_name = LoggingConfig.get_smars_dev_log_level_name()
-logger = LoggingUtils.setup_custom_logger(
-    "EXTRACT_LOGGER",
-    smars_dev_log_level,
-    smars_dev_log_level_name
-)
+from data_pipeline.utils import logger
 
 def extract(spark, table, oracle_config) -> DataFrame:
     """extract 1 table from Oracle"""
@@ -38,6 +28,7 @@ def extract(spark, table, oracle_config) -> DataFrame:
         # Check if the DataFrame is empty (no rows)
         if df.head(1):
             logger.smars_dev(f"Successfully extract data from table: {oracle_table_name}")
+            df.show()
             return df
         else:
             logger.smars_dev(f"Table '{oracle_table_name}' is empty.")
