@@ -2,9 +2,7 @@
 /infra/mysql-data/
 /infra/hdfs-data/
 
-# allow upload the Hive metastore
-!/infra/mysql-data/metastore/
-!/infra/mysql-data/metastore/**
-
-# ignore the original-data CISS_2021.dmp
-/infra/original-data/CISS_2021.dmp
+# ignore .env
+.env
+data_pipeline/configs/.env
+data_pipeline/configs/.env.secret
