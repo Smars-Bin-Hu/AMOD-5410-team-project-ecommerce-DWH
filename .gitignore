@@ -1,8 +1,8 @@
 # ignore MySQL database files (data files, logs, cache, sensitive information, etc)
-/infra/mysql-data/
-/infra/hdfs-data/
+src/infra/mysql-data/
+src/infra/hdfs-data/
 
 # ignore .env
 .env
-data_pipeline/configs/.env
-data_pipeline/configs/.env.secret
+src/data_pipeline/configs/.env
+src/data_pipeline/configs/.env.secret

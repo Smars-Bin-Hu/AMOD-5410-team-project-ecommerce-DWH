@@ -1,0 +1,3 @@
+-- turn on dynamic partition
+-- SET hive.exec.dynamic.partition = true;
+-- SET hive.exec.dynamic.partition.mode = nonstrict;

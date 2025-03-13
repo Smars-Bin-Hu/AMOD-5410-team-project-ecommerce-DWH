@@ -24,18 +24,19 @@
 ```bash
 /bigdata-datawarehouse-project
 │── /docs                    # docs (all business and technologies documents about this project)
-│── /data_pipeline           # data pipeline code (ETL/ELT Logic, output)
-│── /warehouse_modeling      # DWH modelling（Hive/SparkSQL etc.）
-│── /batch_processing        # Data Batch processing (Hadoop, Hive, Spark)
-│── /scheduler               # Task Scheduler(Airflow/DolphinScheduler)
-│── /infra                   # infrastructure deployment(Docker, Kubernetes)
+│── /src
+    │── /data_pipeline       # data pipeline code (ETL/ELT Logic, output)
+    │── /warehouse_modeling  # DWH modelling（Hive/SparkSQL etc.）
+    │── /batch_processing    # Data Batch processing (Hadoop, Hive, Spark)
+    │── /scheduler           # Task Scheduler(Airflow/DolphinScheduler)
+    │── /infra               # infrastructure deployment(Docker, configuration)
+    │── /scripts             # deployment and operations script and command
+    │── main.py              # all python program entrance 
 │── /tests                   # Testing code
-│── /scripts                 # deployment and operations script and command
 │── README.md                # Introduction about project
 │── docker-compose.yml       # Docker Compose to launch the project
-│── .env                     # Docker Compose to read the constant variable about environment
+│── .env                     # (ignored by git) Docker Compose to read the constant variable about environment
 │── .gitignore               # Git ignore some directory to commit to the remote repo
-│── requirements.txt         # Python dependencies
 ```
 
 ## 💪 Quick Start
