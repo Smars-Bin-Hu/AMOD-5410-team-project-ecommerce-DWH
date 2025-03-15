@@ -57,3 +57,4 @@ airflow scheduler -D
 
 # run docker
 docker compose -f docker-compose-bigdata.yml up -d
+docker compose -f docker-compose-bigdata.yml up -d spark

@@ -39,19 +39,19 @@ services:
           tail -f /dev/null
         "
     volumes:
-      - ./infra/ssh-configs/configs:/root/.ssh/configs
+      - ./src/infra/ssh-configs/configs:/root/.ssh/configs
       # hadoop cluster configs
-      - ./infra/hadoop-configs/core-site.xml:${HADOOP_HOME}/etc/hadoop/core-site.xml
-      - ./infra/hadoop-configs/hadoop-env.sh:${HADOOP_HOME}/etc/hadoop/hadoop-env.sh
-      - ./infra/hadoop-configs/hdfs-site.xml:${HADOOP_HOME}/etc/hadoop/hdfs-site.xml
-      - ./infra/hadoop-configs/yarn-site.xml:${HADOOP_HOME}/etc/hadoop/yarn-site.xml
-      - ./infra/hadoop-configs/mapred-site.xml:${HADOOP_HOME}/etc/hadoop/mapred-site.xml
-      - ./infra/hadoop-configs/yarn-env.sh:${HADOOP_HOME}/etc/hadoop/yarn-env.sh
-      - ./infra/hadoop-configs/workers:${HADOOP_HOME}/etc/hadoop/workers
-      - ./infra/zookeeper-configs/zoo.cfg:${ZOOKEEPER_HOME}/conf/zoo.cfg
-      - ./infra/zookeeper-configs/dataDir.1/myid:${ZOOKEEPER_HOME}/data/myid
+      - ./src/infra/hadoop-config/core-site.xml:${HADOOP_HOME}/etc/hadoop/core-site.xml
+      - ./src/infra/hadoop-config/hadoop-env.sh:${HADOOP_HOME}/etc/hadoop/hadoop-env.sh
+      - ./src/infra/hadoop-config/hdfs-site.xml:${HADOOP_HOME}/etc/hadoop/hdfs-site.xml
+      - ./src/infra/hadoop-config/yarn-site.xml:${HADOOP_HOME}/etc/hadoop/yarn-site.xml
+      - ./src/infra/hadoop-config/mapred-site.xml:${HADOOP_HOME}/etc/hadoop/mapred-site.xml
+      - ./src/infra/hadoop-config/yarn-env.sh:${HADOOP_HOME}/etc/hadoop/yarn-env.sh
+      - ./src/infra/hadoop-config/workers:${HADOOP_HOME}/etc/hadoop/workers
+      - ./src/infra/zookeeper-config/zoo.cfg:${ZOOKEEPER_HOME}/conf/zoo.cfg
+      - ./src/infra/zookeeper-config/dataDir.1/myid:${ZOOKEEPER_HOME}/data/myid
       # hdfs metadata
-      - ./infra/hdfs-data/master:${HADOOP_HOME}/data
+      - ./src/infra/hdfs-data/master:${HADOOP_HOME}/data
       # local mount - for big volume storage
       - /Users/smars/bigdata-cluster-volume/hadoop-master/data:/data
       
@@ -81,19 +81,19 @@ services:
       bash -c "service ssh start;
               tail -f /dev/null" 
     volumes:
-      - ./infra/ssh-configs/configs:/root/.ssh/configs
+      - ./src/infra/ssh-configs/configs:/root/.ssh/configs
       # hadoop cluster configs
-      - ./infra/hadoop-configs/core-site.xml:${HADOOP_HOME}/etc/hadoop/core-site.xml
-      - ./infra/hadoop-configs/hadoop-env.sh:${HADOOP_HOME}/etc/hadoop/hadoop-env.sh
-      - ./infra/hadoop-configs/hdfs-site.xml:${HADOOP_HOME}/etc/hadoop/hdfs-site.xml
-      - ./infra/hadoop-configs/mapred-site.xml:${HADOOP_HOME}/etc/hadoop/mapred-site.xml
-      - ./infra/hadoop-configs/yarn-site.xml:${HADOOP_HOME}/etc/hadoop/yarn-site.xml
-      - ./infra/hadoop-configs/workers:${HADOOP_HOME}/etc/hadoop/workers
-      - ./infra/hadoop-configs/yarn-env.sh:${HADOOP_HOME}/etc/hadoop/yarn-env.sh
-      - ./infra/zookeeper-configs/zoo.cfg:${ZOOKEEPER_HOME}/conf/zoo.cfg
-      - ./infra/zookeeper-configs/dataDir.2/myid:${ZOOKEEPER_HOME}/data/myid
+      - ./src/infra/hadoop-config/core-site.xml:${HADOOP_HOME}/etc/hadoop/core-site.xml
+      - ./src/infra/hadoop-config/hadoop-env.sh:${HADOOP_HOME}/etc/hadoop/hadoop-env.sh
+      - ./src/infra/hadoop-config/hdfs-site.xml:${HADOOP_HOME}/etc/hadoop/hdfs-site.xml
+      - ./src/infra/hadoop-config/mapred-site.xml:${HADOOP_HOME}/etc/hadoop/mapred-site.xml
+      - ./src/infra/hadoop-config/yarn-site.xml:${HADOOP_HOME}/etc/hadoop/yarn-site.xml
+      - ./src/infra/hadoop-config/workers:${HADOOP_HOME}/etc/hadoop/workers
+      - ./src/infra/hadoop-config/yarn-env.sh:${HADOOP_HOME}/etc/hadoop/yarn-env.sh
+      - ./src/infra/zookeeper-config/zoo.cfg:${ZOOKEEPER_HOME}/conf/zoo.cfg
+      - ./src/infra/zookeeper-config/dataDir.2/myid:${ZOOKEEPER_HOME}/data/myid
       # hdfs metadata
-      - ./infra/hdfs-data/worker1:${HADOOP_HOME}/data
+      - ./src/infra/hdfs-data/worker1:${HADOOP_HOME}/data
       # local mount - for big volume storage
       - /Users/smars/bigdata-cluster-volume/hadoop-worker1/data:/data
 
@@ -123,19 +123,19 @@ services:
       bash -c "service ssh start;
               tail -f /dev/null" 
     volumes:
-      - ./infra/ssh-configs/configs:/root/.ssh/configs
+      - ./src/infra/ssh-configs/configs:/root/.ssh/configs
       # hadoop cluster configs
-      - ./infra/hadoop-configs/core-site.xml:${HADOOP_HOME}/etc/hadoop/core-site.xml
-      - ./infra/hadoop-configs/hadoop-env.sh:${HADOOP_HOME}/etc/hadoop/hadoop-env.sh
-      - ./infra/hadoop-configs/hdfs-site.xml:${HADOOP_HOME}/etc/hadoop/hdfs-site.xml
-      - ./infra/hadoop-configs/mapred-site.xml:${HADOOP_HOME}/etc/hadoop/mapred-site.xml
-      - ./infra/hadoop-configs/workers:${HADOOP_HOME}/etc/hadoop/workers
-      - ./infra/hadoop-configs/yarn-site.xml:${HADOOP_HOME}/etc/hadoop/yarn-site.xml
-      - ./infra/hadoop-configs/yarn-env.sh:${HADOOP_HOME}/etc/hadoop/yarn-env.sh
-      - ./infra/zookeeper-configs/zoo.cfg:${ZOOKEEPER_HOME}/conf/zoo.cfg
-      - ./infra/zookeeper-configs/dataDir.3/myid:${ZOOKEEPER_HOME}/data/myid
+      - ./src/infra/hadoop-config/core-site.xml:${HADOOP_HOME}/etc/hadoop/core-site.xml
+      - ./src/infra/hadoop-config/hadoop-env.sh:${HADOOP_HOME}/etc/hadoop/hadoop-env.sh
+      - ./src/infra/hadoop-config/hdfs-site.xml:${HADOOP_HOME}/etc/hadoop/hdfs-site.xml
+      - ./src/infra/hadoop-config/mapred-site.xml:${HADOOP_HOME}/etc/hadoop/mapred-site.xml
+      - ./src/infra/hadoop-config/workers:${HADOOP_HOME}/etc/hadoop/workers
+      - ./src/infra/hadoop-config/yarn-site.xml:${HADOOP_HOME}/etc/hadoop/yarn-site.xml
+      - ./src/infra/hadoop-config/yarn-env.sh:${HADOOP_HOME}/etc/hadoop/yarn-env.sh
+      - ./src/infra/zookeeper-config/zoo.cfg:${ZOOKEEPER_HOME}/conf/zoo.cfg
+      - ./src/infra/zookeeper-config/dataDir.3/myid:${ZOOKEEPER_HOME}/data/myid
       # hdfs metadata
-      - ./infra/hdfs-data/worker2:${HADOOP_HOME}/data
+      - ./src/infra/hdfs-data/worker2:${HADOOP_HOME}/data
       # local mount - for big volume storage
       - /Users/smars/bigdata-cluster-volume/hadoop-worker2/data:/data
 
@@ -152,7 +152,7 @@ services:
     ports:
       - "${MYSQL}:${MYSQL}"
     volumes:
-      - ./infra/mysql-data:/var/lib/mysql   # Local Persistence
+      - ./src/infra/mysql-data:/var/lib/mysql   # Local Persistence
 
   # ========== 5) Hive Service (metastore + hiveserver2) ==========
   hive:
@@ -171,14 +171,14 @@ services:
       - "${HIVE_SERVER2_2ND_PORT}:${HIVE_SERVER2_2ND_PORT}"  # HiveServer2 2nd
       - "${HIVE_METASTORE_PORT}:${HIVE_METASTORE_PORT}"    # Metastore Thrift
     volumes:
-      - ./infra/hive-configs/hive-site.xml:${HIVE_HOME}/conf/hive-site.xml
-      - ./infra/hive-configs/hiveservices.sh:${HIVE_HOME}/bin/hiveservices.sh
-      - ./infra/hive-configs/mysql-connector-java-8.0.30.jar:${HIVE_HOME}/lib/mysql-connector-java-8.0.30.jar # JDBC
-      - ./infra/hive-configs/hadoop-env.sh:${HIVE_HADOOP_HOME}/etc/hadoop/hadoop-env.sh
-      - ./infra/hive-configs/core-site.xml:${HIVE_HADOOP_HOME}/etc/hadoop/core-site.xml
-      - ./infra/hive-configs/hdfs-site.xml:${HIVE_HADOOP_HOME}/etc/hadoop/hdfs-site.xml
-      - ./infra/hive-configs/core-site.xml:${HIVE_HOME}/conf/core-site.xml
-      - ./infra/hive-configs/hdfs-site.xml:${HIVE_HOME}/conf/hdfs-site.xml
+      - ./src/infra/hive-config/hive-site.xml:${HIVE_HOME}/conf/hive-site.xml
+      - ./src/infra/hive-config/hiveservices.sh:${HIVE_HOME}/bin/hiveservices.sh
+      - ./src/infra/hive-config/mysql-connector-java-8.0.30.jar:${HIVE_HOME}/lib/mysql-connector-java-8.0.30.jar # JDBC
+      - ./src/infra/hive-config/hadoop-env.sh:${HIVE_HADOOP_HOME}/etc/hadoop/hadoop-env.sh
+      - ./src/infra/hive-config/core-site.xml:${HIVE_HADOOP_HOME}/etc/hadoop/core-site.xml
+      - ./src/infra/hive-config/hdfs-site.xml:${HIVE_HADOOP_HOME}/etc/hadoop/hdfs-site.xml
+      - ./src/infra/hive-config/core-site.xml:${HIVE_HOME}/conf/core-site.xml
+      - ./src/infra/hive-config/hdfs-site.xml:${HIVE_HOME}/conf/hdfs-site.xml
     environment:
       # connect metastore
       - JAVA_HOME=${HIVE_JDK} # different with hadoop cluster cuz hive 3.1.3 need jdk8 and amd64 for the container
@@ -207,13 +207,14 @@ services:
       - "2226:${SSH_PORT}"    # SSH 
       - "${SPARK_WEB_UI}:${SPARK_WEB_UI}"  # Spark UI
       - "${SPARK_MASTER}:${SPARK_MASTER}"  # Spark Master
+      - "10001:${SPARK_THRIFT_SERVER}" # ThriftServer
     volumes:
-      - ./infra/spark-configs/spark-defaults.conf:${SPARK_HOME}/conf/spark-defaults.conf
-      - ./infra/spark-configs/spark-env.sh:${SPARK_HOME}/conf/spark-env.sh
-      - ./infra/spark-configs/log4j2.properties:${SPARK_HOME}/conf/log4j2.properties
-      - ./infra/hadoop-configs/core-site.xml:${SPARK_HOME}/conf/core-site.xml
-      - ./infra/hadoop-configs/yarn-site.xml:${SPARK_HOME}/conf/yarn-site.xml
-      - ./infra/hadoop-configs/hdfs-site.xml:${SPARK_HOME}/conf/hdfs-site.xml
+      - ./src/infra/spark-config/spark-defaults.conf:${SPARK_HOME}/conf/spark-defaults.conf
+      - ./src/infra/spark-config/spark-env.sh:${SPARK_HOME}/conf/spark-env.sh
+      - ./src/infra/spark-config/log4j2.properties:${SPARK_HOME}/conf/log4j2.properties
+      - ./src/infra/hadoop-config/core-site.xml:${SPARK_HOME}/conf/core-site.xml
+      - ./src/infra/hadoop-config/yarn-site.xml:${SPARK_HOME}/conf/yarn-site.xml
+      - ./src/infra/hadoop-config/hdfs-site.xml:${SPARK_HOME}/conf/hdfs-site.xml
     environment:
       - SPARK_MASTER=hadoop-master
       - SPARK_WORKLOAD=yarn
@@ -254,7 +255,7 @@ services:
     ports:
       - "${AIRFLOW_WEB_UI}:${AIRFLOW_WEB_UI}"
     # volumes:
-    #   - ./infra/airflow-configs/start_airflow.sh:${AIRFLOW_HOME}/start_airflow.sh
+    #   - ./src/infra/airflow-configs/start_airflow.sh:${AIRFLOW_HOME}/start_airflow.sh
     command: >
       bash -c "/opt/airflow/start_airflow.sh;
                tail -f /dev/null"

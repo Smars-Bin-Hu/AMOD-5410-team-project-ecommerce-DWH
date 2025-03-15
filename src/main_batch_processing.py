@@ -30,7 +30,7 @@ def main(args):
         .appName(current_app_name)
         .enableHiveSupport()  # 一般也需要启用 Hive 支持
         .config("spark.sql.parquet.writeLegacyFormat", "true")
-        # 如果还有时间/日期字段不兼容，也可能需要 .config("spark.sql.parquet.int96AsTimestamp", "true")
+        # timestamp or date field compatible: .config("spark.sql.parquet.int96AsTimestamp", "true")
         .getOrCreate()
     )
 
