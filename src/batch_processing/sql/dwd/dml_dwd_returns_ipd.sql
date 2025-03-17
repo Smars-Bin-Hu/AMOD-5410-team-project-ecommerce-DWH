@@ -3,7 +3,7 @@ SELECT
     return_id,
     order_id,
     product_id,
-    return_date,
+    DATE_FORMAT(CAST(return_date AS TIMESTAMP), 'yyyy-MM-dd') as order_date,
     reason,
     amount_refunded,
     data_date

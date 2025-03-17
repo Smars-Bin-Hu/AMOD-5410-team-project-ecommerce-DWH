@@ -5,6 +5,9 @@ SELECT
     product_id,
     ratings,
     review,
-    sentiment
+    sentiment,
+    data_date
 FROM
-    ods.ods_customer_product_ratings_ipd;
+    ods.ods_customer_product_ratings_ipd
+WHERE
+        data_date = "2025-03-10";

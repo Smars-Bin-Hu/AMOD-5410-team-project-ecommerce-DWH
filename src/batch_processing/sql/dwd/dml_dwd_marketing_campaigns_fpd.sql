@@ -1,4 +1,4 @@
-INSERT INTO dwd.dwd_marketing_campaigns_fpd
+INSERT OVERWRITE TABLE dwd.dwd_marketing_campaigns_fpd
 SELECT
     campaign_id,
     campaign_name,
