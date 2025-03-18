@@ -1,3 +1,4 @@
+-- Clickhouse DDL
 DROP TABLE IF EXISTS ads_data_mart_ecomerce.ads_orders_detailed_info_wide_ipd;
 CREATE TABLE IF NOT EXISTS ads_data_mart_ecomerce.ads_orders_detailed_info_wide_ipd
 (
