@@ -1,0 +1,1 @@
+CREATE DATABASE IF NOT EXISTS ads_data_mart_ecomerce;

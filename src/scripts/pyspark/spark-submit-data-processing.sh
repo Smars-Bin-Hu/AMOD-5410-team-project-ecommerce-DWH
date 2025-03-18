@@ -27,7 +27,7 @@ spark-submit --master yarn \
     --conf spark.hadoop.yarn.log-aggregation.wait.ms=60000 \
     --conf spark.eventLog.enabled=true \
     --conf spark.eventLog.dir=hdfs:///spark-logs \
-    /opt/miniconda3/envs/pyspark_env/jobs_sync/Users/smars/Developer/big-data-engineering-project1/test/unit_test/batch_processing/ods_to_dwd.py
+    /opt/miniconda3/envs/pyspark_env/jobs_sync/Users/smars/Developer/big-data-engineering-project1/test/unit_test/data_pipeline/spark_hive_to_clickhouse.py
 
 # final spark submit python proejct package, otherwise the spark cannot regconize the package while importing
 spark-submit --master yarn \
