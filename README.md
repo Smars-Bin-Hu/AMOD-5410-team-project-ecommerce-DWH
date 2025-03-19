@@ -6,7 +6,7 @@
   <a href="https://github.com/Smars-Bin-Hu/EComDWH-Pipeline/tree/main/src">
       <img src="https://img.shields.io/badge/project-source_code-green?style=for-the-badge&logo=github" alt="Sublime's custom image"/>
   </a>
-  <a href="https://github.com/Smars-Bin-Hu/EComDWH-Pipeline/tree/main/docs">
+  <a href="https://github.com/Smars-Bin-Hu/EComDWH-Pipeline?tab=readme-ov-file#-project-documents">
       <img src="https://img.shields.io/badge/project-all%20documents-red?style=for-the-badge&logo=github" image"/>
    </a>
 </p>
