@@ -53,7 +53,7 @@ services:
       # hdfs metadata
       - ./src/infra/hdfs-data/master:${HADOOP_HOME}/data
       # local mount - for big volume storage
-      - /Users/smars/bigdata-cluster-volume/hadoop-master/data:/data
+      - ${HADOOP_DATA_LOCAL_MOUNT_PATH}:/data
       
   # ========== 2) Hadoop Worker1 ==========
   # -------------------------------------------------

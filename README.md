@@ -106,7 +106,7 @@ Add hosts to your local `/etc/hosts`
 127.0.0.1   airflow
 ```
 
-## 📌 Project Documents
+## Project Documents
 
 #### Business logic && Tech Selection
 

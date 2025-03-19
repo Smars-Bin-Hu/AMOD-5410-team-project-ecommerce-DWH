@@ -3,6 +3,7 @@ src/infra/mysql-data/
 src/infra/hdfs-data/
 
 # ignore .env
+# <<<<<<<<<======== public .env for locally deploying
 # .env
 # src/data_pipeline/configs/.env
 # src/data_pipeline/configs/.env.secret
