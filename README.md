@@ -1,25 +1,76 @@
-# AMOD-5410-team-project-ecommerce-DWH
+![1](https://github.com/user-attachments/assets/5b98ca67-3770-4d4a-b444-ad8b70c40557)
 
-## 📖 Introduction
+# Enterprise-Grade Offline Data Warehouse Solution for E-Commerce
 
-**Name:**
+<p align="center">
+  <a href="https://github.com/Smars-Bin-Hu/EComDWH-Pipeline/tree/main/src">
+      <img src="https://img.shields.io/badge/project-source_code-green?style=for-the-badge&logo=github" alt="Sublime's custom image"/>
+  </a>
+  <a href="https://github.com/Smars-Bin-Hu/EComDWH-Pipeline/tree/main/docs">
+      <img src="https://img.shields.io/badge/project-all%20documents-red?style=for-the-badge&logo=github" image"/>
+   </a>
+</p>
 
-**Background:**
+<p align="center">
+<img src="https://img.shields.io/badge/apache_spark-3.3.0-blue?style=plastic&logo=apachespark&logoSize=auto&color=white"/>
+<img src="https://img.shields.io/badge/apache_hadoop-3.2.4-blue?style=plastic&logo=apachehadoop&logoColor=yellow&logoSize=auto&color=blue"/>
+<img src="https://img.shields.io/badge/apache_hive-3.1.3-blue?style=plastic&logo=apachehive&logoColor=yellow&logoSize=auto&color=yellow"/>
+<img src="https://img.shields.io/badge/python-3.12.9-blue?style=plastic&logo=python&logoColor=yellow&logoSize=auto&color=blue"/>
+</p>
 
-**Goal:** To build a data batch processing datawarehouse, including data ingestion, cleaning, storage, modelling, analytis and scheduler. Use tech stach as below.
 
-## 🚀 Tech Stack
+This project aims to build an enterprise-grade offline data warehouse solution based on e-commerce platform order data. By leveraging **Docker containers** to simulate a big data platform, it achieves a complete workflow from ETL processing to data warehouse modeling, OLAP analysis, and data visualization. 
 
-- **Data Source(OLTP):** Oracle
-- **Data Extraction, Load:** Airflow + JDBC
-- **Data Storage and Resources Management:** HDFS, Yarn
-- **Data Warehousing:** Apache Hive, MySQL(Metastore), Dimension Modelling
-- **Data Transform:** PySpark, SparkSQL
-- **Scheduler:** Airflow
-- **OLAP engine:** clickhouse
-- **Data Application Layer**: PowerBI
+The core value of this project lies in its implementation of **enterprise-grade data warehouse modeling**, integrating e-commerce order data with relevant business themes through standardized dimension modeling and fact table design, ensuring data accuracy, consistency, and traceability. Meanwhile, **the deployment of a big data cluster via Docker containers** simplifies environment management and operational costs, offering a flexible deployment model for distributed batch processing powered by Spark. Additionally, the project incorporates **CI/CD automation**, enabling rapid iterations while maintaining the stability and reliability of the data pipeline. Storage and computation are also **highly optimized** to maximize hardware resource utilization.
 
-## 📁 Project Directory
+To monitor and manage the system effectively, a **Grafana-based cluster monitoring system** has been implemented, providing real-time insights into cluster health metrics and assisting in performance tuning and capacity planning. Finally, by integrating **business intelligence (BI) and visualization solutions**, the project transforms complex data warehouse analytics into intuitive dashboards and reports, allowing business teams to make data-driven decisions more efficiently.
+
+By combining these critical features—including:
+- Big Data Cluster Deployment
+- Enterprise-Grade Data Warehouse Modeling Standard
+- Distributed Batch Processing with Spark
+- CI/CD Automation
+- Optimized Storage & Computation
+- Cluster Monitoring System using Grafana
+- Business Intelligence & Visualization
+
+this project delivers a professional, robust, and highly efficient solution for enterprises dealing with large-scale data processing and analytics.
+
+## Key Features
+
+### Tech Stack
+
+This project sets up a high-availability big data platform, including the following components:
+
+![Apache Spark](https://img.shields.io/badge/Spark-FDEE21?style=for-the-badge&logo=apachespark&logoColor=black) 	![Apache Hadoop](https://img.shields.io/badge/Hadoop-66CCFF?style=for-the-badge&logo=apachehadoop&logoColor=black) ![Apache Airflow](https://img.shields.io/badge/Airflow-017CEE?style=for-the-badge&logo=Airflow&logoColor=white) ![Apache Hive](https://img.shields.io/badge/Hive-FDEE21?style=for-the-badge&logo=apachehive&logoColor=black)  ![ClickHouse](https://img.shields.io/badge/ClickHouse-FFCC01?style=for-the-badge&logo=clickhouse&logoColor=white) ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+
+| Components             | Features                 | Version |
+|------------------------|--------------------------|---------|
+| Apache Hadoop HDFS     | Distributed Data Storage | 3.2.4   |
+| Apache Hadoop YARN     | Resource Management      | 3.2.4   |
+| Apache Zookeeper       | High Availability        | 3.8.4   |
+| Apache Spark           | Distributed Computing    | 3.3.0   |
+| Apache Hive            | Data Warehousing         | 3.1.3   |
+| Apache Airflow         | Workflow Scheduling      |         |
+| Azure Cloud ClickHouse | OLAP Analysis            |         |
+| Microsoft PowerBI      | BI Dashboard             |         |
+| Prometheus             | Monitoring               |         |
+| Grafana                | Monitoring GUI           |         |
+| Docker                 | Containerization         |         |
+
+### Project Key Features
+
+| ✅ Feature | 🔥 Core Highlights | 📦 Deliverables |
+|-----------|------------------|---------------|
+| **1. Data Warehouse Modeling** | - Full dimensional modeling process (Star Schema / Snowflake Schema) <br> - Standardized development norms (ODS/DWD/DWM/DWS/ADS five-layer modeling) <br> - Business Matrix: defining & managing dimensions & fact tables | - Data warehouse design document (Markdown/PDF) <br> - Hive SQL modeling code <br> - Database ER diagram |
+| **2. Cluster Deployment** | - Fully containerized deployment with Docker for quick replication <br> - High-availability environment: Hadoop + Hive + Spark + Zookeeper + ClickHouse | - Docker images (open-source Dockerfile) <br> - `.env` configuration file <br> - `docker-compose.yml` (one-click cluster startup) <br> - Infra configuration files (Hadoop, Hive, Spark, Zookeeper) |
+| **3. Distributed Batch Processing** | - ETL processing using Spark for Oracle relational data <br> - Multi-layer processing: ODS → DWD → DWM → DWS → ADS <br> - Efficient data transformation & aggregation | - Spark ETL code (PySpark) <br> - SparkSQL scripts <br> - Data flow diagram |
+| **4. CI/CD Automation** | - Automated Airflow DAG deployment (auto-sync with code updates) <br> - Automated Spark job submission (eliminates manual `spark-submit`) <br> - Hive table schema change detection (automatic alerts) | - GitHub Actions / Jenkins pipeline <br> - CI/CD documentation <br> - Sample log screenshots |
+| **5. Storage & Computation Optimization** | - SQL optimization (dynamic partitioning, indexing, storage partitioning) <br> - Spark tuning: Salting, Skew Join Hint, Broadcast Join, `reduceByKey` vs. `groupByKey` <br> - Hive tuning: Z-Order sorting (boost ClickHouse queries), Parquet + Snappy compression | - Pre & post optimization performance comparison <br> - Spark optimization code <br> - SQL execution plan screenshots |
+| **6. Monitoring** | - Prometheus + Grafana for monitoring Spark / Hive / ClickHouse <br> - ETL job status monitoring <br> - Data latency & failure rate tracking | - Prometheus configuration files <br> - Grafana dashboard screenshots <br> - ETL job monitoring logs |
+| **7. Business Intelligence & Visualization** | - PowerBI dashboards for data analysis <br> - Real business-driven visualizations <br> - Providing actionable business insights | - PowerBI visualization screenshots <br> - Business analysis report <br> - Key business metric explanations (BI Insights) |
+
+## Project Directory
 
 ```bash
 /bigdata-datawarehouse-project
@@ -39,7 +90,7 @@
 │── .gitignore               # Git ignore some directory to commit to the remote repo
 ```
 
-## 💪 Quick Start
+## Quick Start
 
 Add hosts to your local `/etc/hosts`
 
