@@ -9,6 +9,12 @@ from .parse_field_type import parse_field_type
 from data_pipeline.utils import logger
 
 def load_hdfs(table:dict, df) -> bool:
+    # check Hive ODS Layer HDFS target path
+    # hive_ods_hdfs_path = HadoopEnvConfig.get_hive_ods_hdfs_path()
+    # if not HDFSUtils.check_hdfs_path(hive_ods_hdfs_path):
+    #     logger.smars_dev(f"HDFS path {hive_ods_hdfs_path} Not found")
+    #     return False
+
     """Load data to HDFS"""
     # read table configuration information
     hive_hdfs_table_path = table["hive_hdfs_table_path"]

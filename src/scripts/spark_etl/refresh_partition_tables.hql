@@ -6,7 +6,7 @@ MSCK REPAIR TABLE ods.ods_returns_ipd;
 
 -- query the loaded tables
 select * from ods.ods_returns_ipd;
-select * from ods.ods_orders_ipd;
+select * from ods.ods_orders_ipd where data_date = '2025-03-18';
 select * from ods.ods_campaign_product_subcategory_fpd;
 select * from ods.ods_category_fpd;
 select * from ods.ods_customer_fpd;

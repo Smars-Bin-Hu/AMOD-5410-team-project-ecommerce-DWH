@@ -15,7 +15,7 @@ class OracleDatabaseUtils:
     """Oracle Database Utils"""
 
     @staticmethod
-    def test_oracle_connection(oracle_db_config, db : str, instance : str) -> bool:
+    def test_oracle_connection(oracle_db_config, db_type : str, instance_code : str) -> bool:
         """
         Test Whether the Oracle Connection is successful
         1) Load Oracle JDBC driver
@@ -23,10 +23,11 @@ class OracleDatabaseUtils:
         3) Execute a simple query, e.g. SELECT 1 FROM DUAL
         4) Return True if no exception, otherwise return False
         """
-        oracle_jdbc_url : str = oracle_db_config.get_jdbc_url(db,instance)
-        oracle_properties : dict = oracle_db_config.get_properties(db,instance)
-        
+        oracle_jdbc_url : str = oracle_db_config.get_jdbc_url(db_type,instance_code)
+        oracle_properties : dict = oracle_db_config.get_properties(db_type,instance_code)
+
         try:
+
             logger.smars_dev("Attempting to connect to Oracle Database...")
 
             # connect the oracle

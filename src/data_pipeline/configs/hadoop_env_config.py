@@ -21,4 +21,4 @@ class HadoopEnvConfig:
 
     @staticmethod
     def get_jdbc_driver_path():
-        return get_env("HADOOP_CLUSTER_ORACLE_JDBC_DRIVER_PATH")
+        return get_env("SPARK_CONTAINER_ORACLE_JDBC_DRIVER_PATH")

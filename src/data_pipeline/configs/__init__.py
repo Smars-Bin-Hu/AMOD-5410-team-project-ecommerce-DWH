@@ -11,7 +11,7 @@ from .logging_config import LoggingConfig
 from .database_connection_config import DatabaseConnectionConfig
 from .hadoop_env_config import HadoopEnvConfig
 from .get_env import get_env
-from .etl_tables_config import etl_tables_config
+from .oracle2hive_tables_config import oracle2hive_tables_config
 from .job_configs import job_configs
 from .hive2ck_tables_config import hive2ck_tables_configs
 # from .spark_env_config import SparkEnvConfig

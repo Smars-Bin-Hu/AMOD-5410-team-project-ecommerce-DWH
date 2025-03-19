@@ -7,6 +7,6 @@ Every .py under this package has only one class that is the same name as file na
 from .extract_oracle import extract_oracle
 from .load_hdfs import load_hdfs
 from .parse_field_type import parse_field_type
-from .spark_etl import spark_etl
-from .spark_load_hive_to_clickhouse import spark_load_hive_to_ck
+from .spark_upstream import spark_upstream
+from .spark_downstream import spark_downstream
 from .load_ck import load_to_ck

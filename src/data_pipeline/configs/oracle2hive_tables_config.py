@@ -1,5 +1,5 @@
 
-etl_tables_config = [
+oracle2hive_tables_config = [
     {
         "oracle_table_name": "CAMPAIGN_PRODUCT_SUBCATEGORY",
         "hive_hdfs_table_path": "/user/hive/warehouse/ods/ods_campaign_product_subcategory_fpd",
