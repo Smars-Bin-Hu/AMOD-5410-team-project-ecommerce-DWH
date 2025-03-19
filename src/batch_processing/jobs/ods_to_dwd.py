@@ -1,5 +1,5 @@
-from src.batch_processing.utils import read_sql, logger
-from src.batch_processing.configs import sql_dml_files_path_dwd
+from .batch_processing.utils import read_sql, logger
+from .batch_processing.configs import sql_dml_files_path_dwd
 
 def ods_to_dwd(spark) -> bool:
     successful_tables = []

@@ -1,14 +1,14 @@
 
 """
-load.py
+load_hdfs.py
 
 This Module: ..
 """
-from pyspark.sql.functions import  current_date, date_format, col
+from pyspark.sql.functions import current_date, date_format, col
 from .parse_field_type import parse_field_type
 from data_pipeline.utils import logger
 
-def load(table:dict, df) -> bool:
+def load_hdfs(table:dict, df) -> bool:
     """Load data to HDFS"""
     # read table configuration information
     hive_hdfs_table_path = table["hive_hdfs_table_path"]

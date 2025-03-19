@@ -1,19 +1,19 @@
 """
-extract.py
+extract_oracle.py
 
 This Module: define OracleToHDFS class, to extract the data from Oracle and load to the HDFS
 """
 from pyspark.sql import DataFrame
 from data_pipeline.utils import logger
 
-def extract(spark, table, oracle_config) -> DataFrame:
+def extract_oracle(spark, table, oracle_config) -> DataFrame:
     """extract 1 table from Oracle"""
     oracle_table_name = table["oracle_table_name"]
     oracle_table_sql_query = table["oracle_table_sql_query"]
 
     # get the configuration info to oracle DB
-    oracle_jdbc_url = oracle_config.get_jdbc_url()
-    properties = oracle_config.get_properties()
+    oracle_jdbc_url = oracle_config.get_jdbc_url("oracle","1")
+    properties = oracle_config.get_properties("oracle","1")
 
     try:
         # Attempt to read the table

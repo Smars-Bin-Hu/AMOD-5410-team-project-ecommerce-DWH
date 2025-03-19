@@ -5,7 +5,8 @@
 ### Description
 
 <p align="center">
-    <img src="../../image/error-handling/future-fix/no-logs.png" alt="image" width="100%">
+    <img 
+src="../../image/error-handling/future-fix/no-logs.png" alt="image" width="100%">
 </p>
 
 In the current Hadoop + Yarn setup, Spark jobs sometimes fail to display logs in the Yarn Web UI, even though the job succeeds. Specifically:

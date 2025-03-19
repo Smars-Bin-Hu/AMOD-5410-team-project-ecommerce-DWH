@@ -6,11 +6,8 @@ from data_pipeline.utils import (
     OracleDatabaseUtils,
     logger
 )
-from data_pipeline.core import (
-    extract,
-    load,
-)
-
+from .extract_oracle import extract_oracle
+from .load_hdfs import load_hdfs
 
 # record the result of extract and load tables
 # NOTE: only load the successful and
@@ -20,14 +17,13 @@ failed_extract_tables = []
 successful_load_tables = []
 failed_load_tables = []
 
-# Connect Oracle
+# Get Database Configuration: Oracle, Instance 1
 oracle_db_config = DatabaseConnectionConfig("oracle","1")
 
 # Read the ETL tables config JSON
 def spark_etl(spark) -> bool:
-    # 1. test Oracle connection
-    # create oracle connection configuration instance
-    if not OracleDatabaseUtils.test_oracle_connection(oracle_db_config):
+    # 1. test Oracle connection: Oracle Instance 1
+    if not OracleDatabaseUtils.test_oracle_connection(oracle_db_config,"oracle","1"):
         logger.smars_dev("Terminal the job：Oracle failed to connect")
         return False
 
@@ -43,7 +39,7 @@ def spark_etl(spark) -> bool:
             logger.smars_dev(f"Starting ETL for table: {table['oracle_table_name']}")
 
             # Step 1: Extract Data from Oracle
-            df = extract(spark, table, oracle_db_config)
+            df = extract_oracle(spark, table, oracle_db_config)
 
             if df.schema is None:  # Case 3: Extraction failed
                 failed_extract_tables.append(table["oracle_table_name"])
@@ -58,7 +54,7 @@ def spark_etl(spark) -> bool:
                 continue  # Skip load step
 
             # Step 2: Load Data into HDFS
-            success = load(table, df)
+            success = load_hdfs(table, df)
 
             if success:
                 successful_load_tables.append(table["oracle_table_name"])

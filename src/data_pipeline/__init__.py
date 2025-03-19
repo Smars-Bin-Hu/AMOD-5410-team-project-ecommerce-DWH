@@ -10,7 +10,7 @@ import os
 __all__ = ["core", "configs", "utils"]
 
 """Load environment variables from .env and .env.secret file"""
-# get the file path
+# get the file p
 BASE_DIR = Path(__file__).resolve().parent / "configs"
 ENV_FILE = BASE_DIR / ".env"
 SECRET_ENV_FILE = BASE_DIR / ".env.secret"

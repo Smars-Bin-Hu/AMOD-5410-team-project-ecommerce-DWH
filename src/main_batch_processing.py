@@ -1,8 +1,8 @@
 from pyspark.sql import SparkSession
 import argparse
-from src.batch_processing.utils import logger
-from src.batch_processing.configs import job_configs
-from src.batch_processing.jobs import ods_to_dwd
+from .batch_processing.utils import logger
+from .batch_processing.configs import job_configs
+from .batch_processing.jobs import ods_to_dwd
 
 
 job_functions_mapping = {
@@ -12,7 +12,7 @@ job_functions_mapping = {
 def main(args):
     current_app_name = ""
     current_launch_log = ""
-    current_job_func = ""
+
     # launch spark
     if args.job_type == "ods_to_dwd":
         current_app_name = job_configs["dwd_to_dwm"].get("app_name")

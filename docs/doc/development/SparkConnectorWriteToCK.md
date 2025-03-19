@@ -27,7 +27,7 @@ During the setup, we encountered several issues, including `ClassNotFoundExcepti
 
 ### 1. Configure Spark Dependencies
 #### Option 1: Using `--jars`
-Download and place compatible JAR files in `/opt/spark/jars/`:
+Download and place compatible JAR files in `/opt/spark/jars/` **(This is my $SPARK_HOME/jars)**:
 ```
 /opt/spark/jars/com.clickhouse.spark_clickhouse-spark-runtime-3.3_2.12-0.8.0.jar
 /opt/spark/jars/com.clickhouse_clickhouse-client-0.6.3.jar
