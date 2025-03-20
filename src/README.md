@@ -18,7 +18,7 @@ Recommend setting:
 
 ### Environment Setup
 
-Pull Docker Images from my Docker Hub Repository
+Pull Docker Images from my Docker Hub Repository: https://hub.docker.com/r/smarsbhu/proj1-dwh-cluster/tags
 ```bash
 docker pull smarsbhu/proj1-dwh-cluster:hadoop-master-smars-1.1
 docker pull smarsbhu/proj1-dwh-cluster:hadoop-worker1-smars-1.1
