@@ -50,7 +50,7 @@ git clone git@github.com:Smars-Bin-Hu/EComDWH-Pipeline.git <your/local/path>
 
 finish your .env config (Important!)
 > [!IMPORTANT]
-> Must configa and double check this .env file before docker compose launching
+> Must config and double check this .env file before docker compose launching
 
 Under the main folder `/ComDWH-Pipeline`, check the `.env` file
 ```dotenv
