@@ -70,38 +70,53 @@ This project sets up a high-availability big data platform, including the follow
 | **6. Monitoring** | - Prometheus + Grafana for monitoring Spark / Hive / ClickHouse <br> - ETL job status monitoring <br> - Data latency & failure rate tracking | - Prometheus configuration files <br> - Grafana dashboard screenshots <br> - ETL job monitoring logs |
 | **7. Business Intelligence & Visualization** | - PowerBI dashboards for data analysis <br> - Real business-driven visualizations <br> - Providing actionable business insights | - PowerBI visualization screenshots <br> - Business analysis report <br> - Key business metric explanations (BI Insights) |
 
-## Project Directory
+## 📁 Project Directory
 
 ```bash
 /bigdata-datawarehouse-project
-│── /docs                    # docs (all business and technologies documents about this project)
+│── /docs                         # docs (all business and technologies documents about this project)
 │── /src
-    │── /data_pipeline       # data pipeline code (ETL/ELT Logic, output)
-    │── /warehouse_modeling  # DWH modelling（Hive/SparkSQL etc.）
-    │── /batch_processing    # Data Batch processing (Hadoop, Hive, Spark)
-    │── /scheduler           # Task Scheduler(Airflow/DolphinScheduler)
-    │── /infra               # infrastructure deployment(Docker, configuration)
-    │── /scripts             # deployment and operations script and command
-    │── main.py              # all python program entrance 
-│── /tests                   # Testing code
-│── README.md                # Introduction about project
-│── docker-compose.yml       # Docker Compose to launch the project
-│── .env                     # (ignored by git) Docker Compose to read the constant variable about environment
-│── .gitignore               # Git ignore some directory to commit to the remote repo
+    │── /data_pipeline            # data pipeline code (ETL/ELT Logic, output)
+    │── /warehouse_modeling       # DWH modelling（Hive SQL etc.）
+    │── /batch_processing         # Data Batch processing (PySpark + SparkSQL)
+    │── /scheduler                # Task Scheduler(Airflow)
+    │── /infra                    # infrastructure deployment(Docker, configuration files)
+    │── /scripts                  # common used commands and scripts
+    │── /README                   # Source Code Use Instruction Markdown Files
+    │── README.md                 # Navigation of Source Code Use Instruction
+    │── main_data_pipeline.py     # operate the data_pipeline module to do the `Extract` and `Load` jobs
+    │── main_batch_processing.py  # operate the batch_processing module to do the `Transform` jobs
+│── /tests                        # all small features unit testing scripts (DWH modelling, data pipeline, scheduler etc.) 
+│── README.md                     # Introduction about project
+│── docker-compose-bigdata.yml    # Docker Compose to launch the docker cluster
+│── .env                          # `public the .env on purpose` for docker-compose file use
+│── .gitignore                    # Git ignore some directory not to be committed to the remote repo
 ```
 
-## Quick Start
+## 🔗 Quick Start `/src`
 
-[Quick Start](src/README.md)
+### [Source Code Use Instruction](./src/README.md)
 
-## Project Documents
+####  [Quick Start](./src/README/quick-start.md)
 
-#### Business logic && Tech Selection
+### Data Pipeline
+#### [Upstream ELT: OLTP to Data Warehouse](./src/README/spark-upstream.md)
+#### [Downstream ELT: Data Warehouse to OLAP](./src/README/spark-downstream.md)
+
+### Batch Processing
+
+### Warehouse Modelling
+
+### Automation Scheduler
+
+## 🔗 Project Documents `/docs`
+
+#### 1. Business logic && Tech Selection
 
 - Business Logic
 - [Project Tech Architecture](./docs/doc/tech-architecture.md)
 
-#### Data Warehouse Modelling
+#### 2. Data Warehouse Modelling
 
 [DWH Modelling Standard Operation Procedure (SOP)](./docs/doc/dwh-modelling-sop.md)
 
@@ -118,7 +133,7 @@ This project sets up a high-availability big data platform, including the follow
 - SQL Development Specification
   - [Development Specification](./docs/doc/data-warehouse-development-specification/development-specification.md)
 
-#### Troubleshooting
+#### 3. Troubleshooting
 
   - [Future Bugs to Fix](./docs/doc/error-handling/future-fix.md)
   - [04_MAR_2025](./docs/doc/error-handling/04_MAR_2025.md)
@@ -126,7 +141,7 @@ This project sets up a high-availability big data platform, including the follow
   - [06_MAR_2025](./docs/doc/error-handling/06_MAR_2025.md)
 
 
-#### Infrastructure & Building
+#### 4. Infrastructure & Building
 
   - 核心架构docker容器分布图
   - Hadoop 3节点 的搭建和配置
@@ -137,23 +152,23 @@ This project sets up a high-availability big data platform, including the follow
   - airflow 节点的搭建和配置
   - `docker-compose` 文件的配置
 
-#### Development
+#### 5. Development
 
   - Data Warehousing
     - ods
     - dwd
-  - datapipe ETL
+  - Data Pipeline ETL
     - Spark on Yarn to connect Oracle (Hello World)
     - Spark to extract data and load to HDFS
     - OOP
   - Scheduler (Airflow)
   - some files under /scripts
 
-#### Optimization
+#### 6. Optimization
 
   - [Too many INFO logs: Reducing Spark Console Log Levels](./docs/doc/optimization/reducing-spark-console-log-levels.md)
 
-#### Testing
+#### 7. Testing
   - spark_connect_oracle.py  
 
 
