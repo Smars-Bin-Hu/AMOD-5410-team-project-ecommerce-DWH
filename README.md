@@ -36,7 +36,7 @@ By combining these critical features—including:
 
 this project delivers a professional, robust, and highly efficient solution for enterprises dealing with large-scale data processing and analytics.
 
-## Key Features
+## ⚙️ Key Features
 
 ### Tech Stack
 
@@ -70,7 +70,7 @@ This project sets up a high-availability big data platform, including the follow
 | **6. Monitoring** | - Prometheus + Grafana for monitoring Spark / Hive / ClickHouse <br> - ETL job status monitoring <br> - Data latency & failure rate tracking | - Prometheus configuration files <br> - Grafana dashboard screenshots <br> - ETL job monitoring logs |
 | **7. Business Intelligence & Visualization** | - PowerBI dashboards for data analysis <br> - Real business-driven visualizations <br> - Providing actionable business insights | - PowerBI visualization screenshots <br> - Business analysis report <br> - Key business metric explanations (BI Insights) |
 
-## Project Directory
+## 📁 Project Directory
 
 ```bash
 /bigdata-datawarehouse-project
@@ -93,11 +93,13 @@ This project sets up a high-availability big data platform, including the follow
 │── .gitignore                    # Git ignore some directory not to be committed to the remote repo
 ```
 
-## Quick Start `/src`
+## 🚀 Quick Start `/src`
 
-### [🔗 Source Code Use Instruction](./src/README.md)
+### [🔗 Source Code Instruction for Use](./src/README.md)
 
-## Project Documents `/docs`
+# 
+
+## 📌 Project Documents `/docs`
 
 #### 1. Business logic && Tech Selection
 
