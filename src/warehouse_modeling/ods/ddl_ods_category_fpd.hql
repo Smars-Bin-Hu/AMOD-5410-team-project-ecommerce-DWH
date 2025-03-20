@@ -1,4 +1,4 @@
-DROP TABLE ods.ods_category_fpd;
+DROP TABLE IF EXISTS ods.ods_category_fpd;
 CREATE EXTERNAL TABLE IF NOT EXISTS ods.ods_category_fpd (
     category_id INT COMMENT 'Unique identifier for table category',
     category_name STRING COMMENT 'Name of category, like Clothing, Books, Grocery...'

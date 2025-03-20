@@ -34,7 +34,7 @@ SELECT
     ords.customer_sentiment,
     ords.data_date -- STRING
 FROM
-    (SELECT * FROM dwm.dwm_orders_with_items_ipd WHERE data_date = "2025-03-10") ords
+    (SELECT * FROM dwm.dwm_orders_with_items_ipd WHERE data_date = "2025-03-20") ords
         LEFT JOIN
     dim.dim_customer_fpd cstm ON ords.customer_id = cstm.customer_id
         LEFT JOIN

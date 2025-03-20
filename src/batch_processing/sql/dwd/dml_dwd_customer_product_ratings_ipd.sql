@@ -10,4 +10,4 @@ SELECT
 FROM
     ods.ods_customer_product_ratings_ipd
 WHERE
-        data_date = "2025-03-10";
+        data_date = "2025-03-20";

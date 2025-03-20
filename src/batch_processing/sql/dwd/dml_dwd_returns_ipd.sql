@@ -10,4 +10,4 @@ SELECT
 FROM
     ods.ods_returns_ipd
 WHERE
-    data_date = "2025-03-10";
+    data_date = "2025-03-20";

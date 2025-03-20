@@ -14,7 +14,7 @@ services:
   # -------------------------------------------------
   hadoop-master:
     container_name: hadoop-master               
-    image: hadoop-master-image                         
+    image:   ${HADOOP_MASTER_IMAGE}
     hostname: hadoop-master
     networks:
       bigdata-net:
@@ -51,7 +51,7 @@ services:
       - ./src/infra/zookeeper-config/zoo.cfg:${ZOOKEEPER_HOME}/conf/zoo.cfg
       - ./src/infra/zookeeper-config/dataDir.1/myid:${ZOOKEEPER_HOME}/data/myid
       # hdfs metadata
-      - ./src/infra/hdfs-data/master:${HADOOP_HOME}/data
+#      - ./src/infra/hdfs-data/master:${HADOOP_HOME}/data
       # local mount - for big volume storage
       - ${HADOOP_DATA_LOCAL_MOUNT_PATH}:/data
       
@@ -61,7 +61,7 @@ services:
   # -------------------------------------------------
   hadoop-worker1:
     container_name: hadoop-worker1
-    image: hadoop-worker1-image
+    image: ${HADOOP_WORKER1_IMAGE}
     hostname: hadoop-worker1
     networks:
       bigdata-net:
@@ -93,9 +93,9 @@ services:
       - ./src/infra/zookeeper-config/zoo.cfg:${ZOOKEEPER_HOME}/conf/zoo.cfg
       - ./src/infra/zookeeper-config/dataDir.2/myid:${ZOOKEEPER_HOME}/data/myid
       # hdfs metadata
-      - ./src/infra/hdfs-data/worker1:${HADOOP_HOME}/data
+#      - ./src/infra/hdfs-data/worker1:${HADOOP_HOME}/data
       # local mount - for big volume storage
-      - /Users/smars/bigdata-cluster-volume/hadoop-worker1/data:/data
+      - ${HADOOP_DATA_LOCAL_MOUNT_PATH}:/data
 
   # ========== 3) Hadoop Worker2 ==========
   # -------------------------------------------------
@@ -103,7 +103,7 @@ services:
   # -------------------------------------------------
   hadoop-worker2:
     container_name: hadoop-worker2
-    image: hadoop-worker2-image
+    image: ${HADOOP_WORKER2_IMAGE}
     hostname: hadoop-worker2
     networks:
       bigdata-net:
@@ -135,14 +135,14 @@ services:
       - ./src/infra/zookeeper-config/zoo.cfg:${ZOOKEEPER_HOME}/conf/zoo.cfg
       - ./src/infra/zookeeper-config/dataDir.3/myid:${ZOOKEEPER_HOME}/data/myid
       # hdfs metadata
-      - ./src/infra/hdfs-data/worker2:${HADOOP_HOME}/data
+#      - ./src/infra/hdfs-data/worker2:${HADOOP_HOME}/data
       # local mount - for big volume storage
-      - /Users/smars/bigdata-cluster-volume/hadoop-worker2/data:/data
+      - ${HADOOP_DATA_LOCAL_MOUNT_PATH}:/data
 
   # ========== 4) MySQL (metastore for Hive) ==========
   mysql:
     container_name: mysql-hive-metastore
-    image: mysql-hive-metastore
+    image: ${MYSQL_HIVE_METASTORE_IMAGE}
     hostname: mysql-hive-metastore
     networks:
       bigdata-net:
@@ -152,12 +152,13 @@ services:
     ports:
       - "${MYSQL}:${MYSQL}"
     volumes:
-      - ./src/infra/mysql-data:/var/lib/mysql   # Local Persistence
+      - ./src/infra/mysql-metastore-dump:/var/opt
+#      - ./src/infra/mysql-data:/var/lib/mysql   # Local Persistence
 
   # ========== 5) Hive Service (metastore + hiveserver2) ==========
   hive:
     container_name: hive
-    image: hive
+    image: ${HIVE_IMAGE}
     platform: linux/amd64
     hostname: hive
     networks:
@@ -193,7 +194,7 @@ services:
   # ========== 6) Spark on YARN ==========
   spark:
     container_name: spark
-    image: spark
+    image: ${SPARK_IMAGE}
     hostname: spark
     networks:
       bigdata-net:
@@ -207,7 +208,7 @@ services:
       - "2226:${SSH_PORT}"    # SSH 
       - "${SPARK_WEB_UI}:${SPARK_WEB_UI}"  # Spark UI
       - "${SPARK_MASTER}:${SPARK_MASTER}"  # Spark Master
-      - "10001:${SPARK_THRIFT_SERVER}" # ThriftServer
+      - "10001:${SPARK_THRIFT_SERVER_PORT}" # ThriftServer
     volumes:
       - ./src/infra/spark-config/spark-defaults.conf:${SPARK_HOME}/conf/spark-defaults.conf
       - ./src/infra/spark-config/spark-env.sh:${SPARK_HOME}/conf/spark-env.sh
@@ -227,7 +228,7 @@ services:
   # ========== 7) Oracle ==========
   oracle:
     container_name: oracle-oltp
-    image: oracle-oltp
+    image: ${ORACLE_OLTP_IMAGE}
     hostname: oracle-oltp
     networks:
       bigdata-net:
@@ -244,7 +245,7 @@ services:
   # ========== 8) Airflow ==========
   airflow:
     container_name: airflow
-    image: airflow
+    image: ${AIRFLOW_IMAGE}
     hostname: airflow
     networks:
       bigdata-net:

@@ -20,10 +20,10 @@ CREATE EXTERNAL TABLE IF NOT EXISTS dwm.dwm_orders_with_items_ipd
     customer_rating_id          INT             COMMENT 'The id of rating given by the customer for the item',
     customer_ratings_by_product DECIMAL(2,1)    COMMENT 'The rating given by the customer for the item',
     customer_review             STRING          COMMENT 'The review given by the customer',
-    customer_sentiment          STRING          COMMENT 'The sentiment given by the customer',
-    data_date                   STRING          COMMENT 'Partition Field'
+    customer_sentiment          STRING          COMMENT 'The sentiment given by the customer'
 )
     COMMENT 'DWM Table for orders with items information - Daily Increment Sync, Permenant Storage'
+    PARTITIONED BY (data_date STRING COMMENT 'partition field')
     STORED AS PARQUET
     LOCATION '/user/hive/warehouse/dwm/dwm_orders_with_items_ipd'
     TBLPROPERTIES (

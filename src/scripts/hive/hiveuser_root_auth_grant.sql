@@ -1,10 +1,15 @@
 -- # beeline login hive as root
-beeline -u jdbc:hive2://localhost:10000 -n root
+/opt/hive/bin/beeline -u jdbc:hive2://localhost:10000 -n root
 
 -- ADMIN ROLE and DATABASE PRIVILEGE GRANT
 SET ROLE ADMIN;
--- GRANT ALL ON DATABASE ods TO ROLE ADMIN; -- auth to ods layer
+GRANT ALL ON DATABASE ods TO ROLE ADMIN; -- auth to ods layer
+GRANT ALL ON DATABASE dwd TO ROLE ADMIN; -- auth to ods layer
+GRANT ALL ON DATABASE dwm TO ROLE ADMIN; -- auth to ods layer
+GRANT ALL ON DATABASE dim TO ROLE ADMIN; -- auth to ods layer
+GRANT ALL ON DATABASE dws TO ROLE ADMIN; -- auth to ods layer
 -- GRANT ROLE ADMIN TO USER root; -- Error Granting: root already has the role admin
 
 SHOW CURRENT ROLES;
 SHOW GRANT ROLE ADMIN;
+
