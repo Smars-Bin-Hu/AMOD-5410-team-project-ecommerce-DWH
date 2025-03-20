@@ -1,28 +1,36 @@
 # Quick Start
 
+## System Requirements 
+
 Your Environment Requirements:
 
-- Docker version 28.0.1 
-- git version 2.39.5
-- 
+- Docker (to get the cluster images)
+- git (to get the source code to run the cluster)
 
-## Docker Memory and Disk Configuration
+In Docker Settings, you could config the memory, disk, number of cpu cores etc.
+Recommend setting:
+- CPU Limits: 10
+- Memory limit: 16 GB
+- Swap: 2 GB
+- Disk usage limit: 240 GB
 
 ## Hadoop Cluster Launching
 
+### Environment Setup
+
 Pull Docker Images from my Docker Hub Repository
 ```bash
-docker pull smarsbhu/proj1-dwh-cluster:hadoop-master-smars-1.0
-docker pull smarsbhu/proj1-dwh-cluster:hadoop-worker1-smars-1.0
-docker pull smarsbhu/proj1-dwh-cluster:hadoop-worker2-smars-1.0
-docker pull smarsbhu/proj1-dwh-cluster:mysql-hive-metastore-smars-1.0
-docker pull smarsbhu/proj1-dwh-cluster:hive-smars-1.0
-docker pull smarsbhu/proj1-dwh-cluster:spark-smars-1.0
-docker pull smarsbhu/proj1-dwh-cluster:oracle-oltp-smars-1.0
-docker pull smarsbhu/proj1-dwh-cluster:airflow-smars-1.0
+docker pull smarsbhu/proj1-dwh-cluster:hadoop-master-smars-1.1
+docker pull smarsbhu/proj1-dwh-cluster:hadoop-worker1-smars-1.1
+docker pull smarsbhu/proj1-dwh-cluster:hadoop-worker2-smars-1.1
+docker pull smarsbhu/proj1-dwh-cluster:mysql-hive-metastore-smars-1.1
+docker pull smarsbhu/proj1-dwh-cluster:hive-smars-1.1
+docker pull smarsbhu/proj1-dwh-cluster:spark-smars-1.1
+docker pull smarsbhu/proj1-dwh-cluster:oracle-oltp-smars-1.1
+docker pull smarsbhu/proj1-dwh-cluster:airflow-smars-1.1
 ```
 
-If you want to save the container as local images
+If you want to save the container as local images (Optional)
 ```bash
 docker commit hadoop-master smarsbhu/proj1-dwh-cluster:hadoop-master-latest
 docker commit hadoop-worker1 smarsbhu/proj1-dwh-cluster:hadoop-worker1-latest
@@ -37,14 +45,40 @@ docker commit airflow smarsbhu/proj1-dwh-cluster:airflow-latest
 Git Clone my repo
 
 ```bash
-git clone git@github.com:Smars-Bin-Hu/EComDWH-Pipeline.git <your/path>
+git clone git@github.com:Smars-Bin-Hu/EComDWH-Pipeline.git <your/local/path>
 ```
 
-Under the main folder `/ComDWH-Pipeline`
+finish your .env config (Important!)
+> [!IMPORTANT]
+> Must configa and double check this .env file before docker compose launching
+
+Under the main folder `/ComDWH-Pipeline`, check the `.env` file
+```dotenv
+# <<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+# make .env public is for helping you deploy the testing hadoop cluster using docker-compose.yml
+# <<<<<<<<<<<<<<<<<<<<< Start - Your Config >>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+# Replace ${HADOOP_DATA_LOCAL_MOUNT_PATH} by your local valid path, to mount the hadoop cluster data
+HADOOP_DATA_LOCAL_MOUNT_PATH=/Users/smars/bigdata-cluster-volume/hadoop-master/data
+
+# You may replace image name if you changed the pulled image name yourself
+HADOOP_MASTER_IMAGE=smarsbhu/proj1-dwh-cluster:hadoop-master-smars-1.1
+HADOOP_WORKER1_IMAGE=smarsbhu/proj1-dwh-cluster:hadoop-worker1-smars-1.1
+HADOOP_WORKER2_IMAGE=smarsbhu/proj1-dwh-cluster:hadoop-worker2-smars-1.1
+MYSQL_HIVE_METASTORE_IMAGE=smarsbhu/proj1-dwh-cluster:mysql-hive-metastore-smars-1.1
+HIVE_IMAGE=smarsbhu/proj1-dwh-cluster:hive-smars-1.1
+SPARK_IMAGE=smarsbhu/proj1-dwh-cluster:spark-smars-1.1
+ORACLE_OLTP_IMAGE=smarsbhu/proj1-dwh-cluster:oracle-oltp-smars-1.1
+AIRFLOW_IMAGE=smarsbhu/proj1-dwh-cluster:airflow-smars-1.1
+# <<<<<<<<<<<<<<<<<<<<< End - Your Config >>>>>>>>>>>>>>>>>>>>>>>>>>>
+```
+
+Under the main folder `/ComDWH-Pipeline`, run the `docker-compose-bigdata.yml` file
 
 ```bash
 docker compose -f docker-compose-bigdata.yml up -d
 ```
+### Add hosts configuration to host machine(Optional)
 
 > [!NOTE]
 > Add the container hostname your host machine local hosts list for convenience. 
@@ -56,7 +90,6 @@ nano /etc/hosts
 ```
 As for Linux, Windows User, could check out this link to add the new hosts. https://www.liquidweb.com/blog/edit-hosts-file-macos-windows-linux/
 
-add below hosts configuration
 ```bash
 # for docker network
 127.0.0.1   hadoop-master
@@ -69,9 +102,9 @@ add below hosts configuration
 127.0.0.1   airflow
 ```
 
-Login Container
+### Log in containers
 
-Directly login the container by below docker command:
+Login Container by directly logging in the container by below docker command:
 ```bash
 docker exec -it --user root hadoop-master bash
 docker exec -it --user root hadoop-worker1 bash
@@ -85,9 +118,9 @@ docker exec -it --user root oracle-oltp bash
 
 Also, I open the ssh port 22 for those containers: `hadoop-master`, `hadoop-worker1`, `hadoop-worker2`,`spark`, so you could use `ssh` command to log in those 4 containers as well. 
 
-run below commands one by one
+### Run the services
 
-aiming at `hadoop-master`,`hadoop-worker1`,`hadoop-worker2`
+run below commands one by one
 ```bash
 # 1. All 3: `hadoop-master`,`hadoop-worker1`,`hadoop-worker2`
 # if launched already, then ignore this
@@ -106,7 +139,7 @@ rm -rf /usr/local/opt/module/hadoop/data/data/* && hdfs --daemon start datanode 
 mr-jobhistory-daemon.sh start historyserver
 ```
 
-if you want to stop the service 
+if you want to **STOP** the service (Optional)
 ```bash
 # Stop
 # 0. Master
@@ -116,9 +149,9 @@ mr-jobhistory-daemon.sh stop historyserver
 stop-yarn.sh && stop-dfs.sh && hdfs --daemon stop journalnode && zkServer.sh stop
 ```
 
-***if Hadoop-Cluster Successful Launching:***
+Check if successful launched already (Optional)  
 
-hadoop-master
+container `hadoop-master`
 ```bash
 root@hadoop-master:/usr/local/opt/module/hadoop/data# jps
 1680 Jps
@@ -131,7 +164,8 @@ root@hadoop-master:/usr/local/opt/module/hadoop/data# jps
 557 DFSZKFailoverController -- ZK FC
 1278 DataNode -- DN
 ```
-hadoop-worker1
+
+container `hadoop-worker1`
 ```bash
 root@hadoop-worker1:/data# jps
 577 NodeManager  -- NM
@@ -142,7 +176,7 @@ root@hadoop-worker1:/data# jps
 186 JournalNode -- zookeeper JN
 ```
 
-hadoop-worker2
+container `hadoop-worker2`
 ```bash
 root@hadoop-worker2:/usr/local/opt/module/hadoop/data# jps
 737 DataNode -- DN
@@ -181,6 +215,9 @@ http://localhost:8088/cluster/nodes
 http://localhost:9870/dfshealth.html#tab-datanode
 
 ![img_1.png](img_1.png)
+  
+> [!TIP]                               
+> Overall, if you get the same results the same as above pictures, that means your cluster is already launched successfully.
 
 ## Hive `Metastore` && `Hiveserver2` Launching
 
