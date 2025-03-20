@@ -1,9 +1,10 @@
-# Quick Start
+# 🚀 Quick Start
 
 ## System Requirements 
 
 Your Environment Requirements:
 
+- Operating System: MacOS 12 above, Windows 10, 11, Linux Ubuntu 20.04+/Debian
 - Docker (to get the cluster images)
 - git (to get the source code to run the cluster)
 
@@ -217,7 +218,7 @@ http://localhost:9870/dfshealth.html#tab-datanode
 ![img_1.png](img_1.png)
   
 > [!TIP]                               
-> Overall, if you get the same results the same as above pictures, that means your cluster is already launched successfully.
+> Overall, if you get the results the same as above pictures, that means your cluster is already launched successfully.
 
 ## Hive `Metastore` && `Hiveserver2` Launching
 
@@ -231,15 +232,34 @@ Launche hive metastore
 /opt/hive/bin/hive --service metastore
 ```
 
+> [!IMPORTANT]
+> Make sure the Hadoop Cluster HDFS Safe Mode is off before running `hiveserver2`
+
+Check the Hadoop HDFS safe mode is on or off, on any of NameNode container `hadoop-master`
+```bash
+hdfs dfsadmin -safemode get
+```
+
+Turn off the safe mode
+```bash
+hdfs dfsadmin -safemode leave
+```
+
+![img_2.png](img_2.png)
+
+
+
 Launche hive hiveserver2
 ```bash
 /opt/hive/bin/hive --service hiveserver2
 ```
 
-check the port `9083`,`10000`,`10002` is listening
+check the port `9083`,`10000`,`10002` is listening **after a few seconds**
 ```bash
 netstat -nltp
 ```
+
+![img_3.png](img_3.png)
 
 ## Spark `ThriftServer` Launching
 
@@ -253,7 +273,7 @@ $SPARK_HOME/sbin/start-thriftserver.sh \
     --conf spark.sql.warehouse.dir=hdfs://ns-ha/user/hive/warehouse
 ```
 
-check the JPS `SparkSubmit` and port `10000` listening
+check the JPS `SparkSubmit` and port `10000` listening **after a few seconds**
 ```bash
 (base) root@spark:/# netstat
 tcp6       0      0 :::10000                :::*                    LISTEN      50/java
@@ -261,3 +281,4 @@ tcp6       0      0 :::10000                :::*                    LISTEN      
 (base) root@spark:/# jps
 50 SparkSubmit
 ```
+![img_4.png](img_4.png)
