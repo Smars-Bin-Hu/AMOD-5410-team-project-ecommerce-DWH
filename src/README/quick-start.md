@@ -21,14 +21,14 @@ Recommend setting:
 
 Pull Docker Images from my Docker Hub Repository: https://hub.docker.com/r/smarsbhu/proj1-dwh-cluster/tags
 ```bash
-docker pull smarsbhu/proj1-dwh-cluster:hadoop-master-smars-1.1
-docker pull smarsbhu/proj1-dwh-cluster:hadoop-worker1-smars-1.1
-docker pull smarsbhu/proj1-dwh-cluster:hadoop-worker2-smars-1.1
-docker pull smarsbhu/proj1-dwh-cluster:mysql-hive-metastore-smars-1.1
-docker pull smarsbhu/proj1-dwh-cluster:hive-smars-1.1
-docker pull smarsbhu/proj1-dwh-cluster:spark-smars-1.1
-docker pull smarsbhu/proj1-dwh-cluster:oracle-oltp-smars-1.1
-docker pull smarsbhu/proj1-dwh-cluster:airflow-smars-1.1
+docker pull smarsbhu/proj1-dwh-cluster:hadoop-master-smars-1.1.1
+docker pull smarsbhu/proj1-dwh-cluster:hadoop-worker1-smars-1.1.1
+docker pull smarsbhu/proj1-dwh-cluster:hadoop-worker2-smars-1.1.1
+docker pull smarsbhu/proj1-dwh-cluster:mysql-hive-metastore-smars-1.1.1
+docker pull smarsbhu/proj1-dwh-cluster:hive-smars-1.1.1
+docker pull smarsbhu/proj1-dwh-cluster:spark-smars-1.1.1
+docker pull smarsbhu/proj1-dwh-cluster:oracle-oltp-smars-1.1.1
+docker pull smarsbhu/proj1-dwh-cluster:airflow-smars-1.1.1
 ```
 
 If you want to save the container as local images (Optional)
@@ -63,14 +63,14 @@ Under the main folder `/ComDWH-Pipeline`, check the `.env` file
 HADOOP_DATA_LOCAL_MOUNT_PATH=/Users/smars/bigdata-cluster-volume/hadoop-master/data
 
 # You may replace image name if you changed the pulled image name yourself
-HADOOP_MASTER_IMAGE=smarsbhu/proj1-dwh-cluster:hadoop-master-smars-1.1
-HADOOP_WORKER1_IMAGE=smarsbhu/proj1-dwh-cluster:hadoop-worker1-smars-1.1
-HADOOP_WORKER2_IMAGE=smarsbhu/proj1-dwh-cluster:hadoop-worker2-smars-1.1
-MYSQL_HIVE_METASTORE_IMAGE=smarsbhu/proj1-dwh-cluster:mysql-hive-metastore-smars-1.1
-HIVE_IMAGE=smarsbhu/proj1-dwh-cluster:hive-smars-1.1
-SPARK_IMAGE=smarsbhu/proj1-dwh-cluster:spark-smars-1.1
-ORACLE_OLTP_IMAGE=smarsbhu/proj1-dwh-cluster:oracle-oltp-smars-1.1
-AIRFLOW_IMAGE=smarsbhu/proj1-dwh-cluster:airflow-smars-1.1
+HADOOP_MASTER_IMAGE=smarsbhu/proj1-dwh-cluster:hadoop-master-smars-1.1.1
+HADOOP_WORKER1_IMAGE=smarsbhu/proj1-dwh-cluster:hadoop-worker1-smars-1.1.1
+HADOOP_WORKER2_IMAGE=smarsbhu/proj1-dwh-cluster:hadoop-worker2-smars-1.1.1
+MYSQL_HIVE_METASTORE_IMAGE=smarsbhu/proj1-dwh-cluster:mysql-hive-metastore-smars-1.1.1
+HIVE_IMAGE=smarsbhu/proj1-dwh-cluster:hive-smars-1.1.1
+SPARK_IMAGE=smarsbhu/proj1-dwh-cluster:spark-smars-1.1.1
+ORACLE_OLTP_IMAGE=smarsbhu/proj1-dwh-cluster:oracle-oltp-smars-1.1.1
+AIRFLOW_IMAGE=smarsbhu/proj1-dwh-cluster:airflow-smars-1.1.1
 # <<<<<<<<<<<<<<<<<<<<< End - Your Config >>>>>>>>>>>>>>>>>>>>>>>>>>>
 ```
 
