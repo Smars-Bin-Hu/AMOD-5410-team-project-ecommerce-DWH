@@ -22,11 +22,11 @@ services:
     environment: # Environment Variables
       - HADOOP_MASTER_HOST=hadoop-master
     ports:
-      - "2222:${SSH_PORT}"    # SSH 
+      - "2222:${CONTAINER_INTERNAL_SSH_PORT}"    # SSH
       - "${HDFS_WEB_UI}:${HDFS_WEB_UI}"
       - "${YARN_RM1_WEB_UI}:${YARN_RM1_WEB_UI}"
       - "8042:${YARN_LOG_WEB_UI}" 
-      - "${HDFS}:${HDFS}" # HDFS for hive
+      - "${LOCALHOST_HDFS_PORT}:${CONTAINER_INTERNAL_HDFS_PORT}" # HDFS for hive
       - "${YARN_JOB_HISTORY_SERVER}:${YARN_JOB_HISTORY_SERVER}"
     extra_hosts:
       - "hadoop-worker2:${HADOOP_WORKER2_IP}"
@@ -39,7 +39,10 @@ services:
           tail -f /dev/null
         "
     volumes:
-      - ./src/infra/ssh-configs/configs:/root/.ssh/configs
+      # /etc/hosts
+      - ./src/infra/hosts/hosts:${HADOOP_CLUSTER_HOSTS_FILE}
+      # ssh configs
+      - ./src/infra/ssh-config/configs:${HADOOP_CLUSTER_SSH_CONFIG_FILE}
       # hadoop cluster configs
       - ./src/infra/hadoop-config/core-site.xml:${HADOOP_HOME}/etc/hadoop/core-site.xml
       - ./src/infra/hadoop-config/hadoop-env.sh:${HADOOP_HOME}/etc/hadoop/hadoop-env.sh
@@ -69,7 +72,7 @@ services:
     environment:
       - HADOOP_MASTER_HOST=hadoop-master
     ports:
-      - "2223:${SSH_PORT}"    # SSH
+      - "2223:${CONTAINER_INTERNAL_SSH_PORT}"    # SSH
       - "${YARN_RM2_WEB_UI}:${YARN_RM2_WEB_UI}"    # YARN_RM2_WEB_UI
       - "8043:${YARN_LOG_WEB_UI}"
     extra_hosts:
@@ -81,7 +84,10 @@ services:
       bash -c "service ssh start;
               tail -f /dev/null" 
     volumes:
-      - ./src/infra/ssh-configs/configs:/root/.ssh/configs
+      # /etc/hosts
+      - ./src/infra/hosts/hosts:${HADOOP_CLUSTER_HOSTS_FILE}
+      # ssh configs
+      - ./src/infra/ssh-config/configs:${HADOOP_CLUSTER_SSH_CONFIG_FILE}
       # hadoop cluster configs
       - ./src/infra/hadoop-config/core-site.xml:${HADOOP_HOME}/etc/hadoop/core-site.xml
       - ./src/infra/hadoop-config/hadoop-env.sh:${HADOOP_HOME}/etc/hadoop/hadoop-env.sh
@@ -111,7 +117,7 @@ services:
     environment:
       - HADOOP_MASTER_HOST=hadoop-master
     ports:
-      - "2224:${SSH_PORT}"    # SSH
+      - "2224:${CONTAINER_INTERNAL_SSH_PORT}"    # SSH
       - "9871:${HDFS_WEB_UI}"
       - "8044:${YARN_LOG_WEB_UI}"
     extra_hosts:
@@ -123,7 +129,10 @@ services:
       bash -c "service ssh start;
               tail -f /dev/null" 
     volumes:
-      - ./src/infra/ssh-configs/configs:/root/.ssh/configs
+      # /etc/hosts
+      - ./src/infra/hosts/hosts:${HADOOP_CLUSTER_HOSTS_FILE}
+      # ssh configs
+      - ./src/infra/ssh-config/configs:${HADOOP_CLUSTER_SSH_CONFIG_FILE}
       # hadoop cluster configs
       - ./src/infra/hadoop-config/core-site.xml:${HADOOP_HOME}/etc/hadoop/core-site.xml
       - ./src/infra/hadoop-config/hadoop-env.sh:${HADOOP_HOME}/etc/hadoop/hadoop-env.sh
@@ -198,6 +207,7 @@ services:
     hostname: spark
     networks:
       bigdata-net:
+
         ipv4_address: ${SPARK_IP}
     depends_on: # launch the hadoop cluster first
       - hadoop-master
@@ -205,7 +215,7 @@ services:
       - hadoop-worker2
       - hive
     ports:
-      - "2226:${SSH_PORT}"    # SSH 
+      - "2226:${CONTAINER_INTERNAL_SSH_PORT}"    # SSH 
       - "${SPARK_WEB_UI}:${SPARK_WEB_UI}"  # Spark UI
       - "${SPARK_MASTER}:${SPARK_MASTER}"  # Spark Master
       - "10001:${SPARK_THRIFT_SERVER_PORT}" # ThriftServer

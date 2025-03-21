@@ -24,9 +24,9 @@ docker exec -it --user root oracle-oltp bash
 
 Docker Commit container as Image
 ```bash
-docker commit hadoop-master smarsbhu/proj1-dwh-cluster:hadoop-master-smars-1.1.1
-docker commit hadoop-worker1 smarsbhu/proj1-dwh-cluster:hadoop-worker1-smars-1.1.1
-docker commit hadoop-worker2 smarsbhu/proj1-dwh-cluster:hadoop-worker2-smars-1.1.1
+docker commit hadoop-master smarsbhu/proj1-dwh-cluster:hadoop-master-smars-1.1.2
+docker commit hadoop-worker1 smarsbhu/proj1-dwh-cluster:hadoop-worker1-smars-1.1.2
+docker commit hadoop-worker2 smarsbhu/proj1-dwh-cluster:hadoop-worker2-smars-1.1.2
 docker commit mysql-hive-metastore  smarsbhu/proj1-dwh-cluster:mysql-hive-metastore-smars-1.1.1
 docker commit hive smarsbhu/proj1-dwh-cluster:hive-smars-1.1.1
 docker commit spark smarsbhu/proj1-dwh-cluster:spark-smars-1.1.1
@@ -48,3 +48,13 @@ docker push smarsbhu/proj1-dwh-cluster:mysql-hive-metastore-smars-1.1.1
 docker push smarsbhu/proj1-dwh-cluster:airflow-smars-1.1.1
 ```
 
+docker commit mysql-hive-metastore  smarsbhu/proj1-dwh-cluster:mysql-hive-metastore-smars-1.1.2
+docker push smarsbhu/proj1-dwh-cluster:mysql-hive-metastore-smars-1.1.2
+
+docker commit hadoop-master smarsbhu/proj1-dwh-cluster:hadoop-master-smars-1.1.2
+docker commit hadoop-worker1 smarsbhu/proj1-dwh-cluster:hadoop-worker1-smars-1.1.2
+docker commit hadoop-worker2 smarsbhu/proj1-dwh-cluster:hadoop-worker2-smars-1.1.2
+
+docker push smarsbhu/proj1-dwh-cluster:hadoop-master-smars-1.1.2
+docker push smarsbhu/proj1-dwh-cluster:hadoop-worker1-smars-1.1.2
+docker push smarsbhu/proj1-dwh-cluster:oracle-oltp-smars-1.1.2
