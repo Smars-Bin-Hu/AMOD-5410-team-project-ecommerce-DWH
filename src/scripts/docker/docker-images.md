@@ -57,4 +57,6 @@ docker commit hadoop-worker2 smarsbhu/proj1-dwh-cluster:hadoop-worker2-smars-1.1
 
 docker push smarsbhu/proj1-dwh-cluster:hadoop-master-smars-1.1.2
 docker push smarsbhu/proj1-dwh-cluster:hadoop-worker1-smars-1.1.2
-docker push smarsbhu/proj1-dwh-cluster:oracle-oltp-smars-1.1.2
+docker push smarsbhu/proj1-dwh-cluster:hadoop-worker2-smars-1.1.2
+
+docker commit hive smarsbhu/proj1-dwh-cluster:hive-smars-1.1.2
