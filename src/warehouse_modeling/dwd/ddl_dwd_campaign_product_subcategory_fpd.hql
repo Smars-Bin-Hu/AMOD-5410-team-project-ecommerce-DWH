@@ -14,3 +14,4 @@ CREATE EXTERNAL TABLE IF NOT EXISTS dwd.dwd_campaign_product_subcategory_fpd
         "transactional" = "false", -- Hive transaction usually are ORC file format, so prevent here.
         'parquet.timestamp.skip.conversion' = 'false' -- Spark and Hive timestamp convertion compatible
         );
+

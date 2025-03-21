@@ -1,4 +1,4 @@
-DROP TABLE ods.ods_orders_ipd;
+DROP TABLE IF EXISTS ods.ods_orders_ipd;
 CREATE EXTERNAL TABLE IF NOT EXISTS ods.ods_orders_ipd (
     order_id_surrogate INT COMMENT 'Unique id for each row in table orders',
     order_id INT COMMENT 'Id for orders, could be duplicated',

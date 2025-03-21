@@ -1,4 +1,4 @@
-DROP TABLE ods.ods_subcategory_fpd;
+DROP TABLE IF EXISTS ods.ods_subcategory_fpd;
 CREATE EXTERNAL TABLE IF NOT EXISTS ods.ods_subcategory_fpd (
     subcategory_id INT COMMENT 'Unique id for subcategory',
     subcategory_name STRING COMMENT 'Subcategory name',

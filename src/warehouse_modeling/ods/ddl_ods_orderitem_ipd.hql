@@ -1,4 +1,4 @@
-DROP TABLE ods.ods_orderitem_ipd;
+DROP TABLE IF EXISTS ods.ods_orderitem_ipd;
 CREATE EXTERNAL TABLE IF NOT EXISTS ods.ods_orderitem_ipd (
     orderitem_id INT COMMENT 'Unique id for each row in table orderitem',
     order_id INT COMMENT 'To find the order in table orders', -- AVRO

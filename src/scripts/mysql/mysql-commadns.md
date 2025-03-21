@@ -2,7 +2,7 @@
 
 1. MySQL dump .sql file to mysql-metastore container
 ```sql
-mysqldump -u root -p metastore > /var/opt/metastore_backup.sql
+mysqldump -u root -p --all-databases > /var/opt/all_databases_backup.sql
 ```
 
 2. MySQL Partition Tables refresh
@@ -38,4 +38,13 @@ FROM
 (SELECT COALESCE(MAX(PART_ID), 0) AS MAX_PART_ID FROM PARTITIONS) AS p,
 (SELECT TBL_ID FROM TBLS WHERE TBL_NAME = '<table_name>') AS tbl,
 (SELECT SD_ID FROM SDS ORDER BY SD_ID DESC LIMIT 1) AS sd;
+```
+
+5. Lock and Kill
+```sql
+SHOW FULL PROCESSLIST;
+```
+
+```sql
+KILL
 ```

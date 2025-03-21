@@ -134,7 +134,7 @@ hdfs --daemon start namenode  && hdfs --daemon start zkfc
 yarn --daemon start resourcemanager
 
 # 4. All 3: `hadoop-master`,`hadoop-worker1`,`hadoop-worker2`
-rm -rf /usr/local/opt/module/hadoop/data/data/* && hdfs --daemon start datanode && yarn --daemon start nodemanager
+hdfs --daemon start datanode && yarn --daemon start nodemanager
 
 # 5. `hadoop-master` only
 mr-jobhistory-daemon.sh start historyserver

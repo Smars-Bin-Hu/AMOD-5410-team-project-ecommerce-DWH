@@ -1,4 +1,4 @@
-DROP TABLE ods.ods_customer_fpd;
+DROP TABLE IF EXISTS ods.ods_customer_fpd;
 CREATE EXTERNAL TABLE IF NOT EXISTS ods.ods_customer_fpd (
     customer_id INT COMMENT 'Unique id for each row in table customer',
     first_name STRING COMMENT 'First name for the customer',

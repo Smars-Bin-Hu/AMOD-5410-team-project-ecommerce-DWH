@@ -1,4 +1,4 @@
-DROP TABLE ods.ods_returns_ipd;
+DROP TABLE IF EXISTS ods.ods_returns_ipd;
 CREATE EXTERNAL TABLE IF NOT EXISTS ods.ods_returns_ipd (
     return_id INT COMMENT 'Unique id for each row in table returns',
     order_id INT COMMENT 'The order associated with the returned order',

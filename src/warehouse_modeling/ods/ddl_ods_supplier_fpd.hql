@@ -1,4 +1,4 @@
-DROP TABLE ods.ods_supplier_fpd;
+DROP TABLE IF EXISTS ods.ods_supplier_fpd;
 CREATE EXTERNAL TABLE IF NOT EXISTS ods.ods_supplier_fpd (
     supplier_id INT COMMENT 'Unique id for supplier',
     supplier_name STRING COMMENT 'Name for supplier',

@@ -1,4 +1,4 @@
-DROP TABLE ods.ods_payment_method_fpd;
+DROP TABLE IF EXISTS ods.ods_payment_method_fpd;
 CREATE EXTERNAL TABLE IF NOT EXISTS ods.ods_payment_method_fpd (
     payment_method_id INT COMMENT 'Unique id for payment method',
     payment_method STRING COMMENT 'Payment method name'
