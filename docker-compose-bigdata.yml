@@ -40,9 +40,9 @@ services:
         "
     volumes:
       # /etc/hosts
-      - ./src/infra/hosts/hosts:${HADOOP_CLUSTER_HOSTS_FILE}
+      - ./src/infra/hadoop-config/hosts/hosts:${HADOOP_CLUSTER_HOSTS_FILE}
       # ssh configs
-      - ./src/infra/ssh-config/configs:${HADOOP_CLUSTER_SSH_CONFIG_FILE}
+      - ./src/infra/ssh-config/config:${HADOOP_CLUSTER_SSH_CONFIG_FILE}
       # hadoop cluster configs
       - ./src/infra/hadoop-config/core-site.xml:${HADOOP_HOME}/etc/hadoop/core-site.xml
       - ./src/infra/hadoop-config/hadoop-env.sh:${HADOOP_HOME}/etc/hadoop/hadoop-env.sh
@@ -85,9 +85,9 @@ services:
               tail -f /dev/null" 
     volumes:
       # /etc/hosts
-      - ./src/infra/hosts/hosts:${HADOOP_CLUSTER_HOSTS_FILE}
+      - ./src/infra/hadoop-config/hosts/hosts:${HADOOP_CLUSTER_HOSTS_FILE}
       # ssh configs
-      - ./src/infra/ssh-config/configs:${HADOOP_CLUSTER_SSH_CONFIG_FILE}
+      - ./src/infra/ssh-config/config:${HADOOP_CLUSTER_SSH_CONFIG_FILE}
       # hadoop cluster configs
       - ./src/infra/hadoop-config/core-site.xml:${HADOOP_HOME}/etc/hadoop/core-site.xml
       - ./src/infra/hadoop-config/hadoop-env.sh:${HADOOP_HOME}/etc/hadoop/hadoop-env.sh
@@ -130,9 +130,9 @@ services:
               tail -f /dev/null" 
     volumes:
       # /etc/hosts
-      - ./src/infra/hosts/hosts:${HADOOP_CLUSTER_HOSTS_FILE}
+      - ./src/infra/hadoop-config/hosts/hosts:${HADOOP_CLUSTER_HOSTS_FILE}
       # ssh configs
-      - ./src/infra/ssh-config/configs:${HADOOP_CLUSTER_SSH_CONFIG_FILE}
+      - ./src/infra/ssh-config/config:${HADOOP_CLUSTER_SSH_CONFIG_FILE}
       # hadoop cluster configs
       - ./src/infra/hadoop-config/core-site.xml:${HADOOP_HOME}/etc/hadoop/core-site.xml
       - ./src/infra/hadoop-config/hadoop-env.sh:${HADOOP_HOME}/etc/hadoop/hadoop-env.sh
