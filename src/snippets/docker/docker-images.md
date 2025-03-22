@@ -38,10 +38,10 @@ docker commit airflow smarsbhu/proj1-dwh-cluster:airflow-smars-1.1.1
 
 Push images to Docker Hub
 ```bash
-docker push smarsbhu/proj1-dwh-cluster:hadoop-master-smars-1.1.1
-docker push smarsbhu/proj1-dwh-cluster:hadoop-worker1-smars-1.1.1
+docker push smarsbhu/proj1-dwh-cluster:hadoop-master-smars-1.1.2
+docker push smarsbhu/proj1-dwh-cluster:hadoop-worker1-smars-1.1.2
+docker push smarsbhu/proj1-dwh-cluster:hadoop-worker2-smars-1.1.2
 docker push smarsbhu/proj1-dwh-cluster:oracle-oltp-smars-1.1.1
-docker push smarsbhu/proj1-dwh-cluster:hadoop-worker2-smars-1.1.1
 docker push smarsbhu/proj1-dwh-cluster:hive-smars-1.1.1
 docker push smarsbhu/proj1-dwh-cluster:spark-smars-1.1.1
 docker push smarsbhu/proj1-dwh-cluster:mysql-hive-metastore-smars-1.1.1

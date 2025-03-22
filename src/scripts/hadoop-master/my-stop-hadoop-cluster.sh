@@ -16,6 +16,9 @@ nohup stop-dfs.sh  >/dev/null 2>&1 &
 
 sleep 15
 
+echo "[Stoping ZKFC on hadoop-worker2]"
+nohup hdfs --daemon stop zkfc >/dev/null 2>&1 &
+
 echo "[Stoping JournalNode on hadoop-master]"
 nohup hdfs --daemon stop journalnode >/dev/null 2>&1 &
 

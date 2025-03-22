@@ -7,7 +7,7 @@ for node in hadoop-master hadoop-worker1 hadoop-worker2; do
   docker exec -i $node bash -c "my-start-zk.sh"
 done
 
-sleep 3
+sleep 8
 
 echo "[2] Launching Namenodes and ZKFC on hadoop-master and hadoop-worker2"
 for node in hadoop-master hadoop-worker2; do
