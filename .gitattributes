@@ -1,0 +1,71 @@
+###############################################################################
+# 通用配置：凡是被识别为 text 类型的文件，统一使用 LF
+###############################################################################
+# 如果你想对所有文本文件应用 LF，可以使用以下一行：
+# * text=auto eol=lf
+
+###############################################################################
+# 也可以更细粒度地为不同后缀指定
+###############################################################################
+# 常见脚本文件
+*.sh          text eol=lf
+*.bash        text eol=lf
+*.zsh         text eol=lf
+
+# 常见配置文件
+*.yaml        text eol=lf
+*.yml         text eol=lf
+*.json        text eol=lf
+*.properties  text eol=lf
+*.conf        text eol=lf
+*.cfg         text eol=lf
+*.ini         text eol=lf
+
+# 常见代码文件
+*.c           text eol=lf
+*.cpp         text eol=lf
+*.h           text eol=lf
+*.hpp         text eol=lf
+*.java        text eol=lf
+*.py          text eol=lf
+*.js          text eol=lf
+*.ts          text eol=lf
+*.jsx         text eol=lf
+*.tsx         text eol=lf
+*.php         text eol=lf
+*.go          text eol=lf
+*.rb          text eol=lf
+*.cs          text eol=lf
+*.scala       text eol=lf
+*.kt          text eol=lf
+
+# 标记文档文件
+*.txt         text eol=lf
+*.md          text eol=lf
+*.markdown    text eol=lf
+
+###############################################################################
+# 对二进制文件不做任何换行处理
+###############################################################################
+*.png         binary
+*.jpg         binary
+*.jpeg        binary
+*.gif         binary
+*.ico         binary
+*.pdf         binary
+*.doc         binary
+*.docx        binary
+*.ppt         binary
+*.pptx        binary
+*.xls         binary
+*.xlsx        binary
+*.zip         binary
+*.gz          binary
+*.tgz         binary
+*.bz2         binary
+*.rar         binary
+*.7z          binary
+*.exe         binary
+*.dll         binary
+*.so          binary
+*.dylib       binary
