@@ -1,5 +1,5 @@
 -- # beeline login hive as root
-/opt/hive/bin/beeline -u jdbc:hive2://localhost:10000 -n root
+beeline -u jdbc:hive2://localhost:10000 -n root
 
 -- ADMIN ROLE and DATABASE PRIVILEGE GRANT
 SET ROLE ADMIN;
@@ -12,4 +12,3 @@ GRANT ALL ON DATABASE dws TO ROLE ADMIN; -- auth to ods layer
 
 SHOW CURRENT ROLES;
 SHOW GRANT ROLE ADMIN;
-

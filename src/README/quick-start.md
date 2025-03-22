@@ -224,12 +224,12 @@ http://localhost:9870/dfshealth.html#tab-datanode
 
 login `Hive` Container
 ```bash
-docker exec -it --user root mysql-hive-metastore bash
+docker exec -it --user root hive bash
 ```
 
 Launche hive metastore
 ```bash
-/opt/hive/bin/hive --service metastore
+hive --service metastore
 ```
 
 > [!IMPORTANT]
@@ -251,7 +251,7 @@ hdfs dfsadmin -safemode leave
 
 Launche hive hiveserver2
 ```bash
-/opt/hive/bin/hive --service hiveserver2
+hive --service hiveserver2
 ```
 
 check the port `9083`,`10000`,`10002` is listening **after a few seconds**

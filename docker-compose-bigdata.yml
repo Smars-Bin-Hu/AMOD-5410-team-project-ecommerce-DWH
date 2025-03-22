@@ -43,6 +43,13 @@ services:
       - ./src/infra/hadoop-config/hosts/hosts:${HADOOP_CLUSTER_HOSTS_FILE}
       # ssh configs
       - ./src/infra/ssh-config/config:${HADOOP_CLUSTER_SSH_CONFIG_FILE}
+      # hadoop scripts
+      - ./src/scripts/hadoop-master/my-start-zk.sh:${HADOOP_CLUSTER_BIN_PATH}/my-start-zk.sh
+      - ./src/scripts/hadoop-master/my-start-NN-ZKFC.sh:${HADOOP_CLUSTER_BIN_PATH}/my-start-NN-ZKFC.sh
+      - ./src/scripts/hadoop-master/my-start-RM.sh:${HADOOP_CLUSTER_BIN_PATH}/my-start-RM.sh
+      - ./src/scripts/hadoop-master/my-start-NM-DN.sh:${HADOOP_CLUSTER_BIN_PATH}/my-start-NM-DN.sh
+      - ./src/scripts/hadoop-master/my-start-historyserver.sh:${HADOOP_CLUSTER_BIN_PATH}/my-start-historyserver.sh
+      - ./src/scripts/hadoop-master/my-stop-hadoop-cluster.sh:${HADOOP_CLUSTER_BIN_PATH}/my-stop-hadoop-cluster.sh
       # hadoop cluster configs
       - ./src/infra/hadoop-config/core-site.xml:${HADOOP_HOME}/etc/hadoop/core-site.xml
       - ./src/infra/hadoop-config/hadoop-env.sh:${HADOOP_HOME}/etc/hadoop/hadoop-env.sh
@@ -88,6 +95,11 @@ services:
       - ./src/infra/hadoop-config/hosts/hosts:${HADOOP_CLUSTER_HOSTS_FILE}
       # ssh configs
       - ./src/infra/ssh-config/config:${HADOOP_CLUSTER_SSH_CONFIG_FILE}
+      # hadoop scripts
+      - ./src/scripts/hadoop-worker1/my-start-zk.sh:${HADOOP_CLUSTER_BIN_PATH}/my-start-zk.sh
+      - ./src/scripts/hadoop-worker1/my-start-RM.sh:${HADOOP_CLUSTER_BIN_PATH}/my-start-RM.sh
+      - ./src/scripts/hadoop-worker1/my-start-NM-DN.sh:${HADOOP_CLUSTER_BIN_PATH}/my-start-NM-DN.sh
+      - ./src/scripts/hadoop-worker1/my-stop-hadoop-cluster.sh:${HADOOP_CLUSTER_BIN_PATH}/my-stop-hadoop-cluster.sh
       # hadoop cluster configs
       - ./src/infra/hadoop-config/core-site.xml:${HADOOP_HOME}/etc/hadoop/core-site.xml
       - ./src/infra/hadoop-config/hadoop-env.sh:${HADOOP_HOME}/etc/hadoop/hadoop-env.sh
@@ -133,6 +145,11 @@ services:
       - ./src/infra/hadoop-config/hosts/hosts:${HADOOP_CLUSTER_HOSTS_FILE}
       # ssh configs
       - ./src/infra/ssh-config/config:${HADOOP_CLUSTER_SSH_CONFIG_FILE}
+      # hadoop scripts
+      - ./src/scripts/hadoop-worker2/my-start-zk.sh:${HADOOP_CLUSTER_BIN_PATH}/my-start-zk.sh
+      - ./src/scripts/hadoop-worker2/my-start-NN-ZKFC.sh:${HADOOP_CLUSTER_BIN_PATH}/my-start-NN-ZKFC.sh
+      - ./src/scripts/hadoop-worker2/my-start-NM-DN.sh:${HADOOP_CLUSTER_BIN_PATH}/my-start-NM-DN.sh
+      - ./src/scripts/hadoop-worker2/my-stop-hadoop-cluster.sh:${HADOOP_CLUSTER_BIN_PATH}/my-stop-hadoop-cluster.sh
       # hadoop cluster configs
       - ./src/infra/hadoop-config/core-site.xml:${HADOOP_HOME}/etc/hadoop/core-site.xml
       - ./src/infra/hadoop-config/hadoop-env.sh:${HADOOP_HOME}/etc/hadoop/hadoop-env.sh

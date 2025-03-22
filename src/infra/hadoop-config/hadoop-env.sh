@@ -156,7 +156,7 @@ export HADOOP_OS_TYPE=${HADOOP_OS_TYPE:-$(uname -s)}
 # start-dfs.sh will attempt to bring up all NNs, DNS, etc.
 
 # Options to pass to SSH when one of the "log into a host and
-# start/stop daemons" scripts is executed
+# start/stop daemons" snippets is executed
 export HADOOP_SSH_OPTS="-p 22"
 
 # The built-in ssh handler will limit itself to 10 simultaneous connections.
@@ -165,7 +165,7 @@ export HADOOP_SSH_OPTS="-p 22"
 # export HADOOP_SSH_PARALLEL=10
 
 # Filename which contains all of the hosts for any remote execution
-# helper scripts # such as workers.sh, start-dfs.sh, etc.
+# helper snippets # such as workers.sh, start-dfs.sh, etc.
 # export HADOOP_WORKERS="${HADOOP_CONF_DIR}/workers"
 
 ###
