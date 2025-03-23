@@ -2,8 +2,8 @@
 
 #####################################################################
 #                                                                   #
-#     mysql-metadata-restore.sh                                     #
-#     -- restore metadata in MySQL(hive metastore)                  #
+#     mysql-metastore-dump.sh                                       #
+#     -- dump all databases in MySQL(hive metastore)                #
 #      You MUST use this script                                     #
 #      for your first use the metastore container                   #
 #                                                                   #
@@ -18,5 +18,5 @@
 
 set -e
 
-echo "restore metadata in MySQL(hive metastore)"
-docker exec -i mysql-hive-metastore bash -c "restore-mysql.sh"
+echo "dump all databases in MySQL(hive metastore)"
+docker exec -i mysql-hive-metastore bash -c "dump-mysql.sh"
