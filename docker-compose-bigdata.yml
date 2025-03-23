@@ -178,7 +178,7 @@ services:
     ports:
       - "${LOCALHOST_MYSQL}:${CONTAINER_MYSQL}"
     volumes:
-      - ./src/infra/mysql-metastore-dump:/var/opt
+      - ./src/infra/mysql-metastore-dump/all_databases_backup.sql:/var/opt/all_databases_backup.sql
       - ./src/scripts/mysql-hive-metastore/dump-mysql.sh:/usr/bin/dump-mysql.sh
       - ./src/scripts/mysql-hive-metastore/restore-mysql.sh:/usr/bin/restore-mysql.sh
 #      - ./src/infra/mysql-data:/var/lib/mysql   # Local Persistence

@@ -1,12 +1,13 @@
-# 🚀 Quick Start
+# 🚀 Source Code Quick Start
 
 ### System Requirements
 
 Your Environment Requirements:
 
-- Operating System: MacOS 12 above, Windows 10, 11, Linux Ubuntu 20.04+/Debian
+- Operating System: MacOS 11 above, Windows 10, 11, Linux
 - Docker v28.0.1 (to get the cluster images)
 - git (to get the source code to run the cluster)
+- Bash
 
 In Docker Settings, you could config the memory, disk, number of cpu cores etc.
 Recommend setting:
@@ -43,10 +44,10 @@ docker commit oracle-oltp smarsbhu/proj1-dwh-cluster:oracle-oltp-latest
 docker commit airflow smarsbhu/proj1-dwh-cluster:airflow-latest
 ```
 
-Git Clone my repo
+git clone my repo or open the `AMOD_5410_term_project.zip` to get the source code
 
 ```bash
-git clone git@github.com:Smars-Bin-Hu/EComDWH-Pipeline.git <your/local/path>
+git clone https://github.com/Smars-Bin-Hu/EComDWH-Pipeline.git <your/local/path>
 ```
 
 finish your .env config (Important!)
@@ -59,18 +60,43 @@ Under the main folder `/ComDWH-Pipeline`, check the `.env` file
 # make .env public is for helping you deploy the testing hadoop cluster using docker-compose.yml
 # <<<<<<<<<<<<<<<<<<<<< Start - Your Config >>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-# Replace ${HADOOP_DATA_LOCAL_MOUNT_PATH} by your local valid path, to mount the hadoop cluster data
+# (Required) Replace ${HADOOP_DATA_LOCAL_MOUNT_PATH} by your local valid path, to mount the hadoop cluster data
 HADOOP_DATA_LOCAL_MOUNT_PATH=/Users/smars/bigdata-cluster-volume/hadoop-master/data
 
-# You may replace image name if you changed the pulled image name yourself
-HADOOP_MASTER_IMAGE=smarsbhu/proj1-dwh-cluster:hadoop-master-smars-1.1.1
-HADOOP_WORKER1_IMAGE=smarsbhu/proj1-dwh-cluster:hadoop-worker1-smars-1.1.1
-HADOOP_WORKER2_IMAGE=smarsbhu/proj1-dwh-cluster:hadoop-worker2-smars-1.1.1
-MYSQL_HIVE_METASTORE_IMAGE=smarsbhu/proj1-dwh-cluster:mysql-hive-metastore-smars-1.1.1
-HIVE_IMAGE=smarsbhu/proj1-dwh-cluster:hive-smars-1.1.1
+# (Optional) You may replace image name if you changed the pulled images'name yourself
+HADOOP_MASTER_IMAGE=smarsbhu/proj1-dwh-cluster:hadoop-master-smars-1.1.2
+HADOOP_WORKER1_IMAGE=smarsbhu/proj1-dwh-cluster:hadoop-worker1-smars-1.1.2
+HADOOP_WORKER2_IMAGE=smarsbhu/proj1-dwh-cluster:hadoop-worker2-smars-1.1.2
+MYSQL_HIVE_METASTORE_IMAGE=smarsbhu/proj1-dwh-cluster:mysql-hive-metastore-smars-1.1.2
+HIVE_IMAGE=smarsbhu/proj1-dwh-cluster:hive-smars-1.1.2
 SPARK_IMAGE=smarsbhu/proj1-dwh-cluster:spark-smars-1.1.1
 ORACLE_OLTP_IMAGE=smarsbhu/proj1-dwh-cluster:oracle-oltp-smars-1.1.1
 AIRFLOW_IMAGE=smarsbhu/proj1-dwh-cluster:airflow-smars-1.1.1
+
+# (Optional) Customize your localhost port config if you wish (you may want to change them to avoid port conflicts)
+LOCALHOST_SSH_PORT_HADOOP_MASTER=2222
+LOCALHOST_SSH_PORT_HADOOP_WORKER1=2223
+LOCALHOST_SSH_PORT_HADOOP_WORKER2=2224
+LOCALHOST_SSH_PORT_SPARK=2226
+LOCALHOST_HDFS_PORT=8020
+LOCALHOST_HDFS_NN1_WEB_UI=9870
+LOCALHOST_HDFS_NN2_WEB_UI=9871
+LOCALHOST_YARN_RM1_WEB_UI=8088
+LOCALHOST_YARN_RM2_WEB_UI=8089
+LOCALHOST_YARN_NM1_LOG_WEB_UI=8042
+LOCALHOST_YARN_NM2_LOG_WEB_UI=8043
+LOCALHOST_YARN_NM3_LOG_WEB_UI=8044
+LOCALHOST_YARN_JOB_HISTORY_SERVER=19888
+LOCALHOST_HIVE_SERVER2_PORT=10000
+LOCALHOST_HIVE_SERVER2_2ND_PORT=10002
+LOCALHOST_HIVE_METASTORE_PORT=9083
+LOCALHOST_MYSQL=3306
+LOCALHOST_ORACLE_CONNECT=1521
+LOCALHOST_ORACLE_MANAGE_CONSOLE=5500
+LOCALHOST_AIRFLOW_WEB_UI=8080
+LOCALHOST_SPARK_WEB_UI=4040
+LOCALHOST_SPARK_MASTER=7077
+LOCALHOST_SPARK_THRIFT_SERVER_PORT=10001
 # <<<<<<<<<<<<<<<<<<<<< End - Your Config >>>>>>>>>>>>>>>>>>>>>>>>>>>
 ```
 
