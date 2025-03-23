@@ -32,3 +32,7 @@ sleep 3
 
 echo "[5] Launching Job History Server on hadoop-master"
 docker exec -i hadoop-master bash -c "my-start-historyserver.sh"
+
+sleep 3
+echo "[6] Turn off the safe mode for Namenodes"
+docker exec -i hadoop-master bash -c "/usr/local/opt/module/hadoop/bin/hdfs dfsadmin -safemode leave"

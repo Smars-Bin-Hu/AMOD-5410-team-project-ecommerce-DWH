@@ -179,6 +179,8 @@ services:
       - "${LOCALHOST_MYSQL}:${CONTAINER_MYSQL}"
     volumes:
       - ./src/infra/mysql-metastore-dump:/var/opt
+      - ./src/scripts/mysql-hive-metastore/dump-mysql.sh:/usr/bin/dump-mysql.sh
+      - ./src/scripts/mysql-hive-metastore/restore-mysql.sh:/usr/bin/restore-mysql.sh
 #      - ./src/infra/mysql-data:/var/lib/mysql   # Local Persistence
 
   # ========== 5) Hive Service (metastore + hiveserver2) ==========
@@ -198,6 +200,10 @@ services:
       - "${LOCALHOST_HIVE_SERVER2_2ND_PORT}:${CONTAINER_HIVE_SERVER2_2ND_PORT}"  # HiveServer2 2nd
       - "${LOCALHOST_HIVE_METASTORE_PORT}:${CONTAINER_HIVE_METASTORE_PORT}"    # Metastore Thrift
     volumes:
+      # Scripts
+      - ./src/scripts/hive/start-hive-services.sh:/usr/local/bin/start-hive-services.sh
+      - ./src/scripts/hive/stop-hive-services.sh:/usr/local/bin/stop-hive-services.sh
+      # Configuration
       - ./src/infra/hive-config/hive-site.xml:${HIVE_HOME}/conf/hive-site.xml
       - ./src/infra/hive-config/hiveservices.sh:${HIVE_HOME}/bin/hiveservices.sh
       - ./src/infra/hive-config/mysql-connector-java-8.0.30.jar:${HIVE_HOME}/lib/mysql-connector-java-8.0.30.jar # JDBC
@@ -235,6 +241,10 @@ services:
       - "${LOCALHOST_SPARK_MASTER}:${CONTAINER_SPARK_MASTER}"  # Spark Master
       - "${LOCALHOST_SPARK_THRIFT_SERVER_PORT}:${CONTAINER_SPARK_THRIFT_SERVER_PORT}" # ThriftServer
     volumes:
+      # Scripts
+      - ./src/scripts/spark/start-spark-services.sh:/usr/local/bin/start-spark-services.sh
+      - ./src/scripts/spark/stop-spark-services.sh:/usr/local/bin/stop-spark-services.sh
+      # Configuration
       - ./src/infra/spark-config/spark-defaults.conf:${SPARK_HOME}/conf/spark-defaults.conf
       - ./src/infra/spark-config/spark-env.sh:${SPARK_HOME}/conf/spark-env.sh
       - ./src/infra/spark-config/log4j2.properties:${SPARK_HOME}/conf/log4j2.properties
