@@ -25,6 +25,8 @@ The core value of this project lies in its implementation of **enterprise-grade 
 
 To monitor and manage the system effectively, a **Grafana-based cluster monitoring system** has been implemented, providing real-time insights into cluster health metrics and assisting in performance tuning and capacity planning. Finally, by integrating **business intelligence (BI) and visualization solutions**, the project transforms complex data warehouse analytics into intuitive dashboards and reports, allowing business teams to make data-driven decisions more efficiently.
 
+![ECom-DWH-Pipeline](https://github.com/user-attachments/assets/97267f2a-f9f4-4d9e-9b0c-6a855c8af641)
+
 By combining these critical features—including:
 - Big Data Cluster Deployment
 - Enterprise-Grade Data Warehouse Modeling Standard
@@ -69,6 +71,14 @@ This project sets up a high-availability big data platform, including the follow
 | **5. Storage & Computation Optimization** | - SQL optimization (dynamic partitioning, indexing, storage partitioning) <br> - Spark tuning: Salting, Skew Join Hint, Broadcast Join, `reduceByKey` vs. `groupByKey` <br> - Hive tuning: Z-Order sorting (boost ClickHouse queries), Parquet + Snappy compression | - Pre & post optimization performance comparison <br> - Spark optimization code <br> - SQL execution plan screenshots |
 | **6. Monitoring** | - Prometheus + Grafana for monitoring Spark / Hive / ClickHouse <br> - ETL job status monitoring <br> - Data latency & failure rate tracking | - Prometheus configuration files <br> - Grafana dashboard screenshots <br> - ETL job monitoring logs |
 | **7. Business Intelligence & Visualization** | - PowerBI dashboards for data analysis <br> - Real business-driven visualizations <br> - Providing actionable business insights | - PowerBI visualization screenshots <br> - Business analysis report <br> - Key business metric explanations (BI Insights) |
+
+### Core Deliverables - Enterprise DWH Modelling
+
+[🔗 Doc - Data Warehouse Modelling Specification](https://github.com/Smars-Bin-Hu/EComDWH-Pipeline?tab=readme-ov-file#2-data-warehouse-modelling)
+
+![image](https://github.com/user-attachments/assets/ec924ea9-1acf-48a3-99ba-1546c1e8c3a9)
+![image](https://github.com/user-attachments/assets/ab21c750-052f-4c10-baf0-bc97e5ed8274)
+
 
 ## 📁 Project Directory
 
