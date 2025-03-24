@@ -78,6 +78,7 @@ This project sets up a high-availability big data platform, including the follow
 
 ![image](https://github.com/user-attachments/assets/ec924ea9-1acf-48a3-99ba-1546c1e8c3a9)
 ![image](https://github.com/user-attachments/assets/ab21c750-052f-4c10-baf0-bc97e5ed8274)
+![star-schema](https://github.com/user-attachments/assets/11064e1a-7520-471d-9c16-654d598ee5d9)
 
 
 ## 📁 Project Directory
