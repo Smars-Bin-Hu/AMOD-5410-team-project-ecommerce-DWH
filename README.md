@@ -25,8 +25,6 @@ The core value of this project lies in its implementation of **enterprise-grade 
 
 To monitor and manage the system effectively, a **Grafana-based cluster monitoring system** has been implemented, providing real-time insights into cluster health metrics and assisting in performance tuning and capacity planning. Finally, by integrating **business intelligence (BI) and visualization solutions**, the project transforms complex data warehouse analytics into intuitive dashboards and reports, allowing business teams to make data-driven decisions more efficiently.
 
-![ECom-DWH-Pipeline](https://github.com/user-attachments/assets/97267f2a-f9f4-4d9e-9b0c-6a855c8af641)
-
 By combining these critical features—including:
 - Big Data Cluster Deployment
 - Enterprise-Grade Data Warehouse Modeling Standard
@@ -37,6 +35,14 @@ By combining these critical features—including:
 - Business Intelligence & Visualization
 
 this project delivers a professional, robust, and highly efficient solution for enterprises dealing with large-scale data processing and analytics.
+
+### Data Platform Architecture 
+
+![ECom-DWH-Pipeline](https://github.com/Smars-Bin-Hu/my-draw-io/blob/main/ECom-DWH-Datapipeline-Proejct/ECom-DWH-Tech-Arc.drawio.svg)
+
+### Data Warehouse Modelling Architecture
+
+![ECom-DWH-Pipeline](https://github.com/Smars-Bin-Hu/my-draw-io/blob/main/ECom-DWH-Datapipeline-Proejct/ECom-DWH-Pipeline.drawio.svg)
 
 ## ⚙️ Key Features
 
@@ -76,11 +82,6 @@ This project sets up a high-availability big data platform, including the follow
 
 [🔗 Doc - Data Warehouse Modelling Specification](https://github.com/Smars-Bin-Hu/EComDWH-Pipeline?tab=readme-ov-file#2-data-warehouse-modelling)
 
-![image](https://github.com/user-attachments/assets/ec924ea9-1acf-48a3-99ba-1546c1e8c3a9)
-![image](https://github.com/user-attachments/assets/ab21c750-052f-4c10-baf0-bc97e5ed8274)
-![star-schema](https://github.com/user-attachments/assets/11064e1a-7520-471d-9c16-654d598ee5d9)
-
-
 ## 📁 Project Directory
 
 ```bash
@@ -103,6 +104,9 @@ This project sets up a high-availability big data platform, including the follow
 │── .env                          # `public the .env on purpose` for docker-compose file use
 │── .gitignore                    # Git ignore some directory not to be committed to the remote repo
 ```
+
+![image](https://github.com/user-attachments/assets/ec924ea9-1acf-48a3-99ba-1546c1e8c3a9)
+![image](https://github.com/user-attachments/assets/ab21c750-052f-4c10-baf0-bc97e5ed8274)
 
 ## 🚀 Quick Start `/src`
 
