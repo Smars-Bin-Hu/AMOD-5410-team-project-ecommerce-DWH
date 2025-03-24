@@ -44,7 +44,7 @@ this project delivers a professional, robust, and highly efficient solution for 
 
 ![ECom-DWH-Pipeline](https://github.com/Smars-Bin-Hu/my-draw-io/blob/main/ECom-DWH-Datapipeline-Proejct/ECom-DWH-Pipeline.drawio.svg)
 
-## ⚙️ Key Features
+## ⚙️ Key Features & Core Deliverables
 
 ### Tech Stack
 
@@ -82,6 +82,9 @@ This project sets up a high-availability big data platform, including the follow
 
 [🔗 Doc - Data Warehouse Modelling Specification](https://github.com/Smars-Bin-Hu/EComDWH-Pipeline?tab=readme-ov-file#2-data-warehouse-modelling)
 
+![image](https://github.com/user-attachments/assets/ec924ea9-1acf-48a3-99ba-1546c1e8c3a9)
+![image](https://github.com/user-attachments/assets/ab21c750-052f-4c10-baf0-bc97e5ed8274)
+
 ## 📁 Project Directory
 
 ```bash
@@ -104,9 +107,6 @@ This project sets up a high-availability big data platform, including the follow
 │── .env                          # `public the .env on purpose` for docker-compose file use
 │── .gitignore                    # Git ignore some directory not to be committed to the remote repo
 ```
-
-![image](https://github.com/user-attachments/assets/ec924ea9-1acf-48a3-99ba-1546c1e8c3a9)
-![image](https://github.com/user-attachments/assets/ab21c750-052f-4c10-baf0-bc97e5ed8274)
 
 ## 🚀 Quick Start `/src`
 
