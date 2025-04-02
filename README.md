@@ -177,5 +177,7 @@ This project sets up a high-availability big data platform, including the follow
 #### 7. Testing
   - spark_connect_oracle.py  
 
+## License
 
-
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.  
+Created and maintained by **Smars-Bin-Hu**.
