@@ -294,13 +294,13 @@ run some Spark SQL
 select * from ods.ods_product_fpd;
 
 -- data warehouse details
-select * from dwd.dwd_customer_product_ratings_ipd limit 20;
+select * from dwd.dwd_customer_product_ratings_ipd where data_date='' limit 20;
 
 -- data warehouse middle
-select * from dwm.dwm_orders_with_items_ipd limit 20;
+select * from dwm.dwm_orders_with_items_ipd where data_date='' limit 20;
 
 -- data warehouse summary 
-select * from dws.dws_orders_detailed_info_wide_ipd limit 20;
+select * from dws.dws_orders_detailed_info_wide_ipd where data_date='' limit 20;
 
 -- dimensional layer
 select * from dim.dim_payment_method_fpd limit 20;
