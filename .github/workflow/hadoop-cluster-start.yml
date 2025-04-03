@@ -1,0 +1,22 @@
+name: Start DWH Cluster
+
+on:
+  workflow_dispatch:
+
+jobs:
+  pull-images:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Pull Docker Images from Docker Hub
+        run: |
+          docker pull smarsbhu/proj1-dwh-cluster:hadoop-master-smars-1.1.1
+          docker pull smarsbhu/proj1-dwh-cluster:hadoop-worker1-smars-1.1.1
+          docker pull smarsbhu/proj1-dwh-cluster:hadoop-worker2-smars-1.1.1
+          docker pull smarsbhu/proj1-dwh-cluster:mysql-hive-metastore-smars-1.1.1
+          docker pull smarsbhu/proj1-dwh-cluster:hive-smars-1.1.1
+          docker pull smarsbhu/proj1-dwh-cluster:spark-smars-1.1.1
+          docker pull smarsbhu/proj1-dwh-cluster:oracle-oltp-smars-1.1.1
+          docker pull smarsbhu/proj1-dwh-cluster:airflow-smars-1.1.1
