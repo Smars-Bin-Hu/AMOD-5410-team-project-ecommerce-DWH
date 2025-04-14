@@ -26,7 +26,7 @@ jobs:
 
       - name: Start Big Data Cluster with Docker Compose
         run: |
-          docker compose -f docker-compose-bigdata.yaml up -d
+          docker compose -f docker-compose-bigdata.yml up -d
 
       - name: Show Running Containers (debug)
         run: |
