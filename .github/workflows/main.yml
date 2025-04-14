@@ -15,11 +15,11 @@ jobs:
 
       - name: Pull Docker Images from Docker Hub
         run: |
-          docker pull ghcr.io/smars-bin-hu/proj1-dwh-cluster:hadoop-master-smars-1.1.1
-          docker pull ghcr.io/smars-bin-hu/proj1-dwh-cluster:hadoop-worker1-smars-1.1.1
-          docker pull ghcr.io/smars-bin-hu/proj1-dwh-cluster:hadoop-worker2-smars-1.1.1
-          docker pull ghcr.io/smars-bin-hu/proj1-dwh-cluster:mysql-hive-metastore-smars-1.1.1
-          docker pull ghcr.io/smars-bin-hu/proj1-dwh-cluster:hive-smars-1.1.1
+          docker pull ghcr.io/smars-bin-hu/proj1-dwh-cluster:hadoop-master-smars-1.1.2
+          docker pull ghcr.io/smars-bin-hu/proj1-dwh-cluster:hadoop-worker1-smars-1.1.2
+          docker pull ghcr.io/smars-bin-hu/proj1-dwh-cluster:hadoop-worker2-smars-1.1.2
+          docker pull ghcr.io/smars-bin-hu/proj1-dwh-cluster:mysql-hive-metastore-smars-1.1.2
+          docker pull ghcr.io/smars-bin-hu/proj1-dwh-cluster:hive-smars-1.1.2
           docker pull ghcr.io/smars-bin-hu/proj1-dwh-cluster:spark-smars-1.1.1
           docker pull ghcr.io/smars-bin-hu/proj1-dwh-cluster:oracle-oltp-smars-1.1.1
           docker pull ghcr.io/smars-bin-hu/proj1-dwh-cluster:airflow-smars-1.1.1
