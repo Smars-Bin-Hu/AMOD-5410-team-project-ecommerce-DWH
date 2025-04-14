@@ -8,7 +8,7 @@ networks:
           gateway: ${HADOOP_GATEWAY}    # GATEWAY
 
 services:
-  # ========== 1) Hadoop Master ==========
+  # ========== 1) Hadoop Master ===========
   # -------------------------------------------------
   # Hadoop Master: start ZK、JournalNode、NameNode、ZKFC、ResourceManager、DN/NM
   # -------------------------------------------------
