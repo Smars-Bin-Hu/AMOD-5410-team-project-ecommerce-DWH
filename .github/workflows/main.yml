@@ -1,4 +1,4 @@
-name: Start DWH Cluster and Data Clients
+name: Data Warehouse Cluster Container Deployment and Services Launching
 
 on:
   workflow_dispatch:
