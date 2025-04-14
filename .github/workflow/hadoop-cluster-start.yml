@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  pull-images:
+  hadoop-cluster-start:
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout Repository
@@ -20,3 +20,41 @@ jobs:
           docker pull smarsbhu/proj1-dwh-cluster:spark-smars-1.1.1
           docker pull smarsbhu/proj1-dwh-cluster:oracle-oltp-smars-1.1.1
           docker pull smarsbhu/proj1-dwh-cluster:airflow-smars-1.1.1
+
+      - name: Start Big Data Cluster with Docker Compose
+        run: |
+          docker compose -f docker-compose-bigdata.yaml up -d
+
+      - name: Show Running Containers (debug)
+        run: |
+          docker ps -a
+
+      - name: Start Hadoop HA Cluster
+        run: |
+          bash start-hadoop-cluster.sh
+
+      - name: Check JPS on hadoop-master
+        run: |
+          docker exec hadoop-master jps
+
+      - name: Check JPS on hadoop-worker1
+        run: |
+          docker exec hadoop-worker1 jps
+
+      - name: Check JPS on hadoop-worker2
+        run: |
+          docker exec hadoop-worker2 jps
+
+      - name: Check HDFS HA status
+        run: |
+          echo "HDFS nn1:"
+          docker exec hadoop-master hdfs haadmin -getServiceState nn1
+          echo "HDFS nn2:"
+          docker exec hadoop-master hdfs haadmin -getServiceState nn2
+
+      - name: Check YARN HA status
+        run: |
+          echo "YARN rm1:"
+          docker exec hadoop-master yarn rmadmin -getServiceState rm1
+          echo "YARN rm2:"
+          docker exec hadoop-master yarn rmadmin -getServiceState rm2

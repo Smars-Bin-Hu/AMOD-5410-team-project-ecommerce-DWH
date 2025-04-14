@@ -2,6 +2,7 @@ src/infra/mysql-data/
 src/infra/hdfs-data/
 .idea
 .vscode
+GHCR_TOKEN
 
 # <<<<<<<<<======== public .env for locally deploying
 # .env
