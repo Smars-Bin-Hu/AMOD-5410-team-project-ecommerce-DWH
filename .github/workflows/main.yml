@@ -5,7 +5,7 @@ on:
 
 jobs:
   hadoop-cluster-start:
-    runs-on: ubuntu-20.04
+    runs-on: self-hosted
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
