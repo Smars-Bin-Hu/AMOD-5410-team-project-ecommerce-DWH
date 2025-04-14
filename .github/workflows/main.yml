@@ -106,7 +106,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         
-      - name: Start Data Clients: Hive Metastore, Spark
+      - name: Start Data Clients - Hive Metastore, Hiveserver2, Spark ThriftServer
         run: |
           bash start-data-clients.sh
 
