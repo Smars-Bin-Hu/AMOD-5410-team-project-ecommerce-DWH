@@ -81,6 +81,7 @@ jobs:
   
   mysql-metadata-restore:
     runs-on: self-hosted
+    needs: hadoop-cluster-start
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -102,6 +103,7 @@ jobs:
 
   data-clients-start:
     runs-on: self-hosted
+    needs: mysql-metadata-restore
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -134,6 +136,7 @@ jobs:
 
   data-clients-stop:
     runs-on: self-hosted
+    needs: data-clients-start
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -166,6 +169,7 @@ jobs:
 
   hadoop-cluster-stop:
     runs-on: self-hosted
+    needs: data-clients-stop
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -209,6 +213,7 @@ jobs:
   
   docker-compose-bigdata-stop:
     runs-on: self-hosted
+    needs: hadoop-cluster-stop
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
