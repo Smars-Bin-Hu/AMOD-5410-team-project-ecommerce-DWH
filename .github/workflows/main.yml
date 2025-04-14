@@ -213,7 +213,7 @@ jobs:
   
   docker-compose-bigdata-stop:
     runs-on: self-hosted
-    needs: hadoop-cluster-stop
+    if: always()
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
