@@ -1,4 +1,4 @@
-name: Start DWH Cluster and Data Clients
+name: Data Warehouse Cluster Container Deployment and Services Launching
 
 on:
   workflow_dispatch:
@@ -108,7 +108,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         
-      - name: Start Data Clients: Hive Metastore, Spark
+      - name: Start Data Clients - Hive Metastore, Hiveserver2, Spark ThriftServer
         run: |
           bash start-data-clients.sh
 
@@ -141,7 +141,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         
-      - name: Stop Data Clients: Hive Metastore, Spark
+      - name: Stop Data Clients - Hive Metastore, Hiveserver2, Spark ThriftServer
         run: |
           bash stop-data-clients.sh
       
