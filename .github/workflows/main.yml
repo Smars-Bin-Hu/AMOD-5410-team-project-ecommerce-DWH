@@ -1,0 +1,222 @@
+name: Start DWH Cluster and Data Clients
+
+on:
+  workflow_dispatch:
+
+jobs:
+  hadoop-cluster-start:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Login to GitHub Container Registry
+        run: echo "${{ secrets.GHCR_TOKEN }}" | docker login ghcr.io -u smars-bin-hu --password-stdin
+
+      - name: Pull Docker Images from Docker Hub
+        run: |
+          docker pull ghcr.io/smars-bin-hu/proj1-dwh-cluster:hadoop-master-smars-1.1.2
+          docker pull ghcr.io/smars-bin-hu/proj1-dwh-cluster:hadoop-worker1-smars-1.1.2
+          docker pull ghcr.io/smars-bin-hu/proj1-dwh-cluster:hadoop-worker2-smars-1.1.2
+          docker pull ghcr.io/smars-bin-hu/proj1-dwh-cluster:mysql-hive-metastore-smars-1.1.2
+          docker pull ghcr.io/smars-bin-hu/proj1-dwh-cluster:hive-smars-1.1.2
+          docker pull ghcr.io/smars-bin-hu/proj1-dwh-cluster:spark-smars-1.1.1
+          docker pull ghcr.io/smars-bin-hu/proj1-dwh-cluster:oracle-oltp-smars-1.1.1
+          docker pull ghcr.io/smars-bin-hu/proj1-dwh-cluster:airflow-smars-1.1.1
+
+      - name: Start Big Data Cluster with Docker Compose
+        run: |
+          docker compose -f docker-compose-bigdata.yml up -d
+
+      - name: Show Running Containers (debug)
+        run: |
+          docker ps -a
+
+      - name: Start Hadoop HA Cluster
+        run: |
+          bash start-hadoop-cluster.sh
+
+      - name: Check JPS on hadoop-master
+        run: |
+          processes=$(docker exec hadoop-master jps)
+          echo "$processes" | grep -q "ResourceManager" || exit 1
+          echo "$processes" | grep -q "NameNode" || exit 1
+          echo "$processes" | grep -q "DataNode" || exit 1
+          echo "$processes" | grep -q "JournalNode" || exit 1
+          echo "$processes" | grep -q "QuorumPeerMain" || exit 1
+          echo "$processes" | grep -q "NodeManager" || exit 1
+          echo "$processes" | grep -q "DFSZKFailoverController" || exit 1
+        continue-on-error: false
+
+      - name: Check JPS on hadoop-worker1
+        run: |
+          processes=$(docker exec hadoop-worker1 jps)
+          echo "$processes" | grep -q "ResourceManager" || exit 1
+          echo "$processes" | grep -q "DataNode" || exit 1
+          echo "$processes" | grep -q "JournalNode" || exit 1
+          echo "$processes" | grep -q "QuorumPeerMain" || exit 1
+          echo "$processes" | grep -q "NodeManager" || exit 1
+        continue-on-error: false
+
+      - name: Check JPS on hadoop-worker2
+        run: |
+          processes=$(docker exec hadoop-worker2 jps)
+          echo "$processes" | grep -q "NameNode" || exit 1
+          echo "$processes" | grep -q "DFSZKFailoverController" || exit 1
+          echo "$processes" | grep -q "DataNode" || exit 1
+          echo "$processes" | grep -q "JournalNode" || exit 1
+          echo "$processes" | grep -q "QuorumPeerMain" || exit 1
+          echo "$processes" | grep -q "NodeManager" || exit 1
+        continue-on-error: false
+
+      - name: Check HDFS HA status
+        run: |
+          echo "HDFS nn1:" && docker exec -i hadoop-master bash -c "/usr/local/opt/module/hadoop/bin/hdfs haadmin -getServiceState nn1"
+          echo "HDFS nn2:" && docker exec -i hadoop-master bash -c "/usr/local/opt/module/hadoop/bin/hdfs haadmin -getServiceState nn2"
+
+      - name: Check YARN HA status
+        run: |
+          echo "YARN rm1:" && docker exec -i hadoop-master bash -c "/usr/local/opt/module/hadoop/bin/yarn rmadmin -getServiceState rm1"
+          echo "YARN rm2:" && docker exec -i hadoop-master bash -c "/usr/local/opt/module/hadoop/bin/yarn rmadmin -getServiceState rm2"
+  
+  mysql-metadata-restore:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: restore MySQL Metastore
+        run: |
+          bash mysql-meta-restore.sh
+
+      - name: check the metastore database
+        run: |
+          databases=$(docker exec -i mysql-hive-metastore bash -c "mysql -u root -p${{ secrets.MYSQL_ROOT_PASSWORD }} -e 'show databases;'")
+          echo "$databases" | grep -q "metastore"
+          if [ $? -ne 0 ]; then
+            echo "metastore database is not restored"
+            exit 1
+          fi
+          echo "metastore database is restored"
+        continue-on-error: false
+
+  data-clients-start:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        
+      - name: Start Data Clients: Hive Metastore, Spark
+        run: |
+          bash start-data-clients.sh
+
+      - name: Check Hive container ports
+        id: check_hive_ports
+        run: |
+          hive_ports=$(docker exec -i hive bash -c "/bin/netstat -nltp | grep -E '9083|10000|10002'")
+          if [ -z "$hive_ports" ]; then
+            echo "Hive ports are not open"
+            exit 1
+          fi
+          echo "Hive ports are open"
+        continue-on-error: false
+
+      - name: Check Spark container ports
+        id: check_spark_ports
+        run: |
+          spark_ports=$(docker exec -i spark bash -c "/bin/netstat -nltp | grep -E '4040|10000'")
+          if [ -z "$spark_ports" ]; then
+            echo "Spark ports are not open"
+            exit 1
+          fi
+          echo "Spark ports are open"
+        continue-on-error: false
+
+  data-clients-stop:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        
+      - name: Stop Data Clients: Hive Metastore, Spark
+        run: |
+          bash stop-data-clients.sh
+      
+      - name: Check Hive container ports
+        id: check_hive_ports
+        run: |
+          hive_ports=$(docker exec -i hive bash -c "/bin/netstat -nltp | grep -E '9083|10000|10002'")
+          if [ ! -z "$hive_ports" ]; then
+            echo "Hive ports 9083, 10000, 10002 are still running"
+            exit 1
+          fi
+          echo "Hive ports are closed"
+        continue-on-error: false
+
+      - name: Check Spark container ports
+        id: check_spark_ports
+        run: |
+          spark_ports=$(docker exec -i spark bash -c "/bin/netstat -nltp | grep -E '4040|10000'")
+          if [ ! -z "$spark_ports" ]; then
+            echo "Spark ports 4040, 10000 are still running"
+            exit 1
+          fi
+          echo "Spark ports are closed"
+        continue-on-error: false
+
+  hadoop-cluster-stop:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        
+      - name: Stop Hadoop HA Cluster
+        run: |
+          bash stop-hadoop-cluster.sh
+
+      - name: Check JPS on hadoop-master
+        run: |
+          processes=$(docker exec hadoop-master jps)
+          echo "$processes" | grep -q "ResourceManager" || exit 1
+          echo "$processes" | grep -q "NameNode" || exit 1
+          echo "$processes" | grep -q "DataNode" || exit 1
+          echo "$processes" | grep -q "JournalNode" || exit 1
+          echo "$processes" | grep -q "QuorumPeerMain" || exit 1
+          echo "$processes" | grep -q "NodeManager" || exit 1
+          echo "$processes" | grep -q "DFSZKFailoverController" || exit 1
+        continue-on-error: false
+
+      - name: Check JPS on hadoop-worker1
+        run: |
+          processes=$(docker exec hadoop-worker1 jps)
+          echo "$processes" | grep -q "ResourceManager" || exit 1
+          echo "$processes" | grep -q "DataNode" || exit 1
+          echo "$processes" | grep -q "JournalNode" || exit 1
+          echo "$processes" | grep -q "QuorumPeerMain" || exit 1
+          echo "$processes" | grep -q "NodeManager" || exit 1
+        continue-on-error: false
+
+      - name: Check JPS on hadoop-worker2
+        run: |
+          processes=$(docker exec hadoop-worker2 jps)
+          echo "$processes" | grep -q "NameNode" || exit 1
+          echo "$processes" | grep -q "DFSZKFailoverController" || exit 1
+          echo "$processes" | grep -q "DataNode" || exit 1
+          echo "$processes" | grep -q "JournalNode" || exit 1
+          echo "$processes" | grep -q "QuorumPeerMain" || exit 1
+          echo "$processes" | grep -q "NodeManager" || exit 1
+        continue-on-error: false
+  
+  docker-compose-bigdata-stop:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        
+      - name: Stop Big Data Cluster with Docker Compose
+        run: |
+          docker compose -p ecomdwh-batchdataprocessingplatform -f docker-compose-bigdata.yml down -v
+
+      - name: Show Running Containers (debug)
+        run: |
+          docker ps -a
