@@ -179,37 +179,71 @@ jobs:
 
       - name: Check JPS on hadoop-master
         run: |
-          processes=$(docker exec hadoop-master jps)
-          echo "$processes" | grep -q "ResourceManager" || exit 1
-          echo "$processes" | grep -q "NameNode" || exit 1
-          echo "$processes" | grep -q "DataNode" || exit 1
-          echo "$processes" | grep -q "JournalNode" || exit 1
-          echo "$processes" | grep -q "QuorumPeerMain" || exit 1
-          echo "$processes" | grep -q "NodeManager" || exit 1
-          echo "$processes" | grep -q "DFSZKFailoverController" || exit 1
+          processes=$(docker exec hadoop-master jps || echo "")
+          running_services=""
+          
+          for service in "ResourceManager" "NameNode" "DataNode" "JournalNode" "QuorumPeerMain" "NodeManager" "DFSZKFailoverController"; do
+            if echo "$processes" | grep -q "$service"; then
+              running_services="$running_services $service"
+            fi
+          done
+          
+          if [ ! -z "$running_services" ]; then
+            echo "::warning::Following services are still running on hadoop-master:$running_services"
+            echo "HADOOP_STOP_FAILED=true" >> $GITHUB_ENV
+          else
+            echo "All services on hadoop-master are stopped successfully"
+          fi
         continue-on-error: false
 
       - name: Check JPS on hadoop-worker1
         run: |
-          processes=$(docker exec hadoop-worker1 jps)
-          echo "$processes" | grep -q "ResourceManager" || exit 1
-          echo "$processes" | grep -q "DataNode" || exit 1
-          echo "$processes" | grep -q "JournalNode" || exit 1
-          echo "$processes" | grep -q "QuorumPeerMain" || exit 1
-          echo "$processes" | grep -q "NodeManager" || exit 1
+          processes=$(docker exec hadoop-worker1 jps || echo "")
+          running_services=""
+          
+          for service in "ResourceManager" "DataNode" "JournalNode" "QuorumPeerMain" "NodeManager"; do
+            if echo "$processes" | grep -q "$service"; then
+              running_services="$running_services $service"
+            fi  
+          done
+          
+          if [ ! -z "$running_services" ]; then
+            echo "::warning::Following services are still running on hadoop-worker1:$running_services"
+            echo "HADOOP_STOP_FAILED=true" >> $GITHUB_ENV
+          else  
+            echo "All services on hadoop-worker1 are stopped successfully"
+          fi
         continue-on-error: false
 
       - name: Check JPS on hadoop-worker2
         run: |
-          processes=$(docker exec hadoop-worker2 jps)
-          echo "$processes" | grep -q "NameNode" || exit 1
-          echo "$processes" | grep -q "DFSZKFailoverController" || exit 1
-          echo "$processes" | grep -q "DataNode" || exit 1
-          echo "$processes" | grep -q "JournalNode" || exit 1
-          echo "$processes" | grep -q "QuorumPeerMain" || exit 1
-          echo "$processes" | grep -q "NodeManager" || exit 1
+          processes=$(docker exec hadoop-worker2 jps || echo "")
+          running_services=""
+          
+          for service in "NameNode" "DFSZKFailoverController" "DataNode" "JournalNode" "QuorumPeerMain" "NodeManager"; do
+            if echo "$processes" | grep -q "$service"; then
+              running_services="$running_services $service"
+            fi
+          done
+          
+          if [ ! -z "$running_services" ]; then
+            echo "::warning::Following services are still running on hadoop-worker2:$running_services"
+            echo "HADOOP_STOP_FAILED=true" >> $GITHUB_ENV
+          else
+            echo "All services on hadoop-worker2 are stopped successfully"
+          fi  
         continue-on-error: false
   
+      - name: Check if hadoop cluster stopped successfully
+        run: |
+          if [ "${HADOOP_STOP_FAILED:-false}" == "true" ]; then
+            echo "::error::Hadoop cluster stop operation failed, some services are still running"
+            exit 1
+          else
+            echo "Hadoop cluster stopped successfully"
+          fi
+        continue-on-error: false
+        
   # docker-compose-bigdata-stop:
   #   runs-on: self-hosted
   #   needs: [hadoop-cluster-start, mysql-metadata-restore, data-clients-start, data-clients-stop,  hadoop-cluster-stop]
