@@ -210,18 +210,18 @@ jobs:
           echo "$processes" | grep -q "NodeManager" || exit 1
         continue-on-error: false
   
-  docker-compose-bigdata-stop:
-    runs-on: self-hosted
-    needs: [hadoop-cluster-start, mysql-metadata-restore, data-clients-start, data-clients-stop,  hadoop-cluster-stop]
-    if: always()
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+  # docker-compose-bigdata-stop:
+  #   runs-on: self-hosted
+  #   needs: [hadoop-cluster-start, mysql-metadata-restore, data-clients-start, data-clients-stop,  hadoop-cluster-stop]
+  #   if: always()
+  #   steps:
+  #     - name: Checkout Repository
+  #       uses: actions/checkout@v4
         
-      - name: Stop Big Data Cluster with Docker Compose
-        run: |
-          docker compose -p ecomdwh-batchdataprocessingplatform -f docker-compose-bigdata.yml down -v
+  #     - name: Stop Big Data Cluster with Docker Compose
+  #       run: |
+  #         docker compose -p ecomdwh-batchdataprocessingplatform -f docker-compose-bigdata.yml down -v
 
-      - name: Show Running Containers (debug)
-        run: |
-          docker ps -a
+  #     - name: Show Running Containers (debug)
+  #       run: |
+  #         docker ps -a
