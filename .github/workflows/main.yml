@@ -92,7 +92,7 @@ jobs:
 
       - name: check the metastore database
         run: |
-          databases=$(docker exec -i mysql-hive-metastore bash -c "mysql -u root -p${{ secrets.MYSQL_ROOT_PASSWORD }} -e 'show databases;'")
+          databases=$(docker exec -i mysql-hive-metastore bash -c "mysql -u root -p ${{ secrets.MYSQL_ROOT_PASSWORD }} -e 'show databases;'")
           echo "$databases" | grep -q "metastore"
           if [ $? -ne 0 ]; then
             echo "metastore database is not restored"
