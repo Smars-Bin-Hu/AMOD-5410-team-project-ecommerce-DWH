@@ -159,7 +159,7 @@ jobs:
       - name: Check Spark container ports
         id: check_spark_ports
         run: |
-          spark_ports=$(docker exec -i spark bash -c "/bin/netstat -nltp | grep -E '4040|10000'")
+          spark_ports=$(docker exec -i spark bash -c "/bin/netstat -nltp | grep -E '4040|10000'"  || true)
           if [ ! -z "$spark_ports" ]; then
             echo "Spark ports 4040, 10000 are still running"
             exit 1
