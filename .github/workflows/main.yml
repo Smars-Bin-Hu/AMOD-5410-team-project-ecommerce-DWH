@@ -92,7 +92,7 @@ jobs:
 
       - name: check the metastore database
         run: |
-          databases=$(docker exec -i mysql-hive-metastore bash -c "mysql -u root -pWhos3301919! -e 'show databases;'")
+          databases=$(docker exec -i mysql-hive-metastore bash -c "mysql -u root -p${{ secrets.MYSQL_ROOT_PASSWORD }} -e 'show databases;'")
           echo "$databases" | grep -q "metastore"
           if [ $? -ne 0 ]; then
             echo "metastore database is not restored"
@@ -148,9 +148,9 @@ jobs:
       - name: Check Hive container ports
         id: check_hive_ports
         run: |
-          hive_ports=$(docker exec -i hive bash -c "/bin/netstat -nltp | grep -E '9083|10000|10002'")
+          hive_ports=$(docker exec -i hive bash -c "/bin/netstat -nltp | grep -E '9083|10000|10002'" || true)
           if [ ! -z "$hive_ports" ]; then
-            echo "Hive ports 9083, 10000, 10002 are still running"
+            echo "Hive ports 9083, 10000, or 10002 are still running"
             exit 1
           fi
           echo "Hive ports are closed"
@@ -211,18 +211,18 @@ jobs:
           echo "$processes" | grep -q "NodeManager" || exit 1
         continue-on-error: false
   
-  # docker-compose-bigdata-stop:
-  #   runs-on: self-hosted
-  #   needs: [hadoop-cluster-start, mysql-metadata-restore, data-clients-start, data-clients-stop,  hadoop-cluster-stop]
-  #   if: always()
-  #   steps:
-  #     - name: Checkout Repository
-  #       uses: actions/checkout@v4
+  docker-compose-bigdata-stop:
+    runs-on: self-hosted
+    needs: [hadoop-cluster-start, mysql-metadata-restore, data-clients-start, data-clients-stop,  hadoop-cluster-stop]
+    if: always()
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
         
-  #     - name: Stop Big Data Cluster with Docker Compose
-  #       run: |
-  #         docker compose -p ecomdwh-batchdataprocessingplatform -f docker-compose-bigdata.yml down -v
+      - name: Stop Big Data Cluster with Docker Compose
+        run: |
+          docker compose -p ecomdwh-batchdataprocessingplatform -f docker-compose-bigdata.yml down -v
 
-  #     - name: Show Running Containers (debug)
-  #       run: |
-  #         docker ps -a
+      - name: Show Running Containers (debug)
+        run: |
+          docker ps -a
