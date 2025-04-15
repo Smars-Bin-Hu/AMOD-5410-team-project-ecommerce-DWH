@@ -17,8 +17,10 @@
 <img src="https://img.shields.io/badge/apache_hadoop-3.2.4-blue?style=plastic&logo=apachehadoop&logoColor=yellow&logoSize=auto&color=blue"/>
 <img src="https://img.shields.io/badge/apache_hive-3.1.3-blue?style=plastic&logo=apachehive&logoColor=yellow&logoSize=auto&color=yellow"/>
 <img src="https://img.shields.io/badge/python-3.12.9-blue?style=plastic&logo=python&logoColor=yellow&logoSize=auto&color=blue"/>
+<a href="https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/actions/workflows/main.yml">
+    <img src="https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/actions/workflows/main.yml/badge.svg" image"/>
+</a>
 </p>
-
 
 This project aims to build an enterprise-grade offline data warehouse solution based on e-commerce platform order data. By leveraging **Docker containers** to simulate a big data platform, it achieves a complete workflow from ETL processing to data warehouse modeling, OLAP analysis, and data visualization. 
 
