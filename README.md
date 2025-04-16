@@ -162,7 +162,7 @@ This project sets up a high-availability big data platform, including the follow
   - Spark 节点的搭建和配置
   - mysql 节点的搭建和配置
   - oracle 节点的搭建和配置
-  - airflow 节点的搭建和配置
+  - airflow 节点的搭建和配置 (airflow.cfg 里 mysql 和 localexecutor 的配置）
   - `docker-compose` 文件的配置
 
 #### 5. Development
