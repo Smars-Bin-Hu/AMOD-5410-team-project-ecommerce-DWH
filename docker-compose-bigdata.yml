@@ -290,8 +290,13 @@ services:
     #   - _AIRFLOW_WWW_USER_PASSWORD=admin
     ports:
       - "${LOCALHOST_AIRFLOW_WEB_UI}:${CONTAINER_AIRFLOW_WEB_UI}"
-    # volumes:
-    #   - ./src/infra/airflow-configs/start_airflow.sh:${AIRFLOW_HOME}/start_airflow.sh
-    command: >
-      bash -c "/opt/airflow/start_airflow.sh;
-               tail -f /dev/null"
+    volumes:
+      # Configuration
+      - ./src/infra/airflow-config/airflow.cfg:/root/airflow/airflow.cfg
+      - ./src/infra/airflow-config/webserver_config.py:/root/airflow/webserver_config.py
+      # Scripts
+      - ./src/scripts/airflow/start-airflow.sh:/usr/local/bin/start-airflow.sh
+      - ./src/scripts/airflow/stop-airflow.sh:/usr/local/bin/stop-airflow.sh
+#    command: >
+#      bash -c "/opt/airflow/start_airflow.sh;
+#               tail -f /dev/null"
