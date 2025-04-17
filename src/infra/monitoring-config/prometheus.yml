@@ -1,0 +1,64 @@
+# --------------------------------------
+# GLOBAL CONFIG
+# --------------------------------------
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+  scrape_timeout: 10s
+
+  external_labels:
+    cluster: hadoop-docker
+    environment: production
+
+# --------------------------------------
+# ALERTMANAGER CONFIG
+# --------------------------------------
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets:
+            - localhost:9093
+
+# --------------------------------------
+# RULE FILES (OPTIONAL)
+# --------------------------------------
+rule_files:
+# - "alert-rules/*.yml"
+
+# --------------------------------------
+# SCRAPE CONFIGS
+# --------------------------------------
+scrape_configs:
+  # Node Exporter - Hadoop Cluster
+  - job_name: 'node-exporter-hadoop-cluster'
+    static_configs:
+      - targets:
+          - 'hadoop-master:9100'
+          - 'hadoop-worker1:9100'
+          - 'hadoop-worker2:9100'
+        labels:
+          role: 'hadoop-cluster'
+
+  # YARN Resource Manager UI (optional metrics scrape via /metrics endpoint)
+  - job_name: 'yarn-resourcemanager'
+    metrics_path: /metrics
+    static_configs:
+      - targets:
+        - 'hadoop-master:8088'
+        - 'hadoop-worker1:8088'
+
+  # HDFS NameNode UI (optional metrics scrape)
+  - job_name: 'hdfs-namenode'
+    metrics_path: /metrics
+    static_configs:
+      - targets:
+        - 'hadoop-master:9870'
+        - 'hadoop-worker2:9870'
+
+  # HDFS DataNode UI (optional metrics scrape)
+  - job_name: 'hdfs-datanodes'
+    metrics_path: /metrics
+    static_configs:
+      - targets:
+          - 'hadoop-worker1:9864'
+          - 'hadoop-worker2:9864'

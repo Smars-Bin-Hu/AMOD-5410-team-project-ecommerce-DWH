@@ -20,6 +20,7 @@ docker exec -it --user root hive bash
 docker exec -it --user root spark bash
 docker exec -it --user root airflow bash
 docker exec -it --user root oracle-oltp bash
+docker exec -it --user root monitoring bash
 ```
 
 Docker Commit container as Image
@@ -32,6 +33,7 @@ docker commit hive smarsbhu/proj1-dwh-cluster:hive-smars-1.1.1
 docker commit spark smarsbhu/proj1-dwh-cluster:spark-smars-1.1.1
 docker commit oracle-oltp smarsbhu/proj1-dwh-cluster:oracle-oltp-smars-1.1.1
 docker commit airflow smarsbhu/proj1-dwh-cluster:airflow-smars-1.1.1
+docker commit monitoring smarsbhu/proj1-dwh-cluster:monitoring-smars-1.1.0
 ```
 
 ## DockerHub Images

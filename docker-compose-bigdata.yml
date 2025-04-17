@@ -50,6 +50,8 @@ services:
       - ./src/scripts/hadoop-master/my-start-NM-DN.sh:${HADOOP_CLUSTER_BIN_PATH}/my-start-NM-DN.sh
       - ./src/scripts/hadoop-master/my-start-historyserver.sh:${HADOOP_CLUSTER_BIN_PATH}/my-start-historyserver.sh
       - ./src/scripts/hadoop-master/my-stop-hadoop-cluster.sh:${HADOOP_CLUSTER_BIN_PATH}/my-stop-hadoop-cluster.sh
+      - ./src/scripts/hadoop-master/my-start-node-exporter.sh:${HADOOP_CLUSTER_BIN_PATH}/my-start-node-exporter.sh
+      - ./src/scripts/hadoop-master/my-stop-node-exporter.sh:${HADOOP_CLUSTER_BIN_PATH}/my-stop-node-exporter.sh
       # hadoop cluster configs
       - ./src/infra/hadoop-config/core-site.xml:${HADOOP_HOME}/etc/hadoop/core-site.xml
       - ./src/infra/hadoop-config/hadoop-env.sh:${HADOOP_HOME}/etc/hadoop/hadoop-env.sh
@@ -100,6 +102,8 @@ services:
       - ./src/scripts/hadoop-worker1/my-start-RM.sh:${HADOOP_CLUSTER_BIN_PATH}/my-start-RM.sh
       - ./src/scripts/hadoop-worker1/my-start-NM-DN.sh:${HADOOP_CLUSTER_BIN_PATH}/my-start-NM-DN.sh
       - ./src/scripts/hadoop-worker1/my-stop-hadoop-cluster.sh:${HADOOP_CLUSTER_BIN_PATH}/my-stop-hadoop-cluster.sh
+      - ./src/scripts/hadoop-worker1/my-start-node-exporter.sh:${HADOOP_CLUSTER_BIN_PATH}/my-start-node-exporter.sh
+      - ./src/scripts/hadoop-worker1/my-stop-node-exporter.sh:${HADOOP_CLUSTER_BIN_PATH}/my-stop-node-exporter.sh
       # hadoop cluster configs
       - ./src/infra/hadoop-config/core-site.xml:${HADOOP_HOME}/etc/hadoop/core-site.xml
       - ./src/infra/hadoop-config/hadoop-env.sh:${HADOOP_HOME}/etc/hadoop/hadoop-env.sh
@@ -150,6 +154,8 @@ services:
       - ./src/scripts/hadoop-worker2/my-start-NN-ZKFC.sh:${HADOOP_CLUSTER_BIN_PATH}/my-start-NN-ZKFC.sh
       - ./src/scripts/hadoop-worker2/my-start-NM-DN.sh:${HADOOP_CLUSTER_BIN_PATH}/my-start-NM-DN.sh
       - ./src/scripts/hadoop-worker2/my-stop-hadoop-cluster.sh:${HADOOP_CLUSTER_BIN_PATH}/my-stop-hadoop-cluster.sh
+      - ./src/scripts/hadoop-worker2/my-start-node-exporter.sh:${HADOOP_CLUSTER_BIN_PATH}/my-start-node-exporter.sh
+      - ./src/scripts/hadoop-worker2/my-stop-node-exporter.sh:${HADOOP_CLUSTER_BIN_PATH}/my-stop-node-exporter.sh
       # hadoop cluster configs
       - ./src/infra/hadoop-config/core-site.xml:${HADOOP_HOME}/etc/hadoop/core-site.xml
       - ./src/infra/hadoop-config/hadoop-env.sh:${HADOOP_HOME}/etc/hadoop/hadoop-env.sh
@@ -218,8 +224,8 @@ services:
       - HIVE_METASTORE_DB_USER=${METASTORE_USERNAME}
       - HIVE_METASTORE_DB_PASS=${METASTORE_PASSWORD}
     # command: >
-    #   bash -c "/opt/hive/bin/hiveservices.sh start; 
-    #           tail -f /dev/null" 
+    #   bash -c "/opt/hive/bin/hiveservices.sh start;
+    #           tail -f /dev/null"
 
   # ========== 6) Spark on YARN ==========
   spark:
@@ -228,7 +234,6 @@ services:
     hostname: spark
     networks:
       bigdata-net:
-
         ipv4_address: ${SPARK_IP}
     depends_on: # launch the hadoop cluster first
       - hadoop-master
@@ -300,3 +305,27 @@ services:
 #    command: >
 #      bash -c "/opt/airflow/start_airflow.sh;
 #               tail -f /dev/null"
+
+  # ========== 9) Monitoring ==========
+  monitoring:
+    container_name: monitoring
+    image: ${MONITORING_IMAGE}
+    hostname: monitoring
+    networks:
+      bigdata-net:
+        ipv4_address: ${MONITORING_IP}
+    ports:
+      - ${LOCALHOST_PROMETHEUS_WEB_UI}:${CONTAINER_PROMETHEUS_WEB_UI}
+      - ${LOCALHOST_GRAFANA_WEB_UI}:${CONTAINER_GRAFANA_WEB_UI}
+      - ${LOCALHOST_ALERTMANAGER_WEB_UI}:${CONTAINER_ALERTMANAGER_WEB_UI}
+    volumes:
+      # Configuration
+      - ./src/infra/monitoring-config/prometheus.yml:${MONITORING_PROMETHEUS_HOME}/prometheus.yml
+      - ./src/infra/monitoring-config/alertmanager.yml:${MONITORING_ALERTMANAGER_HOME}/alertmanager.yml
+      - ./src/infra/monitoring-config/grafana.ini:${MONITORING_GRAFANA_CONF_DIR}/grafana.ini
+      - ./src/infra/monitoring-config/prometheus_datasource.yml:${MONITORING_GRAFANA_CONF_DIR}/provisioning/datasources/prometheus_datasource.yml
+      # Scripts
+      - ./src/scripts/monitoring/start-monitoring-services.sh:${MONITORING_BIN_PATH}/start-monitoring-services.sh
+      - ./src/scripts/monitoring/stop-monitoring-services.sh:${MONITORING_BIN_PATH}/stop-monitoring-services.sh
+    command: >
+      bash -c "tail -f /dev/null"

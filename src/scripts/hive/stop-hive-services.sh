@@ -27,7 +27,7 @@ while true; do
   sleep 1
   COUNT=$((COUNT+1))
   if [ $COUNT -ge $MAX_WAIT ]; then
-    echo "hive container: Timeout: port $PORT is still open"
+    echo "hive container: Timeout"
     echo "hive container: FAILED to finish to stop hive services"
     exit 1
   fi

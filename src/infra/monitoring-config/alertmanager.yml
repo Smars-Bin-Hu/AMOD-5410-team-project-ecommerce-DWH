@@ -1,0 +1,30 @@
+global:
+  resolve_timeout: 5m
+  # smtp_smarthost: 'smtp.gmail.com:587'
+  # smtp_from: 'your@email.com'
+  # smtp_auth_username: 'your@email.com'
+  # smtp_auth_password: 'your_app_password'
+
+route:
+  receiver: 'default'
+  group_by: ['alertname']
+  group_wait: 10s
+  group_interval: 5m
+  repeat_interval: 3h
+
+  # routes:
+  #   - match:
+  #       severity: critical
+  #     receiver: 'critical-team'
+
+receivers:
+  - name: 'default'
+#    email_configs:
+#       - to: 'hubin.smars@gmail.com'
+
+#inhibit_rules:
+#  - source_match:
+#      severity: 'critical'
+#    target_match:
+#      severity: 'warning'
+#    equal: ['alertname', 'instance']
