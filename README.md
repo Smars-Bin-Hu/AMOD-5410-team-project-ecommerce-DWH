@@ -3,6 +3,9 @@
 # Enterprise-Grade Offline Data Warehouse Solution for E-Commerce
 
 <p align="center">
+  <a href="https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/blob/main/src/README/quick-start.md">
+      <img src="https://img.shields.io/badge/project-🚀quick_start-blue?style=for-the-badge&logo=github" alt="Sublime's custom image"/>
+  </a>
   <a href="https://github.com/Smars-Bin-Hu/EComDWH-Pipeline/tree/main/src">
       <img src="https://img.shields.io/badge/project-source_code-green?style=for-the-badge&logo=github" alt="Sublime's custom image"/>
   </a>
@@ -41,8 +44,27 @@ this project delivers a professional, robust, and highly efficient solution for 
 
 ## ⚙️ Core Deliverables
 
-### 1. Data Warehouse Modeling
-[🔗 Doc - Data Warehouse Modelling Specification](https://github.com/Smars-Bin-Hu/EComDWH-Pipeline?tab=readme-ov-file#2-data-warehouse-modelling)
+### 1. Data Warehouse Modeling and Documentation
+
+This project demonstrates my ability to build a data warehouse from the ground up following enterprise-grade standards. I independently designed and documented a complete SOP for data warehouse development, covering every critical step in the modeling roadmap. From initial business data research to final model delivery, I established a standardized methodology that ensures clarity, scalability, and maintainability. The SOP includes detailed best practices on data warehouse layering, table naming conventions, field naming rules, and lifecycle management for warehouse tables. For more information, please refer to the documentation below.
+
+<details>
+  <summary>🔗 Click to Show DWH Dimensional Modelling Documents and Code</summary>
+  
+  - [DWH Modelling Standard Operation Procedure (SOP)](./docs/doc/dwh-modelling-sop.md)
+  - [Business Data Research](./docs/doc/business_data_research.md)
+  
+  Data Warehouse Development Specification
+  
+  - [Data Warehouse Layering Specification](./docs/doc/data-warehouse-development-specification/data-warehouse-layering-specification.md)
+  - [Table Naming Conventions](./docs/doc/data-warehouse-development-specification/table-naming-convertions.md)
+  - [Data Warehouse Column Naming Conventions](./docs/doc/data-warehouse-development-specification/partitioning-column-naming-conventions.md)
+  - [Data Table Lifecycle Management Specification](./docs/doc/data-warehouse-development-specification/data-table-lifecycle-management-specification.md)
+
+
+  [🔨 Code - Hive DDL](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/tree/main/src/warehouse_modeling)(for Data Warehouse All Layers including ods, dwd, dwm, dws, dwt, dim (Operational Data Storage, DW detail, DW middle, DW summary, DW theme, DW Dimension, Analytical Data Storage-CK)
+
+</details>
 
 ![image](https://github.com/user-attachments/assets/ec924ea9-1acf-48a3-99ba-1546c1e8c3a9)
 <p align="center"><em>Figure 1: DWH Dimensional Modelling SOP</em></p>
@@ -53,16 +75,34 @@ this project delivers a professional, robust, and highly efficient solution for 
 ![ECom-DWH-Pipeline](https://github.com/Smars-Bin-Hu/my-draw-io/blob/main/ECom-DWH-Datapipeline-Proejct/ECom-DWH-Pipeline.drawio.svg)
 <p align="center"><em>Figure 3: DWH Dimensional Modelling Architecture</em></p>
 
-### 2. Cluster Deployment
+
+### 2. A Self-Built Distributed Big Data Platform
+
+This distributed data platform was built entirely from scratch by myself. Starting with a base Ubuntu 20.04 image, I manually installed and configured each component step by step, ultimately creating a fully functional three-node Hadoop cluster with distributed storage and computing capabilities. The platform is fully containerized, featuring a highly available HDFS and YARN architecture. It supports Hive for data warehousing, Spark for distributed computing, Airflow for workflow orchestration, and Prometheus + Grafana for performance monitoring. A MySQL container manages metadata for both Hive and Airflow and is also monitored by Prometheus. An Oracle container simulates the backend of a business system and serves as a data source for the data warehouse. All container images are open-sourced and published to [🔨 GitHub Container Registry](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/pkgs/container/proj1-dwh-cluster), making it easy for anyone to deploy the same platform locally.
+
+[🔨 Code - Docker Compose File](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/blob/main/docker-compose-bigdata.yml)
+
+[🔨 Code - Configuration Files for Cluster: Hadoop, ZooKeeper, Hive, MySql, Spark, Prometheus&Grafana, Airflow](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/tree/main/src/infra)
+
+[🔨 Code - Container Internal Scripts: Hadoop, ZooKeeper, Hive, MySql, Spark, Prometheus&Grafana, Airflow](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/tree/main/src/scripts)
+
+[🔨 Code - Common Used Snippets for Cluster: Hadoop, ZooKeeper, Hive, MySql, Spark, Prometheus&Grafana, Airflow](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/tree/main/src/snippets)
+
+<img width="1500" alt="image" src="https://github.com/user-attachments/assets/576ce494-1d96-4b3c-992e-96addc1e6f43" />
+<p align="center"><em>Figure 1: All Containers Window</em></p>
 
 ![ECom-DWH-Pipeline](https://github.com/Smars-Bin-Hu/my-draw-io/blob/main/ECom-DWH-Datapipeline-Proejct/ECom-DWH-Tech-Arc.drawio.svg)
-<p align="center"><em>Figure 1: Data Platform Architecture</em></p>
+<p align="center"><em>Figure 2: Data Platform Architecture</em></p>
 
-[Docker Images GHCR](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/pkgs/container/proj1-dwh-cluster)
 
-[Docker Compose File](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/blob/main/docker-compose-bigdata.yml)
 
 ### 3. Distributed Batch Processing
+
+1. [🔨 Code - Extract and Load pipeline (OLTP -> DWH, DWH -> OLAP)](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/tree/main/src/data_pipeline)
+
+2. [🔨 Code - Batch Processing (Transform)](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/tree/main/src/batch_processing)
+
+3. 🔨 Code - Scheduling based on Airflow (DAG)
 
 ### 4. CI/CD Automation
 
@@ -72,7 +112,7 @@ this project delivers a professional, robust, and highly efficient solution for 
 
 1. GitHub Actions Code
 
-[workflows.main YAML](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/blob/main/.github/workflows/main.yml)
+[🔨 Code - workflows.main YAML](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/blob/main/.github/workflows/main.yml)
 
 2. Key Screenshots
 
@@ -85,21 +125,17 @@ this project delivers a professional, robust, and highly efficient solution for 
 <img width="1500" alt="image" src="https://github.com/user-attachments/assets/4c79ca68-286d-4f19-88a6-9917b565bc9e" />
 <p align="center"><em>Figure 3: Sample Log Screenshot II </em></p>
 
-3. [Automation Workflow](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/actions)
+3. [🔗 Link - Automation Workflow Web UI](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/actions)
 
 ### 5. Storage & Computation Optimization
 
 ### 6. Monitoring
 
-1. Code
+[🔨 Code - Monitoring Services Configuaration Files: Prometheus, Grafana, AlertManager](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/tree/main/src/infra/monitoring-config)
 
-[Monitoring Services Configuaration Files: Prometheus, Grafana, AlertManager](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/tree/main/src/infra/monitoring-config)
+[🔨 Code - Monitoring Services Start&Stop Scripts: Prometheus, Grafana, AlertManager](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/tree/main/src/scripts/monitoring)
 
-[Monitoring Services Start&Stop Scripts: Prometheus, Grafana, AlertManager](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/tree/main/src/scripts/monitoring)
-
-[Container Metrics Exporter Start&Stop Scripts: `my-start-node-exporter.sh` & `my-stop-node-exporter.sh`](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/tree/main/src/scripts/hadoop-master)
-
-2. Screenshots
+[🔨 Code - Container Metrics Exporter Start&Stop Scripts: `my-start-node-exporter.sh` & `my-stop-node-exporter.sh`](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/tree/main/src/scripts/hadoop-master)
 
 <img width="1500" alt="Prometheus" src="https://github.com/user-attachments/assets/2f157fd1-1e41-4090-9c74-0fc3e97e385e" />
 <p align="center"><em>Figure 1: Prometheus</em></p>
@@ -114,7 +150,7 @@ Use Microsoft PowerBI connect to the Clickhouse and extract the **analytical dat
 <img width="1500" alt="image" src="https://github.com/user-attachments/assets/21eaea88-0fac-488d-9696-3be5720b4ac3" />
 <p align="center"><em>Figure 1: PowerBI Dashboard Demo</em></p>
 
-[PowerBI Public Access(Expirable)](https://app.powerbi.com/view?r=eyJrIjoiMzVjYTQ3NmMtODllZS00N2JhLWFkNWItMWI4MmYyNDZjMDc1IiwidCI6IjI0MGI3OWM1LTZiZWYtNDYwOC1hNDE3LTY1NjllODQzNTQ1YyJ9)
+[🔗 Link - PowerBI Public Access(Expirable)](https://app.powerbi.com/view?r=eyJrIjoiMzVjYTQ3NmMtODllZS00N2JhLWFkNWItMWI4MmYyNDZjMDc1IiwidCI6IjI0MGI3OWM1LTZiZWYtNDYwOC1hNDE3LTY1NjllODQzNTQ1YyJ9)
 
 ## Tech Stack
 
@@ -140,6 +176,7 @@ This project sets up a high-availability big data platform, including the follow
 
 ```bash
 /bigdata-datawarehouse-project
+│── /.github/workflows            # CI/CD automation workflows via GitHub Actions
 │── /docs                         # docs (all business and technologies documents about this project)
 │── /src
     │── /data_pipeline            # data pipeline code (ETL/ELT Logic, output)
@@ -147,7 +184,7 @@ This project sets up a high-availability big data platform, including the follow
     │── /batch_processing         # Data Batch processing (PySpark + SparkSQL)
     │── /scheduler                # Task Scheduler(Airflow)
     │── /infra                    # infrastructure deployment(Docker, configuration files)
-    │── /snippets                  # common used commands and snippets
+    │── /snippets                 # common used commands and snippets
     │── /README                   # Source Code Use Instruction Markdown Files
     │── README.md                 # Navigation of Source Code Use Instruction
     │── main_data_pipeline.py     # operate the data_pipeline module to do the `Extract` and `Load` jobs
@@ -157,6 +194,17 @@ This project sets up a high-availability big data platform, including the follow
 │── docker-compose-bigdata.yml    # Docker Compose to launch the docker cluster
 │── .env                          # `public the .env on purpose` for docker-compose file use
 │── .gitignore                    # Git ignore some directory not to be committed to the remote repo
+│── .gitattributes                # Git repository attributes config
+│── LICENSE                       # COPYRIGHT for this project
+│── mysql-metadata-restore.sh     # container operational level scripts: restore mysql container metadata
+│── mysql-metastore-dump.sh       # container operational level scripts: dump mysql container metadata
+│── push-to-ghcr.sh               # container operational level scripts: push the images to GitHub Container Registry
+│── start-data-clients.sh         # container operational level scripts: start hive, spark etc
+│── start-hadoop-cluster.sh       # container operational level scripts: start hadoop HA cluster 
+│── start-other-services.sh       # container operational level scripts: start airflow, prometheus, grafana etc
+│── stop-data-clients.sh          # container operational level scripts: stop hive, spark etc
+│── stop-hadoop-cluster.sh        # container operational level scripts: stop hadoop HA cluster 
+│── stop-other-services.sh        # container operational level scripts: stop airflow, prometheus, grafana etc
 ```
 
 ## 🚀 Quick Start `/src`
@@ -172,7 +220,7 @@ This project sets up a high-availability big data platform, including the follow
 - Business Logic
 - [Project Tech Architecture](./docs/doc/tech-architecture.md)
 
-#### 2. Data Warehouse Modelling
+#### 2. Development Specification
 
 [DWH Modelling Standard Operation Procedure (SOP)](./docs/doc/dwh-modelling-sop.md)
 
