@@ -9,7 +9,7 @@
   <a href="https://github.com/Smars-Bin-Hu/EComDWH-Pipeline/tree/main/src">
       <img src="https://img.shields.io/badge/project-source_code-green?style=for-the-badge&logo=github" alt="Sublime's custom image"/>
   </a>
-  <a href="https://github.com/Smars-Bin-Hu/EComDWH-Pipeline?tab=readme-ov-file#-project-documents">
+  <a href="https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/wiki">
       <img src="https://img.shields.io/badge/project-all%20documents-red?style=for-the-badge&logo=github" image"/>
    </a>
 </p>
@@ -83,7 +83,7 @@ This project demonstrates my ability to build a data warehouse from the ground u
 
 ### 2. A Self-Built Distributed Big Data Platform
 
-This distributed data platform was built entirely from scratch by myself. Starting with a base Ubuntu 20.04 image, I manually installed and configured each component step by step, ultimately creating a fully functional three-node Hadoop cluster with distributed storage and computing capabilities. The platform is fully containerized, featuring a highly available HDFS and YARN architecture. It supports Hive for data warehousing, Spark for distributed computing, Airflow for workflow orchestration, and Prometheus + Grafana for performance monitoring. A MySQL container manages metadata for both Hive and Airflow and is also monitored by Prometheus. An Oracle container simulates the backend of a business system and serves as a data source for the data warehouse. All container images are open-sourced and published to [🔨 GitHub Container Registry](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/pkgs/container/proj1-dwh-cluster), making it easy for anyone to deploy the same platform locally.
+This distributed data platform was built entirely from scratch by myself. Starting with a base Ubuntu 20.04 docker image, I manually installed and configured each component step by step, ultimately creating a fully functional three-node Hadoop cluster with distributed storage and computing capabilities. The platform is fully containerized, featuring a highly available HDFS and YARN architecture. It supports Hive for data warehousing, Spark for distributed computing, Airflow for workflow orchestration, and Prometheus + Grafana for performance monitoring. A MySQL container manages metadata for both Hive and Airflow and is also monitored by Prometheus. An Oracle container simulates the backend of a business system and serves as a data source for the data warehouse. All container images are open-sourced and published to [🔨 GitHub Container Registry](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/pkgs/container/proj1-dwh-cluster), making it easy for anyone to deploy the same platform locally.
 
 [🔨 Code - Docker Compose File](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/blob/main/docker-compose-bigdata.yml)
 
