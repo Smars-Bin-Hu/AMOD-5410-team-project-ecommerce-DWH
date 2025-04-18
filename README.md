@@ -32,9 +32,9 @@ By combining these critical features—including:
 | **1. Data Warehouse Modeling** | - Full dimensional modeling process (Star Schema / Snowflake Schema) <br> - Standardized development norms (ODS/DWD/DWM/DWS/ADS five-layer modeling) <br> - Business Matrix: defining & managing dimensions & fact tables | - Data warehouse design document (Markdown/PDF) <br> - Hive SQL modeling code <br> - Database ER diagram |
 | **2. Cluster Deployment** | - Fully containerized deployment with Docker for quick replication <br> - High-availability environment: Hadoop + Hive + Spark + Zookeeper + ClickHouse | - Docker images (open-source Dockerfile) <br> - `.env` configuration file <br> - `docker-compose.yml` (one-click cluster startup) <br> - Infra configuration files (Hadoop, Hive, Spark, Zookeeper) |
 | **3. Distributed Batch Processing** | - ETL processing using Spark for Oracle relational data <br> - Multi-layer processing: ODS → DWD → DWM → DWS → ADS <br> - Efficient data transformation & aggregation | - Spark ETL code (PySpark) <br> - SparkSQL scripts <br> - Data flow diagram |
-| **4. CI/CD Automation** | - Automated Airflow DAG deployment (auto-sync with code updates) <br> - Automated Spark job submission (eliminates manual `spark-submit`) <br> - Hive table schema change detection (automatic alerts) | - GitHub Actions / Jenkins pipeline <br> - CI/CD documentation <br> - Sample log screenshots |
+| **4. CI/CD Automation** | - Automated Airflow DAG deployment (auto-sync with code updates) <br> - Automated Spark job submission (eliminates manual `spark-submit`) <br> - Hive table schema change detection (automatic alerts) | - GitHub Actions / Jenkins pipeline <br> - CI/CD code and documentation <br> - Sample log screenshots |
 | **5. Storage & Computation Optimization** | - SQL optimization (dynamic partitioning, indexing, storage partitioning) <br> - Spark tuning: Salting, Skew Join Hint, Broadcast Join, `reduceByKey` vs. `groupByKey` <br> - Hive tuning: Z-Order sorting (boost ClickHouse queries), Parquet + Snappy compression | - Pre & post optimization performance comparison <br> - Spark optimization code <br> - SQL execution plan screenshots |
-| **6. Monitoring** | - Prometheus + Grafana for monitoring Spark / Hive / ClickHouse <br> - ETL job status monitoring <br> - Data latency & failure rate tracking | - Prometheus configuration files <br> - Grafana dashboard screenshots <br> - ETL job monitoring logs |
+| **6. DevOps - Monitoring and Alerting** | - Prometheus + Grafana for performance monitoring Hadoop Cluster / MySQL <br> - AlertManager for alerting and email receiving | - Prometheus, Grafana configuration files <br> - Grafana dashboard screenshots <br> |
 | **7. Business Intelligence & Visualization** | - PowerBI dashboards for data analysis <br> - Real business-driven visualizations <br> - Providing actionable business insights | - PowerBI visualization screenshots <br> - Business analysis report <br> - Key business metric explanations (BI Insights) |
 
 this project delivers a professional, robust, and highly efficient solution for enterprises dealing with large-scale data processing and analytics.
@@ -45,16 +45,18 @@ this project delivers a professional, robust, and highly efficient solution for 
 [🔗 Doc - Data Warehouse Modelling Specification](https://github.com/Smars-Bin-Hu/EComDWH-Pipeline?tab=readme-ov-file#2-data-warehouse-modelling)
 
 ![image](https://github.com/user-attachments/assets/ec924ea9-1acf-48a3-99ba-1546c1e8c3a9)
-![image](https://github.com/user-attachments/assets/ab21c750-052f-4c10-baf0-bc97e5ed8274)
+<p align="center"><em>Figure 1: DWH Dimensional Modelling SOP</em></p>
 
-Data Warehouse Modelling Architecture
+![image](https://github.com/user-attachments/assets/ab21c750-052f-4c10-baf0-bc97e5ed8274)
+<p align="center"><em>Figure 2: DWH Dimensional Modelling Methodology Diagram</em></p>
+
 ![ECom-DWH-Pipeline](https://github.com/Smars-Bin-Hu/my-draw-io/blob/main/ECom-DWH-Datapipeline-Proejct/ECom-DWH-Pipeline.drawio.svg)
+<p align="center"><em>Figure 3: DWH Dimensional Modelling Architecture</em></p>
 
 ### 2. Cluster Deployment
 
-Data Platform Architecture
-
 ![ECom-DWH-Pipeline](https://github.com/Smars-Bin-Hu/my-draw-io/blob/main/ECom-DWH-Datapipeline-Proejct/ECom-DWH-Tech-Arc.drawio.svg)
+<p align="center"><em>Figure 1: Data Platform Architecture</em></p>
 
 [Docker Images GHCR](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/pkgs/container/proj1-dwh-cluster)
 
@@ -63,13 +65,48 @@ Data Platform Architecture
 ### 3. Distributed Batch Processing
 
 ### 4. CI/CD Automation
+
 <a href="https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/actions/workflows/main.yml">
     <img src="https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/actions/workflows/main.yml/badge.svg" image"/>
 </a>
 
+1. GitHub Actions Code
+
+[workflows.main YAML](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/blob/main/.github/workflows/main.yml)
+
+2. Key Screenshots
+
+<img width="1500" alt="image" src="https://github.com/user-attachments/assets/00fc170c-14ae-4f9d-a7e1-1480cb4d0112" />
+<p align="center"><em>Figure 1: Data platform launching and stop automation</em></p>
+
+<img width="1500" alt="image" src="https://github.com/user-attachments/assets/4a0a07fe-a629-4a10-a232-b01e0ed3aed2" />
+<p align="center"><em>Figure 2: Sample Log Screenshot I </em></p>
+
+<img width="1500" alt="image" src="https://github.com/user-attachments/assets/4c79ca68-286d-4f19-88a6-9917b565bc9e" />
+<p align="center"><em>Figure 3: Sample Log Screenshot II </em></p>
+
+3. [Automation Workflow](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/actions)
+
 ### 5. Storage & Computation Optimization
 
 ### 6. Monitoring
+
+1. Code
+
+[Monitoring Services Configuaration Files: Prometheus, Grafana, AlertManager](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/tree/main/src/infra/monitoring-config)
+
+[Monitoring Services Start&Stop Scripts: Prometheus, Grafana, AlertManager](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/tree/main/src/scripts/monitoring)
+
+[Container Metrics Exporter Start&Stop Scripts: `my-start-node-exporter.sh` & `my-stop-node-exporter.sh`](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/tree/main/src/scripts/hadoop-master)
+
+2. Screenshots
+
+<img width="1500" alt="Prometheus" src="https://github.com/user-attachments/assets/2f157fd1-1e41-4090-9c74-0fc3e97e385e" />
+<p align="center"><em>Figure 1: Prometheus</em></p>
+<img width="1501" alt="Grafana-Hadoop-Cluster-instance-hadoop-master" src="https://github.com/user-attachments/assets/7c4d94ca-3262-46be-adb3-18c3777a314f" />
+<p align="center"><em>Figure 2: Grafana-Hadoop-Cluster-instance-hadoop-master</em></p>
+<img width="1495" alt="Grafana-MySQLD" src="https://github.com/user-attachments/assets/7df991be-3642-4ad4-9672-3d8483423178" />
+<p align="center"><em>Figure 3: Grafana-MySQLD</em></p>
 
 ### 7. Business Intelligence & Visualization
 
