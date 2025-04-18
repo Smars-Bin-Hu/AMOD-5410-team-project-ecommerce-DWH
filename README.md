@@ -110,6 +110,12 @@ this project delivers a professional, robust, and highly efficient solution for 
 
 ### 7. Business Intelligence & Visualization
 
+Use Microsoft PowerBI connect to the Clickhouse and extract the **analytical data storage** layer
+<img width="1500" alt="image" src="https://github.com/user-attachments/assets/21eaea88-0fac-488d-9696-3be5720b4ac3" />
+<p align="center"><em>Figure 1: PowerBI Dashboard Demo</em></p>
+
+[PowerBI Public Access(Expirable)](https://app.powerbi.com/view?r=eyJrIjoiMzVjYTQ3NmMtODllZS00N2JhLWFkNWItMWI4MmYyNDZjMDc1IiwidCI6IjI0MGI3OWM1LTZiZWYtNDYwOC1hNDE3LTY1NjllODQzNTQ1YyJ9)
+
 ## Tech Stack
 
 This project sets up a high-availability big data platform, including the following components:
