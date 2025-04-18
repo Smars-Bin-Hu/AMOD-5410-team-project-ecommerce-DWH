@@ -184,10 +184,15 @@ services:
     ports:
       - "${LOCALHOST_MYSQL}:${CONTAINER_MYSQL}"
     volumes:
+      # Scripts
       - ./src/infra/mysql-metastore-dump/all_databases_backup.sql:/var/opt/all_databases_backup.sql
-      - ./src/scripts/mysql-hive-metastore/dump-mysql.sh:/usr/bin/dump-mysql.sh
-      - ./src/scripts/mysql-hive-metastore/restore-mysql.sh:/usr/bin/restore-mysql.sh
+      - ./src/scripts/mysql-hive-metastore/dump-mysql.sh:/usr/local/bin/dump-mysql.sh
+      - ./src/scripts/mysql-hive-metastore/restore-mysql.sh:/usr/local/bin/restore-mysql.sh
+      - ./src/scripts/mysql-hive-metastore/start-mysqld-exporter.sh:/usr/local/bin/start-mysqld-exporter.sh
+      - ./src/scripts/mysql-hive-metastore/stop-mysqld-exporter.sh:/usr/local/bin/stop-mysqld-exporter.sh
 #      - ./src/infra/mysql-data:/var/lib/mysql   # Local Persistence
+      # Config
+      - ./src/infra/mysql-config/mysqld-exporter/my.cnf:/opt/mysqld_exporter/my.cnf
 
   # ========== 5) Hive Service (metastore + hiveserver2) ==========
   hive:

@@ -39,26 +39,35 @@ scrape_configs:
         labels:
           role: 'hadoop-cluster'
 
-  # YARN Resource Manager UI (optional metrics scrape via /metrics endpoint)
-  - job_name: 'yarn-resourcemanager'
-    metrics_path: /metrics
+  # Mysqld Exporter - MySQL Container
+  - job_name: 'mysqld-exporter'
+    scrape_interval: 1s
     static_configs:
       - targets:
-        - 'hadoop-master:8088'
-        - 'hadoop-worker1:8088'
+          - 'mysql-hive-metastore:9104'
+        labels:
+          instance: 'mysqld_exporter'
 
-  # HDFS NameNode UI (optional metrics scrape)
-  - job_name: 'hdfs-namenode'
-    metrics_path: /metrics
-    static_configs:
-      - targets:
-        - 'hadoop-master:9870'
-        - 'hadoop-worker2:9870'
-
-  # HDFS DataNode UI (optional metrics scrape)
-  - job_name: 'hdfs-datanodes'
-    metrics_path: /metrics
-    static_configs:
-      - targets:
-          - 'hadoop-worker1:9864'
-          - 'hadoop-worker2:9864'
+#  # YARN Resource Manager UI (optional metrics scrape via /metrics endpoint)
+#  - job_name: 'yarn-resourcemanager'
+#    metrics_path: /metrics
+#    static_configs:
+#      - targets:
+#        - 'hadoop-master:8088'
+#        - 'hadoop-worker1:8088'
+#
+#  # HDFS NameNode UI (optional metrics scrape)
+#  - job_name: 'hdfs-namenode'
+#    metrics_path: /metrics
+#    static_configs:
+#      - targets:
+#        - 'hadoop-master:9870'
+#        - 'hadoop-worker2:9870'
+#
+#  # HDFS DataNode UI (optional metrics scrape)
+#  - job_name: 'hdfs-datanodes'
+#    metrics_path: /metrics
+#    static_configs:
+#      - targets:
+#          - 'hadoop-worker1:9864'
+#          - 'hadoop-worker2:9864'

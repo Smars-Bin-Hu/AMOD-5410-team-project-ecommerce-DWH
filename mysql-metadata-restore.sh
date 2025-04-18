@@ -12,7 +12,7 @@
 #                                                                   #
 #      path on container: /var/opt/all_databases_backup.sql         #
 #      MOUNTED BY DOCKER                                            #
-#      ./src/infra/mysql-metastore-dump/all_databases_backup.sql    #
+#      ./src/infra/mysql-metastore-dunmp/all_databases_backup.sql    #
 #                                                                   #
 #####################################################################
 
