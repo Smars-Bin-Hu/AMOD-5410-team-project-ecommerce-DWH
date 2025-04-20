@@ -18,7 +18,12 @@ successful_load_tables = []
 failed_load_tables = []
 
 # Read the ETL tables config JSON
-def spark_upstream(spark, oltp_data_source : dict, dwh_data_target : dict) -> bool:
+def spark_upstream(
+        spark,
+        oltp_data_source : dict,
+        dwh_data_target : dict,
+        partition_data : str
+) -> bool:
     # get target OLTP Database Configuration
     db_type = oltp_data_source.get("db_type")
     instance_code = oltp_data_source.get("instance_code")
@@ -59,7 +64,7 @@ def spark_upstream(spark, oltp_data_source : dict, dwh_data_target : dict) -> bo
                     continue  # Skip load step
 
                 # Step 2: Load Data into HDFS
-                success = load_job_main_func(table, df)
+                success = load_job_main_func(table, df, partition_data)
 
                 if success:
                     successful_load_tables.append(table["oracle_table_name"])

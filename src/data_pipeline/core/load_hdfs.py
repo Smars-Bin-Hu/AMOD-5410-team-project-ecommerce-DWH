@@ -4,11 +4,11 @@ load_hdfs.py
 
 This Module: ..
 """
-from pyspark.sql.functions import current_date, date_format, col
+from pyspark.sql.functions import current_date, date_format, col, lit
 from .parse_field_type import parse_field_type
 from data_pipeline.utils import logger
 
-def load_hdfs(table:dict, df) -> bool:
+def load_hdfs(table:dict, df, partition_data) -> bool:
     # check Hive ODS Layer HDFS target path
     # hive_ods_hdfs_path = HadoopEnvConfig.get_hive_ods_hdfs_path()
     # if not HDFSUtils.check_hdfs_path(hive_ods_hdfs_path):
@@ -37,7 +37,7 @@ def load_hdfs(table:dict, df) -> bool:
 
         # add partition field if the table has partition
         if partition_field == "data_date":
-            df = df.withColumn("data_date", date_format(current_date(), "yyyy-MM-dd")) # add new column filled with current_date()
+            df = df.withColumn("data_date", lit(partition_data)) # add new column filled with partition_data  (current_date() by default)
 
         # write df to hive
         if partition_field == "None":

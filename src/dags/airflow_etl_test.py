@@ -30,23 +30,25 @@ with DAG(
 ) as dag:
     chk_oracle = EmptyOperator(task_id="chk_oracle")   # 可替换成 SQLSensor
 
-    partition_data = "2025-04-19"
-    spark_ssh_cmd = \
-        """
-            spark-submit --master yarn \
-                --deploy-mode client \
-                --driver-memory 512m \
-                --executor-memory 1g \
-                --executor-cores 1 \
-                --num-executors 3 \
-                --conf spark.executor.memoryOverhead=256 \
-                --conf spark.hadoop.yarn.log-aggregation.wait.ms=60000 \
-                --conf spark.eventLog.enabled=true \
-                --conf spark.eventLog.dir=hdfs:///spark-logs \
-                /opt/miniconda3/envs/pyspark_env/jobs_sync/Users/smars/Developer/big-data-engineering-project1/src/main_data_pipeline.py \
-                --job_type oltp_to_dwh \
-                --partition_data {{ ds }}
-        """
+    SPARK_RESOURCES = {
+        "--driver-memory": "512m",
+        "--executor-memory": "1g",
+        "--executor-cores": "1",
+        "--num-executors": "3",
+        "--conf": "spark.executor.memoryOverhead=256"
+    }
+
+    SPARK_JOB_ARGS = [
+        "--job_type", "oltp_to_dwh",
+        "--partition_data", "{{ ds }}"
+    ]
+
+    spark_ssh_cmd = f"""
+    spark-submit --master yarn --deploy-mode client \
+        {" ".join([f"{k} {v}" for k, v in SPARK_RESOURCES.items()])} \
+        /opt/miniconda3/envs/pyspark_env/jobs_sync/Users/smars/Developer/big-data-engineering-project1/src/main_data_pipeline.py \
+        {" ".join(SPARK_JOB_ARGS)}
+    """
 
     spark_oltp_to_dwh = SSHOperator(
         task_id="spark_oltp_to_dwh",
@@ -57,4 +59,4 @@ with DAG(
 
     end_of_day = EmptyOperator(task_id="pipeline_done")
 
-    chk_oracle >> spark_oltp_to_dwh >> end_of_day
+    chk_oracle >> hdfs_partition_create >> spark_oltp_to_dwh >> end_of_day
