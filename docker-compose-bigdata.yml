@@ -39,6 +39,9 @@ services:
           tail -f /dev/null
         "
     volumes:
+      # Localtime & Timezone
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
       # /etc/hosts
       - ./src/infra/hadoop-config/hosts/hosts:${HADOOP_CLUSTER_HOSTS_FILE}
       # ssh configs
@@ -93,6 +96,9 @@ services:
       bash -c "service ssh start;
               tail -f /dev/null" 
     volumes:
+      # Localtime & Timezone
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
       # /etc/hosts
       - ./src/infra/hadoop-config/hosts/hosts:${HADOOP_CLUSTER_HOSTS_FILE}
       # ssh configs
@@ -145,6 +151,9 @@ services:
       bash -c "service ssh start;
               tail -f /dev/null" 
     volumes:
+      # Localtime & Timezone
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
       # /etc/hosts
       - ./src/infra/hadoop-config/hosts/hosts:${HADOOP_CLUSTER_HOSTS_FILE}
       # ssh configs
@@ -184,6 +193,9 @@ services:
     ports:
       - "${LOCALHOST_MYSQL}:${CONTAINER_MYSQL}"
     volumes:
+      # Localtime & Timezone
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
       # Scripts
       - ./src/infra/mysql-metastore-dump/all_databases_backup.sql:/var/opt/all_databases_backup.sql
       - ./src/scripts/mysql-hive-metastore/dump-mysql.sh:/usr/local/bin/dump-mysql.sh
@@ -211,6 +223,9 @@ services:
       - "${LOCALHOST_HIVE_SERVER2_2ND_PORT}:${CONTAINER_HIVE_SERVER2_2ND_PORT}"  # HiveServer2 2nd
       - "${LOCALHOST_HIVE_METASTORE_PORT}:${CONTAINER_HIVE_METASTORE_PORT}"    # Metastore Thrift
     volumes:
+      # Localtime & Timezone
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
       # Scripts
       - ./src/scripts/hive/start-hive-services.sh:/usr/local/bin/start-hive-services.sh
       - ./src/scripts/hive/stop-hive-services.sh:/usr/local/bin/stop-hive-services.sh
@@ -251,6 +266,9 @@ services:
       - "${LOCALHOST_SPARK_MASTER}:${CONTAINER_SPARK_MASTER}"  # Spark Master
       - "${LOCALHOST_SPARK_THRIFT_SERVER_PORT}:${CONTAINER_SPARK_THRIFT_SERVER_PORT}" # ThriftServer
     volumes:
+      # Localtime & Timezone
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
       # Scripts
       - ./src/scripts/spark/start-spark-services.sh:/usr/local/bin/start-spark-services.sh
       - ./src/scripts/spark/stop-spark-services.sh:/usr/local/bin/stop-spark-services.sh
@@ -301,6 +319,9 @@ services:
     ports:
       - "${LOCALHOST_AIRFLOW_WEB_UI}:${CONTAINER_AIRFLOW_WEB_UI}"
     volumes:
+      # Localtime & Timezone
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
       # Configuration
       - ./src/infra/airflow-config/airflow.cfg:/root/airflow/airflow.cfg
       - ./src/infra/airflow-config/webserver_config.py:/root/airflow/webserver_config.py
@@ -327,6 +348,9 @@ services:
 #      - ${LOCALHOST_GRAFANA_WEB_UI}:${CONTAINER_GRAFANA_WEB_UI}
 #      - ${LOCALHOST_ALERTMANAGER_WEB_UI}:${CONTAINER_ALERTMANAGER_WEB_UI}
 #    volumes:
+#      # Localtime & Timezone
+#      - /etc/localtime:/etc/localtime:ro
+#      - /etc/timezone:/etc/timezone:ro
 #      # Configuration
 #      - ./src/infra/monitoring-config/prometheus.yml:${MONITORING_PROMETHEUS_HOME}/prometheus.yml
 #      - ./src/infra/monitoring-config/alertmanager.yml:${MONITORING_ALERTMANAGER_HOME}/alertmanager.yml

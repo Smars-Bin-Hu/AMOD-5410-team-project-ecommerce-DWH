@@ -18,7 +18,7 @@ while true; do
     echo "airflow container: port 8080 is open and listening"
     echo "airflow container: successful to launch airflow webserver, port is 8080"
     echo "airflow container: launch airflow services: scheduler"
-    nohup /opt/airflow/airflow-env/bin/airflow dags > /root/airflow/airflow-dags.log 2>&1 &
+    nohup /opt/airflow/airflow-env/bin/airflow scheduler > /root/airflow/airflow-scheduler.log 2>&1 &
     break
   fi
   sleep 1
