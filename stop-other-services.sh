@@ -3,7 +3,7 @@
 #############################################################################
 #                                                                           #
 #     stop-other-services.sh                                                #
-#     1. stop airflow services: webserver && scheduler                      #
+#     1. stop airflow services: webserver && dags                      #
 #     2. stop monitoring service:                                           #
 #             node-exporter on the hadoop cluster                           #
 #             mysqld exporter on the mysql container                        #

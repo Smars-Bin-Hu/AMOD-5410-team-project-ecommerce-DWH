@@ -189,14 +189,14 @@ This project sets up a high-availability big data platform, including the follow
     │── /data_pipeline            # data pipeline code (ETL/ELT Logic, output)
     │── /warehouse_modeling       # DWH modelling（Hive SQL etc.）
     │── /batch_processing         # Data Batch processing (PySpark + SparkSQL)
-    │── /scheduler                # Task Scheduler(Airflow)
+    │── /dags                # Task Scheduler(Airflow)
     │── /infra                    # infrastructure deployment(Docker, configuration files)
     │── /snippets                 # common used commands and snippets
     │── /README                   # Source Code Use Instruction Markdown Files
     │── README.md                 # Navigation of Source Code Use Instruction
     │── main_data_pipeline.py     # operate the data_pipeline module to do the `Extract` and `Load` jobs
     │── main_batch_processing.py  # operate the batch_processing module to do the `Transform` jobs
-│── /tests                        # all small features unit testing snippets (DWH modelling, data pipeline, scheduler etc.) 
+│── /tests                        # all small features unit testing snippets (DWH modelling, data pipeline, dags etc.) 
 │── README.md                     # Introduction about project
 │── docker-compose-bigdata.yml    # Docker Compose to launch the docker cluster
 │── .env                          # `public the .env on purpose` for docker-compose file use

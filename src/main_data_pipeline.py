@@ -27,7 +27,7 @@ olap_data_target = {
     "instance_code" : "1"
 }
 
-partition_data = '2025-03-10'
+
 # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< End of Job Config >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
@@ -70,7 +70,7 @@ def main(args):
         if args.job_type == "oltp_to_dwh":
             spark_upstream(spark, oltp_data_source, dwh_data_target)
         elif args.job_type == "dwh_to_olap":
-            spark_downstream(spark, dwh_data_source, olap_data_target, partition_data)
+            spark_downstream(spark, dwh_data_source, olap_data_target, args.partition_data)
 
         # release resource
         spark.stop()
@@ -100,7 +100,7 @@ spark-submit --master yarn \
     --conf spark.hadoop.yarn.log-aggregation.wait.ms=60000 \
     --conf spark.eventLog.enabled=true \
     --conf spark.eventLog.dir=hdfs:///spark-logs \
-    /opt/miniconda3/envs/pyspark_env/jobs_sync/Users/smars/Developer/big-data-engineering-project1/src/main_data_pipeline.py --job_type oltp_to_dwh
+    /opt/miniconda3/envs/pyspark_env/jobs_sync/Users/smars/Developer/big-data-engineering-project1/src/main_data_pipeline.py --job_type oltp_to_dwh --partition_data 2025-03-10
     
 spark-submit --master yarn \
     --deploy-mode client \

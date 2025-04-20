@@ -3,7 +3,7 @@
 #############################################################################
 #                                                                           #
 #     start-other-services.sh                                               #
-#     1. launch airflow services: webserver && scheduler                    #
+#     1. launch airflow services: webserver && dags                    #
 #     2. launch monitoring service:                                         #
 #             node-exporter on the hadoop cluster                           #
 #             mysqld exporter on the mysql container                        #
@@ -13,8 +13,8 @@
 
 set -e
 
-#echo "[1] launch airflow services: webserver && scheduler"
-#docker exec -i airflow bash -c "start-airflow.sh"
+echo "[1] launch airflow services: webserver && scheduler"
+docker exec -i airflow bash -c "start-airflow.sh"
 
 sleep 3
 
