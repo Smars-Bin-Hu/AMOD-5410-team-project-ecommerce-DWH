@@ -1,24 +1,23 @@
 from .batch_processing.utils import read_sql, logger
 from .batch_processing.configs import sql_dml_files_path_dwd
 
-def ods_to_dwd(spark) -> bool:
-    successful_tables = []
-    failed_tables = []
+def ods_to_dwd(spark, table_name, partition_field, data_date) -> bool:
+    logger.smars_dev(f"Data processing - ODS to DWD - table name: {table_name} is executing")
 
-    # Get the DML SQL files Path for DWD Layer
-    for key, value in sql_dml_files_path_dwd.items():
-        logger.smars_dev(f"Data processing - ODS to DWD - table name: {key} is executing")
-        try:
-            sql = read_sql(value)
-            spark.sql(sql)   # execute sql
-            logger.smars_dev(f"Data processing - ODS to DWD - table name: {key} is finished")
-            successful_tables.append(key)
-        except Exception as e:
-            logger.smars_dev(f"Data processing - ODS to DWD - table name: {key} is failed. Exception Info: {e}")
-            failed_tables.append(key)
+    try:
+        # Get the DML SQL files Path for DWD Layer
+        path_to_dml_sql = sql_dml_files_path_dwd.get(table_name)
+
+        # get the raw sql
+        raw_sql = read_sql(path_to_dml_sql)
+
+        # replace the partition field with the data
+
+
+        spark.sql(sql)   # execute sql
+        logger.smars_dev(f"Data processing - ODS to DWD - table name: {table_name} is finished")
+    except Exception as e:
+        logger.smars_dev(f"Data processing - ODS to DWD - table name: {table_name} is failed. Exception Info: {e}")
 
     # output the logs
-    logger.smars_dev("=== ODS to DWD Transformation jobs finished ===")
-    logger.smars_dev(f"Successfully Extracted: {successful_tables}")
-    logger.smars_dev(f"Failed to Extract: {failed_tables}")
     return True

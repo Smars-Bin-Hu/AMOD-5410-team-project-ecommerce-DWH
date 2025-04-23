@@ -22,11 +22,11 @@ SELECT
     rts.sentiment AS customer_sentiment,
     ords.data_date
 FROM
-    (SELECT * FROM dwd.dwd_orders_ipd WHERE data_date = "2025-03-20") ords
+    (SELECT * FROM dwd.dwd_orders_ipd WHERE data_date = "${data_date}") ords
         LEFT JOIN
-    (SELECT * FROM dwd.dwd_orderitem_ipd WHERE data_date = "2025-03-20") ords_itm ON ords.order_id = ords_itm.order_id
+    (SELECT * FROM dwd.dwd_orderitem_ipd WHERE data_date = "${data_date}") ords_itm ON ords.order_id = ords_itm.order_id
         LEFT JOIN
-    (SELECT * FROM dwd.dwd_returns_ipd WHERE data_date = "2025-03-20") rets ON rets.order_id = ords.order_id AND rets.product_id = ords_itm.product_id
+    (SELECT * FROM dwd.dwd_returns_ipd WHERE data_date = "${data_date}") rets ON rets.order_id = ords.order_id AND rets.product_id = ords_itm.product_id
         LEFT JOIN
-    (SELECT * FROM dwd.dwd_customer_product_ratings_ipd WHERE data_date = "2025-03-20") rts ON rts.customer_id = ords.customer_id AND rts.product_id = ords_itm.product_id
+    (SELECT * FROM dwd.dwd_customer_product_ratings_ipd WHERE data_date = "${data_date}") rts ON rts.customer_id = ords.customer_id AND rts.product_id = ords_itm.product_id
 ;
