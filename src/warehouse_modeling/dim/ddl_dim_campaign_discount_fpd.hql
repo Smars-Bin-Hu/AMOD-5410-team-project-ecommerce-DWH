@@ -12,7 +12,7 @@ CREATE EXTERNAL TABLE IF NOT EXISTS dim.dim_campaign_discount_fpd
 )
     COMMENT 'DIM Table for campaign information - Daily Full Sync, Permenant Storage'
     STORED AS PARQUET
-    LOCATION '/user/hive/warehouse/dim/dim_campaign_discount_fpd'
+    LOCATION '/user/hive/warehouse/dws/dim_campaign_discount_fpd'
     TBLPROPERTIES (
         "parquet.compress" = "SNAPPY",
         "transactional" = "false", -- Hive transaction usually are ORC file format, so prevent here.

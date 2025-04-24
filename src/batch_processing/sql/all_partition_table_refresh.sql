@@ -15,11 +15,3 @@ MSCK REPAIR TABLE dwm.dwm_orders_with_items_ipd;
 
 -- dws
 MSCK REPAIR TABLE dws.dws_orders_detailed_info_wide_ipd;
-
--- <<<<<<<<<<<<<<<<<<<<<<< Test SQL
---     select * from ods.ods_orders_ipd;
---     select * from dwd.dwd_orders_ipd;
---     select * from dwm.dwm_orders_with_items_ipd;
---     select * from dws.dws_orders_detailed_info_wide_ipd;
---
--- >>>>>>>>>>>>>>>>>>>>>>> Test SQL

@@ -15,5 +15,4 @@ job_configs = {
         "app_name" : "batch_processing_dwm_to_dws",
         "launch_log" : "MAIN METHOD IS EXECUTED. DWM to DWS TRANSFORMATION IS STARTING"
     },
-
 }

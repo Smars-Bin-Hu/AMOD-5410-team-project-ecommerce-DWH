@@ -6,7 +6,7 @@ CREATE EXTERNAL TABLE IF NOT EXISTS dim.dim_payment_method_fpd
 )
     COMMENT 'DIM Table for payment method info - Daily Full Sync, Permenant Storage'
     STORED AS PARQUET
-    LOCATION '/user/hive/warehouse/dim/dim_payment_method_fpd'
+    LOCATION '/user/hive/warehouse/dws/dim_payment_method_fpd'
     TBLPROPERTIES (
         "parquet.compress" = "SNAPPY",
         "transactional" = "false", -- Hive transaction usually are ORC file format, so prevent here.

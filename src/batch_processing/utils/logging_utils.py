@@ -1,6 +1,5 @@
 import logging
-
-from .batch_processing.configs import LoggingConfig
+from batch_processing.configs import LoggingConfig
 
 
 class LoggingUtils:

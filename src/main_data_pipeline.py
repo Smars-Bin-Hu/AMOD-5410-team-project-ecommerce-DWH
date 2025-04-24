@@ -125,4 +125,3 @@ spark-submit --master yarn \
     --conf "spark.executor.memoryOverhead=512" \
     /opt/miniconda3/envs/pyspark_env/jobs_sync/Users/smars/Developer/big-data-engineering-project1/src/main_data_pipeline.py --job_type dwh_to_olap --partition_data 2025-xx-xx
 """
-#%%

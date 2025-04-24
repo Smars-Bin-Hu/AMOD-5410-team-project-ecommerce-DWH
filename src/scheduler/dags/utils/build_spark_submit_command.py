@@ -1,5 +1,4 @@
-# spark_command.py
-
+# build_spark_submit_command.py
 def build_spark_submit_command(
         deploy_mode: str,
         resources: dict,

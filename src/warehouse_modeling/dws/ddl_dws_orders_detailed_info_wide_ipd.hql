@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS dws.dws_orders_detailed_info_wide_ipd
     customer_review             STRING COMMENT 'Review left by the customer',
     customer_sentiment          STRING COMMENT 'Customer sentiment analysis result'
 )
-    COMMENT 'DWS table for orders with detailed information joined with dim tables - Daily Increment Sync, Permenant Storage'
+    COMMENT 'DWS table for orders with detailed information joined with dws tables - Daily Increment Sync, Permenant Storage'
     PARTITIONED BY (data_date STRING COMMENT 'partition field')
     STORED AS PARQUET
     LOCATION '/user/hive/warehouse/dws/dws_orders_detailed_info_wide_ipd'

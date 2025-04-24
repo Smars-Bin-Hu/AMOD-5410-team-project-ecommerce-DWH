@@ -1,0 +1,1 @@
+MSCK REPAIR TABLE dws.dws_orders_detailed_info_wide_ipd;

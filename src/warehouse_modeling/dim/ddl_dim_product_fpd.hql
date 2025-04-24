@@ -12,7 +12,7 @@ CREATE EXTERNAL TABLE IF NOT EXISTS dim.dim_product_fpd
 )
     COMMENT 'DIM Table for product info - Daily Full Sync, Permenant Storage'
     STORED AS PARQUET
-    LOCATION '/user/hive/warehouse/dim/dim_product_fpd'
+    LOCATION '/user/hive/warehouse/dws/dim_product_fpd'
     TBLPROPERTIES (
         "parquet.compress" = "SNAPPY",
         "transactional" = "false", -- Hive transaction usually are ORC file format, so prevent here.

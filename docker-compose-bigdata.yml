@@ -243,9 +243,11 @@ services:
       - HIVE_METASTORE_DB_HOST=${METASTORE_HOST}
       - HIVE_METASTORE_DB_USER=${METASTORE_USERNAME}
       - HIVE_METASTORE_DB_PASS=${METASTORE_PASSWORD}
-    # command: >
-    #   bash -c "/opt/hive/bin/hiveservices.sh start;
-    #           tail -f /dev/null"
+    command: >
+      bash -c "
+              service ssh start;
+              tail -f /dev/null
+              "
 
   # ========== 6) Spark on YARN ==========
   spark:
@@ -328,9 +330,11 @@ services:
       # Scripts
       - ./src/scripts/airflow/start-airflow.sh:/usr/local/bin/start-airflow.sh
       - ./src/scripts/airflow/stop-airflow.sh:/usr/local/bin/stop-airflow.sh
-      # DAGs
-      - ./src/dags:/opt/airflow/dags
-
+      # DAGs & Python(Config, Utils)
+      - ./src/scheduler/dags:/opt/airflow/dags
+      - ./src/scheduler/configs:/opt/airflow/configs
+      - ./src/scheduler/utils:/opt/airflow/utils
+      - ./src/scheduler/hql:/opt/airflow/hql
 #    command: >
 #      bash -c "/opt/airflow/start_airflow.sh;
 #               tail -f /dev/null"
