@@ -5,7 +5,6 @@ import os
 def ods_to_dwd(spark, table_name, partition_data) -> bool:
     logger.smars_dev(f"Data processing - ODS to DWD - table name: {table_name} is executing")
 
-
     try:
         # read the sql file info
         path_to_dml_sql = sql_dml_files_dwd.get(table_name).get("path")

@@ -8,7 +8,7 @@ class DAGConfig:
             "owner": "airflow",
             "email_on_failure": False,
             "email_on_retry": False,
-            "retries": 2,
+            "retries": 4,
             "retry_delay": timedelta(minutes=retry_minutes),
         }
 
@@ -25,14 +25,15 @@ class DAGConfig:
                 "catchup": False,
                 "default_args": DAGConfig.base_args(),
             },
-            "ods_to_dwd_process": {
+            "etl_daily_batch_process": {
                 "dag_id": name,
                 "start_date": datetime(2025, 4, 21, tz="America/Toronto"),
-                "schedule_interval": "30 2 * * *",
-                "description": "ODS → DWD, level = single table",
-                "tags": ["ods2dwd"],
+                "schedule_interval": "15 2 * * *",
+                "description": "Daily batch processing: ODS → DWD -> DWM/DIM -> DWS -> DWT, level = single table",
+                "tags": ["daily_batch"],
                 "max_active_runs": 1,
                 "catchup": False,
+                "concurrency" : 5,
                 "default_args": DAGConfig.base_args(retry_minutes=2),
             },
             "backfill_refresh" : {

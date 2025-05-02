@@ -11,7 +11,7 @@ def choose_hql(**ctx):
     dwh_layer = ctx["dag_run"].conf.get("dwh_layer")
 
     # validate the parameter dwh_layer
-    valid = ["ods", "dwh", "dws", "dwm"]
+    valid = ["ods", "dwd", "dws", "dwm"]
     if dwh_layer not in valid:
         raise ValueError(f"Invalid dwh_layer: {dwh_layer}. Valid options are: \"ods\" / \"dwd\" / \"dwm\" / \"dws\"")
 

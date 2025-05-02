@@ -112,6 +112,6 @@ spark-submit --master yarn \
     --executor-cores 1 \
     --num-executors 3 \
     --conf "spark.executor.memoryOverhead=512" \
-    /opt/miniconda3/envs/pyspark_env/jobs_sync/Users/smars/Developer/big-data-engineering-project1/src/main_batch_processing.py --job_type ods_to_dwd --table_name dml_dwd_customer_product_ratings_ipd  --partition_data 2025-04-20
+    /opt/miniconda3/envs/pyspark_env/jobs_sync/Users/smars/Developer/big-data-engineering-project1/src/main_batch_processing.py --job_type ods_to_dwd --table_name dwd_customer_product_ratings_ipd  --partition_data 2025-04-20
     
 """

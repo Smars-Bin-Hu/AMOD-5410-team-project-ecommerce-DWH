@@ -1,61 +1,61 @@
 sql_dml_files_dwd = \
     {
-        "dml_dwd_campaign_product_subcategory_fpd":
+        "dwd_campaign_product_subcategory_fpd":
             {
                 "has_partition": False,
                 "path": "../sql/dwd/dml_dwd_campaign_product_subcategory_fpd.sql"
             },
-        "dml_dwd_category_fpd":
+        "dwd_category_fpd":
             {
                 "has_partition": False,
                 "path": "../sql/dwd/dml_dwd_category_fpd.sql",
             },
-        "dml_dwd_customer_fpd":
+        "dwd_customer_fpd":
             {
                 "has_partition": False,
                 "path":"../sql/dwd/dml_dwd_customer_fpd.sql",
             },
-        "dml_dwd_customer_product_ratings_ipd":
+        "dwd_customer_product_ratings_ipd":
             {
                 "has_partition": True,
                 "path": "../sql/dwd/dml_dwd_customer_product_ratings_ipd.sql",
             },
-        "dml_dwd_marketing_campaigns_fpd":
+        "dwd_marketing_campaigns_fpd":
             {
                 "has_partition": False,
                 "path": "../sql/dwd/dml_dwd_marketing_campaigns_fpd.sql",
             },
-        "dml_dwd_orderitem_ipd":
+        "dwd_orderitem_ipd":
             {
                 "has_partition": True,
                 "path":  "../sql/dwd/dml_dwd_orderitem_ipd.sql",
             },
-        "dml_dwd_orders_ipd":
+        "dwd_orders_ipd":
             {
                 "has_partition": True,
                 "path": "../sql/dwd/dml_dwd_orders_ipd.sql",
             },
-        "dml_dwd_payment_method_fpd":
+        "dwd_payment_method_fpd":
             {
                 "has_partition": False,
                 "path":"../sql/dwd/dml_dwd_payment_method_fpd.sql",
             },
-        "dml_dwd_product_fpd":
+        "dwd_product_fpd":
             {
                 "has_partition": False,
                 "path":"../sql/dwd/dml_dwd_product_fpd.sql",
             },
-        "dml_dwd_returns_ipd":
+        "dwd_returns_ipd":
             {
                 "has_partition": True,
                 "path": "../sql/dwd/dml_dwd_returns_ipd.sql",
             },
-        "dml_dwd_subcategory_fpd":
+        "dwd_subcategory_fpd":
             {
                 "has_partition": False,
                 "path": "../sql/dwd/dml_dwd_subcategory_fpd.sql",
             },
-        "dml_dwd_supplier_fpd":
+        "dwd_supplier_fpd":
             {
                 "has_partition": False,
                 "path": "../sql/dwd/dml_dwd_supplier_fpd.sql",
@@ -64,50 +64,50 @@ sql_dml_files_dwd = \
 
 sql_dml_files_dim = \
     {
-        "dml_dim_campaign_discount_fpd":
+        "dim_campaign_discount_fpd":
             {
                 "has_partition": False,
-                "path":"../sql/dws/dml_dim_campaign_discount_fpd.sql",
+                "path":"../sql/dim/dml_dim_campaign_discount_fpd.sql",
             },
-        "dml_dim_category_fpd":
+        "dim_category_fpd":
             {
                 "has_partition": False,
-                "path":"../sql/dws/dml_dim_category_fpd.sql",
+                "path":"../sql/dim/dml_dim_category_fpd.sql",
             },
-        "dml_dim_customer_fpd":
+        "dim_customer_fpd":
             {
                 "has_partition": False,
-                "path":"../sql/dws/dml_dim_customer_fpd.sql",
+                "path":"../sql/dim/dml_dim_customer_fpd.sql",
             },
-        "dml_dim_payment_method_fpd":
+        "dim_payment_method_fpd":
             {
                 "has_partition": False,
-                "path":"../sql/dws/dml_dim_payment_method_fpd.sql",
+                "path":"../sql/dim/dml_dim_payment_method_fpd.sql",
             },
-        "dml_dim_product_fpd":
+        "dim_product_fpd":
             {
                 "has_partition": False,
-                "path":"../sql/dws/dml_dim_product_fpd.sql",
+                "path":"../sql/dim/dml_dim_product_fpd.sql",
             },
-        "dml_dim_supplier_fpd":
+        "dim_supplier_fpd":
             {
                 "has_partition": False,
-                "path":"../sql/dws/dml_dim_supplier_fpd.sql",
+                "path":"../sql/dim/dml_dim_supplier_fpd.sql",
             }
     }
 
 sql_dml_files_dwm = \
     {
-        "dml_dwm_campaign_product_subcategory_fpd":
+        "dwm_campaign_product_subcategory_fpd":
             {
-                "has_partition": False,
-                "path":"../sql/dwm/dml_dwm_campaign_product_subcategory_fpd.sql"
+                "has_partition": True,
+                "path":"../sql/dwm/dml_dwm_orders_with_items_ipd.sql"
             }
     }
 
 sql_dml_files_dws = \
     {
-        "dml_dws_orders_detailed_info_wide_ipd":
+        "dws_orders_detailed_info_wide_ipd":
             {
                 "has_partition": True,
                 "path":"../sql/dws/dml_dws_orders_detailed_info_wide_ipd.sql"
