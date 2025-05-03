@@ -103,11 +103,21 @@ This distributed data platform was built entirely from scratch by myself. Starti
 
 ### 3. Distributed Batch Processing
 
-1. [🔨 Code - Extract and Load pipeline (OLTP -> DWH, DWH -> OLAP)](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/tree/main/src/data_pipeline)
+This project implements a robust distributed batch processing architecture using PySpark for computation and Apache Airflow for orchestration. The batch layer focuses on high-throughput, scalable ETL workflows and integrates seamlessly with the overall data warehouse design. The core functionalities are structured as follows:
 
-2. [🔨 Code - Batch Processing (Transform)](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/tree/main/src/batch_processing)
+1. [🔨 Code - Data Pipeline (OLTP -> DWH, DWH -> OLAP)](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/tree/main/src/data_pipeline)
+   
+A PySpark-based incremental extraction process is used to ingest new records from the Oracle OLTP database into the data warehouse. Additionally, downstream scripts handle the transformation and export of analytical and result-layer datasets from the data warehouse into external OLAP systems, enabling fast access by BI tools (e.g., Power BI, Tableau).
 
-3. 🔨 Code - Scheduling based on Airflow (DAG)
+2.  [🔨 Code - Batch Processing (DWH Internal Transform)](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/tree/main/src/batch_processing)
+   
+Multi-stage transformations are implemented using Spark SQL within PySpark jobs to process data across warehouse layers, such as: ODS (Operational Data Store) → DWD (Data Warehouse Detail) and DWD → DIM (Dimension Tables). These transformations ensure structured, cleaned, and query-optimized data for analytical use cases.
+
+3. [🔨 Code - Scheduling based on Airflow (DAGs)](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/tree/main/src/scheduler/dags)
+
+The entire batch workflow is automated via Apache Airflow, with DAGs scheduled to run nightly at 2:00 AM. The scheduler coordinates the extraction, transformation, and loading tasks, handles dependencies, and ensures timely creation of new partitions and ingestion of the latest data into the warehouse.
+
+<img width="2055" alt="image" src="https://github.com/user-attachments/assets/e74e33cd-8b9e-4913-8ce5-ad7a20793851" />
 
 ### 4. CI/CD Automation
 
