@@ -216,11 +216,9 @@ This project sets up a high-availability big data platform, including the follow
 │── stop-other-services.sh        # container operational level scripts: stop airflow, prometheus, grafana etc
 ```
 
-## 🚀 Quick Start `/src`
+## 🚀 [Source Code Instruction for Use](./src/README.md) `/src`
 
-### [🔗 Source Code Instruction for Use](./src/README.md)
-
-### [🚀 Docker Cluster Quick Start](./README/quick-start.md)
+### [🚀 Cluster Quick Start](./README/quick-start.md)
 
 ### Data Pipeline Instruction
 

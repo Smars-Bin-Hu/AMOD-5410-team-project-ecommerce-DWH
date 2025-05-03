@@ -1,6 +1,6 @@
 # Source Code Instruction for Use
 
-### [🚀 Docker Cluster Quick Start](./README/quick-start.md)
+### [🚀 Cluster Quick Start](./README/quick-start.md)
 
 ### Data Pipeline Instruction
 
