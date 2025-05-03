@@ -143,11 +143,11 @@ docker exec -it --user root airflow bash
 docker exec -it --user root oracle-oltp bash
 ```
 
-### 4. Start the hadoop cluster services
+### 4. Start the hadoop cluster services `start-hadoop-cluster.sh`
 
 run the script `start-hadoop-cluster.sh`
 ```bash
-AMOD_5410_term_project % bash start-hadoop-cluster.sh
+  % bash start-hadoop-cluster.sh
 ```
 
 **(Optional) Check if successful launched already** 
@@ -224,21 +224,35 @@ http://localhost:9870/dfshealth.html#tab-datanode
 
 if you want to **STOP** the hadoop cluster services, run the script `stop-hadoop-cluster.sh`
 ```bash
-AMOD_5410_term_project % bash stop-hadoop-cluster.sh
+  % bash stop-hadoop-cluster.sh
 ```
 
-### 5. MySQL metastore restoring
+### 5. MySQL metastore restoring `mysql-metadata-restore.sh`
 
 the first time you launch my docker container, you have to use `mysql-metadata-restore.sh` to restore the dumped `.sql` file, otherwise you cannot access the data on HDFS by Hive.
 ```bash
-AMOD_5410_term_project % bash mysql-metadata-restore.sh
+  % bash mysql-metadata-restore.sh
 ```
 
-### 6. Launch The Data Clients (Hive, Spark)
+***(Optional) Dump the MySQL all databases `mysql-metastore-dump.sh`***
+
+if you want to **DUMP** the MySQL all databases, run the script `mysql-metastore-dump.sh` to dump the database as the `.sql` file.
+```bash
+  % bash mysql-metastore-dump.sh
+```
+
+### 6. Launch The Data Clients (Hive, Spark) `start-data-clients.sh`
 
 run the script: `start-data-clients.sh` to start Hive `Metastore` && `Hiveserver2` and Spark `ThriftServer`
 ```bash
-AMOD_5410_term_project % bash start-data-clients.sh
+  % bash start-data-clients.sh
+```
+
+***(Optional) Stop the Data Clients (Hive, Spark) `stop-data-clients.sh`***
+
+if you want to **STOP** the hive & spark services, run the script `stop-data-clients.sh`
+```bash
+  % bash stop-data-clients.sh
 ```
 
 > [!IMPORTANT]
@@ -265,6 +279,48 @@ root@spark:/# netstat -nltp
 ```
 
 ![img_4.png](README/img_4.png)
+
+### 7. Launch The other services (Airflow & Monitoring) `start-other-services.sh`
+
+run the script: `start-other-services.sh` to start Airflow and Monitoring container services
+```bash
+  % bash start-other-services.sh
+```
+
+***(Optional) Stop the Data Clients (Hive, Spark) `stop-other-services.sh`***
+
+if you want to **STOP** the Airflow and Monitoring container services, run the script `stop-other-services.sh`
+```bash
+  % bash stop-other-services.sh
+```
+
+run this `netstat -nltp` to check the ports
+```text
+root@airflow:/# netstat -nltp
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 127.0.0.11:42899        0.0.0.0:*               LISTEN      -
+tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN      23/gunicorn: master
+tcp6       0      0 :::8793                 :::*                    LISTEN      49/gunicorn: master
+```
+
+```text
+root@monitoring:/# netstat -nltp
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 127.0.0.11:38635        0.0.0.0:*               LISTEN      -
+tcp6       0      0 :::9090                 :::*                    LISTEN      15/prometheus
+tcp6       0      0 :::9094                 :::*                    LISTEN      37/alertmanager
+tcp6       0      0 :::9093                 :::*                    LISTEN      37/alertmanager
+tcp6       0      0 :::3000                 :::*                    LISTEN      56/grafana
+```
+
+![img.png](./README/airflow_web_ui_login.png)
+(password: whos3301919)
+
+![airflow_web_ui.png](./README/airflow_web_ui.png)
+
+![grafana_web_ui.png](./README/grafana_web_ui.png)
 
 ## Access the Data Warehouse
 

@@ -3,7 +3,7 @@
 #############################################################################
 #                                                                           #
 #     start-other-services.sh                                               #
-#     1. launch airflow services: webserver && dags                         #
+#     1. launch airflow services: webserver && scheduler                    #
 #     2. launch monitoring service:                                         #
 #             node-exporter on the hadoop cluster                           #
 #             mysqld exporter on the mysql container                        #

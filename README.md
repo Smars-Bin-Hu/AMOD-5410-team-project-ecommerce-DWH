@@ -186,16 +186,18 @@ This project sets up a high-availability big data platform, including the follow
 │── /.github/workflows            # CI/CD automation workflows via GitHub Actions
 │── /docs                         # docs (all business and technologies documents about this project)
 │── /src
-    │── /data_pipeline            # data pipeline code (ETL/ELT Logic, output)
+    │── /data_pipeline            # ETL flow: OLTP2DWH & DWH2OLAP
     │── /warehouse_modeling       # DWH modelling（Hive SQL etc.）
     │── /batch_processing         # Data Batch processing (PySpark + SparkSQL)
-    │── /dags                # Task Scheduler(Airflow)
+    │── /scheduler                # Task Scheduler(Airflow DAGs)
     │── /infra                    # infrastructure deployment(Docker, configuration files)
     │── /snippets                 # common used commands and snippets
+    │── /scripts                  # container internal shell scripts
+    │── /bi                       # PowerBI Dashboard pbix file
     │── /README                   # Source Code Use Instruction Markdown Files
     │── README.md                 # Navigation of Source Code Use Instruction
-    │── main_data_pipeline.py     # operate the data_pipeline module to do the `Extract` and `Load` jobs
-    │── main_batch_processing.py  # operate the batch_processing module to do the `Transform` jobs
+    │── main_data_pipeline.py     # **main entry point for the data pipeline module
+    │── main_batch_processing.py  # **main entry point for the batch processing module
 │── /tests                        # all small features unit testing snippets (DWH modelling, data pipeline, dags etc.) 
 │── README.md                     # Introduction about project
 │── docker-compose-bigdata.yml    # Docker Compose to launch the docker cluster
@@ -217,8 +219,34 @@ This project sets up a high-availability big data platform, including the follow
 ## 🚀 Quick Start `/src`
 
 ### [🔗 Source Code Instruction for Use](./src/README.md)
-### 
-### 
+
+### [🚀 Docker Cluster Quick Start](./README/quick-start.md)
+
+### Data Pipeline Instruction
+
+#### [🚀 /src/data_pipeline + /src/main_data_pipeline.py](./README/spark-upstream.md)
+#### [🚀 /src/data_pipeline + /src/main_data_pipeline.py](./README/spark-downstream.md)
+
+### Batch Processing Instruction
+
+#### [🚀 /src/batch_processing + /src/main_batch_processing.py](./README/batch_processing.md)
+
+### Warehouse Modelling Instruction
+
+#### [🚀 /src/warehouse_modelling](./README/warehouse_modelling.md)
+
+### Automation Scheduler Instruction
+
+#### [🚀 /src/scheduler](./README/automation_scheduler.md)
+
+### Container DevOps Scripts Instruction
+
+#### [🚀 /src/scripts](./README/automation_scheduler.md)
+
+### Snippets Instruction
+
+#### [🚀 /src/snippets](./README/automation_scheduler.md)
+
 
 ## 📌 Project Documents `/docs`
 

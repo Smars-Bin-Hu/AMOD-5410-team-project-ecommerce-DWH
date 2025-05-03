@@ -332,36 +332,33 @@ services:
       - ./src/scripts/airflow/stop-airflow.sh:/usr/local/bin/stop-airflow.sh
       # DAGs & Python(Config, Utils)
       - ./src/scheduler/dags:/opt/airflow/dags
-      - ./src/scheduler/configs:/opt/airflow/configs
-      - ./src/scheduler/utils:/opt/airflow/utils
-      - ./src/scheduler/hql:/opt/airflow/hql
 #    command: >
 #      bash -c "/opt/airflow/start_airflow.sh;
 #               tail -f /dev/null"
 
   # ========== 9) Monitoring ==========
-#  monitoring:
-#    container_name: monitoring
-#    image: ${MONITORING_IMAGE}
-#    hostname: monitoring
-#    networks:
-#      bigdata-net:
-#        ipv4_address: ${MONITORING_IP}
-#    ports:
-#      - ${LOCALHOST_PROMETHEUS_WEB_UI}:${CONTAINER_PROMETHEUS_WEB_UI}
-#      - ${LOCALHOST_GRAFANA_WEB_UI}:${CONTAINER_GRAFANA_WEB_UI}
-#      - ${LOCALHOST_ALERTMANAGER_WEB_UI}:${CONTAINER_ALERTMANAGER_WEB_UI}
-#    volumes:
-#      # Localtime & Timezone
-#      - /etc/localtime:/etc/localtime:ro
-#      - /etc/timezone:/etc/timezone:ro
-#      # Configuration
-#      - ./src/infra/monitoring-config/prometheus.yml:${MONITORING_PROMETHEUS_HOME}/prometheus.yml
-#      - ./src/infra/monitoring-config/alertmanager.yml:${MONITORING_ALERTMANAGER_HOME}/alertmanager.yml
-#      - ./src/infra/monitoring-config/grafana.ini:${MONITORING_GRAFANA_CONF_DIR}/grafana.ini
-#      - ./src/infra/monitoring-config/prometheus_datasource.yml:${MONITORING_GRAFANA_CONF_DIR}/provisioning/datasources/prometheus_datasource.yml
-#      # Scripts
-#      - ./src/scripts/monitoring/start-monitoring-services.sh:${MONITORING_BIN_PATH}/start-monitoring-services.sh
-#      - ./src/scripts/monitoring/stop-monitoring-services.sh:${MONITORING_BIN_PATH}/stop-monitoring-services.sh
-#    command: >
-#      bash -c "tail -f /dev/null"
+  monitoring:
+    container_name: monitoring
+    image: ${MONITORING_IMAGE}
+    hostname: monitoring
+    networks:
+      bigdata-net:
+        ipv4_address: ${MONITORING_IP}
+    ports:
+      - ${LOCALHOST_PROMETHEUS_WEB_UI}:${CONTAINER_PROMETHEUS_WEB_UI}
+      - ${LOCALHOST_GRAFANA_WEB_UI}:${CONTAINER_GRAFANA_WEB_UI}
+      - ${LOCALHOST_ALERTMANAGER_WEB_UI}:${CONTAINER_ALERTMANAGER_WEB_UI}
+    volumes:
+      # Localtime & Timezone
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+      # Configuration
+      - ./src/infra/monitoring-config/prometheus.yml:${MONITORING_PROMETHEUS_HOME}/prometheus.yml
+      - ./src/infra/monitoring-config/alertmanager.yml:${MONITORING_ALERTMANAGER_HOME}/alertmanager.yml
+      - ./src/infra/monitoring-config/grafana.ini:${MONITORING_GRAFANA_CONF_DIR}/grafana.ini
+      - ./src/infra/monitoring-config/prometheus_datasource.yml:${MONITORING_GRAFANA_CONF_DIR}/provisioning/datasources/prometheus_datasource.yml
+      # Scripts
+      - ./src/scripts/monitoring/start-monitoring-services.sh:${MONITORING_BIN_PATH}/start-monitoring-services.sh
+      - ./src/scripts/monitoring/stop-monitoring-services.sh:${MONITORING_BIN_PATH}/stop-monitoring-services.sh
+    command: >
+      bash -c "tail -f /dev/null"

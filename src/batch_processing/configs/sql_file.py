@@ -98,7 +98,7 @@ sql_dml_files_dim = \
 
 sql_dml_files_dwm = \
     {
-        "dwm_campaign_product_subcategory_fpd":
+        "dwm_orders_with_items_ipd":
             {
                 "has_partition": True,
                 "path":"../sql/dwm/dml_dwm_orders_with_items_ipd.sql"
