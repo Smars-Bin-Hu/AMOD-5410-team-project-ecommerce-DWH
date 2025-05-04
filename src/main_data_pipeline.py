@@ -7,7 +7,7 @@ from data_pipeline.core import spark_upstream,spark_downstream
 from data_pipeline.configs import job_configs
 
 # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Job Config >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-# --job_type oltp_to_dwh : spark_etl()
+# --job_type oltp_to_dwh : spark_upstream()
 oltp_data_source = {
     "db_type" : "oracle",
     "instance_code" : "1"
@@ -18,7 +18,7 @@ dwh_data_target = {
     "dwh_target_db" : "ods",
 }
 
-# --job_type dwh_to_olap : spark_load_hive_to_ck()
+# --job_type dwh_to_olap : spark_downstream()
 dwh_data_source = {
     "dwh_type" : "hive",
     "dwh_target_db" : "dws",
@@ -28,8 +28,6 @@ olap_data_target = {
     "db_type" : "clickhouse",
     "instance_code" : "1"
 }
-
-
 # <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< End of Job Config >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 

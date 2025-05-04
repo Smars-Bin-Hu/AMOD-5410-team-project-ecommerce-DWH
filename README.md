@@ -118,6 +118,7 @@ Multi-stage transformations are implemented using Spark SQL within PySpark jobs 
 The entire batch workflow is automated via Apache Airflow, with DAGs scheduled to run nightly at 2:00 AM. The scheduler coordinates the extraction, transformation, and loading tasks, handles dependencies, and ensures timely creation of new partitions and ingestion of the latest data into the warehouse.
 
 <img width="2055" alt="image" src="https://github.com/user-attachments/assets/e74e33cd-8b9e-4913-8ce5-ad7a20793851" />
+<p align="center"><em>Figure 1: Airflow Web UI</em></p>
 
 ### 4. CI/CD Automation
 
@@ -228,32 +229,28 @@ This project sets up a high-availability big data platform, including the follow
 
 ## 🚀 [Source Code Instruction for Use](./src/README.md) `/src`
 
-### [🚀 Cluster Quick Start](./README/quick-start.md)
+### [🚀 Cluster Quick Start](./src/README/quick-start.md)
 
 ### Data Pipeline Instruction
 
-#### [🚀 /src/data_pipeline + /src/main_data_pipeline.py](./README/spark-upstream.md)
-#### [🚀 /src/data_pipeline + /src/main_data_pipeline.py](./README/spark-downstream.md)
+#### [🚀 /src/data_pipeline + /src/main_data_pipeline.py](./src/README/spark-upstream.md)
+#### [🚀 /src/data_pipeline + /src/main_data_pipeline.py](./src/README/spark-downstream.md)
 
 ### Batch Processing Instruction
 
-#### [🚀 /src/batch_processing + /src/main_batch_processing.py](./README/batch_processing.md)
+#### [🚀 /src/batch_processing + /src/main_batch_processing.py](./src/README/batch_processing.md)
 
 ### Warehouse Modelling Instruction
 
-#### [🚀 /src/warehouse_modelling](./README/warehouse_modelling.md)
+#### [🚀 /src/warehouse_modelling](./src/README/warehouse_modelling.md)
 
 ### Automation Scheduler Instruction
 
-#### [🚀 /src/scheduler](./README/automation_scheduler.md)
+#### [🚀 /src/scheduler](./src/README/scheduler.md)
 
 ### Container DevOps Scripts Instruction
 
-#### [🚀 /src/scripts](./README/automation_scheduler.md)
-
-### Snippets Instruction
-
-#### [🚀 /src/snippets](./README/automation_scheduler.md)
+#### [🚀 /src/scripts](./src/README/scripts.md)
 
 
 ## 📌 Project Documents `/docs`

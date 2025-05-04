@@ -17,12 +17,8 @@
 
 ### Automation Scheduler Instruction
 
-#### [🚀 /src/scheduler](./README/automation_scheduler.md)
+#### [🚀 /src/scheduler](./README/scheduler.md)
 
 ### Container DevOps Scripts Instruction
 
-#### [🚀 /src/scripts](./README/automation_scheduler.md)
-
-### Snippets Instruction
-
-#### [🚀 /src/snippets](./README/automation_scheduler.md)
+#### [🚀 /src/scripts](./README/scripts.md)
