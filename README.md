@@ -56,16 +56,16 @@ This project demonstrates my ability to build a data warehouse from the ground u
 <details>
   <summary>🔗 Click to Show DWH Dimensional Modelling Documents and Code</summary>
   
-  - [DWH Modelling Standard Operation Procedure (SOP)](./docs/doc/dwh-modelling-sop.md)
-  - [Business Data Research](./docs/doc/business_data_research.md)
+  - [DWH Modelling Standard Operation Procedure (SOP)](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/blob/main/docs/doc/dwh-modelling-sop.md)
+  - [Business Data Research](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/blob/main/docs/doc/business_data_research.md)
   
   Data Warehouse Development Specification
   
-  - [Data Warehouse Layering Specification](./docs/doc/data-warehouse-development-specification/data-warehouse-layering-specification.md)
-  - [Table Naming Conventions](./docs/doc/data-warehouse-development-specification/table-naming-convertions.md)
-  - [Data Warehouse Column Naming Conventions](./docs/doc/data-warehouse-development-specification/partitioning-column-naming-conventions.md)
-  - [Data Table Lifecycle Management Specification](./docs/doc/data-warehouse-development-specification/data-table-lifecycle-management-specification.md)
-  - [DWH Modelling Architecture Diagram](./docs/doc/dwh-modelling-arch-diagram.md)
+  - [Data Warehouse Layering Specification](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/blob/main/docs/doc/data-warehouse-development-specification/data-warehouse-layering-specification.md)
+  - [Table Naming Conventions](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/blob/main/docs/doc/data-warehouse-development-specification/table-naming-convertions.md)
+  - [Data Warehouse Column Naming Conventions](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/blob/main/docs/doc/data-warehouse-development-specification/partitioning-column-naming-conventions.md)
+  - [Data Table Lifecycle Management Specification](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/blob/main/docs/doc/data-warehouse-development-specification/data-table-lifecycle-management-specification.md)
+  - [DWH Modelling Architecture Diagram](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/blob/main/docs/doc/dwh-modelling-arch-diagram.md)
 
 
   [🔨 Code - Hive DDL](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/tree/main/src/warehouse_modeling)(for Data Warehouse All Layers including ods, dwd, dwm, dws, dwt, dim (Operational Data Storage, DW detail, DW middle, DW summary, DW theme, DW Dimension, Analytical Data Storage-CK)
@@ -258,39 +258,39 @@ This project sets up a high-availability big data platform, including the follow
 
 #### 1. Tech Architecture
 
-- [Project Tech Architecture](./docs/doc/tech-architecture.md)
+- [Project Tech Architecture](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/blob/main/docs/doc/tech-architecture.md)
 
 #### 2. Development Specification
 
 - Data Warehouse Development Specification
-  - [Business Data Research](./docs/doc/business_data_research.md)
-  - [DWH Modelling Standard Operation Procedure (SOP)](./docs/doc/dwh-modelling-sop.md)
-  - [Data Warehouse Layering Specification](./docs/doc/data-warehouse-development-specification/data-warehouse-layering-specification.md)
-  - [Table Naming Conventions](./docs/doc/data-warehouse-development-specification/table-naming-convertions.md)
-  - [Data Warehouse Column Naming Conventions](./docs/doc/data-warehouse-development-specification/partitioning-column-naming-conventions.md)
-  - [Data Table Lifecycle Management Specification](./docs/doc/data-warehouse-development-specification/data-table-lifecycle-management-specification.md)
-  - [DWH Modelling Architecture Diagram](./docs/doc/dwh-modelling-arch-diagram.md)
+  - [Business Data Research](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/blob/main/docs/doc/business_data_research.md)
+  - [DWH Modelling Standard Operation Procedure (SOP)](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/blob/main/docs/doc/dwh-modelling-sop.md)
+  - [Data Warehouse Layering Specification](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/blob/main/docs/doc/data-warehouse-development-specification/data-warehouse-layering-specification.md)
+  - [Table Naming Conventions](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/blob/main/docs/doc/data-warehouse-development-specification/table-naming-convertions.md)
+  - [Data Warehouse Column Naming Conventions](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/blob/main/docs/doc/data-warehouse-development-specification/partitioning-column-naming-conventions.md)
+  - [Data Table Lifecycle Management Specification](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/blob/main/docs/doc/data-warehouse-development-specification/data-table-lifecycle-management-specification.md)
+  - [DWH Modelling Architecture Diagram](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/blob/main/docs/doc/dwh-modelling-arch-diagram.md)
 
 - SQL Development Specification
-  - [Development Specification](./docs/doc/data-warehouse-development-specification/development-specification.md)
+  - [Development Specification](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/blob/main/docs/doc/data-warehouse-development-specification/development-specification.md)
 
 #### 3. Troubleshooting
 
-  - [Troubleshooting: NodeManager Disk Space Issue Preventing YARN Registration](./docs/doc/error-handling/04_MAR_2025.md)
-  - [Troubleshooting: Spark on Yarn submit encounter Container exited with a non-zero exit code 13. Error file: prelaunch.err.](./docs/doc/error-handling/05_MAR_2025.md)
-  - [Troubleshooting: Error Handling Log: YARN Web UI Log Loading Failures](./docs/doc/error-handling/06_MAR_2025.md)
-  - [Troubleshooting: Docker Container Running Out of Memory](./docs/doc/error-handling/06_MAR_2025_02.md)
-  - [Troubleshooting: Spark Task - Issue with Writing ODS Layer Avro Data to HDFS but Hive Cannot Read](./docs/doc/error-handling/07_MAR_2025.md)
-  - [Troubleshooting: JSON-like Dictionary Representation in Python Script Causes Execution Failure](./docs/doc/error-handling/08_MAR_2025.md)
-  - [Troubleshooting: Partitioned table NO DATA displayed while hive SQL query, even though data file existing on HDFS](./docs/doc/error-handling/10-MAR-2025_02.md)
-  - [Troubleshooting: Resolving "Unrecognized column type: DATE_TYPE" Issue on ods_orders_ipd Table](./docs/doc/error-handling/10-MAR-2025.md)
-  - [Troubleshooting Hive Unable to Read Parquet Files Written by Spark SQL](./docs/doc/error-handling/13-MAR-2025.md)
-  - [Troubleshooting: java.lang.NoClassDefFoundError: org/apache/hc/client5/http/io/HttpClientConnectionManager](./docs/doc/error-handling/17-MAR-2025.md)
-  - [Troubleshooting NameNode Startup Failure in Hadoop HA Environment](./docs/doc/error-handling/21-MAR-2025.md)
-  - [Preventing SIGHUP from Killing Background Processes When Using Docker `exec -it`](./docs/doc/error-handling/22-MAR-2025-2.md)
-  - [Troubleshooting Document: Git Line Ending Conversion Issue Causing JournalNode/NameNode Startup Failure](./docs/doc/error-handling/22-MAR-2025.md)
+  - [Troubleshooting: NodeManager Disk Space Issue Preventing YARN Registration](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/blob/main/docs/doc/error-handling/04_MAR_2025.md)
+  - [Troubleshooting: Spark on Yarn submit encounter Container exited with a non-zero exit code 13. Error file: prelaunch.err.](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/blob/main/docs/doc/error-handling/05_MAR_2025.md)
+  - [Troubleshooting: Error Handling Log: YARN Web UI Log Loading Failures](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/blob/main/docs/doc/error-handling/06_MAR_2025.md)
+  - [Troubleshooting: Docker Container Running Out of Memory](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/blob/main/docs/doc/error-handling/06_MAR_2025_02.md)
+  - [Troubleshooting: Spark Task - Issue with Writing ODS Layer Avro Data to HDFS but Hive Cannot Read](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/blob/main/docs/doc/error-handling/07_MAR_2025.md)
+  - [Troubleshooting: JSON-like Dictionary Representation in Python Script Causes Execution Failure](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/blob/main/docs/doc/error-handling/08_MAR_2025.md)
+  - [Troubleshooting: Partitioned table NO DATA displayed while hive SQL query, even though data file existing on HDFS](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/blob/main/docs/doc/error-handling/10-MAR-2025_02.md)
+  - [Troubleshooting: Resolving "Unrecognized column type: DATE_TYPE" Issue on ods_orders_ipd Table](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/blob/main/docs/doc/error-handling/10-MAR-2025.md)
+  - [Troubleshooting Hive Unable to Read Parquet Files Written by Spark SQL](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/blob/main/docs/doc/error-handling/13-MAR-2025.md)
+  - [Troubleshooting: java.lang.NoClassDefFoundError: org/apache/hc/client5/http/io/HttpClientConnectionManager](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/blob/main/docs/doc/error-handling/17-MAR-2025.md)
+  - [Troubleshooting NameNode Startup Failure in Hadoop HA Environment](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/blob/main/docs/doc/error-handling/21-MAR-2025.md)
+  - [Preventing SIGHUP from Killing Background Processes When Using Docker `exec -it`](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/blob/main/docs/doc/error-handling/22-MAR-2025-2.md)
+  - [Troubleshooting Document: Git Line Ending Conversion Issue Causing JournalNode/NameNode Startup Failure](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/blob/main/docs/doc/error-handling/22-MAR-2025.md)
 
-  - [Bugs Need To Be Fixed in Future](./docs/doc/error-handling/future-fix.md)
+  - [Bugs Need To Be Fixed in Future](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/blob/main/docs/doc/error-handling/future-fix.md)
 
 #### Development 
 
@@ -298,7 +298,7 @@ This project sets up a high-availability big data platform, including the follow
 
 #### Optimization
 
-  - [Too many INFO logs: Reducing Spark Console Log Levels](./docs/doc/optimization/reducing-spark-console-log-levels.md)
+  - [Too many INFO logs: Reducing Spark Console Log Levels](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/blob/main/docs/doc/optimization/reducing-spark-console-log-levels.md)
 
 ## License
 
