@@ -65,6 +65,7 @@ This project demonstrates my ability to build a data warehouse from the ground u
   - [Table Naming Conventions](./docs/doc/data-warehouse-development-specification/table-naming-convertions.md)
   - [Data Warehouse Column Naming Conventions](./docs/doc/data-warehouse-development-specification/partitioning-column-naming-conventions.md)
   - [Data Table Lifecycle Management Specification](./docs/doc/data-warehouse-development-specification/data-table-lifecycle-management-specification.md)
+  - [DWH Modelling Architecture Diagram](./docs/doc/dwh-modelling-arch-diagram.md)
 
 
   [🔨 Code - Hive DDL](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/tree/main/src/warehouse_modeling)(for Data Warehouse All Layers including ods, dwd, dwm, dws, dwt, dim (Operational Data Storage, DW detail, DW middle, DW summary, DW theme, DW Dimension, Analytical Data Storage-CK)
@@ -255,65 +256,49 @@ This project sets up a high-availability big data platform, including the follow
 
 ## 📌 Project Documents `/docs`
 
-#### 1. Business logic && Tech Selection
+#### 1. Tech Architecture
 
-- Business Logic
 - [Project Tech Architecture](./docs/doc/tech-architecture.md)
 
 #### 2. Development Specification
 
-[DWH Modelling Standard Operation Procedure (SOP)](./docs/doc/dwh-modelling-sop.md)
-
-- [Business Data Research](./docs/doc/business_data_research.md)
 - Data Warehouse Development Specification
+  - [Business Data Research](./docs/doc/business_data_research.md)
+  - [DWH Modelling Standard Operation Procedure (SOP)](./docs/doc/dwh-modelling-sop.md)
   - [Data Warehouse Layering Specification](./docs/doc/data-warehouse-development-specification/data-warehouse-layering-specification.md)
   - [Table Naming Conventions](./docs/doc/data-warehouse-development-specification/table-naming-convertions.md)
   - [Data Warehouse Column Naming Conventions](./docs/doc/data-warehouse-development-specification/partitioning-column-naming-conventions.md)
   - [Data Table Lifecycle Management Specification](./docs/doc/data-warehouse-development-specification/data-table-lifecycle-management-specification.md)
+  - [DWH Modelling Architecture Diagram](./docs/doc/dwh-modelling-arch-diagram.md)
 
-- Python Development Specification
-  - Package Modulize
- 
 - SQL Development Specification
   - [Development Specification](./docs/doc/data-warehouse-development-specification/development-specification.md)
 
 #### 3. Troubleshooting
 
-  - [Future Bugs to Fix](./docs/doc/error-handling/future-fix.md)
-  - [04_MAR_2025](./docs/doc/error-handling/04_MAR_2025.md)
-  - [05_MAR_2025](./docs/doc/error-handling/05_MAR_2025.md)
-  - [06_MAR_2025](./docs/doc/error-handling/06_MAR_2025.md)
+  - [Troubleshooting: NodeManager Disk Space Issue Preventing YARN Registration](./docs/doc/error-handling/04_MAR_2025.md)
+  - [Troubleshooting: Spark on Yarn submit encounter Container exited with a non-zero exit code 13. Error file: prelaunch.err.](./docs/doc/error-handling/05_MAR_2025.md)
+  - [Troubleshooting: Error Handling Log: YARN Web UI Log Loading Failures](./docs/doc/error-handling/06_MAR_2025.md)
+  - [Troubleshooting: Docker Container Running Out of Memory](./docs/doc/error-handling/06_MAR_2025_02.md)
+  - [Troubleshooting: Spark Task - Issue with Writing ODS Layer Avro Data to HDFS but Hive Cannot Read](./docs/doc/error-handling/07_MAR_2025.md)
+  - [Troubleshooting: JSON-like Dictionary Representation in Python Script Causes Execution Failure](./docs/doc/error-handling/08_MAR_2025.md)
+  - [Troubleshooting: Partitioned table NO DATA displayed while hive SQL query, even though data file existing on HDFS](./docs/doc/error-handling/10-MAR-2025_02.md)
+  - [Troubleshooting: Resolving "Unrecognized column type: DATE_TYPE" Issue on ods_orders_ipd Table](./docs/doc/error-handling/10-MAR-2025.md)
+  - [Troubleshooting Hive Unable to Read Parquet Files Written by Spark SQL](./docs/doc/error-handling/13-MAR-2025.md)
+  - [Troubleshooting: java.lang.NoClassDefFoundError: org/apache/hc/client5/http/io/HttpClientConnectionManager](./docs/doc/error-handling/17-MAR-2025.md)
+  - [Troubleshooting NameNode Startup Failure in Hadoop HA Environment](./docs/doc/error-handling/21-MAR-2025.md)
+  - [Preventing SIGHUP from Killing Background Processes When Using Docker `exec -it`](./docs/doc/error-handling/22-MAR-2025-2.md)
+  - [Troubleshooting Document: Git Line Ending Conversion Issue Causing JournalNode/NameNode Startup Failure](./docs/doc/error-handling/22-MAR-2025.md)
 
+  - [Bugs Need To Be Fixed in Future](./docs/doc/error-handling/future-fix.md)
 
-#### 4. Infrastructure & Building
+#### Development 
 
-  - 核心架构docker容器分布图
-  - Hadoop 3节点 的搭建和配置
-  - Hive 节点的搭建和配置
-  - Spark 节点的搭建和配置
-  - mysql 节点的搭建和配置
-  - oracle 节点的搭建和配置
-  - airflow 节点的搭建和配置 (airflow.cfg 里 mysql 和 localexecutor 的配置）
-  - `docker-compose` 文件的配置
+#### Testing 
 
-#### 5. Development
-
-  - Data Warehousing
-    - ods
-    - dwd
-  - Data Pipeline ETL
-    - Spark on Yarn to connect Oracle (Hello World)
-    - Spark to extract data and load to HDFS
-    - OOP
-  - Scheduler (Airflow)
-  - some files under /scripts
-
-#### 6. Optimization
+#### Optimization
 
   - [Too many INFO logs: Reducing Spark Console Log Levels](./docs/doc/optimization/reducing-spark-console-log-levels.md)
-
-#### 7. Testing
-  - spark_connect_oracle.py  
 
 ## License
 
