@@ -1,4 +1,5 @@
-![1](https://github.com/user-attachments/assets/5b98ca67-3770-4d4a-b444-ad8b70c40557)
+[![1](https://github.com/user-attachments/assets/5b98ca67-3770-4d4a-b444-ad8b70c40557)](https://www.youtube.com/watch?v=c_d3ey_3AX0)
+<p align="center"><em>👆 click the picture to see the presentation video! </em></p>
 
 # Enterprise-Grade Offline Data Warehouse Solution for E-Commerce
 
