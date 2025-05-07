@@ -118,8 +118,11 @@ Multi-stage transformations are implemented using Spark SQL within PySpark jobs 
 
 The entire batch workflow is automated via Apache Airflow, with DAGs scheduled to run nightly at 2:00 AM. The scheduler coordinates the extraction, transformation, and loading tasks, handles dependencies, and ensures timely creation of new partitions and ingestion of the latest data into the warehouse.
 
+![ECom-ETL-Data-Pipeline](https://github.com/Smars-Bin-Hu/my-draw-io/blob/main/ECom-DWH-Datapipeline-Proejct/ETL-data-pipeline-architecture.drawio.svg)
+<p align="center"><em>Figure 1: ETL Data Pipeline</em></p>
+
 <img width="2055" alt="image" src="https://github.com/user-attachments/assets/e74e33cd-8b9e-4913-8ce5-ad7a20793851" />
-<p align="center"><em>Figure 1: Airflow Web UI</em></p>
+<p align="center"><em>Figure 2: Airflow Web UI</em></p>
 
 ### 4. CI/CD Automation
 
