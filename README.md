@@ -37,7 +37,7 @@ By combining these critical features—including:
 
 | ✅ Core Feature | 🔥 Core Highlights | 📦 Deliverables |
 |-----------|------------------|---------------|
-| **1. [Data Warehouse Modeling and Documentation](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/tree/main?tab=readme-ov-file#1-data-warehouse-modeling-and-documentation)** | - Full dimensional modeling process (Star Schema / Snowflake Schema) <br> - Standardized development norms (ODS/DWD/DWM/DWS/ADS five-layer modeling) <br> - Business Matrix: defining & managing dimensions & fact tables | - Data warehouse design document (Markdown) <br> - Hive SQL modeling code <br> - DWH Dimensional Modelling Architecture Diagram |
+| **1. [Data Warehouse Modeling and Documentation](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/tree/main?tab=readme-ov-file#1-data-warehouse-modeling-and-documentation)** | - Full dimensional modeling process (Star Schema / Snowflake Schema) <br> - Standardized development norms (ODS/DWD/DWM/DWS/DWT/ADS six-layer modeling) <br> - Business Matrix: defining & managing dimensions & fact tables | - Data warehouse design document (Markdown) <br> - Hive SQL modeling code <br> - DWH Dimensional Modelling Architecture Diagram |
 | **2. [A Self-Built Distributed Big Data Platform](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/tree/main?tab=readme-ov-file#2-a-self-built-distributed-big-data-platform)** | - Fully containerized deployment with Docker for quick replication <br> - High-availability environment: Hadoop + Hive + Spark + Zookeeper + ClickHouse | - Docker images (Open sourced on GitHub Container Registry) <br> - `docker-compose.yml` (one-click cluster startup) <br> - Infra Configuration Files for Cluster: Hadoop, ZooKeeper, Hive, MySql, Spark, Prometheus&Grafana, Airflow  <br> - Container Internal Scripts: Hadoop, ZooKeeper, Hive, MySql, Spark, Prometheus&Grafana, Airflow <br> - Common Used Snippets for Cluster: Hadoop, ZooKeeper, Hive, MySql, Spark, Prometheus&Grafana, Airflow |
 | **3. [Distributed Batch Processing](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/tree/main?tab=readme-ov-file#3-distributed-batch-processing)** | - ETL processing using PySpark <br> - data ETL job: OLTP to DWH && DWH to OLAP  <br> - Data Warehouse internal processing: ODS → DWD → DIM/DWM → DWS → ADS <br> - batch processing job scheduler using Airflow | PySpark and Spark SQL Code <br> - Code - Data Pipeline (OLTP -> DWH, DWH -> OLAP) <br> - Code - Batch Processing (DWH Internal Transform) <br> - Code - Scheduling based on Airflow (DAGs) |
 | **4. [CI/CD Automation](https://github.com/Smars-Bin-Hu/EComDWH-BatchDataProcessingPlatform/tree/main?tab=readme-ov-file#4-cicd-automation)** | - Automated data platform cluster launching and stop | - GitHub Actions workflow pipeline `.yaml` <br> - CI/CD code and documentation <br> - Sample log screenshots |
@@ -118,8 +118,11 @@ Multi-stage transformations are implemented using Spark SQL within PySpark jobs 
 
 The entire batch workflow is automated via Apache Airflow, with DAGs scheduled to run nightly at 2:00 AM. The scheduler coordinates the extraction, transformation, and loading tasks, handles dependencies, and ensures timely creation of new partitions and ingestion of the latest data into the warehouse.
 
+![ECom-ETL-Data-Pipeline](https://github.com/Smars-Bin-Hu/my-draw-io/blob/main/ECom-DWH-Datapipeline-Proejct/ETL-data-pipeline-architecture.drawio.svg)
+<p align="center"><em>Figure 1: ETL Data Pipeline</em></p>
+
 <img width="2055" alt="image" src="https://github.com/user-attachments/assets/e74e33cd-8b9e-4913-8ce5-ad7a20793851" />
-<p align="center"><em>Figure 1: Airflow Web UI</em></p>
+<p align="center"><em>Figure 2: Airflow Web UI</em></p>
 
 ### 4. CI/CD Automation
 
